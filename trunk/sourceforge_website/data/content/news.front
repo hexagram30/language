@@ -7,7 +7,7 @@ Content: After setting up various projects in a multiple-project
     more rigorous math, a clear separation of application code and
     library code/utilities, and I wanted to get rid of all the aesthetic
     issues I have with it.
-
+    <br/><br/>
     I started reorganizing the code, breaking out the mini-corpora,
     generated stats, actual code, and the tool/app that have all
     been conglomerated as PyWordGen. Then, vaguely remembering that
@@ -17,7 +17,7 @@ Content: After setting up various projects in a multiple-project
     prototypes with NLTK that may end up replacing all the stuff I
     did originally. Which is good, since NLTK is a hard-core,
     rigorous computational linguistic toolset.
-
+    <br/><br/>
     So, if everything goes well, the next release of PyWordGen will
     include well organized and separated code and an NLTK wrapper
     for the consonant and vowel games I am playing.
