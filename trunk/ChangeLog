@@ -1,3 +1,8 @@
+2004.10.14
+
+* Migrated to subversion.
+* Fixed over-written data on the web server.
+
 2003.11.21
 
 * Added website to the repository.

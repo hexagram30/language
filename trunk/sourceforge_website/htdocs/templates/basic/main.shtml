@@ -1,0 +1,7 @@
+<table>
+  <tr>
+    <td class="content">
+    <!--#include virtual="/cgi-bin/content.py?file=main" -->
+    </td>
+  </tr>
+</table>

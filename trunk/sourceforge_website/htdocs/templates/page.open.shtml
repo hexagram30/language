@@ -1,0 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--#config timefmt="%A %B %d, %Y" -->
+<html>
+<head>
+        <title>
+<!--#include virtual="/cgi-bin/pageparts.py?datatype=config&file=site.title" -->
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="SHORTCUT ICON" href="favicon.ico">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff" vlink="#000099" onload="boldEvents(); searchHistory();">

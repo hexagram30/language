@@ -1,0 +1,8 @@
+Month: November 2003
+Headline: New Projecct Web Site
+Date: 2003.11.21
+Content: A special thanks goes out the the PHP.net folks, since we totally stole their look at feel ;-) Their site has been one of the nicest and cleanest on the net for some time; it was natural source of inspiration. We've used a combination of SSI (server-side includes) and python CGI to develop a "site in a box" that only requires edits to flat text file s (shell access). This combination of technologies is very common in hosted environments and is as simple to implement as uploadeding and unpacking a gzip'ed tarball or doing a CVS checkout.
+
+Headline: PyWordGen Launched on SF.net
+Date: 2003.11.16
+Content: PyWordGen has an official home on SourceForge.net. Although the first version of the code is written, the project site is yet to be completed and there is nothing in CVS at the moment.
