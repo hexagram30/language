@@ -4,18 +4,15 @@ SOURCE_DIR="sourceforge_website/"
 REMOTE_USER="oubiwann"
 REMOTE_HOST="shell.sf.net"
 REMOTE_DIR="pywordgen/"
-
+RSYNC_BIN="rsync"
+DEFAULT_OPTIONS="--exclude .svn* --recursive --stats  --progress --checksum"
 if [ "$CHECK" = "check" ]; then
     echo
     echo "Hit ENTER to continue..."
     read
     echo "Performing a dry-run..."
     echo
-   rsync \
-    --recursive \
-    --stats \
-    --progress \
-    --checksum \
+   $RSYNC_BIN $DEFAULT_OPTIONS \
     --dry-run \
     $SOURCE_DIR $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR
 elif [ "$CHECK" = "download" ]; then
@@ -26,11 +23,7 @@ elif [ "$CHECK" = "download" ]; then
     read
     echo "Downloading files from production..."
     echo
-    rsync \
-    --recursive \
-    --stats \
-    --progress \
-    --checksum \
+    $RSYNC_BIN $DEFAULT_OPTIONS \
     $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR $SOURCE_DIR
 else
     echo
@@ -40,11 +33,7 @@ else
     read
     echo "Moving files into production..."
     echo
-    rsync \
-    --recursive \
-    --stats \
-    --progress \
-    --checksum \
+    $RSYNC_BIN $DEFAULT_OPTIONS \
     $SOURCE_DIR $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR
 fi
 

@@ -1,3 +1,13 @@
+2004.12.31
+
+* Experimented with NLTK to, figuring out how to perform the old PyWordGen
+tasks within an academic framework such as NLTK.
+
+2004.12.27
+
+* Added a setup.py file for distutils install.
+* Added custom corpora.
+
 2004.12.26
 
 * Created new space for linguistic libs.
