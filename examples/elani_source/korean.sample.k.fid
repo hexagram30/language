@@ -1,0 +1,1226 @@
+;;A;25:1: 김 특무장, 아까 김 특무장이 지난 2주 동안 공병들이 대대 지역에서 열심히 작업을 해 왔다고 그랬다.
+
+(S (NP-VOC 김/NPR
+           특무장/NNC)
+   ,/SCM
+   (ADVP 아까/ADV)
+   (S (NP-SBJ 김/NPR
+              특무장/NNC+이/PCA)
+      (VP (S-COMP (NP-ADV 지난/DAN
+                          2/NNU
+                          주/NNX
+                          동안/NNX)
+                  (S (NP-SBJ 공병/NNC+들/XSF+이/PCA)
+                     (VP (VP (NP-ADV 대대/NNC
+                                     지역/NNC+에서/PAD)
+                             (ADVP 열심히/ADV)
+                             (VP (NP-OBJ-LV 작업/NNC+을/PCA)
+                                 (LV 하/VV+어/EAU)))
+                         오/VX+았/EPF+다고/ECS)))
+          그러/VV+었/EPF+다/EFN))
+   ./SFN)
+
+;;A;25:2: 그 공병들이 지뢰 매설 작업 외에 또 무슨 작업을 했는가?
+
+(S (NP-SBJ 그/DAN
+           공병/NNC+들/XSF+이/PCA)
+   (VP (NP-ADV 지뢰/NNC
+               매설/NNC
+               작업/NNC
+               외/NNC+에/PAD)
+       (ADVP 또/ADV)
+       (VP (NP-OBJ-LV 무슨/DAN
+                      작업/NNC+을/PCA)
+           (LV 하/VV+었/EPF+는가/EFN)))
+   ?/SFN)
+
+;;B;25:3: 철조망을 거의 배로 강화했습니다.
+
+(S (NP-SBJ *pro*)
+   (VP (NP-OBJ 철조망/NNC+을/PCA)
+       (ADVP 거의/ADV)
+       (NP-ADV 배/NNC+로/PAD)
+       (VP (VV 강화/NNC+하/XSV+었/EPF+습니다/EFN)))
+   ./SFN)
+
+;;B;25:4: 저희가 정찰나오기 바로 전날 공병들이 이동 철조망을 저희 중대 앞 도로의 갈림길 근방에 잔뜩 실어다 놨지요.
+
+(S (NP-ADV (NP (S (NP-SBJ 저희/NPN+가/PCA)
+                  (VP (NP-OBJ-LV 정찰/NNC)
+                      (LV 나오/VV+기/ENM))))
+           (NP (DANP 바로/DAN)
+               (NP 전날/NNC)))
+   (S (NP-SBJ 공병/NNC+들/XSF+이/PCA)
+      (VP (VP (NP-OBJ 이동/NNC
+                      철조망/NNC+을/PCA)
+              (VP (NP-ADV (NP 저희/NPN
+                              중대/NNC
+                              앞/NNC
+                              도로/NNC+의/PCA)
+                          (NP 갈림길/NNC)
+                          (NP 근방/NNC+에/PAD))
+                  (ADVP 잔뜩/ADV)
+                  (VP 싣/VV+어다/ECS)))
+          놓/VX+았/EPF+지요/EFN))
+   ./SFN)
+
+;;A;25:5: 그 이동 철조망은 어떤 건가?
+
+(S (NP-SBJ 그/DAN
+           이동/NNC
+           철조망/NNC+은/PAU)
+   (VP (NP (DANP 어떤/DAN)
+           (NP 것/NNX+이/CO+ㄴ가/EFN)))
+   ?/SFN)
+
+;;B;25:6: 거마 철조망입니다.
+
+(S (NP-SBJ *pro*)
+   (VP (NP 거마/NNC
+           철조망/NNC+이/CO+ㅂ니다/EFN))
+   ./SFN)
+
+;;B;25:7: 이 철조망은 중대 지역으로 통하는 도로를 차단하기 위한 거죠.
+
+(S (NP-SBJ 이/DAN
+           철조망/NNC+은/PAU)
+   (VP (NP (S (WHNP-2 *op*)
+              (S (NP-SBJ *T*-2)
+                 (VP (NP-OBJ (S (NP-SBJ *pro*)
+                                (VP (NP-OBJ (S (WHNP-1 *op*)
+                                               (S (NP-SBJ *T*-1)
+                                                  (VP (NP-ADV 중대/NNC
+                                                              지역/NNC+으로/PAD)
+                                                      (VP 통하/VV+는/EAN))))
+                                            (NP 도로/NNC+를/PCA))
+                                    (VV 차단/NNC+하/XSV+기/ENM))))
+                     위하/VV+ㄴ/EAN)))
+           (NP 것/NNX+이/CO+죠/EFN)))
+   ./SFN)
+
+;;A;25:8: 그 공병들이 그 외에 또 무슨 철조망을 2 대대 지역 내에 설치했는가?
+
+(S (NP-SBJ 그/DAN
+           공병/NNC+들/XSF+이/PCA)
+   (VP (NP-ADV 그/DAN
+               외/NNC+에/PAD)
+       (ADVP 또/ADV)
+       (VP (NP-OBJ 무슨/DAN
+                   철조망/NNC+을/PCA)
+           (NP-COMP 2/NNU
+                    대대/NNC
+                    지역/NNC
+                    내/NNC+에/PAD)
+           (VV 설치/NNC+하/XSV+었/EPF+는가/EFN)))
+   ?/SFN)
+
+;;B;25:9: 사복 철조망과 저항 철조망을 설치했지요.
+
+(S (NP-SBJ *pro*)
+   (VP (NP-OBJ (NP 사복/NNC
+                   철조망/NNC+과/PCJ)
+               (NP 저항/NNC
+                   철조망/NNC+을/PCA))
+       (VV 설치/NNC+하/XSV+었/EPF+지요/EFN))
+   ./SFN)
+
+;;B;25:10: 이 철조망들은 대부분 대대 주방어 지대 전방과 중대 지탱점들 사이에 설치했습니다.
+
+(S (NP-OBJ-1 이/DAN
+             철조망/NNC+들/XSF+은/PAU)
+   (S (NP-SBJ *pro*)
+      (VP (NP-ADV 대부분/NNC)
+          (NP-ADV (NP 대대/NNC
+                      주방어/NNC
+                      지대/NNC
+                      전방/NNC+과/PAD)
+                  (NP 중대/NNC
+                      지탱점/NNC+들/XSF)
+                  (NP 사이/NNC+에/PAD))
+          (VP (NP-OBJ *T*-1)
+              (VV 설치/NNC+하/XSV+었/EPF+습니다/EFN))))
+   ./SFN)
+
+;;A;25:11: 사복 철조망 하나를 설치하는 데는 전사 몇 명이 필요한가?
+
+(S (NP-COMP-1 (S (NP-SBJ *pro*)
+                 (VP (NP-OBJ 사복/NNC
+                             철조망/NNC
+                             하나/NNU+를/PCA)
+                     (VV 설치/NNC+하/XSV+는/EAN)))
+              (NP 데/NNX+는/PAU))
+   (S (NP-SBJ 전사/NNC
+              몇/NNU
+              명/NNX+이/PCA)
+      (ADJP (NP-COMP *T*-1)
+            (VJ 필요/NNC+하/XSJ+ㄴ가/EFN)))
+   ?/SFN)
+
+;;B;25:12: 전사 2명이 3분 내지 5분이면 할 수 있습니다.
+
+(S (NP-SBJ (S (NP-SBJ 전사/NNC
+                      2/NNU
+                      명/NNX+이/PCA)
+              (VP (S (NP-SBJ *pro*)
+                     (VP (NP (NP 3/NNU
+                                 분/NNX)
+                             (ADCP 내지/ADC)
+                             (NP 5/NNU
+                                 분/NNX+이/CO+면/ECS))))
+                  (VP (NP-OBJ *pro*)
+                      하/VV+ㄹ/EAN)))
+           (NP 수/NNX))
+   (ADJP 있/VJ+습니다/EFN)
+   ./SFN)
+
+;;A;25:13: 인민군에서는 그 외에 또 무슨 철조망을 사용하는가?
+
+(S (NP-ADV 인민군/NNC+에서/PAD+는/PAU)
+   (S (NP-SBJ *pro*)
+      (VP (NP-ADV 그/DAN
+                  외/NNC+에/PAD)
+          (ADVP 또/ADV)
+          (VP (NP-OBJ 무슨/DAN
+                      철조망/NNC+을/PCA)
+              (VV 사용/NNC+하/XSV+는가/EFN))))
+   ?/SFN)
+
+;;B;25:14: 에, 증강 철조망, 일렬 철조망, 삼선 철조망, 오선 철조망, 난견 철조망 -- 그런 것들입니다.
+
+(S (INTJ 에/IJ)
+   ,/SCM
+   (NP-ADV (NP 증강/NNC
+               철조망/NNC)
+           ,/SCM
+           (NP 일렬/NNC
+               철조망/NNC)
+           ,/SCM
+           (NP 삼선/NNC
+               철조망/NNC)
+           ,/SCM
+           (NP 오선/NNC
+               철조망/NNC)
+           ,/SCM
+           (NP 난견/NNC
+               철조망/NNC))
+   --/SSY
+   (S (NP-SBJ *pro*)
+      (VP (NP 그런/DAN
+              것/NNX+들/XSF+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;A;25:15: 그 외에 그 공병들이 2 대대 지역에서 또 무슨 작업을 했는가?
+
+(S (NP-ADV 그/DAN
+           외/NNC+에/PAD)
+   (S (NP-SBJ 그/DAN
+              공병/NNC+들/XSF+이/PCA)
+      (VP (NP-ADV 2/NNU
+                  대대/NNC
+                  지역/NNC+에서/PAD)
+          (ADVP 또/ADV)
+          (VP (NP-OBJ-LV 무슨/DAN
+                         작업/NNC+을/PCA)
+              (LV 하/VV+었/EPF+는가/EFN))))
+   ?/SFN)
+
+;;B;25:16: 전방 방어 지역에 있는 철조망에 제발 장치와 지뢰를 설치했지요.
+
+(S (NP-SBJ *pro*)
+   (VP (NP-ADV (S (WHNP-1 *op*)
+                  (S (NP-SBJ *T*-1)
+                     (ADJP (NP-COMP 전방/NNC
+                                    방어/NNC
+                                    지역/NNC+에/PAD)
+                           있/VJ+는/EAN)))
+               (NP 철조망/NNC+에/PAD))
+       (VP (NP-OBJ (NP 제발/NNC
+                       장치/NNC+와/PCJ)
+                   (NP 지뢰/NNC+를/PCA))
+           (VV 설치/NNC+하/XSV+었/EPF+지요/EFN)))
+   ./SFN)
+
+;;A;25:17: 음, 과연 그 공병들이 일을 많이 했군.
+
+(S (INTJ 음/IJ)
+   ,/SCM
+   (ADVP 과연/ADV)
+   (S (NP-SBJ 그/DAN
+              공병/NNC+들/XSF+이/PCA)
+      (VP (NP-OBJ-LV 일/NNC+을/PCA)
+          (VP (ADVP 많이/ADV)
+              (VP (LV 하/VV+었/EPF+군/EFN)))))
+   ./SFN)
+
+;;A;25:18: 그런데 무슨 지뢰를 그 철조망에 설치했는가?
+
+(S (ADCP 그런데/ADC)
+   (S (NP-SBJ *pro*)
+      (VP (NP-OBJ 무슨/DAN
+                  지뢰/NNC+를/PCA)
+          (NP-COMP 그/DAN
+                   철조망/NNC+에/PAD)
+          (VV 설치/NNC+하/XSV+었/EPF+는가/EFN)))
+   ?/SFN)
+
+;;B;25:19: 아마 POMZ (페오엠제)하고 OZM-3 (오제엠-3) 파편 지뢰일 겁니다. 
+
+(S (ADVP 아마/ADV)
+   (S (NP-SBJ *pro*)
+      (VP (VP (NP (NP POMZ/NFW
+                      (PRN -LRB-/SLQ
+                           페오엠제/NNC
+                           -RRB-/SRQ)
+                      하고/PCJ)
+                  (NP OZM-3/NFW
+                      (PRN -LRB-/SLQ
+                           오제엠-3/NNC
+                           -RRB-/SRQ)
+                      파편/NNC
+                      지뢰/NNC+이/CO+ㄹ/EAN)))
+          (VX 것/NNX+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;A;25:20: "아마" 라니?
+
+(S (NP "/SLQ
+       아마/ADV
+       "/SRQ
+       라니/PAD)
+   ?/SFN)
+
+;;A;25:21: 확실치 않단 말인가?
+
+(S (NP-SBJ *pro*)
+   (VP (NP (S (NP-SBJ *pro*)
+              (VP (ADJP (VJ 확실/NNC+하/XSJ+지/EAU))
+                  않/VX+단/EAN))
+           (NP 말/NNC+이/CO+ㄴ가/EFN)))
+   ?/SFN)
+
+;;B;25:22: 네, 확실치 않습니다.
+
+(S (INTJ 네/IJ)
+   ,/SCM
+   (S (NP-SBJ *pro*)
+      (VP (ADJP (VJ 확실/NNC+하/XSJ+지/EAU))
+          않/VX+습니다/EFN))
+   ./SFN)
+
+;;B;25:23: 그렇지만 이 두 가지 지뢰는 다 인발선에 의해서 폭발하는 지뢰니까 그게 아마 맞을 겁니다.
+
+(S (ADCP 그렇지만/ADC)
+   (S (NP-SBJ 이/DAN
+              두/NNU
+              가지/NNX
+              지뢰/NNC+는/PAU)
+      (VP (ADVP 다/ADV)
+          (VP (NP (S (WHNP-1 *op*)
+                     (S (NP-SBJ *T*-1)
+                        (VP (S (NP-SBJ *pro*)
+                               (VP (NP-COMP 인발선/NNC+에/PAD)
+                                   의하/VV+어서/ECS))
+                            (VP (VV 폭발/NNC+하/XSV+는/EAN)))))
+                  (NP 지뢰/NNC+이/CO+니까/ECS)))))
+   (S (NP-SBJ 그것/NPN+이/PCA)
+      (VP (VP (ADVP 아마/ADV)
+              (VP 맞/VV+을/EAN))
+          (VX 것/NNX+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;B;25:24: 인발선은 철조망에 위장해 놓기가 아주 쉽죠.
+
+(S (NP-SBJ (S (NP-SBJ *pro*)
+              (VP (VP (NP-OBJ 인발선/NNC+은/PAU)
+                      (VP (NP-ADV 철조망/NNC+에/PAD)
+                          (VP (VV 위장/NNC+하/XSV+어/EAU))))
+                  놓/VX+기/ENM+가/PCA)))
+   (ADJP (ADVP 아주/ADV)
+         (ADJP 쉽/VJ+죠/EFN))
+   ./SFN)
+
+;;A;25:25: 알겠다.
+
+(S (NP-SBJ *pro*)
+   (VP 알/VV+겠/EPF+다/EFN)
+   ./SFN)
+
+;;A;25:26: 그런데 그 공병들이 무슨 제발 장치를 그 철조망에 설치했는가?
+
+(S (ADCP 그런데/ADC)
+   (S (NP-SBJ 그/DAN
+              공병/NNC+들/XSF+이/PCA)
+      (VP (NP-OBJ 무슨/DAN
+                  제발/NNC
+                  장치/NNC+를/PCA)
+          (NP-COMP 그/DAN
+                   철조망/NNC+에/PAD)
+          (VV 설치/NNC+하/XSV+었/EPF+는가/EFN)))
+   ?/SFN)
+
+;;B;25:27: 그것도 확실히는 모르겠습니다만 보통 방울이나 조명 신호 장치를 제일 많이 사용합니다.
+
+(S (S (NP-SBJ *pro*)
+      (VP (NP-OBJ 그것/NPN+도/PAU)
+          (VP (ADVP 확실히/ADV+는/PAU)
+              (VP 모르/VV+겠/EPF+습니다만/ECS))))
+   (S (NP-SBJ *pro*)
+      (VP (ADVP 보통/ADV)
+          (VP (NP-OBJ (NP 방울/NNC+이나/PCJ)
+                      (NP 조명/NNC
+                          신호/NNC
+                          장치/NNC+를/PCA))
+              (VP (ADVP (ADVP 제일/ADV)
+                        (ADVP 많이/ADV))
+                  (VP (VV 사용/NNC+하/XSV+ㅂ니다/EFN))))))
+   ./SFN)
+
+;;A;25:28: 그런데 연대 공병 중대가 그 외에 또 무엇을 보병 대대에 지원할 수 있는가?
+
+(S (ADCP 그런데/ADC)
+   (S (NP-SBJ (S (NP-SBJ 연대/NNC
+                         공병/NNC
+                         중대/NNC+가/PCA)
+                 (VP (NP-ADV 그/DAN
+                             외/NNC+에/PAD)
+                     (ADVP 또/ADV)
+                     (VP (NP-OBJ 무엇/NPN+을/PCA)
+                         (NP-COMP 보병/NNC
+                                  대대/NNC+에/PAD)
+                         (VV 지원/NNC+하/XSV+ㄹ/EAN))))
+              (NP 수/NNX))
+      (ADJP 있/VJ+는가/EFN))
+   ?/SFN)
+
+;;B;25:29: 도로와 교량을 건설하고 보수하고 유지하는 일도 하고요.
+
+(S (NP-SBJ *pro*)
+   (VP (NP-OBJ-LV (S (NP-SBJ *pro*)
+                     (VP (NP-OBJ (NP 도로/NNC+와/PCJ)
+                                 (NP 교량/NNC+을/PCA))
+                         (VV (VV 건설/NNC+하/XSV+고/ECS)
+                             (VV 보수/NNC+하/XSV+고/ECS)
+                             (VV 유지/NNC+하/XSV+는/EAN))))
+                  (NP 일/NNC+도/PAU))
+       (LV 하/VV+고요/EFN))
+   ./SFN)
+
+;;B;25:30: 토목 화점이나 기타 다른 요새 진지 구축을 지원하기도 하고요.
+
+(S (NP-SBJ *pro*)
+   (VP (VP (NP-OBJ (NP (NP 토목/NNC
+                           화점/NNC+이나/PCJ)
+                       (NP 기타/NNC
+                           다른/DAN
+                           요새/NNC
+                           진지/NNC))
+                   (NP 구축/NNC+을/PCA))
+           (VV 지원/NNC+하/XSV+기도/ECS))
+       하/VX+고요/EFN)
+   ./SFN)
+
+;;B;25:31: 그리고 도하장을 설치 운영하기도 하고, 또 적의 차단물을 파괴하기도 하지요.
+
+(S (ADCP 그리고/ADC)
+   (S (NP-SBJ *pro*)
+      (VP (VP (NP-OBJ 도하장/NNC+을/PCA)
+              (VV (VV 설치/NNC)
+                  (VV 운영/NNC+하/XSV+기도/ECS)))
+          하/VX+고/ECS))
+   ,/SCM
+   (ADVP 또/ADV)
+   (S (NP-SBJ *pro*)
+      (VP (VP (NP-OBJ 적/NNC+의/PCA
+                      차단물/NNC+을/PCA)
+              (VV 파괴/NNC+하/XSV+기도/ECS))
+          하/VX+지요/EFN))
+   ./SFN)
+
+;;B;25:32: 물론 지뢰를 매설하거나 제거하는 일도 합니다.
+
+(S (ADVP 물론/ADV)
+   (S (NP-SBJ *pro*)
+      (VP (NP-OBJ-LV (S (NP-SBJ *pro*)
+                        (VP (NP-OBJ 지뢰/NNC+를/PCA)
+                            (VV (VV 매설/NNC+하/XSV+거나/ECS)
+                                (VV 제거/NNC+하/XSV+는/EAN))))
+                     (NP 일/NNC+도/PAU))
+          (LV 하/VV+ㅂ니다/EFN)))
+   ./SFN)
+
+;;A;25:33: 응, 알겠다.
+
+(S (INTJ 응/IJ)
+   ,/SCM
+   (S (NP-SBJ *pro*)
+      (VP 알/VV+겠/EPF+다/EFN))
+   ./SFN)
+
+;;A;25:34: 그런데 아까 김 특무장이 5 중대 예하 소대는 다 참호에 배치되어 있다고 했다.
+
+(S (ADCP 그런데/ADC)
+   (ADVP 아까/ADV)
+   (S (NP-SBJ 김/NPR
+              특무장/NNC+이/PCA)
+      (VP (S-COMP (NP-SBJ 5/NNU
+                          중대/NNC
+                          예하/NNC
+                          소대/NNC+는/PAU)
+                  (VP (VP (ADVP 다/ADV)
+                          (VP (NP-COMP 참호/NNC+에/PAD)
+                              (VV 배치/NNC+되/XSV+어/EAU)))
+                      있/VX+다고/ECS))
+          하/VV+었/EPF+다/EFN))
+   ./SFN)
+
+;;A;25:35: 그 참호들은 어떻게 편성되어 있는지 한번 말해봐.
+
+(S (NP-SBJ *pro*)
+   (VP (VP (S-OBJ (NP-SBJ 그/DAN
+                          참호/NNC+들/XSF+은/PAU)
+                  (VP (VP (ADVP 어떻게/ADV)
+                          (VP (VV 편성/NNC+되/XSV+어/EAU)))
+                      있/VX+는지/EFN))
+           (VP (NP-ADV 한번/NNC)
+               (VP 말하/VV+어/EAU)))
+       보/VX+아/EFN)
+   ./SFN)
+
+;;B;25:36: 에, 그 참호들은 교통호에 의해서 연결되어 있죠.
+
+(S (INTJ 에/IJ)
+   ,/SCM
+   (S (NP-SBJ 그/DAN
+              참호/NNC+들/XSF+은/PAU)
+      (VP (VP (S (NP-SBJ *pro*)
+                 (VP (NP-COMP 교통호/NNC+에/PAD)
+                     의하/VV+어서/ECS))
+              (VP (VV 연결/NNC+되/XSV+어/EAU)))
+          있/VX+죠/EFN))
+   ./SFN)
+
+;;B;25:37: 그리고 참호안엔 전호들이 있는데 이 전호들은 다 연결호에 의해서 연결되어 있습니다.
+
+(S (ADCP 그리고/ADC)
+   (S (NP-COMP-1 참호/NNC
+                 안/NNC+에/PAD+는/PAU)
+      (S (NP-SBJ 전호/NNC+들/XSF+이/PCA)
+         (ADJP (NP-COMP *T*-1)
+               있/VJ+는데/ECS)))
+   (S (NP-SBJ 이/DAN
+              전호/NNC+들/XSF+은/PAU)
+      (VP (VP (ADVP 다/ADV)
+              (VP (S (NP-SBJ *pro*)
+                     (VP (NP-COMP 연결호/NNC+에/PAD)
+                         의하/VV+어서/ECS))
+                  (VP (VV 연결/NNC+되/XSV+어/EAU))))
+          있/VX+습니다/EFN))
+   ./SFN)
+
+;;B;25:38: 이 연결호들은 곡절형으로 구축되었지요.
+
+(S (NP-SBJ 이/DAN
+           연결호/NNC+들/XSF+은/PAU)
+   (VP (NP-ADV 곡절/NNC
+               형/NNC+으로/PAD)
+       (VP (VV 구축/NNC+되/XSV+었/EPF+지요/EFN)))
+   ./SFN)
+
+;;B;25:39: 저희 중대가 차지하고 있는 참호는 사실상 대대 참호선의 일부입니다.
+
+(S (NP-SBJ (S (WHNP-1 *op*)
+              (S (NP-SBJ 저희/NPN
+                         중대/NNC+가/PCA)
+                 (VP (VP (NP-OBJ *T*-1)
+                         (VV 차지/NNC+하/XSV+고/EAU))
+                     있/VX+는/EAN)))
+           (NP 참호/NNC+는/PAU))
+   (VP (NP-ADV 사실/NNC+상/XSF)
+       (VP (NP (NP 대대/NNC
+                   참호선/NNC+의/PCA)
+               (NP 일부/NNC+이/CO+ㅂ니다/EFN))))
+   ./SFN)
+
+;;25:40: 누가 그 갈림길 옆에 가시 철조망을 설치했는가?
+
+(S (NP-SBJ 누구/NPN+가/PCA)
+   (VP (NP-COMP 그/DAN
+                갈림길/NNC
+                옆/NNC+에/PAD)
+       (NP-OBJ 가시/NNC
+               철조망/NNC+을/PCA)
+       (VV 설치/NNC+하/XSV+었/EPF+는가/EFN))
+   ?/SFN)
+
+;;25:41: 우리는 서로 그 갈림길에서 헤어졌습니다.
+
+(S (NP-SBJ 우리/NPN+는/PAU)
+   (VP (ADVP 서로/ADV)
+       (NP-ADV 그/DAN
+               갈림길/NNC+에서/PAD)
+       (VP 헤어지/VV+었/EPF+습니다/EFN))
+   ./SFN)
+
+;;25:42: 우리가 거마 철조망을 다섯 개 만들었습니다.
+
+(S (NP-SBJ 우리/NPN+가/PCA)
+   (VP (NP-OBJ 거마/NNC
+               철조망/NNC+을/PCA)
+       (VP (NP-ADV 다섯/NNU
+                   개/NNX)
+           (VP 만들/VV+었/EPF+습니다/EFN)))
+   ./SFN)
+
+;;25:43: 거마 철조망은 주로 어디에 사용하는가?
+
+(S (NP-OBJ-1 거마/NNC
+             철조망/NNC+은/PAU)
+   (S (NP-SBJ *pro*)
+      (VP (ADVP 주로/ADV)
+          (NP-ADV 어디/NPN+에/PAD)
+          (VP (NP-OBJ *T*-1)
+              (VV 사용/NNC+하/XSV+는가/EFN))))
+   ?/SFN)
+
+;;25:44: 연대 공병 중대가 그 도로를 건설했습니다.
+
+(S (NP-SBJ 연대/NNC
+           공병/NNC
+           중대/NNC+가/PCA)
+   (VP (NP-OBJ 그/DAN
+               도로/NNC+를/PCA)
+       (VV 건설/NNC+하/XSV+었/EPF+습니다/EFN))
+   ./SFN)
+
+;;25:45: 그 공병들이 건설한 도로를 유지하는 일도 합니다.
+
+(S (NP-SBJ 그/DAN
+           공병/NNC+들/XSF+이/PCA)
+   (VP (NP-OBJ-LV (S (WHNP *op*)
+                     (S (NP-SBJ *pro*)
+                        (VP (NP-OBJ (S (WHNP-1 *op*)
+                                       (S (NP-SBJ *pro*)
+                                          (VP (NP-OBJ *T*-1)
+                                              (VV 건설/NNC+하/XSV+ㄴ/EAN))))
+                                    (NP 도로/NNC+를/PCA))
+                            (VV 유지/NNC+하/XSV+는/EAN))))
+                  (NP 일/NNC+도/PAU))
+       (LV 하/VV+ㅂ니다/EFN))
+   ./SFN)
+
+;;25:46: 교통호는 보통 곡절형으로 구축합니다.
+
+(S (NP-OBJ-1 교통호/NNC+는/PAU)
+   (ADVP 보통/ADV)
+   (S (NP-SBJ *pro*)
+      (VP (NP-ADV 곡절/NNC
+                  형/NNC+으로/PAD)
+          (VP (NP-OBJ *T*-1)
+              (VV 구축/NNC+하/XSV+ㅂ니다/EFN))))
+   ./SFN)
+
+;;25:47: 참호를 파는 데 곡절형 외에 또 어떤 형이 있는가?
+
+(S (NP-COMP-1 (S (NP-SBJ *pro*)
+                 (VP (NP-OBJ 참호/NNC+를/PCA)
+                     파/VV+는/EAN))
+              (NP 데/NNX))
+   (NP-ADV 곡절/NNC
+           형/NNC
+           외/NNC+에/PAD)
+   (ADVP 또/ADV)
+   (S (NP-SBJ 어떤/DAN
+              형/NNC+이/PCA)
+      (ADJP (NP-COMP *T*-1)
+            있/VJ+는가/EFN))
+   ?/SFN)
+
+;;25:48: 교량은 사단 공병들이 언제나 건설합니다.
+
+(S (NP-OBJ-1 교량/NNC+은/PAU)
+   (S (NP-SBJ 사단/NNC
+              공병/NNC+들/XSF+이/PCA)
+      (VP (ADVP 언제나/ADV)
+          (VP (NP-OBJ *T*-1)
+              (VV 건설/NNC+하/XSV+ㅂ니다/EFN))))
+   ./SFN)
+
+;;25:49: 인민군에서는 후퇴할 때 교량을 파괴합니다.
+
+(S (NP-ADV 인민군/NNC+에서/PAD+는/PAU)
+   (S (NP-SBJ *pro*)
+      (VP (NP-ADV (S (WHNP *op*)
+                     (S (NP-SBJ *pro*)
+                        (VP (VV 후퇴/NNC+하/XSV+ㄹ/EAN))))
+                  (NP 때/NNC))
+          (VP (NP-OBJ 교량/NNC+을/PCA)
+              (VV 파괴/NNC+하/XSV+ㅂ니다/EFN))))
+   ./SFN)
+
+;;25:50: 난견 철조망에 대한 모양을 그려 보게.
+
+(S (NP-SBJ *pro*)
+   (VP (VP (NP-OBJ (S (WHNP-1 *op*)
+                      (S (NP-SBJ *T*-1)
+                         (VP (NP-COMP 난견/NNC
+                                      철조망/NNC+에/PAD)
+                             대하/VV+ㄴ/EAN)))
+                   (NP 모양/NNC+을/PCA))
+           그리/VV+어/EAU)
+       보/VX+게/EFN)
+   ./SFN)
+
+;;25:51: 난견 철조망은 주로 어디에 사용되는가?
+
+(S (NP-SBJ 난견/NNC
+           철조망/NNC+은/PAU)
+   (VP (ADVP 주로/ADV)
+       (NP-ADV 어디/NPN+에/PAD)
+       (VP (VV 사용/NNC+되/XSV+는가/EFN)))
+   ?/SFN)
+
+;;25:52: 그 도하장에서는 어떤 장비가 운용됐는가?
+
+(S (NP-ADV 그/DAN
+           도하장/NNC+에서/PAD+는/PAU)
+   (S (NP-SBJ 어떤/DAN
+              장비/NNC+가/PCA)
+      (VP (VV 운용/NNC+되/XSV+었/EPF+는가/EFN)))
+   ?/SFN)
+
+;;25:53: 연대에서는 어느 부대가 도하장을 설치하는가?
+
+(S (NP-ADV 연대/NNC+에서/PAD+는/PAU)
+   (S (NP-SBJ 어느/DAN
+              부대/NNC+가/PCA)
+      (VP (NP-OBJ 도하장/NNC+을/PCA)
+          (VV 설치/NNC+하/XSV+는가/EFN)))
+   ?/SFN)
+
+;;25:54: 그 감시소 전화선을 누가 연결했는가?
+
+(S (NP-OBJ-1 그/DAN
+             감시소/NNC
+             전화선/NNC+을/PCA)
+   (S (NP-SBJ 누구/NPN+가/PCA)
+      (VP (NP-OBJ *T*-1)
+          (VV 연결/NNC+하/XSV+었/EPF+는가/EFN)))
+   ?/SFN)
+
+;;25:55: 그 토목 화점들은 연결호로 연결되어 있습니다.
+
+(S (NP-SBJ 그/DAN
+           토목/NNC
+           화점/NNC+들/XSF+은/PAU)
+   (VP (VP (NP-ADV 연결호/NNC+로/PAD)
+           (VP (VV 연결/NNC+되/XSV+어/EAU)))
+       있/VX+습니다/EFN)
+   ./SFN)
+
+;;25:56: 도로를 보수하는 데 어떤 장비를 사용하는가?
+
+(S (NP-COMP-1 (S (NP-SBJ *pro*)
+                 (VP (NP-OBJ 도로/NNC+를/PCA)
+                     (VV 보수/NNC+하/XSV+는/EAN)))
+              (NP 데/NNX))
+   (S (NP-SBJ *pro*)
+      (VP (NP-COMP *T*-1)
+          (NP-OBJ 어떤/DAN
+                  장비/NNC+를/PCA)
+          (VV 사용/NNC+하/XSV+는가/EFN)))
+   ?/SFN)
+
+;;25:57: 그 건물은 낡아서 보수해야 합니다.
+
+(S (S (NP-SBJ 그/DAN
+              건물/NNC+은/PAU)
+      (ADJP 낡/VJ+아서/ECS))
+   (S (NP-SBJ *pro*)
+      (VP (VP (NP-OBJ *pro*)
+              (VV 보수/NNC+하/XSV+어야/ECS))
+          하/VX+ㅂ니다/EFN))
+   ./SFN)
+
+;;25:58: 철조망의 종류에는 사복 철조망도 있습니다.
+
+(S (NP-COMP-1 철조망/NNC+의/PCA
+              종류/NNC+에/PAD+는/PAU)
+   (S (NP-SBJ 사복/NNC
+              철조망/NNC+도/PAU)
+      (ADJP (NP-COMP *T*-1)
+            있/VJ+습니다/EFN))
+   ./SFN)
+
+;;25:59: 사복 철조망은 주로 방어 지역 전방에 설치합니다.
+
+(S (NP-OBJ-1 사복/NNC
+             철조망/NNC+은/PAU)
+   (S (NP-SBJ *pro*)
+      (VP (ADVP 주로/ADV)
+          (NP-ADV 방어/NNC
+                  지역/NNC
+                  전방/NNC+에/PAD)
+          (VP (NP-OBJ *T*-1)
+              (VV 설치/NNC+하/XSV+ㅂ니다/EFN))))
+   ./SFN)
+
+;;25:60: 인민군에서는 어떤 지뢰에 인발선을 사용하는가?
+
+(S (NP-ADV 인민군/NNC+에서/PAD+는/PAU)
+   (S (NP-SBJ *pro*)
+      (VP (NP-ADV 어떤/DAN
+                  지뢰/NNC+에/PAD)
+          (VP (NP-OBJ 인발선/NNC+을/PCA)
+              (VV 사용/NNC+하/XSV+는가/EFN))))
+   ?/SFN)
+
+;;25:61: 그 지뢰에는 아마 인발선이 설치되어 있을 겁니다.
+
+(S (NP-COMP-1 그/DAN
+              지뢰/NNC+에/PAD+는/PAU)
+   (ADVP 아마/ADV)
+   (S (NP-SBJ 인발선/NNC+이/PCA)
+      (VP (VP (VP (NP-COMP *T*-1)
+                  (VV 설치/NNC+되/XSV+어/EAU))
+              있/VX+을/EAN)
+          (VX 것/NNX+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;25:62: 저항 철조망은 지상에서 얼마나 높게 설치되는가?
+
+(S (NP-SBJ 저항/NNC
+           철조망/NNC+은/PAU)
+   (VP (S (NP-SBJ *pro*)
+          (ADJP (NP-ADV 지상/NNC+에서/PAD)
+                (ADVP 얼마나/ADV)
+                (ADJP 높/VJ+게/ECS)))
+       (VP (VV 설치/NNC+되/XSV+는가/EFN)))
+   ?/SFN)
+
+;;25:63: 저항 철조망은 보통 사복 철조망들 사이에 사용됩니다.
+
+(S (NP-SBJ 저항/NNC
+           철조망/NNC+은/PAU)
+   (VP (ADVP 보통/ADV)
+       (VP (NP-COMP 사복/NNC
+                    철조망/NNC+들/XSF
+                    사이/NNC+에/PAD)
+           (VV 사용/NNC+되/XSV+ㅂ니다/EFN)))
+   ./SFN)
+
+;;25:64: 전호는 1 인용과 2 인용이 대부분입니다.
+
+(S (NP-SBJ 전호/NNC+는/PAU)
+   (S (NP-SBJ (NP 1/NNU
+                  인/NNX+용/XSF+과/PCJ)
+              (NP 2/NNU
+                  인/NNX+용/XSF+이/PCA))
+      (VP (NP 대부분/NNC+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;25:65: 그 참호에 있는 전호들은 모두 연결되어 있습니다.
+
+(S (NP-SBJ (S (WHNP-1 *op*)
+              (S (NP-SBJ *T*-1)
+                 (ADJP (NP-COMP 그/DAN
+                                참호/NNC+에/PAD)
+                       있/VJ+는/EAN)))
+           (NP 전호/NNC+들/XSF+은/PAU))
+   (VP (VP (ADVP 모두/ADV)
+           (VP (VV 연결/NNC+되/XSV+어/EAU)))
+       있/VX+습니다/EFN)
+   ./SFN)
+
+;;25:66: 제발 장치는 야간 전투에 특히 효과적입니다.
+
+(S (NP-SBJ 제발/NNC
+           장치/NNC+는/PAU)
+   (VP (NP-ADV 야간/NNC
+               전투/NNC+에/PAD)
+       (ADVP 특히/ADV)
+       (VP (NP 효과/NNC+적/XSF+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;25:67: 우리 소대가 그 철조망에 제발 장치를 했습니다.
+
+(S (NP-SBJ 우리/NPN
+           소대/NNC+가/PCA)
+   (VP (NP-COMP 그/DAN
+                철조망/NNC+에/PAD)
+       (NP-OBJ-LV 제발/NNC
+                  장치/NNC+를/PCA)
+       (LV 하/VV+었/EPF+습니다/EFN))
+   ./SFN)
+
+;;25:68: 중대 지탱점은 사복 철조망으로 보강됩니다.
+
+(S (NP-SBJ 중대/NNC
+           지탱점/NNC+은/PAU)
+   (VP (NP-ADV 사복/NNC
+               철조망/NNC+으로/PAD)
+       (VP (VV 보강/NNC+되/XSV+ㅂ니다/EFN)))
+   ./SFN)
+
+;;25:69: 중대 지탱점을 편성할 때는 어떤 철조망을 사용하는가?
+
+(S (NP-ADV (S (WHNP *op*)
+              (S (NP-SBJ *pro*)
+                 (VP (NP-OBJ 중대/NNC
+                             지탱점/NNC+을/PCA)
+                     (VV 편성/NNC+하/XSV+ㄹ/EAN))))
+           (NP 때/NNC+는/PAU))
+   (S (NP-SBJ *pro*)
+      (VP (NP-OBJ 어떤/DAN
+                  철조망/NNC+을/PCA)
+          (VV 사용/NNC+하/XSV+는가/EFN)))
+   ?/SFN)
+
+;;25:70: 지뢰가 폭발해서 공병들이 여러 명 죽었지요.
+
+(S (S (NP-SBJ 지뢰/NNC+가/PCA)
+      (VP (VV 폭발/NNC+하/XSV+어서/ECS)))
+   (S (NP-SBJ 공병/NNC+들/XSF+이/PCA)
+      (VP (NP-ADV 여러/DAN
+                  명/NNX)
+          (VP 죽/VV+었/EPF+지요/EFN)))
+   ./SFN)
+
+;;25:71: 그 지뢰는 인발선에 의해서 폭발하도록 매설했습니다.
+
+(S (NP-OBJ-1 그/DAN
+             지뢰/NNC+는/PAU)
+   (S (NP-SBJ *pro*)
+      (VP (S (NP-SBJ *pro*)
+             (VP (S (NP-SBJ *pro*)
+                    (VP (NP-COMP 인발선/NNC+에/PAD)
+                        의하/VV+어서/ECS))
+                 (VP (VV 폭발/NNC+하/XSV+도록/ECS))))
+          (VP (NP-OBJ *T*-1)
+              (VV 매설/NNC+하/XSV+었/EPF+습니다/EFN))))
+   ./SFN)
+
+;;25:72: 공병들이 이동 철조망을 그 갈림길 근방에 잔뜩 실어다 놨습니다.
+
+(S (NP-SBJ 공병/NNC+들/XSF+이/PCA)
+   (VP (VP (NP-OBJ 이동/NNC
+                   철조망/NNC+을/PCA)
+           (VP (NP-ADV 그/DAN
+                       갈림길/NNC
+                       근방/NNC+에/PAD)
+               (ADVP 잔뜩/ADV)
+               (VP 싣/VV+어다/ECS)))
+       놓/VX+았/EPF+습니다/EFN)
+   ./SFN)
+
+;;25:73: 그 거마 철조망은 중대 지역으로 통하는 도로를 차단하기 위한 겁니다.
+
+(S (NP-SBJ 그/DAN
+           거마/NNC
+           철조망/NNC+은/PAU)
+   (VP (NP (S (WHNP-2 *op*)
+              (S (NP-SBJ *T*-2)
+                 (VP (NP-COMP (S (NP-SBJ *pro*)
+                                 (VP (NP-OBJ (S (WHNP-1 *op*)
+                                                (S (NP-SBJ *T*-1)
+                                                   (VP (NP-COMP 중대/NNC
+                                                                지역/NNC+으로/PAD)
+                                                       통하/VV+는/EAN)))
+                                             (NP 도로/NNC+를/PCA))
+                                     (VV 차단/NNC+하/XSV+기/ENM))))
+                     위하/VV+ㄴ/EAN)))
+           (NP 것/NNX+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;25:74: 저항 철조망과 사복 철조망을 중대 지탱점들 사이에 설치했습니다.
+
+(S (NP-SBJ *pro*)
+   (VP (NP-OBJ (NP 저항/NNC
+                   철조망/NNC+과/PAD)
+               (NP 사복/NNC
+                   철조망/NNC+을/PCA))
+       (NP-COMP 중대/NNC
+                지탱점/NNC+들/XSF
+                사이/NNC+에/PAD)
+       (VV 설치/NNC+하/XSV+었/EPF+습니다/EFN))
+   ./SFN)
+
+;;25:75: 인민군에서 사용하는 철조망에는 난견 철조망과 일렬 철조망도 있습니다.
+
+(S (NP-COMP-2 (S (WHNP-1 *op*)
+                 (S (NP-SBJ *pro*)
+                    (VP (NP-ADV 인민군/NNC+에서/PAD)
+                        (VP (NP-OBJ *T*-1)
+                            (VV 사용/NNC+하/XSV+는/EAN)))))
+              (NP 철조망/NNC+에/PAD+는/PAU))
+   (S (NP-SBJ (NP 난견/NNC
+                  철조망/NNC+과/PCJ)
+              (NP 일렬/NNC
+                  철조망/NNC+도/PAU))
+      (ADJP (NP-COMP *T*-2)
+            있/VJ+습니다/EFN))
+   ./SFN)
+
+;;25:76: 그 철조망에 설치한 지뢰는 인발선에 의해서 폭발하는 지뢰입니다.
+
+(S (NP-SBJ (S (WHNP-1 *op*)
+              (S (NP-SBJ *pro*)
+                 (VP (NP-COMP 그/DAN
+                              철조망/NNC+에/PAD)
+                     (NP-OBJ *T*-1)
+                     (VV 설치/NNC+하/XSV+ㄴ/EAN))))
+           (NP 지뢰/NNC+는/PAU))
+   (VP (NP (S (WHNP-2 *op*)
+              (S (NP-SBJ *T*-2)
+                 (VP (S (NP-SBJ *pro*)
+                        (VP (NP-COMP 인발선/NNC+에/PAD)
+                            의하/VV+어서/ECS))
+                     (VP (VV 폭발/NNC+하/XSV+는/EAN)))))
+           (NP 지뢰/NNC+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;25:77: 공병들은 교량과 도로를 건설하고 보수하고 그리고 유지하는 일도 합니다.
+
+(S (NP-SBJ 공병/NNC+들/XSF+은/PAU)
+   (VP (NP-OBJ-LV (S (NP-SBJ *pro*)
+                     (VP (NP-OBJ (NP 교량/NNC+과/PCJ)
+                                 (NP 도로/NNC+를/PCA))
+                         (VV (VV 건설/NNC+하/XSV+고/ECS)
+                             (VV 보수/NNC+하/XSV+고/ECS)
+                             (ADCP 그리고/ADC)
+                             (VV 유지/NNC+하/XSV+는/EAN))))
+                  (NP 일/NNC+도/PAU))
+       (LV 하/VV+ㅂ니다/EFN))
+   ./SFN)
+
+;;25:78: 공병 중대는 도하장을 설치 운영하기도 하고 토목 화점의 구축을 지원하기도 합니다.
+
+(S (NP-SBJ 공병/NNC
+           중대/NNC+는/PAU)
+   (VP (VP (VP (NP-OBJ 도하장/NNC+을/PCA)
+               (VV (VV 설치/NNC)
+                   (VV 운영/NNC+하/XSV+기도/ECS)))
+           하/VX+고/ECS)
+       (VP (VP (NP-OBJ 토목/NNC
+                       화점/NNC+의/PCA
+                       구축/NNC+을/PCA)
+               (VV 지원/NNC+하/XSV+기도/ECS))
+           하/VX+ㅂ니다/EFN))
+   ./SFN)
+
+;;25:79: 전방 방어 지역에 있는 증강 철조망에는 제발 장치를 설치했습니다.
+
+(S (NP-SBJ *pro*)
+   (VP (NP-COMP (S (WHNP-1 *op*)
+                   (S (NP-SBJ *T*-1)
+                      (ADJP (NP-COMP 전방/NNC
+                                     방어/NNC
+                                     지역/NNC+에/PAD)
+                            있/VJ+는/EAN)))
+                (NP 증강/NNC
+                    철조망/NNC+에/PAD+는/PAU))
+       (NP-OBJ 제발/NNC
+               장치/NNC+를/PCA)
+       (VV 설치/NNC+하/XSV+었/EPF+습니다/EFN))
+   ./SFN)
+
+;;25:80: 전호들은 연결호에 의해서 연결되어 있고 참호들은 교통호에 의해서 연결되어 있습니다.
+
+(S (S (NP-SBJ 전호/NNC+들/XSF+은/PAU)
+      (VP (VP (S (NP-SBJ *pro*)
+                 (VP (NP-COMP 연결호/NNC+에/PAD)
+                     의하/VV+어서/ECS))
+              (VP (VV 연결/NNC+되/XSV+어/EAU)))
+          있/VX+고/ECS))
+   (S (NP-SBJ 참호/NNC+들/XSF+은/PAU)
+      (VP (VP (S (NP-SBJ *pro*)
+                 (VP (NP-COMP 교통호/NNC+에/PAD)
+                     의하/VV+어서/ECS))
+              (VP (VV 연결/NNC+되/XSV+어/EAU)))
+          있/VX+습니다/EFN))
+   ./SFN)
+
+;;25:81: 참호안에 있는 전호를 연결하는 연결호는 곡절형으로 되어 있습니다.
+
+(S (NP-SBJ (S (WHNP-2 *op*)
+              (S (NP-SBJ *T*-2)
+                 (VP (NP-OBJ (S (WHNP-1 *op*)
+                                (S (NP-SBJ *T*-1)
+                                   (ADJP (NP-COMP 참호/NNC
+                                                  안/NNC+에/PAD)
+                                         있/VJ+는/EAN)))
+                             (NP 전호/NNC+를/PCA))
+                     (VV 연결/NNC+하/XSV+는/EAN))))
+           (NP 연결호/NNC+는/PAU))
+   (VP (VP (NP-COMP 곡절/NNC
+                    형/NNC+으로/PAD)
+           되/VV+어/EAU)
+       있/VX+습니다/EFN)
+   ./SFN)
+
+;;25:82: 그 공병들은 저희 대대 지역에 철조망을 거의 배로 강화했습니다.
+
+(S (NP-SBJ 그/DAN
+           공병/NNC+들/XSF+은/PAU)
+   (VP (NP-ADV 저희/NPN
+               대대/NNC
+               지역/NNC+에/PAD)
+       (VP (NP-OBJ 철조망/NNC+을/PCA)
+           (VP (ADVP 거의/ADV)
+               (NP-ADV 배/NNC+로/PAD)
+               (VP (VV 강화/NNC+하/XSV+었/EPF+습니다/EFN)))))
+   ./SFN)
+
+;;25:83: 저항 철조망은 대부분 대대 주방어 지대 전방에 설치했습니다.
+
+(S (NP-OBJ-1 저항/NNC
+             철조망/NNC+은/PAU)
+   (S (NP-SBJ *pro*)
+      (VP (NP-ADV 대부분/NNC)
+          (VP (NP-COMP 대대/NNC
+                       주방어/NNC
+                       지대/NNC
+                       전방/NNC+에/PAD)
+              (NP-OBJ *T*-1)
+              (VV 설치/NNC+하/XSV+었/EPF+습니다/EFN))))
+   ./SFN)
+
+;;25:84: 전사 3명이 5분 내지 7분이면 사복 철조망 하나를 설치할 수 있습니다.
+
+(S (NP-SBJ (S (NP-SBJ 전사/NNC
+                      3/NNU
+                      명/NNX+이/PCA)
+              (VP (S (NP-SBJ *pro*)
+                     (VP (NP (NP 5/NNU
+                                 분/NNX)
+                             (ADCP 내지/ADC)
+                             (NP 7/NNU
+                                 분/NNX+이/CO+면/ECS))))
+                  (VP (NP-OBJ 사복/NNC
+                              철조망/NNC
+                              하나/NNU+를/PCA)
+                      (VV 설치/NNC+하/XSV+ㄹ/EAN))))
+           (NP 수/NNX))
+   (ADJP 있/VJ+습니다/EFN)
+   ./SFN)
+
+;;25:85: 그 증강 철조망에 설치한 지뢰는 아마 POMZ (페오엠제)하고 OMZ-3 파편 지뢰일 겁니다. 
+
+(S (NP-SBJ (S (WHNP-1 *op*)
+              (S (NP-SBJ *pro*)
+                 (VP (NP-COMP 그/DAN
+                              증강/NNC
+                              철조망/NNC+에/PAD)
+                     (NP-OBJ *T*-1)
+                     (VV 설치/NNC+하/XSV+ㄴ/EAN))))
+           (NP 지뢰/NNC+는/PAU))
+   (VP (VP (ADVP 아마/ADV)
+           (VP (NP (NP POMZ/NFW
+                       (PRN -LRB-/SLQ
+                            페오엠제/NNC
+                            -RRB-/SRQ)
+                       하고/PCJ)
+                   (NP OMZ-3/NFW
+                       파편/NNC
+                       지뢰/NNC+이/CO+ㄹ/EAN))))
+       (VX 것/NNX+이/CO+ㅂ니다/EFN))
+   ./SFN)
+
+;;25:86: 그렇지만 인발선은 철조망에 위장해 놓기가 아주 쉬우니까 그게 아마 맞을 겁니다.
+
+(S (ADCP 그렇지만/ADC)
+   (S (NP-SBJ (S (NP-SBJ *pro*)
+                 (VP (VP (NP-OBJ 인발선/NNC+은/PAU)
+                         (VP (NP-ADV 철조망/NNC+에/PAD)
+                             (VP (VV 위장/NNC+하/XSV+어/EAU))))
+                     놓/VX+기/ENM+가/PCA)))
+      (ADJP (ADVP 아주/ADV)
+            (ADJP 쉽/VJ+으니까/ECS)))
+   (S (NP-SBJ 그것/NPN+이/PCA)
+      (VP (VP (ADVP 아마/ADV)
+              (VP 맞/VV+을/EAN))
+          (VX 것/NNX+이/CO+ㅂ니다/EFN)))
+   ./SFN)
+
+;;25:87: 그것도 확실치는 않습니다만 보통 방울이나 조명 신호 장치를 제일 많이 사용합니다.
+
+(S (S (NP-SBJ 그것/NPN+도/PAU)
+      (VP (ADJP (VJ 확실/NNC+하/XSJ+지/EAU+는/PAU))
+          않/VX+습니다만/ECS))
+   (S (NP-SBJ *pro*)
+      (VP (ADVP 보통/ADV)
+          (VP (NP-OBJ (NP 방울/NNC+이나/PCJ)
+                      (NP 조명/NNC
+                          신호/NNC
+                          장치/NNC+를/PCA))
+              (VP (ADVP (ADVP 제일/ADV)
+                        (ADVP 많이/ADV))
+                  (VP (VV 사용/NNC+하/XSV+ㅂ니다/EFN))))))
+   ./SFN)
+
+;;25:88: 저희가 정찰나오기 바로 전날에 공병들이 저희 중대부 앞 도롯가에 거마 철조망을 잔뜩 실어다 놨죠.
+
+(S (NP-ADV (NP (S (NP-SBJ 저희/NPN+가/PCA)
+                  (VP (NP-OBJ-LV 정찰/NNC)
+                      (LV 나오/VV+기/ENM))))
+           (NP (DANP 바로/DAN)
+               (NP 전날/NNC+에/PAD)))
+   (S (NP-SBJ 공병/NNC+들/XSF+이/PCA)
+      (VP (VP (NP-ADV 저희/NPN
+                      중대부/NNC
+                      앞/NNC
+                      도롯가/NNC+에/PAD)
+              (VP (NP-OBJ 거마/NNC
+                          철조망/NNC+을/PCA)
+                  (VP (ADVP 잔뜩/ADV)
+                      (VP 싣/VV+어다/ECS))))
+          놓/VX+았/EPF+죠/EFN))
+   ./SFN)
+
+;;25:89: 연대 공병 중대는 토목 화점이나 기타 다른 요새 진지 구축을 지원하기도 합니다.
+
+(S (NP-SBJ 연대/NNC
+           공병/NNC
+           중대/NNC+는/PAU)
+   (VP (VP (NP-OBJ (NP 토목/NNC
+                       화점/NNC+이나/PCJ)
+                   (NP 기타/NNC
+                       다른/DAN
+                       요새/NNC
+                       진지/NNC
+                       구축/NNC+을/PCA))
+           (VV 지원/NNC+하/XSV+기도/ECS))
+       하/VX+ㅂ니다/EFN)
+   ./SFN)
+
+;;25:90: 물론 공병들은 적의 차단물을 파괴하기도 하고 지뢰를 매설하거나 제거하는 일도 합니다.
+
+(S (ADVP 물론/ADV)
+   (S (NP-SBJ 공병/NNC+들/XSF+은/PAU)
+      (VP (VP (VP (NP-OBJ 적/NNC+의/PCA
+                          차단물/NNC+을/PCA)
+                  (VV 파괴/NNC+하/XSV+기도/ECS))
+              하/VX+고/ECS)
+          (VP (NP-OBJ-LV (S (NP-SBJ *pro*)
+                            (VP (NP-OBJ 지뢰/NNC+를/PCA)
+                                (VV (VV 매설/NNC+하/XSV+거나/ECS)
+                                    (VV 제거/NNC+하/XSV+는/EAN))))
+                         (NP 일/NNC+도/PAU))
+              (LV 하/VV+ㅂ니다/EFN))))
+   ./SFN)
+
+;;25:91: 제5 중대가 차지하고 있는 참호 두 개는 사실상 대대 참호선의 일부입니다.
+
+(S (NP-SBJ (S (WHNP-1 *op*)
+              (S (NP-SBJ 제/XPF+5/NNU
+                         중대/NNC+가/PCA)
+                 (VP (VP (NP-OBJ *T*-1)
+                         (VV 차지/NNC+하/XSV+고/EAU))
+                     있/VX+는/EAN)))
+           (NP 참호/NNC
+               두/NNU
+               개/NNX+는/PAU))
+   (VP (NP-ADV 사실/NNC+상/XSF)
+       (VP (NP (NP 대대/NNC
+                   참호선/NNC+의/PCA)
+               (NP 일부/NNC+이/CO+ㅂ니다/EFN))))
+   ./SFN)
