@@ -3,6 +3,7 @@
 * Moved corpora out of lib and into its own space.
 * Created corpora/wordlists, corpora/sources, and corpora/stats.
 * Added admin directory with a couple scripts.
+* Moved wordlists into their own directory.
 
 2004.12.31
 
