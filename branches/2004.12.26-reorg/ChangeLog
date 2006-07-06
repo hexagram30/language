@@ -4,6 +4,7 @@
 * Created corpora/wordlists, corpora/sources, and corpora/stats.
 * Added admin directory with a couple scripts.
 * Moved wordlists into their own directory.
+* Removed the extraneous "_wordlist" on the wordlist text files.
 
 2004.12.31
 
