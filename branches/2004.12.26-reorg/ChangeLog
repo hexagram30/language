@@ -1,3 +1,9 @@
+2006.06.06
+
+* Moved corpora out of lib and into its own space.
+* Created corpora/wordlists, corpora/sources, and corpora/stats.
+* Added admin directory with a couple scripts.
+
 2004.12.31
 
 * Experimented with NLTK to, figuring out how to perform the old PyWordGen
