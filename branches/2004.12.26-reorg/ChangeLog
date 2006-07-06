@@ -5,6 +5,8 @@
 * Added admin directory with a couple scripts.
 * Moved wordlists into their own directory.
 * Removed the extraneous "_wordlist" on the wordlist text files.
+* Added sources and stats.
+* Moved a hijacked python file from corpora back into lib.
 
 2004.12.31
 
