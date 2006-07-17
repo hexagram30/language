@@ -2,14 +2,18 @@ from string import split, join, find, lower, strip
 from random import Random
 import time
 import re
-import cPickle
+import codecs
 
 class GenerateStats:
   '''
 
   '''
 
-  def __init__(self):
+  def __init__(self, vowels=None, consonants=None):
+    if not vowels:
+        vowels = 'aeiouy'
+    if not consonants:
+        consonants = 'bcdfghjklmnpqrstvwxz'
     self.source_filename = ''
     self.legal_filename = ''
     self.list_filname = ''
@@ -19,9 +23,9 @@ class GenerateStats:
     self.wordlist = []
     self.illegals = {}
     #self.word_pattern = "^[a-zA-Z-']+$"
-    self.word_pattern = "^[a-zA-Z]+$"
-    self.vowel_pattern = "[aeiouy]+"
-    self.consonant_pattern = "[bcdfghjklmnpqrstvwxz]+"
+    self.word_pattern = "^[%s%s]+$" % (vowels, consonants)
+    self.vowel_pattern = "[%s]+" % vowels
+    self.consonant_pattern = "[%s]+" % consonants
     self.stats = {}
 
   def getWordList(self):
@@ -30,16 +34,16 @@ class GenerateStats:
     '''
     if self.wordlist:
       return self.wordlist
-    file = open(self.source_filename)
+    fh = codecs.open(self.source_filename, 'r', 'utf-8')
     regex = re.compile(self.word_pattern)
-    for line in file.readlines():
+    for line in fh.readlines():
       words = split(line)
       for word in words:
         if len(word) > 2:
           word = strip(word)
           if regex.search(word):
             self.wordlist.append(lower(word))
-    file.close()
+    fh.close()
     #print self.wordlist
     return self.wordlist
 
@@ -47,11 +51,11 @@ class GenerateStats:
     '''
     
     '''
-    file = open(self.list_filname, "wb")
+    fh = codecs.open(self.list_filname, 'w+', 'utf-8')
     self.wordlist = self.getWordList()
     for word in self.wordlist:
-      file.write(word + "\n")
-    file.close()
+      fh.write(word + "\n")
+    fh.close()
 
   def __getLegals(self, pattern):
     '''
@@ -199,7 +203,7 @@ class GenerateStats:
     output = ''
     percent = 0
     stats = {}
-    file = open(self.stats_filename, "wb")
+    fh = codecs.open(self.stats_filename, 'w+', 'utf-8')
     self.stats = self.getWordStats()
     for type in self.stats.keys():
       counter = 1
@@ -217,7 +221,8 @@ class GenerateStats:
           # file.write(output)
           counter += part_count
     #print stats
-    cPickle.dump(stats, file, 0)
+    fh.write(str(stats))
+    fh.close()
 
 class CreateWord:
   '''
@@ -236,8 +241,8 @@ class CreateWord:
 
     ''' 
     if self.stats: return 1
-    file = open(self.stats_filename, "r")
-    self.stats = cPickle.load(file)
+    fh = codecs.open(self.stats_filename, 'r', 'utf-8')
+    self.stats = eval(fh.read())
     self.max['beginnings'] = self.stats['beginnings'][-1][1]
     self.max['medials'] = self.stats['medials'][-1][1]
     self.max['endings'] = self.stats['endings'][-1][1]

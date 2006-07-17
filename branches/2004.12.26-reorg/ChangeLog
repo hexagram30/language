@@ -1,3 +1,21 @@
+2006.07.17
+
+* Added new vowel, consonant, and alphabet sources.
+* Added support for unicode/UTF-8.
+* Removed pickle usage from LangGen due to its lack of support for unicode.
+* Added scripts for generating an alphabet from source text.
+* Added a word-gen script.
+* Generated clean source text file for Old Norse from raw source.
+* Generated stats file for Old Norse.
+* Introduced a quick and dirty and horribly inefficient kludge for building
+word lists that start with a given string. This needs to be done right in the
+near future.
+* Added TODO file.
+
+2006.07.11
+
+* Added Old English and Old Norse source text.
+
 2006.06.06
 
 * Moved corpora out of lib and into its own space.
