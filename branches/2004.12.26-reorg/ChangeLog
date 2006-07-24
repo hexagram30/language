@@ -1,3 +1,12 @@
+2006.07.24
+
+* Created a UFTFile object for mangaing the codecs files.
+* Created Letter, Vowel, Consonant, and Word objects to assist in generalizing
+the code in LangGen.py.
+* Cleaned up (removed) the code that depended on the old way of determining
+vowels and consonants.
+* Added corpra files for oldenglish and sanskrit.
+
 2006.07.17
 
 * Added new vowel, consonant, and alphabet sources.

@@ -1,13 +1,12 @@
+# -*- coding: utf-8 -*-
+
 import re
 import sys
 import codecs
 
-sourceFile = sys.argv[1]
-try:
-    destFile = sys.argv[2]
-except IndexError:
-    destFile = None
-
+sourceType = sys.argv[1]
+sourceFile = "corpora/sources/%s.txt" % sourceType
+destFile = "corpora/alphabets/%s.txt" % sourceType
 data = codecs.open(sourceFile, 'r', 'utf-8').read()
 alphabet = {}
 for letter in data:
