@@ -13,7 +13,7 @@ consonants = codecs.open('corpora/consonants/%s.txt' % lang, 'r', 'utf-8').read(
 vowels = codecs.open('corpora/vowels/%s.txt' % lang, 'r', 'utf-8').read()
 
 
-stats = LangGen.GenerateStats(vowels=vowels, consonants=consonants)
+stats = LangGen.StatsMaker(vowels=vowels, consonants=consonants)
 stats.source_filename = SOURCE
 stats.list_filname = LIST
 stats.stats_filename = STATS

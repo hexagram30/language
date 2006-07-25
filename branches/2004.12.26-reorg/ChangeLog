@@ -6,6 +6,8 @@ the code in LangGen.py.
 * Cleaned up (removed) the code that depended on the old way of determining
 vowels and consonants.
 * Added corpra files for oldenglish and sanskrit.
+* Finished the rewrite of LangGen (LangGen.Syntagmata).
+* Added many more unit tests.
 
 2006.07.17
 
