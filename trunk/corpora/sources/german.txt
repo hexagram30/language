@@ -1,0 +1,216 @@
+
+
+
+
+: Inhaltsverzeichnis
+Einleitung
+
+Willkommen beim Zope-Buch. Dieses Buch ist dafür gedacht, Ihnen Zope und seine Verwendungsmöglichkeiten vorzustellen. Zope ist ein Open-Source-Web-Anwendungsserver. Wenn Sie sich für das Verfassen von Web-Seiten, das Programmieren von Web-Skripten, die Verwendung von Datenbanken, das Verwalten von Inhalten oder die Durchführung einer gemeinsamen Web-Entwicklungsaufgabe interessieren, dann sollten Sie dieses Buch lesen.
+Warum sollte ich dieses Buch lesen?
+
+Dieses Buch soll sowohl jetzige und neue Zope-Benutzer ansprechen:
+
+    * Sie müssen kein Programmierer sein, um dieses Buch zu lesen oder Zope zu verwenden.
+    * Sie sollten eine Vorstellung davon haben, wie das Web funktioniert; mit Grundkenntnissen über HTML und URLs.
+    * Sie sollten wissen, was ein Web-Browser und ein Web-Server ist und Sie sollten eine Vorstellung darüber haben, wie diese miteinander kommunizieren.
+
+Der erste Teil des Buchs erklärt Ihnen, wie Sie Zope über seine Web-Verwaltungsschnittstelle, dem Web Managment Interface, benutzen, um dynamischen Inhalt zu verwalten. Die Konzepte in diesen Kapiteln sind grundlegende Zope-Konzepte, die Ihnen zeigen, wie man Zope verwendet, um Inhalt im Netz zu veröffentlichen.
+
+Einige spätere Abschnitte des Buches behandeln weiterführende Themen wie relationale Datenbanken, das Skripting mit verschiedenen Programmiersprachen und XML. Diese Kapitel vermitteln Ihnen keine Grundlagen über relationale Datenbanken, wie sie Programmieren lernen oder über XML, sie zeigen Ihnen lediglich, wie diese Technologien mit Zope zu verwenden sind.
+Wie das Buch aufgebaut ist
+
+Im Folgenden sehen Sie den Aufbau dieses Buches sowie eine kurze Zusammenfassung jedes Kapitels.
+Teil I: Einführung in Zope
+
+Diese Kapitel helfen dem Leser beim Start und Betrieb von Zope. Sie erfahren etwas über die Grundobjekte in Zope und dessen Vokabular.
+Kapitel 1: Einführung in Zope
+
+Kapitel 1 erklärt Ihnen, was Zope ist und für wen es gedacht ist. Es beschreibt in groben Zügen, was Sie mit Zope tun können. Sie lernen auch etwas über die Unterschiede zwischen Zope und anderen Web-Anwendungs-Servern.
+Kapitel 2: Zope benutzen
+
+Kapitel 2 behandelt die wichtigsten Zope-Konzepte. Am Ende dieses Kapitels sollten Sie in der Lage sein, Zope zu verwenden, um einfache aber leistungsfähige Web-Anwendungen zu erstellen und zu verwalten.
+Kapitel 3: Verwendung grundlegender Zope-Objekte
+
+Kapitel 3 führt Objekte ein. Sie sind die wichtigsten Elemente von Zope. Hier erfahren wir, was ein Objekt im Allgemeinen ist und führen dann die Grundobjekte von Zope ein: Ordner (Folders), DTML-Dokumente, DTML-Methoden, Dateien (Files) und Bilder (Images).
+Kapitel 4: Dynamische Inhalte mit DTML
+
+Kapitel 4 stellt DTML vor, Zopes Tag-basierte Skripting-Sprache. Hier beschreiben wir die Verwendung von DTML für das Erstellen von Vorlagen und für das Skripting und seine Rolle in bezug auf andere Arten, Zope zu programmieren. Wir behandeln die DTML-Syntax und die drei grundlegendsten Befehle var, if and in. Nach dem Lesen dieses Kapitels werden Sie in der Lage sein, dynamische Web-Seiten zu erstellen.
+Kapitel 5: Zopes Seitenvorlagen verwenden
+
+Kapitel 5 führt Zopes Seitenvorlagen -- die Zope Page Templates -- ein, ein neues Werkzeug um dynamisches HTML zu erzeugen. Dieses Kapitel zeigt Ihnen, wie man Seitenvorlagen erstellt und bearbeitet. Es führt auch grundlegende Vorlagenanweisungen ein, die es Ihnen ermöglichen dynamischen Inhalt einzufügen.
+Kapitel 6: Erstellung einfacher Zope-Anwendungen
+
+Kapitel 6 führt den Leser durch mehrere Alltagsbeispiele, in denen Zope-Anwendungen aufgebaut werden. Es liefert viele Beispiele, die zeigen, wie man Zope-Objekte verwenden kann und wie sie zusammenarbeiten können, um einfache Anwendungen zu erzeugen.
+Teil II: Erstellen von Web-Anwendungen mit Zope
+
+Diese Kapitel liefern einen tiefergehenden Einblick in weiterführende Zope-Themen. Sie liefern die Grundlagen, die notwendig sind, um richtige Web-Anwendungen mit Zope aufzubauen.
+Kapitel 7: Benutzer und Sicherheit
+
+Kapitel 7 betrachtet, wie Zope Benutzer, Authentifizierung, Berechtigungen und andere sicherheitsbedingte Angelegenheiten behandelt. Sicherheit spielt in Zopes Design eine zentrale Rolle und das sollte sie auch in den Web-Anwendungen, die Sie mit Zope erstellen.
+Kapitel 8: Variablen und DTML für Fortgeschrittene
+
+Kapitel 8 wirft einen näheren Blick auf DTML. Es behandelt Sicherheit in DTML und das komplizierte Thema, wie Variablen in DTML gesucht werden. Es deckt auch fortgeschrittene Anwendungen der in Kapitel 3 besprochenen Grundbefehle und der unzähligen Befehle für Spezialzwecke ab. Dieses Kapitel macht Sie zu einem DTML-"Zauberer".
+Kapitel 9: Zopes Seitenvorlagen für Fortgeschrittene
+
+Kapitel 9 gibt einen tiefergehenden Einblick in Vorlagen. Dieses Kapitel bringt Ihnen alle Vorlagenanweisungen und Ausdruckstypen bei. Es behandelt auch Makros, die es Ihnen erlauben Darstellungselemente wiederzuverwenden. Am Ende dieses Kapitels werden Sie alles über Vorlagen wissen.
+Kapitel 10: Zope-Scripting für Fortgeschrittene
+
+Kapitel 10 handelt vom Zope-Skripting mit Python und Perl. Darin zeigen wir, wie man Geschäftslogik in Zope mit Hilfe von leistungsfähigeren Werkzeugen als DTML schreiben kann. Es erörtert die Vorstellung von Skripten (Scripts) in Zope und konzentriert sich dabei auf python- und perl-basieriende Skripten. Dieses Kapitel zeigt Ihnen, wie Sie Ihrer Site leistungsfähiges Skripting hinzufügen können.
+Kapitel 11: Inhalt durchsuchen und kategorisieren
+
+Kapitel 11 zeigt Ihnen, wie Objekte mit Zopes eingebauter Suchmaschine, dem Catalog, indiziert und durchsucht werden können. Es führt Indizierungskonzepte ein und erörtert verschiedene Vorgehensweisen für das Indizieren und Suchen. Zuletzt erörtert es Metadaten und Suchergebnisse. Dieses Kapitel zeigt Ihnen, wie Sie eine leistungsfähige und einfach zu benutzende Informationsarchitektur aufbauen können.
+Kapitel 12: Verbindung mit relationalen Datenbanken
+
+Kapitel 12 beschreibt, wie sich Zope mit externen relationalen Datenbanken verbinden lässt. Es zeigt Ihnen, wie Datenbanken anzubinden und abzufragen sind. Es behandelt auch Funktionen, die Ihnen erlauben relationale Daten so zu behandeln, als ob sie Zope-Objekte wären. Zuletzt erörtert das Kapitel Überlegungen zu Sicherheit und Leistungsfähigkeit.
+Teil III: Entwickeln fortgeschrittener Web-Anwendungen mit Zope
+
+Der letzte Teil des Buches behandelt fortgeschrittene Themen. Sie erfahren, wie Sie Ihre Web-Anwendung je nach Ihren Bedürfnissen skalieren und Zope selbst erweitern können.
+Kapitel 13: Skalierbarkeit und ZEO
+
+Kapitel 13 behandelt Probleme und Lösungen beim Aufbau und bei der Verwaltung großer Web-Anwendungen und geht dabei auf Themen der Verwaltung und Skalierbarkeit ein. Vor allem wird die "Zope Enterprise Option" (ZEO) im Detail behandelt. Dieses Kapitel zeigt Ihnen die Werkzeuge und Methoden auf, die Sie brauchen, um eine kleine Site zu einer großformatigen Site zu machen und Millionen von Besuchern zu bedienen.
+Kapitel 14: Zope erweitern
+
+Kapitel handelt von den Möglichkeiten Zope zu erweitern, indem Sie Ihre eigenen Objektarten erstellen. Es erörtert ZClasses, und wie Instanzen von Klassen erzeugt werden. Es beschreibt Schritt für Schritt wie man eine ZClass erstellt und die dabei aufkommenden Sicherheits- und die Designaspekte. Zuletzt zeigt es, wie man Basisklassen in Python für ZClasses erstellt, und beschreibt die grundlegenden Klassen, die mit Zope geliefert werden. Dieses Kapitel zeigt Ihnen, wie Zope auf eine höhere Ebene gebracht werden kann, indem Sie Zope Ihren Bedürnissen entsprechend maßschneidern.
+In diesem Buch verwendete Konventionen
+Dieses Buch verwendet die folgenden typographischen Konventionen:
+
+Kursivschrift
+    Kursivschrift zeigt Variablen an und wird auch verwendet, um neue Begriffe einzuführen.
+Dicktengleiche Schrift
+    Text in dicktengleicher Schrift zeigt Eingabekommandos, Hyperlinks und Code-Listings an.
+
+Einleitung
+
+Willkommen beim Zope-Buch. Dieses Buch ist dafür gedacht, Ihnen Zope und seine Verwendungsmöglichkeiten vorzustellen. Zope ist ein Open-Source-Web-Anwendungsserver. Wenn Sie sich für das Verfassen von Web-Seiten, das Programmieren von Web-Skripten, die Verwendung von Datenbanken, das Verwalten von Inhalten oder die Durchführung einer gemeinsamen Web-Entwicklungsaufgabe interessieren, dann sollten Sie dieses Buch lesen.
+Warum sollte ich dieses Buch lesen?
+
+Dieses Buch soll sowohl jetzige und neue Zope-Benutzer ansprechen:
+
+    * Sie müssen kein Programmierer sein, um dieses Buch zu lesen oder Zope zu verwenden.
+    * Sie sollten eine Vorstellung davon haben, wie das Web funktioniert; mit Grundkenntnissen über HTML und URLs.
+    * Sie sollten wissen, was ein Web-Browser und ein Web-Server ist und Sie sollten eine Vorstellung darüber haben, wie diese miteinander kommunizieren.
+
+Der erste Teil des Buchs erklärt Ihnen, wie Sie Zope über seine Web-Verwaltungsschnittstelle, dem Web Managment Interface, benutzen, um dynamischen Inhalt zu verwalten. Die Konzepte in diesen Kapiteln sind grundlegende Zope-Konzepte, die Ihnen zeigen, wie man Zope verwendet, um Inhalt im Netz zu veröffentlichen.
+
+Einige spätere Abschnitte des Buches behandeln weiterführende Themen wie relationale Datenbanken, das Skripting mit verschiedenen Programmiersprachen und XML. Diese Kapitel vermitteln Ihnen keine Grundlagen über relationale Datenbanken, wie sie Programmieren lernen oder über XML, sie zeigen Ihnen lediglich, wie diese Technologien mit Zope zu verwenden sind.
+Wie das Buch aufgebaut ist
+
+Im Folgenden sehen Sie den Aufbau dieses Buches sowie eine kurze Zusammenfassung jedes Kapitels.
+Teil I: Einführung in Zope
+
+Diese Kapitel helfen dem Leser beim Start und Betrieb von Zope. Sie erfahren etwas über die Grundobjekte in Zope und dessen Vokabular.
+Kapitel 1: Einführung in Zope
+
+Kapitel 1 erklärt Ihnen, was Zope ist und für wen es gedacht ist. Es beschreibt in groben Zügen, was Sie mit Zope tun können. Sie lernen auch etwas über die Unterschiede zwischen Zope und anderen Web-Anwendungs-Servern.
+Kapitel 2: Zope benutzen
+
+Kapitel 2 behandelt die wichtigsten Zope-Konzepte. Am Ende dieses Kapitels sollten Sie in der Lage sein, Zope zu verwenden, um einfache aber leistungsfähige Web-Anwendungen zu erstellen und zu verwalten.
+Kapitel 3: Verwendung grundlegender Zope-Objekte
+
+Kapitel 3 führt Objekte ein. Sie sind die wichtigsten Elemente von Zope. Hier erfahren wir, was ein Objekt im Allgemeinen ist und führen dann die Grundobjekte von Zope ein: Ordner (Folders), DTML-Dokumente, DTML-Methoden, Dateien (Files) und Bilder (Images).
+Kapitel 4: Dynamische Inhalte mit DTML
+
+Kapitel 4 stellt DTML vor, Zopes Tag-basierte Skripting-Sprache. Hier beschreiben wir die Verwendung von DTML für das Erstellen von Vorlagen und für das Skripting und seine Rolle in bezug auf andere Arten, Zope zu programmieren. Wir behandeln die DTML-Syntax und die drei grundlegendsten Befehle var, if and in. Nach dem Lesen dieses Kapitels werden Sie in der Lage sein, dynamische Web-Seiten zu erstellen.
+Kapitel 5: Zopes Seitenvorlagen verwenden
+
+Kapitel 5 führt Zopes Seitenvorlagen -- die Zope Page Templates -- ein, ein neues Werkzeug um dynamisches HTML zu erzeugen. Dieses Kapitel zeigt Ihnen, wie man Seitenvorlagen erstellt und bearbeitet. Es führt auch grundlegende Vorlagenanweisungen ein, die es Ihnen ermöglichen dynamischen Inhalt einzufügen.
+Kapitel 6: Erstellung einfacher Zope-Anwendungen
+
+Kapitel 6 führt den Leser durch mehrere Alltagsbeispiele, in denen Zope-Anwendungen aufgebaut werden. Es liefert viele Beispiele, die zeigen, wie man Zope-Objekte verwenden kann und wie sie zusammenarbeiten können, um einfache Anwendungen zu erzeugen.
+Teil II: Erstellen von Web-Anwendungen mit Zope
+
+Diese Kapitel liefern einen tiefergehenden Einblick in weiterführende Zope-Themen. Sie liefern die Grundlagen, die notwendig sind, um richtige Web-Anwendungen mit Zope aufzubauen.
+Kapitel 7: Benutzer und Sicherheit
+
+Kapitel 7 betrachtet, wie Zope Benutzer, Authentifizierung, Berechtigungen und andere sicherheitsbedingte Angelegenheiten behandelt. Sicherheit spielt in Zopes Design eine zentrale Rolle und das sollte sie auch in den Web-Anwendungen, die Sie mit Zope erstellen.
+Kapitel 8: Variablen und DTML für Fortgeschrittene
+
+Kapitel 8 wirft einen näheren Blick auf DTML. Es behandelt Sicherheit in DTML und das komplizierte Thema, wie Variablen in DTML gesucht werden. Es deckt auch fortgeschrittene Anwendungen der in Kapitel 3 besprochenen Grundbefehle und der unzähligen Befehle für Spezialzwecke ab. Dieses Kapitel macht Sie zu einem DTML-"Zauberer".
+Kapitel 9: Zopes Seitenvorlagen für Fortgeschrittene
+
+Kapitel 9 gibt einen tiefergehenden Einblick in Vorlagen. Dieses Kapitel bringt Ihnen alle Vorlagenanweisungen und Ausdruckstypen bei. Es behandelt auch Makros, die es Ihnen erlauben Darstellungselemente wiederzuverwenden. Am Ende dieses Kapitels werden Sie alles über Vorlagen wissen.
+Kapitel 10: Zope-Scripting für Fortgeschrittene
+
+Kapitel 10 handelt vom Zope-Skripting mit Python und Perl. Darin zeigen wir, wie man Geschäftslogik in Zope mit Hilfe von leistungsfähigeren Werkzeugen als DTML schreiben kann. Es erörtert die Vorstellung von Skripten (Scripts) in Zope und konzentriert sich dabei auf python- und perl-basieriende Skripten. Dieses Kapitel zeigt Ihnen, wie Sie Ihrer Site leistungsfähiges Skripting hinzufügen können.
+Kapitel 11: Inhalt durchsuchen und kategorisieren
+
+Kapitel 11 zeigt Ihnen, wie Objekte mit Zopes eingebauter Suchmaschine, dem Catalog, indiziert und durchsucht werden können. Es führt Indizierungskonzepte ein und erörtert verschiedene Vorgehensweisen für das Indizieren und Suchen. Zuletzt erörtert es Metadaten und Suchergebnisse. Dieses Kapitel zeigt Ihnen, wie Sie eine leistungsfähige und einfach zu benutzende Informationsarchitektur aufbauen können.
+Kapitel 12: Verbindung mit relationalen Datenbanken
+
+Kapitel 12 beschreibt, wie sich Zope mit externen relationalen Datenbanken verbinden lässt. Es zeigt Ihnen, wie Datenbanken anzubinden und abzufragen sind. Es behandelt auch Funktionen, die Ihnen erlauben relationale Daten so zu behandeln, als ob sie Zope-Objekte wären. Zuletzt erörtert das Kapitel Überlegungen zu Sicherheit und Leistungsfähigkeit.
+Teil III: Entwickeln fortgeschrittener Web-Anwendungen mit Zope
+
+Der letzte Teil des Buches behandelt fortgeschrittene Themen. Sie erfahren, wie Sie Ihre Web-Anwendung je nach Ihren Bedürfnissen skalieren und Zope selbst erweitern können.
+Kapitel 13: Skalierbarkeit und ZEO
+
+Kapitel 13 behandelt Probleme und Lösungen beim Aufbau und bei der Verwaltung großer Web-Anwendungen und geht dabei auf Themen der Verwaltung und Skalierbarkeit ein. Vor allem wird die "Zope Enterprise Option" (ZEO) im Detail behandelt. Dieses Kapitel zeigt Ihnen die Werkzeuge und Methoden auf, die Sie brauchen, um eine kleine Site zu einer großformatigen Site zu machen und Millionen von Besuchern zu bedienen.
+Kapitel 14: Zope erweitern
+
+Kapitel handelt von den Möglichkeiten Zope zu erweitern, indem Sie Ihre eigenen Objektarten erstellen. Es erörtert ZClasses, und wie Instanzen von Klassen erzeugt werden. Es beschreibt Schritt für Schritt wie man eine ZClass erstellt und die dabei aufkommenden Sicherheits- und die Designaspekte. Zuletzt zeigt es, wie man Basisklassen in Python für ZClasses erstellt, und beschreibt die grundlegenden Klassen, die mit Zope geliefert werden. Dieses Kapitel zeigt Ihnen, wie Zope auf eine höhere Ebene gebracht werden kann, indem Sie Zope Ihren Bedürnissen entsprechend maßschneidern.
+In diesem Buch verwendete Konventionen
+
+Der Widder stellt den Anfang allen Anfangs dar. Es ist die Zeit des Frühlingsanfangs,  das Jahr beginnt von Neuem, ein neuer Zyklus, die Samen brechen durch die Erdschicht und bahnen sich ihren Weg zu neuem Wachstum. Dazu braucht es ungeheurere Kraft und starken Lebensdrang. Widdergeborene sind mutig und unbefangen. Sie sind kraftvoll und lebensfroh und haben alle Gaben, die sie für einen Neuanfang brauchen. Sie sind Pioniere, Eroberer und Kämpfer. Widder Geborene sind  ungeduldig und schnell. Sie lassen sich durch Nichts und Niemanden aufhalten, schon gar nicht durch Belehrungen und verstandesmäßige Erklärungen. Auch Sicherheit und Kalkül interessiert sie wenig. Die einzige Möglichkeit sie zu  bremsen ist, wenn sie Schaden nehmen. Auch das hält sie nicht lange auf. Der Widder ist impulsiv und spontan. Widder Geborene sind lebendig, voller Energie. und voller Ideen. Sie sind immer in Bewegung und auf der Suche nach einer Herausforderung. Sie brauchen die Hürde, den Kampf um ihre Kräfte zu spüren und auszuleben.  Sie sind gute Sportler. Sie lieben Wettbewerbe und tun alles, um zu gewinnen. Sie möchten gerne der Erste sein. Ein Widder Mensch hat seinen eigenen Willen und möchte eher Anführer sein. als sich etwas sagen lassen. Im Grunde ist es aber wichtig, dass er seinen eigenen Weg gehen kann.
+Widder ist ein Feuerzeichen, die Eigenschaften des Feuers sind Wärme, Aktivität und Helligkeit. Widdermenschen sind sehr flexibel und verharren nicht lange in einem bestimmten Zustand. Sie sind offen, kontaktfreudig und hitzig in ihren Reaktionen. 
+
+Das Wichtigste für den Stier ist Sicherheit. Er braucht Geld und Besitz um sich wirklich sicher zu fühlen. Er liebt aber auch schöne Dinge, am liebsten natürlich "naturbelassen". Ein typischer Stiermensch mag es bequem, aber er arbeitet auch hart für Dinge, die ihn glücklich machen. Er ist bedächtig, ruhig und entspannt, naturverbunden und sinnlich. So liebt er Gerüche, Farben und ist empfänglich für sinnliche Eindrücke. Er ist ein Genießer und liebt gutes Essen. Stier Menschen sind beständig bis behäbig und manchmal auch faul. Es braucht seine Zeit um sie zur Aktivität zu bewegen, aber wenn sie dann aktiv werden hören sie so schnell nicht mehr auf. Dann können sie mühelos ganze Fußballfelder voller Gänseblümchen bepflanzen. Stier-Menschen sind sehr praktisch und lieben es von daher konkret mit den Dingen des Alltags, praktisch oder handwerklich tätig zu sein. Manchmal bevorzugen sie einen einfachen Lebensstil. Sie arbeiten gut, beständig, gründlich und verlässlich. Sie lassen sich nicht so schnell aus der Ruhe bringen, aber wenn, dann empfiehlt es sich einen großen Bogen um sie zu machen. Sie scheuen keine Routine oder ein Gleichmaß. Es kann auch sein, dass sie das Landleben bevorzugen. Manche Stiere haben eine schöne Stimme und sind begabte Musiker oder sie mögen Bildhauerei.  Stier-Menschen reagieren eher langsam und brauchen lange bis sie wissen, was sie wollen.
+Stier gehört zu den Erdzeichen. Das heißt auch, dass Stier-Menschen dauerhaft und zuverlässig sind - wie die Erde. Stier-Menschen sorgen gut für ihre Lieben und geben auch hier Sicherheit und Beständigkeit. 
+
+In der alten Astrologie wurde das Zeichen der Zwillinge mit der Liebe assoziiert. Man hielt dieses Zeichen für ein gutes Symbol. In einer Jahreszeit, da die Blütenwelt explodiert und Insekten aller Art von Blüte zu Blüte hüpfen um zur Befruchtung und Vermehrung beizutragen sind auch die Menschen, die zu dieser Zeit geboren sind, kontaktfreudig und kommunikativ. Das Wichtigste für einen Zwilling ist die Kommunikation. Aber auch Themen wie; das Denken und sprachliche wie praktische Intelligenz. Der zugeordnete Planet ist Merkur, der in der alten Mythologie als Götterbote galt. Im Alltag sieht das so aus, dass Zwillings-Menschen fast immer neugierig sind und sich für viele verschiedene Dinge und Menschen interessieren. Ein typischer Zwilling ist normalerweise gerne mit anderen Leuten zusammen und teilt gerne mit, was er gerade macht oder erlebt. Zwillinge sind Informationsträger. Sie wissen viel, wenn nicht alles, auch wenn es manchmal auf Kosten von Genauigkeit geht. In jedem Fall wissen sie stets Antwort, sind gut informiert und kennen "Gott und die Welt" . Gerne tun sie viele Dinge gleichzeitig (telefonieren, lesen, sich mit der Freundin unterhalten..)  Zwei der wenigen Nachteile der Zwillinge sind Oberflächlichkeit und Phlegma. Zwillinge sind sympathisch, aufgeschlossen, interessant und vielseitig. Der Zwilling lässt sich ungern festlegen. Muss er sich mal entscheiden, was ihm in den seltensten Fällen gelingt, so sieht er von 100 Möglichkeiten 99 andere vor seinem inneren Auge schwinden und das ist hart. Auf einer Party schielt der Zwilling zum Ausgang, er braucht Auswege und (Flucht-) Möglichkeiten. 
+Zwillingsbetonte Menschen beschäftigen sich gerne mit der Sprache, unterrichten gerne, halten hie und da Reden und beschäftigen sich mit Technik, bzw. damit wie die Dinge funktionieren. Ebenso lieben sie Bewegung. Jede Art von Sport, manche sind tolle Tänzer. Viele Zwillinge arbeiten im Bereich der Medien  (Radio, Fernsehen oder Zeitungen) Sie brauchen das Neue, lieben es zu reisen und neue Leute zu treffen.
+Zwillinge gehören zu den Luftzeichen. Das heißt, das sie ein leichtes, unkompliziertes Wesen haben - sie sind wie die erfrischende Brise eines Frühlingstages. 
+
+Ein Krebs-Mensch ist ein häuslicher, familiärer Typ. Er sorgt liebend für seinen nächsten Freunde und seine Familie, der Rest der Welt interessiert ihn nicht wirklich, zumindest nicht emotional. Mit seinen Lieben kreiert er gerne eine eigene, kuschelige, gemütliche Welt. Er braucht Geborgenheit und Sicherheit. Das Mütterliche ist ihm wichtig. Er braucht eine nährende, fürsorgliche und vertraute Umgebung. Der Krebs ist sehr empfindlich und verletzlich und zieht schnell und unerbittlich zurück, wenn er gekränkt wurde. Es kann lange dauern, bis er wieder aus seinem Krebshaus kommt und verzeiht. Er ist nachtragend und rückwärtsblickend. Manchmal lebt er mehr in der Vergangenheit als in der Gegenwart und Zukunft. Er hat etwas Geheimnisvolles und Tiefes. Der Krebs ist anhänglich und neigt dazu sich an etwas zu klammern, besonders wenn er liebt und geliebt wird. Das Krebszeichen ist ein Wasserzeichen und der Herrscher des Krebses ist der Mond. Der Mond erzeugt nicht sein eigenes Licht, sondern reflektiert das Licht der Sonne. Krebs Menschen spiegeln Gefühle wieder, sie sind eher aufnehmender Natur, abwartend und passiv. Sie sind eher schüchtern, empfindlich und zurückhaltend, sind aber mutige Verteidiger von Freunden und ihrer Familie, wenn es sein muss. Krebs Männer wie Frauen sind liebende Mütter/Väter. Sie brauchen und spenden Nestwärme. Der Krebs ist sehr feinfühlig und verhält sich eher indirekt, wenn er nicht auf direktem Weg bekommen kann, was er möchte. 
+Krebs-Menschen wollen gebraucht werden. Viele Krebse haben eine ausgeprägte Phantasie und können Kreatives hervorbringen.
+
+Der Löwe ist der Inbegriff für Selbstbewusstsein und Ich-Stärke. Als König der Tiere ist er uneingeschränkter Herrscher und eine starke Persönlichkeit. Ein Löwengeborener ist jemand und ist sich darüber auch bewusst. So muss er nur in einen Raum kommen und wird von anwesenden Menschen sofort registriert. Trotzdem braucht der Löwe eine Bühne und einen Rahmen sich zu zeigen und darzustellen.  
+
+Es ist die Zeit im Sommer, da man voller Lebensfreude die Sonne und das Leben aus vollen Zügen genießt, spielt, sich vergnügt. Der Löwe liebt Kinder und das Zusammensein mit ihnen. Die im Zeichen Löwe geborenen sind lebensfrohe, kreative und schöpferische Menschen. Der Löwe-Mensch möchte und muss sich selber, seine Fähigkeiten und Talente ausdrücken. Dafür braucht er Raum Zeit und die Bewunderung der Anderen. Er ist sehr stolz und gekränkt, wenn ihm Anerkennung und Aufmerksamkeit nicht zuteil werden.  
+
+Sie müssen eigenen Interessen nachgehen können und wollen Dinge tun, die ihnen Freude machen und bei denen sie kreativ sein können. Löwen sind sehr großzügig und souverän. Sie eignen sich eher zum Anführer, Chef, Bestimmer und ordnet sich nicht gerne unter. Auch in künstlerisch darstellerischer Bereichen (Schauspieler z.B. Götz George) sind die Löwen gerne vertreten.  
+
+Löwe ist ein Feuerzeichen. Ein Löwe muss seine Einzigartigkeit zeigen können und seinem Schaffensdrang nachkommen. Er steht gerne im Mittelpunkt und läuft manchmal Gefahr vor lauter Egozentrik die anderen aus den Augen zu verlieren. Er liebt die Liebe, behandelt seine Lieben königlich ist großzügig und treu. Er kann lieben und muss genauso geliebt werden.
+
+Jungfrau-Menschen sind normalerweise rational und vernünftig. Sie haben ein sanftmütiges und ruhiges Wesen. Sie sind zurückhaltend und eher vorsichtig. Manchmal wirken sie kühl und berechnend. Im Grunde sind sie sehr anpassungsfähig und können sich gut in ihre Umgebung einfinden. Sie lieben kleine Tiere und alles, was wächst. Darin zeigt sich eine gewisse Fürsorglichkeit und Hilfsbereitschaft. 
+
+Viele Jungfrauen tun gerne Dinge, bei denen sie genau sein müssen und ihre Geschicklichkeit einsetzen können. Sie haben eine Liebe zum Detail und wirken manchmal pingelig. Sie arbeiten hart, wenn sie etwas machen wollen, das sowohl schön als auch nützlich ist. Verdienste durch Arbeit und Fleiß, bei denen man Lorbeeren ernten kann,  zählen zu den wichtigsten Jungfraueigenschaften. Überhaupt ist die Erntezeit die Jungfrauzeit. Es gilt die gesamte Ernte einzuholen und zu verarbeiten, auf das die Lebensmittel für die Winterzeit reichen. Darin liegt die jungfräuliche Verantwortung und Sorge. Sie sind auch die Heiler, Mediziner, Analytiker, diejenigen die helfen wollen und es auch können. 
+
+Ihr Wissen ist gründlich und fundiert, Jungfraugeborene sind genau, liefern gute Diagnosen, Analysen und Urteile. Ihre Beobachtungsgabe und ihre Wahrnehmung sind exakt. Sie sind klug und intelligent. Sie sind gute Verwerter, ja man könnte fast sagen,  Ökonomen, sie hassen Verschwendung und mangelnde Umsicht im Ungang mit Dingen und Menschen. Sie sind geordnet und planmäßig, aber sie kämpfen auch gegen das Chaos. In jedem Fall kommt bei jedem Jungfrau geborenen Menschen das Thema Chaos-Ordnung auf. Entweder in der Wohnung, bei der Arbeit, in der Lebensorganisation oder anderswo. Die im Zeichen Jungfrau geborenen sind, gerne alleine, trotzdem brauchen sie das Gefühl, von anderen gebraucht und geschätzt zu werden. Es macht Jungfrau-Menschen nichts aus, zu Dienen. Sie sind immer bereit, anderen zu helfen und sind da, wenn jemand ein Problem hat. Oft sind sie schüchtern und empfindsam, und auch sehr verletzlich. Sind Jungfrau geborene Menschen unzufrieden so äußert sich dass in endlosen Nörgeleien und Gemecker. Darin können sie zeitweise penetrant werden. In ihrem Inneren teilen sie eine irdische Liebe mit allem, was sie umgibt. 
+
+Jungfrau ist ein Erdzeichen. Jungfraugeborenen macht es Freude, die praktischen Seiten zu leben und etwas mit den eigenen Händen herzustellen. Sie strahlen Feinheit und Ruhe aus, sind besonnen und freundlich. Angenehme Zeitgenossen eben. 
+
+Der beherrschende Planet der Waage ist die Venus, Göttin der Liebe und Schönheit. Die Waage ist ein Luftzeichen und die Luft ist in erster Linie mit Ideen und Prinzipien befasst. Natürlich auch mit Liebe und Partnerschaft. Die Vorstellung der Waage-Menschen die Liebe und Beziehung betreffend ist von harmonischen und vollkommenen Ideen geprägt. Liebe ist Stilvoll und mit dem richtigem Design ausgestattet. Hier ist die Waage Perfektionist. Sie sucht das Gute, Wahre und Schöne, Sie hat die Gabe Stil, Eleganz und Harmonie um sich zu verbreiten. Die Waage hat Initiative und braucht Ziele. Sie ist immer hinter etwas her und verwirklicht das am liebsten mit einem Partner. Waage Menschen sind geschickte Diplomaten. Sie konnen mit einem Minimunm an Kränkung ihre Ziele durchsetzen und können auf Aggressionen verzichten. Sie macht lieber Komplimente als zu beleidigen und ist bestrebt das Schöne und Gute am Menschen und am Leben zu sehen. Die rüpelhafte Wahrheit interessiert sie nicht, sie läßt sich ihre Träme nicht nehmen. Ein Waage-Mensch fühlt sich zu Kunst, Kultur und Architektur hingezogen. Er muss Schönheit in seiner unmittelbaren Umgebung haben und ist auch selbst oft künstlerisch begabt. Manche haben auch musikalisches Talent. Wie bei einer Waage, die aus dem Gleichgewicht gerät, wenn sie einseitig beansprucht oder belastet wird, brauchen Waage-Menschen ein ausgeglichenes Leben in allen Bereichen um glücklich zu ein. Im Allgemeinen sind Waage-Menschen beliebt und umgänglich, freundlich und besonnen.
+
+Der Skorpion versteckt sich gerne im Dunkeln unter Steinen. Er zeigt sich nicht gerne bei Lichte und wenn ihn ein Lichtschein trifft, kann er sich sogar selbst mit seinem Stachel töten. Die im Zeichen des Skorpion geborenen gelten als tiefgründige Menschen, mit starken, extremen Gefühlen. Diese Menschen empfinden intensiv und brauchen lange, um über gewisse Dinge hinwegzukommen. Zu den intensiven Gefühlen gehören Trennung, Krankheit und Tod aber auch intensive Liebe und tiefes Glück. Da der Skorpion dazu neigt, sich zu fixieren, zu binden und sich gerne festlegen möchte, kann er nur schwer Veränderungen ertragen oder auch Gefühle loslassen. Wenn der Skorpion sich einmal zu etwas entschlossen hat dann gilt das. Skorpion Geborene sind oft charismatische Persönlichkeiten. Man vermutet gerne Geheimnisse und unbekannte Welten und Leidenschaften. Der Skorpion ist ungern offen.  
+
+Skorpion-Menschen brauchen viel Zeit für sich selbst, um über ihre tiefsten Gefühle nachdenken zu können.
+Skorpione sind manchmal sehr ruhig, schüchtern und empfindsam. Sie haben ein gutes Gespür für die Schwächen anderer. Am wichtigsten für den Skorpion ist Selbsterkenntnis. darin ist er sich selbst gegenüber schonungslos. Er hat keine Angst davor, Dinge auszuprobieren, die andere sich nicht getrauen würden, wenn es ihm dabei hilft, sich selbst besser kennen zu lernen. Skorpione verlassen sich am liebsten nur auf sich selbst. Sie vertrauen ungern anderen Menschen und haben lieber selber die Kontrolle über sich und ihr Leben. Sie sind deshalb so empfindlich, wenn jemand sie ausnutzt oder verletzt. Sie sind nachtragend und können schwer verzeihen, Sie haben ein starkes Gerechtigkeitsgefühl. Bei Skorpion-Kindern ist besonders darauf zu achten, dass sie auf ungerechte Bestrafung empfindlich reagieren. Skorpiongeborene sind als Kinder besonders feinfühlig und verständig mit einem starken Gespür für Unstimmigkeiten und Lügen. Sie verstehen mehr als andere Kinder. Sie sind sehr einsichtig, wenn Eltern ihnen erklären, warum sie etwas tun oder lassen sollen.
+Skorpione können aufgrund ihres tiefgründigen Wesens  Psychologen werden, oder gute Ärzte und Chirurgen. Da sie sich auch zu Machtbereichen hingezogen fühlen findet man Skorpion Menschen auch in der Politik oder in Führungspositionen..
+Skorpion ist ein Wasserzeichen. Skorpione sind sehr verlässlich. emotional stark und lassen sich nicht so leicht aus der Ruhe bringen.
+
+Der Schütze wird immer mit Pfeil und Bogen dargestellt  Er schießt auf ein entferntes Ziel, und schießt auch gerne hoch über das Ziel hinaus. Er ist großzügig und weitsichtig, immer den Horizont, das Weite, das  Entfernte im Visier. Er ist immer in Bewegung. Er reist gerne, zu neuen Orten, möchte neue Menschen kennen lernen. Ferne Länder und Kulturen faszinieren ihn und halten ihn in Bann. Er ist abenteuerlustig und dem Fremden aufgeschlossen.
+Schütze-Menschen brauchen viel Freiheit, sie möchten so viele Erfahrungen wie möglich machen. Sie leben nicht gerne in einem immer wiederkehrenden Alltagstrott, Routinetätigkeiten machen sie eher unglücklich. Langeweile ist für einen Schützen unerträglich. Er möchte immer auf zu neuen Ufern, Entdecken, Erfahren und Lernen. Mit Grenzen und Beschränkungen hat er nicht viel im Sinn. Er schöpft gerne aus dem Vollen. Vielfalt, Reichtum und Großartiges, eben alle Superlative sind ihm vertraut. Auf den Schützen wartet das Beste, Größte, Schönste...!  Sie haben häufig einen ruhelosen und abenteuerlustigen Geist und interessieren sich für alle möglichen Lehren. Im Grunde suchen sie nach Erkenntnis, sie wollen wirklich begreifen und verstehen. Sie interessieren sich für Philosophie, Religion und die Welt der Ideen. Sie verbreiten leidenschaftlich Ideen, von denen sie überzeugt sind und würden am liebsten alle Menschen mitreißen. Sie können feurig für ihre Ideen werben, sie sind deshalb gute Unterhalter, manchmal auch Missionare. 
+Schütze ist ein Feuerzeichen. Schützen sind gerne immer unterwegs, brauchen einen Glauben an etwas und an sich selbst. Sie müssen ihren lebhaften Forschergeist ausleben, denn sie sind voll innerer Fragezeichen. Sie sind mutig und waghalsig. Der einzige Nachteil dieses doch sehr anziehenden, faszinierenden Schützen ist das Zuviel, die Übertreibung. nach dem Motto: "genug kann nie genügen..!"
+
+Der Steinbock ist zielstrebig und verantwortungsbewusst. Er strebt gerne einem Ziel nach, das über ihn selbst hinauszeigt. Das persönliche Befinden, das eigene Ego sind zweitrangig, wichtig sind die höheren Ziele im Leben und gesellschaftliche Positionen. So geben sie gute Politiker, Manager, Anwälte, Lehrer oder schlicht hart arbeitende Menschen ab. Wo immer sie auftauchen, übernehmen sie die Verantwortung im Beruf, wie im Privatleben. Hat man mit einem Steinbock zu tun, so kann man sicher sein, dass er die Verantwortung übernimmt, schwierige Aufgaben nicht scheut und eisern und hart arbeitet. Auf den Steinbock kann man sich verlassen. Er vergisst zwar manchmal vor lauter Pflichtgefühl die Leichtigkeit und die Freunden des Lebens, ist aber diesen Seiten nicht ganz abgeneigt. Der Steinbock ist ehrgeizig und will hoch hinaus. Er braucht ein Ziel, auf dass er hinarbeiten kann. Er arbeitet diszipliniert und setzt sich für gesellschaftliche Belange ein. Er steigt immer dem Gipfel entgegen. Er hat einen sicheren Gang, stolpert nicht und weiß wohin er geht.  Manchmal ist es auf dem Gipfel einsam und kalt. Wichtig für einen Steinbock ist Erfolg. Er braucht das Gefühl das er gute, herausragende Fähigkeiten hat, dass er etwas besser kann als jeder andere. Steinbock-Menschen sind ruhig und diplomatisch und wissen, wie man sorgsam und taktvoll mit anderen umgeht. Es kann lange dauern bis Du einen Steinbock richtig kennst, weil er von Natur aus eher ernst und schüchtern ist.
+Steinbock ist ein Erdzeichen. 
+
+Der Steinbock sorgt auch gut und beständig für seine Familie. Es fällt ihm nicht schwer zu verzichten und Frustrationen oder unangenehme Gefühle hinzunehmen. Solche Erscheinungen sind vorrübergehend und können einen Steinbock nicht verschrecken. Er ist gelassen, geduldig und ausdauernd.
+
+Der Steinbock ist zielstrebig und verantwortungsbewusst. Er strebt gerne einem Ziel nach, das über ihn selbst hinauszeigt. Das persönliche Befinden, das eigene Ego sind zweitrangig, wichtig sind die höheren Ziele im Leben und gesellschaftliche Positionen. So geben sie gute Politiker, Manager, Anwälte, Lehrer oder schlicht hart arbeitende Menschen ab. Wo immer sie auftauchen, übernehmen sie die Verantwortung im Beruf, wie im Privatleben. Hat man mit einem Steinbock zu tun, so kann man sicher sein, dass er die Verantwortung übernimmt, schwierige Aufgaben nicht scheut und eisern und hart arbeitet. Auf den Steinbock kann man sich verlassen. Er vergisst zwar manchmal vor lauter Pflichtgefühl die Leichtigkeit und die Freunden des Lebens, ist aber diesen Seiten nicht ganz abgeneigt. Der Steinbock ist ehrgeizig und will hoch hinaus. Er braucht ein Ziel, auf dass er hinarbeiten kann. Er arbeitet diszipliniert und setzt sich für gesellschaftliche Belange ein. Er steigt immer dem Gipfel entgegen. Er hat einen sicheren Gang, stolpert nicht und weiß wohin er geht.  Manchmal ist es auf dem Gipfel einsam und kalt. Wichtig für einen Steinbock ist Erfolg. Er braucht das Gefühl das er gute, herausragende Fähigkeiten hat, dass er etwas besser kann als jeder andere. Steinbock-Menschen sind ruhig und diplomatisch und wissen, wie man sorgsam und taktvoll mit anderen umgeht. Es kann lange dauern bis Du einen Steinbock richtig kennst, weil er von Natur aus eher ernst und schüchtern ist.
+Steinbock ist ein Erdzeichen. 
+
+Der Steinbock sorgt auch gut und beständig für seine Familie. Es fällt ihm nicht schwer zu verzichten und Frustrationen oder unangenehme Gefühle hinzunehmen. Solche Erscheinungen sind vorrübergehend und können einen Steinbock nicht verschrecken. Er ist gelassen, geduldig und ausdauernd.
+
+Irrtümlich zählt man den Wassermann zu den Wasserzeichen. Er ist aber ein Luftzeichen. Die Wassermann-Menschen teilen ihre Gaben und Ideen gerne und großzügig mit anderen. Sie sind Humanisten,  Menschenfreunde.  Sie interessieren sich für Menschen - einzeln und in der Gruppe und halten sich gerne in Gruppen auf. Wichtig in diesen Gruppen ich eine gemeinsame Gesinnung, eine Idee oder eine Mission. Wassermann-Menschen sind gute Freunde Sie halten auch andere für ihren Freund, unabhängig von Äußerlichkeiten. Menschliche Fassaden durch Make-up, Style, Design produziert, beeindrucken ihn nicht. Wassermann ist ein sehr freundliches Zeichen.
+Viele Wassermänner haben Köpfchen. Sie sind gute Wissenschaftler und interessieren sich für alles, das Menschen helfen kann. Auch die Astrologie sagt man ist hier zuhause. Sie sind fasziniert von Geräten und Erfindungen, und manche Wassermänner werden sogar selbst große Erfinder. Sie lieben die Veränderung. Manche  unterstützen vielleicht politische Bewegungen, die sich für Freiheit und Gerechtigkeit einsetzen. Wassermann-Menschen sind eher distanziert als emotional, weil sie sich mehr für Ideen und Gedanken interessieren.
+
+
+Wassermann-Menschen sind tolerant und unkonventionell. Wenn alle in eine Richtung laufen kann man sich gewiss sein, dass Wassermann-Menschen entgegengesetzt laufen. Manchmal auch, wenn es keinen Sinn weiteren Sinn macht, als nur aus der Masse herauszutreten. Das Bedürfnis ist, nicht so sein wie andere aber gleichzeitig auch, sich mit seinesgleichen zu umgeben. Ein Widerspruch? Nicht für Wassermann-Menschen, ganz im Gegenteil sie können mit Extremen und Polaritäten umgehen. Sie zählen zu den Revolutionären und Aussteigern. Sie sind echte Individualisten. Individualität ist ein Muss. Das Verständnis für andere, die Fähigkeit wahrzunehmen, wie Menschen wirklich denken und fühlen, zeigt dass sie sich wirklich für Andere interessieren. Wassermann-Menschen sind freiheitsliebend. Sie können Freiheit geben und brauchen sie auch für sich persönlich.
+
+Fischegeborene Menschen sind sehr hingebungsvoll und allen Wesen zugewandt. Sie scheinen sehr anmutig und zeigen eine Liebe zu Allem und Jedem, der ihnen begegnet. Das kommt anderen Menschen manchmal grenzenlos und schwer verständlich vor. Für Fischegeborene ist es aber wichtig sich Eins und "im Fluss"  mit den Dingen den Lebens zu fühlen. Das hat einerseits etwas Unpersönliches, aber auch etwas Faszinierendes. Fische geborene scheinen bisweilen jenseits von Gut und Böse, nicht von dieser Welt zu sein. Sie sind verträumt und phantasievoll. Sie sind kreativ und erfindungsreich. Die materielle, greifbare Welt ist ihnen nicht so wichtig, sie ist eher langweilig. Es ist das Unsichtbare, das Spirituelle das sie fesselt und interessiert. Sie haben Zugang zu Schönheit und Vielfalt. Sie lieben Musik und Gedichte und sind unendlich romantisch. Sie haben eine eigene, innere Welt, die ganz besonders wertvoll für sie ist. Sie werden Künstler, Dichter oder einfach kreative Menschen. Fische Menschen sind bisweilen Chaoten und leben das offen oder verstecken es hinter einer scheinbaren Ordnungssucht. Sie sind nicht besonders realistisch, gerade deshalb wagen sie sich an hoffnungslose Fälle oder Projekte. Da Fische Menschen mitfühlend und unendlich hilfsbereit sind, findet man sie auch in helfenden Berufen. Sie können tief mit Menschen mitfühlen, die unglücklich sind und wissen Trost. Bisweilen können Fischegeborene auch zu tief ins Glas schauen. Bei bestimmten Formen der Realitätsflucht kann es auch zu Suchtproblemen kommen. 
+
+Fische Menschen sind religiös. So können sie an übersinnliche Kräfte oder an das Wort Gottes glauben.
+Fischegeborene lieben den Zauber und die Geheimnisse Fische haben oft das Bedürfnis alleine zu sein, denn durch ihre ungefilterte Aufmerksamkeit mit ihrer Umgebung können sie kaum abschalten und zu sich finden. Aber sie lieben die Gemeinschaft von anderen. Sie gehen gerne im Anderen auf und sind dabei hingebungs- und aufopferungsvoll. 
+Fische ist ein Wasserzeichen 
+
+Für Fische Menschen ist es wichtig einen eigenen, zurückgezogenen Raum zu haben, in dem sie ihren Träumen und Phantasien ungestört folgen können.  Damit können sie sich wieder aufladen und neue Energien tanken. Die Fische holen sich ihre Kraft über Bäume, Sterne oder auch Mitmenschen, auch darin sind sie unbegrenzt.  Eben das ist schwer zu verstehen, wie auch die Fische geborenen schwer zu begreifen sind, im Zweifelsfall kann man sie einfach nur lieben. 
