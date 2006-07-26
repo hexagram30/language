@@ -163,13 +163,13 @@ class Word(object):
         
 class UTF8File(object):
     
-    def __init__(self, filename=None, mode=None):
+    def __init__(self, filename=None, mode='r'):
         self.filename = filename
         if filename:
             self.open(filename, mode)
 
     def open(self, filename, mode):
-        if filename and mode:
+        if filename:
             self.fh = codecs.open(filename, mode, 'utf-8')
             return self
         raise FileNotFound
@@ -296,15 +296,14 @@ class Syntagmata(object):
     '''
     def __init__(self, langName='', vowels='', consonants=''):
         if not vowels:
-            vowels = UTF8File(vowelFileTmpl % langName)
+            vowels = UTF8File(vowelFileTmpl % langName).read()
         if not consonants:
-            consonants = UTF8File(consonantFileTmpl % langName)
+            consonants = UTF8File(consonantFileTmpl % langName).read()
         self.langName = langName
         self.vowel = Vowel(vowels)
         self.consonant = Consonant(consonants)
         self.word = Word(self.vowel, self.consonant)
         self.stats = {}
-        self.totals = Counter()
 
     def __add__(self, syntagObj):
         vowels = self.vowel.letters + syntagObj.vowel.letters
@@ -357,12 +356,13 @@ class Syntagmata(object):
     def getStats(self, sourceText=''):
         if self.stats:
             return self.stats
-        if sourceText:
-            return self.generateStats(sourceText)
-        file = UTF8File(statsFileTmpl % self.langName)
-        self.stats = eval(file.read())
-        file.close()
-        return self.stats
+        try:
+            file = UTF8File(statsFileTmpl % self.langName)
+            self.stats = eval(file.read())
+            file.close()
+        except IOError:
+            pass
+        return self.generateStats(sourceText)
 
     def makeWordList(self, sourceLines):
         wordList = []
@@ -380,14 +380,11 @@ class Syntagmata(object):
         thisType = initialType = lastType = None
         syllables = []
         for letter in word:
-            self.totals.updateCount(LetterType.name)
             try:
                 thisType = self.getLetterType(letter)
             except InvalidLetter:
-                self.totals.updateCount(IllegalType.name)
                 continue
             if not part:
-                self.totals.updateCount(InitialType.name)
                 initialType = thisType
             if thisType == initialType and thisType != lastType:
                 syllables.append(part)
@@ -415,11 +412,9 @@ class Syntagmata(object):
             medials = []
             if len(syllables) > 1:
                 finalData.updateCount(syllables[-1])
-                self.totals.updateCount(FinalType.name)
             if len(syllables) > 2:
                 for medial in syllables[1:-1]:
                     medialData.updateCount(medial)
-                    self.totals.updateCount(MedialType.name)
         self.stats = {
             InitialType.name: initialData,
             MedialType.name: medialData,
@@ -427,9 +422,11 @@ class Syntagmata(object):
         return self.getStats()
 
     def makeWordPart(self, positionObj):
+        self.getStats()
         syllableData = self.stats[positionObj.name]
-        syllableData
         summedCounts = sum(syllableData.values())
+        print "Syllable data: %s" % str(syllableData)
+        print "Summed count: %s" % summedCounts
         choiceIndex = random.randint(1, summedCounts)
         # next we need to get the count ranges for each pseudo-syllable so that
         # we pick a syllable randomly but statistically accurately
@@ -467,370 +464,9 @@ class Syntagmata(object):
             word += self.makeInitialPart()
             word += self.makeFinalPart()
         return word
-        
-class StatsMaker(object):
-    '''
-
-    '''
-
-    def __init__(self, vowels=None, consonants=None):
-        if not vowels:
-            vowels = 'aeiouy'
-        if not consonants:
-            consonants = 'bcdfghjklmnpqrstvwxz'
-        self.vowel = Vowel(vowels)
-        self.consonant = Consonant(consonants)
-        self.word = Word(self.vowel, self.consonant)
-
-        self.source_filename = ''
-        self.legal_filename = ''
-        self.list_filname = ''
-        self.stats_filname = ''
-        self.freqs = {}
-        self.totals = {}
-        self.wordlist = []
-        self.illegals = {}
-
-        self.stats = {}
-
-    def isWord(self, word):
-        return self.word(word)
-
-    def isVowel(self, letter):
-        return self.vowel(letter)
-
-    def isConsonant(self, letter):
-        return self.consonant(letter)
-
-    def getWordList(self):
-        '''
-
-        '''
-        if self.wordlist:
-            return self.wordlist
-        file = UTF8File(self.source_filename, 'r')
-        for line in file.readlines():
-            words = line.split()
-            for word in words:
-                word = word.strip()
-                if len(word) > 2:
-                    if self.isWord(word):
-                        self.wordlist.append(word.lower())
-        file.close()
-        return self.wordlist
-
-    def writeWordList(self):
-        '''
-        
-        '''
-        file = UTF8File(self.list_filname, 'w+')
-        self.wordlist = self.getWordList()
-        for word in self.wordlist:
-            file.write(word + "\n")
-        file.close()
-
-    def getLegalVowels(self):
-        return self.vowel.letters
-
-    def getLegalConsonants(self):
-        return self.consonant.letters
-
-    def sortStats(self, data):
-        '''
-
-        '''
-        data = map(None, data.values(), data.keys())
-        data.sort()
-        data.reverse()    
-        return data
-
-    def dictCount(self, data, key):
-        '''
-        
-        '''
-        try: data[key] += 1
-        except: data[key] = 1
-        return data
-
-    def getLetterType(self, letter):
-        '''
-
-        '''
-        if self.isConsonant(letter): 
-              type = "con"
-              self.totals = self.dictCount(self.totals, 'consonants')
-              self.totals = self.dictCount(self.totals, 'letters')
-        elif self.isVowel(letter): 
-              type = "vow"
-              self.totals = self.dictCount(self.totals, 'vowels')
-              self.totals = self.dictCount(self.totals, 'letters')
-        else: 
-              type = "ill"
-              self.totals = self.dictCount(self.totals, 'illegals')
-              self.illegals = self.dictCount(self.illegals, letter)
-        return type
-
-    def getWordParts(self, word):
-        '''
-
-        '''
-        #print word
-        part = ''
-        beg_check = 1
-        output = []
-        for i in range(len(word)):
-            letter = word[i]
-            part = part + letter
-            try: 
-                next = self.getLetterType(word[i+1])
-                if i == 0 or beg_check: position = "beg"
-                else: position = "med"
-            except: 
-                next = None
-                position = "end"
-            type = self.getLetterType(letter)
-            if type != next:
-                beg_check = 0
-                #print "index: %s, letter: %i, type: %s, next: %s, part: %s, position: %s" % (word[i], i, type, next, part, position)
-                output.append((position, part))
-                part = ''
-        return output
-    
-    def getWordStats(self):
-        '''
-
-        '''
-        self.wordlist = self.getWordList()
-
-        parts = []
-        beginnings = {}
-        medials = {}
-        endings = {}
-        for word in self.wordlist:
-            parts = self.getWordParts(word)
-            #print parts
-            for part in parts:
-                if part[0] == "beg":
-                    beginnings = self.dictCount(beginnings, part[1])
-                    self.totals = self.dictCount(self.totals, 'beginnings')
-                elif part[0] == "med":
-                    medials = self.dictCount(medials, part[1])
-                    self.totals = self.dictCount(self.totals, 'medials')
-                elif part[0] == "end":
-                    endings = self.dictCount(endings, part[1])
-                    self.totals = self.dictCount(self.totals, 'endings')
-
-        beginnings = self.sortStats(beginnings)
-        endings = self.sortStats(endings)
-        medials = self.sortStats(medials)
-        self.stats = {
-            'beginnings':beginnings, 
-            'medials': medials, 
-            'endings': endings}
-        return self.stats
-
-    def statTotals(self):
-        '''
-
-        '''
-        totals = 0
-        self.stats = self.getWordStats()
-        for type in self.stats.keys():
-            #print type
-            for tuple in self.stats[type]:
-                #print tuple
-                if tuple[1] != '':
-                    totals += tuple[0]
-        return totals
 
     def writeStatsFile(self):
-        '''
-
-        '''
-        output = ''
-        percent = 0
-        stats = {}
-        file = UTF8File(self.stats_filename, 'w+')
-        self.stats = self.getWordStats()
-        for type in self.stats.keys():
-            counter = 1
-            for (part_count, word_part) in self.stats[type]:
-                if word_part != '':
-                    ### pickle method
-                    #stats[type] = {'range': (counter, counter + part_count), 'word_part': word_part}
-                    stats.setdefault(type,[]).append((counter, counter + part_count, word_part))
-
-                    ### old method
-                    # print part_count, word_part
-                    # percent = float(part_count)/self.totals[type]
-                    # output = "'%s'\t'%s'\t%i\t%f\t(%i, %i)\n" % (type, word_part, part_count, percent, counter, counter + part_count)
-                    # file.write(output)
-                    counter += part_count
-        #print stats
+        stats = self.getStats()
+        file = UTF8File(filename=statsFileTmpl % self.langName, mode='w+')
         file.write(str(stats))
         file.close()
-
-class CreateWord(object):
-    '''
-
-    '''
- 
-    def __init__(self):
-        self.stats_filename = ''
-        self.stats = {}
-        self.max = {}
-        self.last_type = ''
-        self.letter = ''
-  
-    def openPickledData(self):
-        '''
-
-        ''' 
-        if self.stats: return 1
-        file = UTF8File(self.stats_filename, 'r')
-        # the stats data structure is saved as a string in a file
-        self.stats = eval(file.read())
-        # we want the maximum values for each of the letter placement types so
-        # that we can determine the range wherein they lie -- we'll use this
-        # information when generating a random number
-        self.max['beginnings'] = self.stats['beginnings'][-1][1]
-        self.max['medials'] = self.stats['medials'][-1][1]
-        self.max['endings'] = self.stats['endings'][-1][1]
-
-    def _getWordPart(self, type):
-        '''
-        
-        '''
-        letter = ''
-        seed = random.Random(time.time())
-        rand = int(seed.uniform(1, self.max[type]))
-        for (start, end, letter) in self.stats[type]:
-            if rand >= start and rand <= end:
-                break
-
-        check = StatsMaker()
-        this_type = check.getLetterType(letter[0])
-
-        if this_type != self.last_type: 
-            self.last_type = this_type
-            self.letter = letter
-        else:
-            self._getWordPart(type)
-        return self.letter  
-
-    def getEndPart(self):
-        '''
-
-        '''
-        return self._getWordPart('endings')
-
-    def getBegPart(self):
-        '''
-
-        '''
-        return self._getWordPart('beginnings')
-
-    def getMedPart(self):
-        '''
-
-        '''
-        return self._getWordPart('medials')
-
-    def getWord(self, parts):
-        '''
-
-        '''
-        word = self.getBegPart()
-        for i in range(parts - 2):
-            word += self.getMedPart()
-        word += self.getEndPart()
-
-        return word
-
-    def getChineseWord(self, parts):
-        '''
-
-        '''
-        word = ''
-        for i in range(int(parts/2)):
-            word += self.getBegPart()
-            word += self.getEndPart()
-        
-        return word
-
-class EvolveWord(object):
-    '''
-
-    '''
-
-    def __init__(self, word):  
-        self.word = word
-        self.stats = {}
-        self.last_type = ''
-        self.letter = ''
-        self.stats_filname = ''
-        self.check = StatsMaker()
-        self.gen = CreateWord()
-        self.gen.stats_filname = self.stats_filname
-        #self.patterns = 
-
-    def deletePart(self):
-        '''
-
-        '''
-
-    def insertPart(self):
-        '''
-
-        '''
-        # get current type
-        # self.gen._getWordPart
-
-    def metathesizePart(self):
-        '''
-
-        '''
-  
-    def eliminateRepeats(self, part):
-        '''
-
-        '''
-        #pattern = ".*[a-zA-Z]{2,}.*"
-        pattern = "([a]{2,})"
-        regex = re.compile(pattern)
-        return re.sub("([a]{1})([a]{1,})","\1", part)
-
-    def assimilatePart(self):
-        '''
-
-        '''
-        print self.word
-        print self.eliminateRepeats(self.word)
-        parts = self.check.getWordParts(self.word)    
-        print parts
-        output = ''
-        for (location, part) in parts:
-            if part != 'beg' and len(part) >= 2:
-            #  for i in range(len(part)):
-            #    print "i: %s, part: %s" % (i, part[i])
-                output += self.eliminateRepeats(part)
-        return output
-
-    def dissimilatePart(self):
-        '''
-
-        '''
-
-    def driftPart(self):
-        '''
-
-        '''
-        # substitue part 2 for all occurances of part 1
-        # but do it randomly, not for every letter in word... some percentage/probablity
-
-def _test():
-    import doctest, LangGen
-    return doctest.testmod(LangGen)
-
-if __name__ == '__main__':
-    _test()

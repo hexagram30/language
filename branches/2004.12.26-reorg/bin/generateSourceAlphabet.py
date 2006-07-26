@@ -4,10 +4,13 @@ import re
 import sys
 import codecs
 
+from wordgen import UTF8File
+from wordgen import Syntagmata
+
 sourceType = sys.argv[1]
 sourceFile = "corpora/sources/%s.txt" % sourceType
 destFile = "corpora/alphabets/%s.txt" % sourceType
-data = codecs.open(sourceFile, 'r', 'utf-8').read()
+data = UTF8File(sourceFile, 'r').read()
 alphabet = {}
 for letter in data:
     letter = letter.strip()
@@ -20,9 +23,9 @@ keys.sort()
 alphabet = ''.join(keys)
 
 if destFile:
-    fh = codecs.open(destFile, 'w+', 'utf-8')
-    fh.write(alphabet)
-    fh.close()
+    file = UTF8File(destFile, 'w+')
+    file.write(alphabet)
+    file.close()
     print "Alphabet saved to %s." % destFile
 else:
     alphabet

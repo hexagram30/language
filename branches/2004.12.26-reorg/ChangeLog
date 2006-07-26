@@ -1,3 +1,10 @@
+2006.07.26
+
+* Created a wordgen package.
+* Added placeholders for worgen submodules.
+* Added more alphabets, vowels, etc.
+* Started converting the bin scripts to use the new Syntagamata code.
+
 2006.07.24
 
 * Created a UFTFile object for mangaing the codecs files.
@@ -8,6 +15,9 @@ vowels and consonants.
 * Added corpra files for oldenglish and sanskrit.
 * Finished the rewrite of LangGen (LangGen.Syntagmata).
 * Added many more unit tests.
+* Renamed LangGen to wordgen.
+* Added support for writing new stats files.
+
 
 2006.07.17
 
