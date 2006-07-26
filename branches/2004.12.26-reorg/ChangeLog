@@ -4,6 +4,11 @@
 * Added placeholders for worgen submodules.
 * Added more alphabets, vowels, etc.
 * Started converting the bin scripts to use the new Syntagamata code.
+* Moved wordgen.py to wordgen/syntagmata.py.
+* Removed the old lib dir.
+* Moved exception and type code out of syntagmata and into the placeholders.
+* Moved letters and word classes out of syn and into an elemants module.
+* Moved utf-8 file and counter into a utilities module.
 
 2006.07.24
 
