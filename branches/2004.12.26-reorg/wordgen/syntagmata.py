@@ -313,7 +313,7 @@ class Syntagmata(object):
             InitialType.name: Counter(),
             MedialType.name: Counter(),
             FinalType.name: Counter()}
-        itemSum = self.stats.items() + syntagObj.stats.items()
+        itemSum = self.getStats().items() + syntagObj.getStats().items()
         for key, data in itemSum:
             for syllable, count in data.items():
                 try:
@@ -360,6 +360,7 @@ class Syntagmata(object):
             file = UTF8File(statsFileTmpl % self.langName)
             self.stats = eval(file.read())
             file.close()
+            return self.stats
         except IOError:
             pass
         return self.generateStats(sourceText)
@@ -422,11 +423,9 @@ class Syntagmata(object):
         return self.getStats()
 
     def makeWordPart(self, positionObj):
-        self.getStats()
-        syllableData = self.stats[positionObj.name]
+        stats = self.getStats()
+        syllableData = stats[positionObj.name]
         summedCounts = sum(syllableData.values())
-        print "Syllable data: %s" % str(syllableData)
-        print "Summed count: %s" % summedCounts
         choiceIndex = random.randint(1, summedCounts)
         # next we need to get the count ranges for each pseudo-syllable so that
         # we pick a syllable randomly but statistically accurately

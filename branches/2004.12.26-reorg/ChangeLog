@@ -10,6 +10,9 @@
 * Moved letters and word classes out of syn and into an elemants module.
 * Moved utf-8 file and counter into a utilities module.
 * Cleaned up some files.
+* Split up the languages file into a subpackage.
+* Added bin/generateMythgarthurWordLists.py.
+* Added more corpora.
 
 2006.07.24
 

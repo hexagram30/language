@@ -3,9 +3,8 @@
 import sys
 import codecs
 
-from wordgen import Syntagmata
+from wordgen.syntagmata import Syntagmata
 
 lang = sys.argv[1]
-
 syn = Syntagmata(lang)
 stats = syn.writeStatsFile()
