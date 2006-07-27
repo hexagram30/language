@@ -2,7 +2,7 @@
 CHECK=$1
 SOURCE_DIR="sourceforge_website/"
 REMOTE_USER="oubiwann"
-REMOTE_HOST="shell.sf.net"
+REMOTE_HOST="shell.sourceforge.net"
 REMOTE_DIR="pywordgen/"
 RSYNC_BIN="rsync"
 DEFAULT_OPTIONS="--exclude .svn* --recursive --stats  --progress --checksum"

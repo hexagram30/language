@@ -1,3 +1,4 @@
+import re
 
 class Letter(object):
     '''

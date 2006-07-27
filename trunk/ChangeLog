@@ -15,6 +15,13 @@
 * Added more corpora.
 * Merged branch to trunk (-r5:22).
 * Renamed the old "examples" directory to "old".
+* Updated the site news.
+* Updated menu links.
+* Part of wordgen.syntagmata never got committed to svn; now it should be.
+* Added the tmp dir that didn't get merged from branch.
+* Removed the blank languages.py file.
+* Added a general python script for generating word lists.
+* Added generated word lists in tmp.
 
 2006.07.24
 

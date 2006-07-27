@@ -1,13 +1,13 @@
 from wordgen.languages import mythgarthur
 
 l = mythgarthur.Orcish()
-l.createWordlist()
+l.createWordlist(maxSyllables=5)
 
 l = mythgarthur.Elvish()
-l.createWordlist()
+l.createWordlist(maxSyllables=5)
 
 l = mythgarthur.Human()
-l.createWordlist()
+l.createWordlist(maxSyllables=5)
 
 l = mythgarthur.Dwarvish()
-l.createWordlist()
+l.createWordlist(maxSyllables=5)
