@@ -1,0 +1,16 @@
+                                <table cellpadding="10" cellspacing="0" width="100%">
+                                        <tbody>
+                                                <tr>
+                                                        <td valign="top">
+<!-- main content -->
+<h1>
+<!--#include virtual="/cgi-bin/pageparts.py?datatype=config&file=site.title.short" -->
+</h1>
+<!--#include virtual="/cgi-bin/pageparts.py?datatype=content&file=docs" -->
+                                                                <p class="center">
+                                                                </p>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                </table>
+

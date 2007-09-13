@@ -1,0 +1,31 @@
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tbody>
+                <tr bgcolor="#333366">
+                        <td>
+                                <img src="spacer.gif" width="1" height="1" border="0" alt="">
+                        </td>
+                </tr>
+                <tr bgcolor="#9999cc">
+                        <td align="right" valign="bottom">
+<!-- footer horiz menu -->
+<!--#include virtual="/cgi-bin/pageparts.py?datatype=menu.horiz&file=footer" -->
+                        </td>
+                </tr>
+                <tr bgcolor="#333366">
+                        <td>
+                                <img src="spacer.gif" width="1" height="1" border="0" alt="">
+                        </td>
+                </tr>
+        </tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="6" width="100%">
+        <tbody>
+                <tr valign="top" bgcolor="#cccccc">
+                        <td>
+                                <small>Copyright &copy; 2003 <a href="http://adytumsolutions.com">AdytumSolutions, Inc</a>.
+                                        <br>
+                                        All rights reserved.</small>
+                        </td>
+                        <td align="right">
+                                <small>
+

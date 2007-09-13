@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td class="logo">
+
+    </td>
+    <td class="time">
+    <!--#config timefmt="%A %B %d, %Y" -->
+    <!--#echo var="DATE_LOCAL" -->
+    </td>
+  </tr>
+</table>
