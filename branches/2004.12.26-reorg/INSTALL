@@ -1,4 +1,0 @@
-There are no install instructions yet. When I make a distro, I will added them then.
-Right now, if you want to run any of the examples, you will need to make sure that
-the LangGen.py file is in the same directory as any script that will use it. Of
-course, you could just add it to your site-packages directory...
