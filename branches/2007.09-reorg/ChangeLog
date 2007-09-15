@@ -12,6 +12,7 @@
 (again).
 * Removed old adytum directory.
 * Moved Language class out of init.
+* Added corpora.files for standardizing access to corpora resources.
 
 2006.07.26
 
