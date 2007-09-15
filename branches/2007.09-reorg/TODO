@@ -6,7 +6,5 @@ language.
   . move/convert pertinent stuff in old to fictional
   . convert pertinent stuff in "tmp" to fictional
 * remove old, tmp
-* use setuptools
-* add namespace info to __init__
 * add site news item
 
