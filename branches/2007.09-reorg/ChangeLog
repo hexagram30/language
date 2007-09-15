@@ -1,3 +1,8 @@
+2007.09.15
+
+* Converted to using setuptools.
+* Added a new directory for a combined adytum.ling package.
+
 2006.07.26
 
 * Created a wordgen package.
