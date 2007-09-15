@@ -11,6 +11,7 @@
 * Changed my mind about namespaces: wordgen is now the top-level namespace
 (again).
 * Removed old adytum directory.
+* Moved Language class out of init.
 
 2006.07.26
 
