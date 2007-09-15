@@ -1,4 +1,4 @@
-* Add support for building merged wordlists by percent-contributed per
+* add support for building merged wordlists by percent-contributed per
 language.
 * change copora to 
   . languages at the top level, with their respective files beneath that
@@ -6,5 +6,7 @@ language.
   . move/convert pertinent stuff in old to fictional
   . convert pertinent stuff in "tmp" to fictional
 * remove old, tmp
-* add site news item
-
+* add code exmaple pages on sf.net site (maybe take stuff off of old trac for
+that)
+* upload to PyPI
+* fix links to svn, download, etc.
