@@ -8,6 +8,8 @@
 * Removed old, bogus tests.
 * Updated site content.
 * Moved corpora into wordgen.
+* Changed my mind about namespaces: wordgen is now the top-level namespace
+(again).
 
 2006.07.26
 
