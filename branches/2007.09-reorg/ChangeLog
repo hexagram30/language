@@ -3,6 +3,7 @@
 * Converted to using setuptools.
 * Added a new directory for a combined adytum.ling package.
 * Moved coprora into adytum.ling.
+* Moved wordgen into adytum.ling.
 
 2006.07.26
 
