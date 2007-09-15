@@ -10,6 +10,7 @@
 * Moved corpora into wordgen.
 * Changed my mind about namespaces: wordgen is now the top-level namespace
 (again).
+* Removed old adytum directory.
 
 2006.07.26
 
