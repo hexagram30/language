@@ -1,2 +1,12 @@
 * Add support for building merged wordlists by percent-contributed per
 language.
+* change copora to 
+  . languages at the top level, with their respective files beneath that
+  . a "fictional" top-level directory
+  . move/convert pertinent stuff in old to fictional
+  . convert pertinent stuff in "tmp" to fictional
+* remove old, tmp
+* use setup tools
+* add namespace info to __init__
+* add site news item
+
