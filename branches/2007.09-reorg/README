@@ -1,4 +1,0 @@
-All docs are embedded in python code. To read them without opening the souce files,
-just run pydoc in the PyWordGen directory:
-
-  pydoc ./LangGen.py

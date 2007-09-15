@@ -16,7 +16,7 @@ class Language(object):
             print self.makeWord(random.randint(1, maxSyllables))
 
     def createWordlist(self, filename='tempWordlist.txt', count=250,
-        maxSyllables=7):
+                       maxSyllables=7):
         if self.name:
             filename='tmp/%sWordlist.txt' % self.name
         data = []
