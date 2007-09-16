@@ -40,3 +40,17 @@ class Gaelic(Language):
     def __init__(self):
         super(Gaelic, self).__init__()
         self.language = Syntagmata('gaelic')
+
+class Sanskrit(Language):
+
+    def __init__(self):
+        super(Sanskrit, self).__init__()
+        self.language = Syntagmata('sanskrit')
+
+class Chinese(Language):
+
+    def __init__(self):
+        super(Chinese, self).__init__()
+        self.language = Syntagmata('chinese')
+
+
