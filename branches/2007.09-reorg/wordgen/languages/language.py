@@ -1,6 +1,7 @@
 import random
 
 from wordgen.utils import UTF8File
+from wordgen.syntagmata import Syntagmata
 
 class Language(object):
 
@@ -27,3 +28,15 @@ class Language(object):
         file = UTF8File(filename, 'w+')
         file.write('\n'.join(data))
         file.close()
+
+class English(Language):
+
+    def __init__(self):
+        super(English, self).__init__()
+        self.language = Syntagmata('english')
+
+class Gaelic(Language):
+
+    def __init__(self):
+        super(Gaelic, self).__init__()
+        self.language = Syntagmata('gaelic')

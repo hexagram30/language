@@ -6,6 +6,7 @@
 * Added fictional directory to languages.
 * Moved fictional languages into new directory.
 * Created middleearth placeholder for Tolkein languages.
+* Appended "earth" languages to language.py.
 
 2007.09.15
 
