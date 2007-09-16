@@ -1,31 +1,31 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+import ez_setup
+ez_setup.use_setuptools()
+from setuptools import setup
 
 setup(name="PyWordGen",
-    version="1.0",
+    version="1.1",
     description="Python Word Generator",
     author="Duncan McGreggor",
-    author_email="duncan@adytumsolutions.com",
-    url="http://pywordgen.sf.net",
+    author_email="duncan@adytums.us",
+    url="http://pywordgen.sourceforge.net",
     packages=[
-        'adytum',
-        'adytum.linguistics',
-        'adytum.linguistics.corpora',
-        'adytum.linguistics.syntagma',
+        'wordgen',
+        'wordgen.corpora',
+        'wordgen.languages',
     ],
-    data_files=[('adytum/linguistics/corpora',
-        ['lib/linguistics/corpora/afrikaner_wordlist.txt',
-        'lib/linguistics/corpora/arabic_wordlist.txt',
-        'lib/linguistics/corpora/chinese_wordlist.txt',
-        'lib/linguistics/corpora/english_wordlist.txt',
-        'lib/linguistics/corpora/french_wordlist.txt',
-        'lib/linguistics/corpora/german_wordlist.txt',
-        'lib/linguistics/corpora/hindi_wordlist.txt',
-        'lib/linguistics/corpora/japanese_wordlist.txt',
-        'lib/linguistics/corpora/korean_wordlist.txt',
-        'lib/linguistics/corpora/russian_wordlist.txt',
-        'lib/linguistics/corpora/spanish_wordlist.txt']
+    data_files=[('wordgen/corpora',
+        ['wordgen/corpora/afrikaner_wordlist.txt',
+        'wordgen/corpora/arabic_wordlist.txt',
+        'wordgen/corpora/chinese_wordlist.txt',
+        'wordgen/corpora/english_wordlist.txt',
+        'wordgen/corpora/french_wordlist.txt',
+        'wordgen/corpora/german_wordlist.txt',
+        'wordgen/corpora/hindi_wordlist.txt',
+        'wordgen/corpora/japanese_wordlist.txt',
+        'wordgen/corpora/korean_wordlist.txt',
+        'wordgen/corpora/russian_wordlist.txt',
+        'wordgen/corpora/spanish_wordlist.txt']
     )],
-    package_dir = {'adytum': 'lib'},
 )

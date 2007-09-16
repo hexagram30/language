@@ -1,4 +1,4 @@
-from wordgen.languages import earth
+from wordgen.language import Gaelic
 
-l = earth.Gaelic()
+l = Gaelic()
 l.createWordlist(maxSyllables=5)

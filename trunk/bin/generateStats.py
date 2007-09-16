@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import codecs
 
 from wordgen.syntagmata import Syntagmata
 

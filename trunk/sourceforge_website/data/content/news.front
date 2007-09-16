@@ -1,3 +1,11 @@
+Month: September 2007
+Headline: New Branch
+Date: 2007.09.15
+Content: More work is continuing on PyWordGen, with foucs on adding support for
+    setuptools, unifying python modules in a single namespace, adding support
+    for other languages, and improving test coverage. There is no timeline set
+    currently, but this work has been a long time waiting and I'm glad to be
+    playing with it again.
 Month: July 2006
 Headline: Reorg Branch Merged to Trunk
 Date: 2006.07.26

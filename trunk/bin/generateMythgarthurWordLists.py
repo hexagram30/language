@@ -1,4 +1,4 @@
-from wordgen.languages import mythgarthur
+from wordgen.fictional import mythgarthur
 
 l = mythgarthur.Orcish()
 l.createWordlist(maxSyllables=5)

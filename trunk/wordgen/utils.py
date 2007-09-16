@@ -1,6 +1,6 @@
 import codecs
 
-from exceptions import FileNotFound
+from wordgen.exceptions import FileNotFound
 
 class Counter(dict):
 
@@ -9,7 +9,6 @@ class Counter(dict):
             self[key] += 1
         except KeyError:
             self.setdefault(key, 1)
-
         
 class UTF8File(object):
     
