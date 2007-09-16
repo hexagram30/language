@@ -120,9 +120,9 @@ class Syntagmata(object):
     def __init__(self, langName='', vowels='', consonants=''):
         self.corpus = Corpus(langName, vowels, consonants)
         if not vowels:
-            vowels = self.corpus.vowels
+            vowels = self.corpus.getVowels()
         if not consonants:
-            consonants = self.corpus.consonants
+            consonants = self.corpus.getConsonants()
         self.langName = langName
         self.vowel = Vowel(vowels)
         self.consonant = Consonant(consonants)
@@ -211,7 +211,7 @@ class Syntagmata(object):
 
     def generateStats(self, sourceText=''):
         if not sourceText:
-            sourceText = self.corpus.source
+            sourceText = self.corpus.getSource()
         sourceLines = sourceText.split('\n')
         initialData = Counter()
         medialData = Counter()
@@ -236,7 +236,7 @@ class Syntagmata(object):
         if self.stats:
             return self.stats
         try:
-            self.stats = self.corpus.stats
+            self.stats = self.corpus.getStats()
             if self.stats:
                 return self.stats
         except IOError:
@@ -278,7 +278,11 @@ class Syntagmata(object):
         word += self.makeFinalPart()
         return word
 
-    def makeChineseWord(self, syllableCount):
+    def makeCVWord(self, syllableCount):
+        """
+        This method forces a CV (consonant-vowel) pattern that is commonly
+        found in Japanese and Chinese phonology.
+        """
         word = ''
         for i in range(int(syllableCount/2)):
             word += self.makeInitialPart()
