@@ -3,6 +3,7 @@
 * Added code to corpora.corpus for abstracting textual file data.
 * Added the test runner to syntagmata.py.
 * Made local exceptions import absolute (not relative).
+* Added fictional directory to languages.
 
 2007.09.15
 
