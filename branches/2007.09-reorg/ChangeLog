@@ -8,6 +8,7 @@
 * Created middleearth placeholder for Tolkein languages.
 * Appended "earth" languages to language.py.
 * Reorganized languages for a better api.
+* Removed empty languages directory.
 
 2007.09.15
 
