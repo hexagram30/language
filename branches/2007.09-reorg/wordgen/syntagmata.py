@@ -2,16 +2,12 @@ import re
 import time
 import random
 
-from types import *
-from exceptions import *
+from wordgen.types import *
+from wordgen.exceptions import *
+
 from utils import UTF8File, Counter
 from elements import Vowel, Consonant, Word
-
-basePath = './corpora'
-vowelFileTmpl = basePath + "/vowels/%s.txt"
-consonantFileTmpl = basePath + "/consonants/%s.txt"
-statsFileTmpl = basePath + "/stats/%s.txt"
-sourceFileTmpl = basePath + "/sources/%s.txt"
+from corpora.corpus import Corpus
 
 class Syntagmata(object):
     '''
@@ -122,10 +118,11 @@ class Syntagmata(object):
 
     '''
     def __init__(self, langName='', vowels='', consonants=''):
+        self.corpus = Corpus(langName, vowels, consonants)
         if not vowels:
-            vowels = UTF8File(vowelFileTmpl % langName).read()
+            vowels = self.corpus.vowels
         if not consonants:
-            consonants = UTF8File(consonantFileTmpl % langName).read()
+            consonants = self.corpus.consonants
         self.langName = langName
         self.vowel = Vowel(vowels)
         self.consonant = Consonant(consonants)
@@ -180,18 +177,6 @@ class Syntagmata(object):
     def getAlphabet(self):
         return self.consonant.letters + self.vowel.letters
 
-    def getStats(self, sourceText=''):
-        if self.stats:
-            return self.stats
-        try:
-            file = UTF8File(statsFileTmpl % self.langName)
-            self.stats = eval(file.read())
-            file.close()
-            return self.stats
-        except IOError:
-            pass
-        return self.generateStats(sourceText)
-
     def makeWordList(self, sourceLines):
         wordList = []
         for line in sourceLines:
@@ -226,9 +211,7 @@ class Syntagmata(object):
 
     def generateStats(self, sourceText=''):
         if not sourceText:
-            file = UTF8File(sourceFileTmpl % self.langName)
-            sourceText = file.read()
-            file.close()
+            sourceText = self.corpus.source
         sourceLines = sourceText.split('\n')
         initialData = Counter()
         medialData = Counter()
@@ -248,6 +231,17 @@ class Syntagmata(object):
             MedialType.name: medialData,
             FinalType.name: finalData}
         return self.getStats()
+
+    def getStats(self, sourceText=''):
+        if self.stats:
+            return self.stats
+        try:
+            self.stats = self.corpus.stats
+            if self.stats:
+                return self.stats
+        except IOError:
+            pass
+        return self.generateStats(sourceText)
 
     def makeWordPart(self, positionObj):
         stats = self.getStats()
@@ -293,6 +287,13 @@ class Syntagmata(object):
 
     def writeStatsFile(self):
         stats = self.getStats()
-        file = UTF8File(filename=statsFileTmpl % self.langName, mode='w+')
+        file = UTF8File(filename=self.corpus.statsFile, mode='w+')
         file.write(str(stats))
         file.close()
+
+def _test():
+    import doctest
+    doctest.testmod()
+
+if __name__ == "__main__":
+    _test()
