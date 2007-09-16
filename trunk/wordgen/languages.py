@@ -1,10 +1,31 @@
 import random
 from itertools import islice
 
+from zope.interface import Interface, implements
+
 from wordgen.utils import UTF8File
 from wordgen.syntagmata import Syntagmata
 
-class Language(object):
+class ILanguage(Interface):
+    """
+    This is an interface for marking classes as languages.
+    """
+
+def getSupportedLanguages():
+    from pprint import pprint
+    from wordgen import languages
+    langs = []
+    for item in dir(languages):
+        k = getattr(languages, item)
+        try:
+            if ILanguage.implementedBy(k):
+                langs.append(item)
+        except TypeError:
+            pass
+    langs.sort()
+    pprint(langs)
+
+class BaseLanguage(object):
     def __init__(self):
         self.name = self.__class__.__name__
         self.language = None
@@ -35,7 +56,7 @@ class Language(object):
         fh.write('\n'.join(data))
         fh.close()
 
-class Composite(Language):
+class Composite(BaseLanguage):
 
     parts = {}
 
@@ -61,6 +82,9 @@ class Composite(Language):
             ratio = val/float(totalParts)
             percent = int(100*ratio)
             print "%s: %i parts (%i%%)" % (key, val, percent)
+
+class Language(BaseLanguage):
+    implements(ILanguage)
 
 class Sanskrit(Language):
     def __init__(self):

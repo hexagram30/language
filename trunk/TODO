@@ -1,7 +1,5 @@
-* add support for building merged wordlists by percent-contributed per language.
 * change copora to 
   . languages at the top level, with their respective files beneath that
-  . a "fictional" top-level directory
   . move/convert pertinent stuff in old to fictional
   . convert pertinent stuff in "tmp" to fictional
 * remove old, tmp
@@ -9,3 +7,11 @@
 * upload to PyPI
 * fix links to svn, download, etc.
 * fix horrible hard-coding of word list files.
+* write a script that generates
+ o alphabets
+ o consonants
+ o vowels
+ o stats
+ (and adds them to svn?)
+ this will require interactivity on the part of the user (is this a vowel? is
+ this a consonant?)

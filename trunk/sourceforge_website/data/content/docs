@@ -1,3 +1,136 @@
-Section: PyWordGen Documentation
-Content: This will contain pydoc HTML renderings, FAQs, HOWTOs, READMEs, INSTALLs. Anything that we add to the code base and any processes that we develop for this project will be added here.
+Section: Documentation
+Content: <h3>Example Usage</h3>
+
+    <h4>Defining a Language</h4>
+
+    To define a language, you need to have the stats file, the vowel file and
+    the consonant file. With those in hand, instantiating <span
+    style="font-family:monospace">Syntagmata</span>
+    will work. Assigning a <span style="font-family:monospace">Syntagmata</span>
+     instance to a <span style="font-family:monospace">Language</span> class's
+    <span style="font-family:monospace">language</span> attribute is pretty much
+    all there is to creating a new language.
+    <pre>
+    from wordgen.languages import Language
+    from wordgen.syntagmata import Syntagmata
+
+    class Gaelic(Language):
+
+        def __init__(self):
+            super(Gaelic, self).__init__()
+            self.language = Syntagmata('gaelic')
+    </pre>
+
+    <h4>Using a Language</h4>
+
+    Now we can do fun stuff like creating new words:
+    <pre>
+    >>> lang = Gaelic()
+    >>> lang.makeWord(4)
+    u'gachareag'
+    </pre>
+    There are also some convenience functions for creating word lists:
+    <ul>
+    <li>a word list generator (just call <span style="font-family:monospace">next</span> on it)</li>
+    <li>a method for retruning a word list (slice of the python geneator above)</li>
+    <li>printing a word list</li>
+    <li>saving a word list to disk</li>
+    </ul>
+    Here's the generator in action:
+    <pre>
+    >>> wl = lang.wordList()
+    >>> wl.next()
+    u'eilththarathrodaichase'
+    >>> wl.next()
+    u'saen'
+    >>> wl.next()
+    u'anne'
+    >>> wl.next()
+    u'anntealtrainear'
+    >>> wl.next()
+    u'masteathealeadalich'
+    </pre>
+    With any of those methods, you can pass a <span
+    style="font-family:monospace">maxSyllables</span> parameter that will limit
+    how long the words in the llist will be (the number of syllables for each
+    generated word is determined randomly for the word list methods).
+
+    The last three methods take an additional <span
+    style="font-family:monospace">count</span> parameter limiting the number of
+    words to return.
+
+    <h4>Supported Languages</h4>
+
+    To get a list of languages currently supported, you can do the following:
+    <pre>
+    >>> from wordgen.languages import getSupportedLanguages
+    >>> getSupportedLanguages()
+    ['Afrikaner',
+     'Chinese',
+     'English',
+     'French',
+     'Gaelic',
+     'Hindi',
+     'Japanese',
+     'Korean',
+     'Language',
+     'Latin',
+     'Onomatopoetic',
+     'Sanskrit',
+     'Spanish']
+    </pre>
+
+    <h4>Creating a Composite Language</h4>
+    Creating composite languages is just plain fun. There are probably all
+    sorts of reasons to do this, but for the authors of this software, the one
+    it was designed for and is used for most of the time is creating fictional
+    worlds. You can often get just the "sound" you're looking for by combining
+    different languages in different ratios.
+
+    Here's how it works:
+    <pre>
+    >>> from wordgen.languages import Composite
+    >>> c = Composite()
+    >>> c.addLanguage('sanskrit', 5)
+    >>> c.addLanguage('korean', 1)
+    </pre>
+    If we're going to be doing a lot of combination, it could be helpful to see
+    what the current composition of our new language is
+    <pre>    
+    >>> c.report()
+    sanskrit: 5 parts (83%)
+    korean: 1 parts (16%)
+    </pre>
+    Let's add another one and then check the ratios again:
+    <pre>
+    >>> c.addLanguage('french', 2)
+    >>> c.report()
+    sanskrit: 5 parts (62%)
+    korean: 1 parts (12%)
+    french: 2 parts (25%)
+    </pre>
+    Now, let's take a look at what we created:
+    <pre>
+    >>> c.printWordList()
+    antelonseeinlayaan
+    biemmnkanonaamshhtram
+    derghanaakshaam
+    etlan
+    explvadah
+    fausse
+    kaannaraaltaedmh
+    learntashvanar
+    moshaathimh
+    muretenh
+    ous
+    pascevihax
+    plukhactrite
+    pouduno
+    resquemonnoimuryat
+    sabhaamrdgoyo
+    suimmepratirthaan
+    syaas
+    vyashyadhan
+    yahrthaihh
+    </pre>
 
