@@ -9,6 +9,12 @@
 * Appended "earth" languages to language.py.
 * Reorganized languages for a better api.
 * Removed empty languages directory.
+* Added tests for Corpus.
+* Fixed Corpus so that stats are now eval'ed.
+* Added load*() and get*() methods to Corpus for improved efficiency and a
+better API.
+* Added corpus.getAvailableLanguages() that lists all the source language files
+(without the file extension).
 
 2007.09.15
 
