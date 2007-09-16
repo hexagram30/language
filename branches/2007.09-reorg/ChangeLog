@@ -4,6 +4,8 @@
 * Added the test runner to syntagmata.py.
 * Made local exceptions import absolute (not relative).
 * Added fictional directory to languages.
+* Moved fictional languages into new directory.
+* Created middleearth placeholder for Tolkein languages.
 
 2007.09.15
 
