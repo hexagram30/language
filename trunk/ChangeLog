@@ -25,6 +25,8 @@ better API.
 * Added a composite language feature.
 * Merged reorg branch to trunk.
 * Updated documentation.
+* Added more language support (classes).
+* Made improvements to Composite class.
 
 2007.09.15
 

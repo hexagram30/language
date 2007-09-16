@@ -23,11 +23,16 @@ Content: <h3>Example Usage</h3>
 
     <h4>Using a Language</h4>
 
-    Now we can do fun stuff like creating new words:
+    Now we can do fun stuff like creating new words, passing an integer for the
+    desired syllable count:
     <pre>
     >>> lang = Gaelic()
     >>> lang.makeWord(4)
     u'gachareag'
+    >>> lang.makeWord(1)
+    u'rod'
+    >>> lang.makeWord(7)
+    u"a'eannadhlirairie"
     </pre>
     There are also some convenience functions for creating word lists:
     <ul>
@@ -63,21 +68,25 @@ Content: <h3>Example Usage</h3>
 
     To get a list of languages currently supported, you can do the following:
     <pre>
-    >>> from wordgen.languages import getSupportedLanguages
-    >>> getSupportedLanguages()
-    ['Afrikaner',
-     'Chinese',
-     'English',
-     'French',
-     'Gaelic',
-     'Hindi',
-     'Japanese',
-     'Korean',
-     'Language',
-     'Latin',
-     'Onomatopoetic',
-     'Sanskrit',
-     'Spanish']
+    >>> from wordgen.languages import printSupportedLanguages
+    >>> printSupportedLanguages()
+    Afrikaner
+    Arabic
+    Chinese
+    English
+    French
+    Gaelic
+    German
+    Hebrew
+    Hindi
+    Japanese
+    Korean
+    Latin
+    OldEnglish
+    OldNorse
+    Onomatopoetic
+    Sanskrit
+    Spanish
     </pre>
 
     <h4>Creating a Composite Language</h4>
@@ -90,47 +99,97 @@ Content: <h3>Example Usage</h3>
     Here's how it works:
     <pre>
     >>> from wordgen.languages import Composite
+    >>> from wordgen.languages import Sanskrit, Korean, French
     >>> c = Composite()
-    >>> c.addLanguage('sanskrit', 5)
-    >>> c.addLanguage('korean', 1)
+    >>> c.addLanguage(Sanskrit, 5)
+    >>> c.addLanguage(Korean 2)
     </pre>
     If we're going to be doing a lot of combination, it could be helpful to see
-    what the current composition of our new language is
+    what the current composition of our new language is:
     <pre>    
     >>> c.report()
-    sanskrit: 5 parts (83%)
-    korean: 1 parts (16%)
+    sanskrit: 5 parts (71%)
+    korean: 2 parts (28%)
     </pre>
     Let's add another one and then check the ratios again:
     <pre>
-    >>> c.addLanguage('french', 2)
+    >>> c.addLanguage(French, 3)
     >>> c.report()
-    sanskrit: 5 parts (62%)
-    korean: 1 parts (12%)
-    french: 2 parts (25%)
+    sanskrit: 5 parts (50%)
+    korean: 2 parts (20%)
+    french: 3 parts (30%)
     </pre>
-    Now, let's take a look at what we created:
+    Now, let's take a look at what we've just created:
     <pre>
     >>> c.printWordList()
-    antelonseeinlayaan
-    biemmnkanonaamshhtram
-    derghanaakshaam
-    etlan
-    explvadah
-    fausse
-    kaannaraaltaedmh
-    learntashvanar
-    moshaathimh
-    muretenh
-    ous
-    pascevihax
-    plukhactrite
-    pouduno
-    resquemonnoimuryat
-    sabhaamrdgoyo
-    suimmepratirthaan
-    syaas
-    vyashyadhan
-    yahrthaihh
+    bhalathae
+    bodayadskis
+    elmjnaanam
+    estmpte
+    etxapa
+    fonalatol
+    jeims
+    kaaaantdasapaahi
+    leine
+    lemakabaaptan
+    meksharetim
+    motyuskaalahnaalam
+    nangjuvyaadhyanchakaatre
+    neh
+    ninnals
+    pouncha
+    san
+    shie
+    traisondima
+    trayint
     </pre>
 
+    <h4>Dessert</h4>
+
+    If you want to see a sampling of all languages, you can do something like
+    this:
+    <pre>
+    >>> for name in languages.getSupportedLanguages():
+    ...   print name
+    ...   words = getattr(languages, name)().getWordList(3,4)
+    ...   for w in words:
+    ...     print w,
+    ...   print
+    </pre>
+    Which will give you something along these lines:
+    <pre>
+    Afrikaner
+    disans ngees taam
+    Arabic
+    alddn suu warau
+    Chinese
+    xian juanggoun nungzhain
+    English
+    ins logs paidittos
+    French
+    deuigigt leroies oumers
+    Gaelic
+    airsch annn rilbh
+    German
+    geckebjell lepiwe wich
+    Hebrew
+    klhl kzbyhrn vxkmal
+    Hindi
+    paya rapnarao sadbhasya
+    Japanese
+    taeshi tanaishi tosagyonko
+    Korean
+    ayng gwammyam junsu
+    Latin
+    deorr expnum intm
+    OldEnglish
+    cypeneed gen wætoloor
+    OldNorse
+    föðingu keguggði okngleitssi
+    Onomatopoetic
+    boot mune weechazzle
+    Sanskrit
+    chagashhtaa syan yogh
+    Spanish
+    els poial suntemano
+    </pre>

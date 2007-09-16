@@ -4,7 +4,7 @@ from glob import glob
 
 from wordgen.utils import UTF8File
 
-def getAvailableLanguages():
+def getAvailableLanguageSources():
     """
     >>> from pprint import pprint
     >>> files = getAvailableLanguages()
