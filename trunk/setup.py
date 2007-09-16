@@ -5,7 +5,7 @@ ez_setup.use_setuptools()
 from setuptools import setup
 
 setup(name="PyWordGen",
-    version="1.1",
+    version="1.2",
     description="Python Word Generator",
     author="Duncan McGreggor",
     author_email="duncan@adytums.us",

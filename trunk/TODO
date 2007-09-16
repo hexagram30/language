@@ -15,3 +15,4 @@
  (and adds them to svn?)
  this will require interactivity on the part of the user (is this a vowel? is
  this a consonant?)
+* get corpora files working with setup tools
