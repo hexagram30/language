@@ -17,6 +17,9 @@ better API.
 (without the file extension).
 * Renamed Syntagmata.makeChineseWord() to the more general makeCVWord().
 * Removed unused import from generate script.
+* Removed old script.
+* Updated scripts.
+* Added support for a whole new slew of languages.
 
 2007.09.15
 

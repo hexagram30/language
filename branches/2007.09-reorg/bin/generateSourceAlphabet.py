@@ -8,8 +8,8 @@ from wordgen.utils import UTF8File
 from wordgen.syntagmata import Syntagmata
 
 sourceType = sys.argv[1]
-sourceFile = "corpora/sources/%s.txt" % sourceType
-destFile = "corpora/alphabets/%s.txt" % sourceType
+sourceFile = "wordgen/corpora/sources/%s.txt" % sourceType
+destFile = "wordgen/corpora/alphabets/%s.txt" % sourceType
 data = UTF8File(sourceFile, 'r').read()
 alphabet = {}
 for letter in data:

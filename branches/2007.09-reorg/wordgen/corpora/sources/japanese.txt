@@ -1,3096 +1,3096 @@
-SHO SAI MYO KICHIJO DARANI
-NO MO SAN MAN DA MOTO NAN
- OHA RA CHI KOTO SHA SONO NAN
- TO JI TO EN GYA GYA GYA KI GYA KI UN NUN
-  SHIFU RA SHIFU RA HARA SHIFU RA HARA SHIFU RA
-    CHISHU SA CHISHU SA SHUSHI RI SHUSHI RI
-     SOHA JA SOHA JA SEN CHI GYA SHIRI E SOMO KO
-     EMMEI JIKKU KANNON GYo
-     Tenchi Tenno
+sho sai myo kichijo darani
+no mo san man da moto nan
+ oha ra chi koto sha sono nan
+ to ji to en gya gya gya ki gya ki un nun
+  shifu ra shifu ra hara shifu ra hara shifu ra
+    chishu sa chishu sa shushi ri shushi ri
+     soha ja soha ja sen chi gya shiri e somo ko
+     emmei jikku kannon gyo
+     tenchi tenno
 
-Aki no ta no
-Kariho no io no
-Toma o arami
+aki no ta no
+kariho no io no
+toma o arami
 
 
-Waga koromode wa
-Tsuyu ni nure tsutsu 
-Jito Tenno
+waga koromode wa
+tsuyu ni nure tsutsu 
+jito tenno
 
-Haru sugite
-Natsu ki ni kerashi
-Shirotae no
+haru sugite
+natsu ki ni kerashi
+shirotae no
 
 
-Koromo hosu cho
-Ama no Kaguyama 
+koromo hosu cho
+ama no kaguyama 
 
-Kakinomoto no Hitomaro
+kakinomoto no hitomaro
 
-Ashibiki no
-Yamadori no o no
-Shidari o no
+ashibiki no
+yamadori no o no
+shidari o no
 
 
-Naganagashi yo o
-Hitori ka mo nen
+naganagashi yo o
+hitori ka mo nen
 
-Yamabe no Akahito
+yamabe no akahito
 
-Tago no Ura ni
-Uchi idete mireba
-Shirotae no
+tago no ura ni
+uchi idete mireba
+shirotae no
 
 
-Fuji no takane ni
-Yuki wa furi tsutsu
+fuji no takane ni
+yuki wa furi tsutsu
 
 
-1
 
-Tenchi Tenno
 
-Aki no ta no
-Kariho no io no
-Toma o arami
+tenchi tenno
 
+aki no ta no
+kariho no io no
+toma o arami
 
-Waga koromode wa
-Tsuyu ni nure tsutsu
 
+waga koromode wa
+tsuyu ni nure tsutsu
 
 
-| <-  |  -> |
-2
 
-Jito Tenno
+      
 
-Haru sugite
-Natsu ki ni kerashi
-Shirotae no
 
+jito tenno
 
-Koromo hosu cho
-Ama no Kaguyama
+haru sugite
+natsu ki ni kerashi
+shirotae no
 
 
+koromo hosu cho
+ama no kaguyama
 
-| <-  |  -> |
-3
 
-Kakinomoto no Hitomaro
 
-Ashibiki no
-Yamadori no o no
-Shidari o no
+      
 
 
-Naganagashi yo o
-Hitori ka mo nen
+kakinomoto no hitomaro
 
+ashibiki no
+yamadori no o no
+shidari o no
 
 
-| <-  |  -> |
-4
+naganagashi yo o
+hitori ka mo nen
 
-Yamabe no Akahito
 
-Tago no Ura ni
-Uchi idete mireba
-Shirotae no
 
+      
 
-Fuji no takane ni
-Yuki wa furi tsutsu
 
+yamabe no akahito
 
+tago no ura ni
+uchi idete mireba
+shirotae no
 
-| <-  |  -> |
-5
 
-Sarumaru Dayu
+fuji no takane ni
+yuki wa furi tsutsu
 
-Okuyama ni
-Momiji fumiwake
-Naku shika no
 
 
-Koe kiku toki zo
-Aki wa kanashiki
+      
 
 
+sarumaru dayu
 
-| <-  |  -> |
-6
+okuyama ni
+momiji fumiwake
+naku shika no
 
-Chunagon Yakamochi
 
-Kasasagi no
-Wataseru hashi ni
-Oku shimo no
+koe kiku toki zo
+aki wa kanashiki
 
 
-Shiroki o mireba
-Yo zo fuke ni keru
 
+      
 
 
-| <-  |  -> |
-7
+chunagon yakamochi
 
-Abe no Nakamaro
+kasasagi no
+wataseru hashi ni
+oku shimo no
 
-Ama no hara
-Furisake mireba
-Kasuga naru
 
+shiroki o mireba
+yo zo fuke ni keru
 
-Mikasa no yama ni
-Ideshi tsuki kamo
 
 
+      
 
-| <-  |  -> |
-8
 
-Kisen Hoshi
+abe no nakamaro
 
-Waga io wa
-Miyako no tatsumi
-Shika zo sumu
+ama no hara
+furisake mireba
+kasuga naru
 
 
-Yo o Ujiyama to
-Hito wa iu nari
+mikasa no yama ni
+ideshi tsuki kamo
 
 
 
-| <-  |  -> |
-9
+      
 
-Ono no Komachi
 
-Hana no iro wa
-Utsuri ni keri na
-Itazura ni
+kisen hoshi
 
+waga io wa
+miyako no tatsumi
+shika zo sumu
 
-Waga mi yo ni furu
-Nagame seshi ma ni
 
+yo o ujiyama to
+hito wa iu nari
 
 
-| <-  |  -> |
-10
 
-Semimaru
+      
 
-Kore ya kono
-Yuku mo kaeru mo
-Wakarete wa
 
+ono no komachi
 
-Shiru mo shiranu mo
-Osaka no seki
+hana no iro wa
+utsuri ni keri na
+itazura ni
 
 
+waga mi yo ni furu
+nagame seshi ma ni
 
-| <-  |  -> |
-11
 
-Sangi Takamura
 
-Wata no hara
-Yasoshima kakete
-Kogi idenu to
+      
 
 
-Hito ni wa tsugeyo
-Ama no tsuri bune
+semimaru
 
+kore ya kono
+yuku mo kaeru mo
+wakarete wa
 
 
-| <-  |  -> |
-12
+shiru mo shiranu mo
+osaka no seki
 
-Sojo Henjo
 
-Ama tsu kaze
-Kumo no kayoiji
-Fuki toji yo
 
+      
 
-Otome no sugata
-Shibashi todomen
 
+sangi takamura
 
+wata no hara
+yasoshima kakete
+kogi idenu to
 
-| <-  |  -> |
-13
 
-Yozei In
+hito ni wa tsugeyo
+ama no tsuri bune
 
-Tsukuba ne no
-Mine yori otsuru
-Minano-gawa
 
 
-Koi zo tsumorite
-Fuchi to nari nuru
+      
 
 
+sojo henjo
 
-| <-  |  -> |
-14
+ama tsu kaze
+kumo no kayoiji
+fuki toji yo
 
-Kawara no Sadaijin
 
-Michinoku no
-Shinobu moji-zuri
-Tare yue ni
+otome no sugata
+shibashi todomen
 
 
-Midare some ni shi
-Ware naranaku ni
 
+      
 
 
-| <-  |  -> |
-15
+yozei in
 
-Koko Tenno
+tsukuba ne no
+mine yori otsuru
+minanogawa
 
-Kimi ga tame
-Haru no no ni idete
-Wakana tsumu
 
+koi zo tsumorite
+fuchi to nari nuru
 
-Waga koromode ni
-Yuki wa furi tsutsu
 
 
+      
 
-| <-  |  -> |
-16
 
-Chunagon Yukihira
+kawara no sadaijin
 
-Tachi wakare
-Inaba no yama no
-Mine ni oru
+michinoku no
+shinobu mojizuri
+tare yue ni
 
 
-Matsu to shi kikaba
-Ima kaeri kon
+midare some ni shi
+ware naranaku ni
 
 
 
-| <-  |  -> |
-17
+      
 
-Ariwara no Narihira Ason
 
-Chihayaburu
-Kamiyo mo kikazu
-Tatsuta-gawa
+koko tenno
 
+kimi ga tame
+haru no no ni idete
+wakana tsumu
 
-Kara kurenai ni
-Mizu kukuru to wa
 
+waga koromode ni
+yuki wa furi tsutsu
 
 
-| <-  |  -> |
-18
 
-Fujiwara no Toshiyuki Ason
+      
 
-Sumi no e no
-Kishi ni yoru nami
-Yoru sae ya
 
+chunagon yukihira
 
-Yume no kayoi ji
-Hito me yoku ran
+tachi wakare
+inaba no yama no
+mine ni oru
 
 
+matsu to shi kikaba
+ima kaeri kon
 
-| <-  |  -> |
-19
 
-Ise
 
-Naniwa gata
-Mijikaki ashi no
-Fushi no ma mo
+      
 
 
-Awade kono yo o
-Sugushite yo to ya
+ariwara no narihira ason
 
+chihayaburu
+kamiyo mo kikazu
+tatsutagawa
 
 
-| <-  |  -> |
-20
+kara kurenai ni
+mizu kukuru to wa
 
-Motoyoshi Shinno
 
-Wabi nureba
-Ima hata onaji
-Naniwa naru
 
+      
 
-Mi o tsukushite mo
-Awan to zo omou
 
+fujiwara no toshiyuki ason
 
+sumi no e no
+kishi ni yoru nami
+yoru sae ya
 
-| <-  |  -> |
-21
 
-Sosei Hoshi
+yume no kayoi ji
+hito me yoku ran
 
-Ima kon to
-Iishi bakari ni
-Nagatsuki no
 
 
-Ariake no tsuki o
-Machi idetsuru kana
+      
 
 
+ise
 
-| <-  |  -> |
-22
+naniwa gata
+mijikaki ashi no
+fushi no ma mo
 
-Fun'ya no Yasuhide
 
-Fuku kara ni
-Aki no kusaki no
-Shiorureba
+awade kono yo o
+sugushite yo to ya
 
 
-Mube yama kaze o
-Arashi to iuran
 
+      
 
 
-| <-  |  -> |
-23
+motoyoshi shinno
 
-Oe no Chisato
+wabi nureba
+ima hata onaji
+naniwa naru
 
-Tsuki mireba
-Chiji ni mono koso
-Kanashi kere
 
+mi o tsukushite mo
+awan to zo omou
 
-Waga mi hitotsu no
-Aki ni wa aranedo
 
 
+      
 
-| <-  |  -> |
-24
 
-Kan Ke
+sosei hoshi
 
-Kono tabi wa
-Nusa mo toriaezu
-Tamukeyama
+ima kon to
+iishi bakari ni
+nagatsuki no
 
 
-Momiji no nishiki
-Kami no mani mani
+ariake no tsuki o
+machi idetsuru kana
 
 
 
-| <-  |  -> |
-25
+      
 
-Sanjo Udaijin
 
-Na ni shi owaba
-Osakayama no
-Sanekazura
+funya no yasuhide
 
+fuku kara ni
+aki no kusaki no
+shiorureba
 
-Hito ni shirarede
-Kuru yoshi mo gana
 
+mube yama kaze o
+arashi to iuran
 
 
-| <-  |  -> |
-26
 
-Teishin Ko
+      
 
-Ogurayama
-Mine no momijiba
-Kokoro araba
 
+oe no chisato
 
-Ima hitotabi no
-Miyuki matanan
+tsuki mireba
+chiji ni mono koso
+kanashi kere
 
 
+waga mi hitotsu no
+aki ni wa aranedo
 
-| <-  |  -> |
-27
 
-Chunagon Kanesuke
 
-Mika no Hara
-Wakite nagaruru
-Izumi-gawa
+      
 
 
-Itsu mi kitote ka
-Koishi karuran
+kan ke
 
+kono tabi wa
+nusa mo toriaezu
+tamukeyama
 
 
-| <-  |  -> |
-28
+momiji no nishiki
+kami no mani mani
 
-Minamoto no Muneyuki Ason
 
-Yama-zato wa
-Fuyu zo sabishisa
-Masari keru
 
+      
 
-Hitome mo kusa mo
-Karenu to omoeba
 
+sanjo udaijin
 
+na ni shi owaba
+osakayama no
+sanekazura
 
-| <-  |  -> |
-29
 
-Oshikochi no Mitsune
+hito ni shirarede
+kuru yoshi mo gana
 
-Kokoroate ni
-Orabaya oran
-Hatsushimo no
 
 
-Oki madowaseru
-Shiragiku no hana
+      
 
 
+teishin ko
 
-| <-  |  -> |
-30
+ogurayama
+mine no momijiba
+kokoro araba
 
-Mibu no Tadamine
 
-Ariake no
-Tsurenaku mieshi
-Wakare yori
+ima hitotabi no
+miyuki matanan
 
 
-Akatsuki bakari
-Uki mono wa nashi
 
+      
 
 
-| <-  |  -> |
-31
+chunagon kanesuke
 
-Sakanoue no Korenori
+mika no hara
+wakite nagaruru
+izumigawa
 
-Asaborake
-Ariake no tsuki to
-Miru made ni
 
+itsu mi kitote ka
+koishi karuran
 
-Yoshino no sato ni
-Fureru shirayuki
 
 
+      
 
-| <-  |  -> |
-32
 
-Harumichi no Tsuraki
+minamoto no muneyuki ason
 
-Yama kawa ni
-Kaze no kaketaru
-Shigarami wa
+yamazato wa
+fuyu zo sabishisa
+masari keru
 
 
-Nagare mo aenu
-Momiji nari keri
+hitome mo kusa mo
+karenu to omoeba
 
 
 
-| <-  |  -> |
-33
+      
 
-Ki no Tomonori
 
-Hisakata no
-Hikari nodokeki
-Haru no hi ni
+oshikochi no mitsune
 
+kokoroate ni
+orabaya oran
+hatsushimo no
 
-Shizu-gokoro naku
-Hana no chiruran
 
+oki madowaseru
+shiragiku no hana
 
 
-| <-  |  -> |
-34
 
-Fujiwara no Okikaze
+      
 
-Tare o ka mo
-Shiru hito ni sen
-Takasago no
 
+mibu no tadamine
 
-Matsu mo mukashi no
-Tomo nara naku ni
+ariake no
+tsurenaku mieshi
+wakare yori
 
 
+akatsuki bakari
+uki mono wa nashi
 
-| <-  |  -> |
-35
 
-Ki no Tsurayuki
 
-Hito wa isa
-Kokoro mo shirazu
-Furusato wa
+      
 
 
-Hana zo mukashi no
-Ka ni nioi keru
+sakanoue no korenori
 
+asaborake
+ariake no tsuki to
+miru made ni
 
 
-| <-  |  -> |
-36
+yoshino no sato ni
+fureru shirayuki
 
-Kiyohara no Fukayabu
 
-Natsu no yo wa
-Mada yoi nagara
-Akenuru o
 
+      
 
-Kumo no izuko ni
-Tsuki yadoruran
 
+harumichi no tsuraki
 
+yama kawa ni
+kaze no kaketaru
+shigarami wa
 
-| <-  |  -> |
-37
 
-Fun'ya no Asayasu
+nagare mo aenu
+momiji nari keri
 
-Shiratsuyu o
-Kaze no fukishiku
-Aki no no wa
 
 
-Tsuranuki tomenu
-Tama zo chiri keru
+      
 
 
+ki no tomonori
 
-| <-  |  -> |
-38
+hisakata no
+hikari nodokeki
+haru no hi ni
 
-Ukon
 
-Wasuraruru
-Mi o ba omowazu
-Chikaite shi
+shizugokoro naku
+hana no chiruran
 
 
-Hito no inochi no
-Oshiku mo aru kana
 
+      
 
 
-| <-  |  -> |
-39
+fujiwara no okikaze
 
-Sangi Hitoshi
+tare o ka mo
+shiru hito ni sen
+takasago no
 
-Asajiu no
-Ono no shinohara
-Shinoburedo
 
+matsu mo mukashi no
+tomo nara naku ni
 
-Amarite nado ka
-Hito no koishiki
 
 
+      
 
-| <-  |  -> |
-40
 
-Taira no Kanemori
+ki no tsurayuki
 
-Shinoburedo
-Iro ni ide ni keri
-Waga koi wa
+hito wa isa
+kokoro mo shirazu
+furusato wa
 
 
-Mono ya omou to
-Hito no tou made
+hana zo mukashi no
+ka ni nioi keru
 
 
 
-| <-  |  -> |
-41
+      
 
-Mibu no Tadami
 
-Koisu cho
-Waga na wa madaki
-Tachi ni keri
+kiyohara no fukayabu
 
+natsu no yo wa
+mada yoi nagara
+akenuru o
 
-Hito shirezu koso
-Omoi someshi ka
 
+kumo no izuko ni
+tsuki yadoruran
 
 
-| <-  |  -> |
-42
 
-Kiyohara no Motosuke
+      
 
-Chigiriki na
-Katami ni sode o
-Shibori tsutsu
 
+funya no asayasu
 
-Sue no Matsuyama
-Nami kosaji to wa
+shiratsuyu o
+kaze no fukishiku
+aki no no wa
 
 
+tsuranuki tomenu
+tama zo chiri keru
 
-| <-  |  -> |
-43
 
-Gon Chunagon Atsutada
 
-Ai mite no
-Nochi no kokoro ni
-Kurabureba
+      
 
 
-Mukashi wa mono o
-Omowazari keri
+ukon
 
+wasuraruru
+mi o ba omowazu
+chikaite shi
 
 
-| <-  |  -> |
-44
+hito no inochi no
+oshiku mo aru kana
 
-Chunagon Asatada
 
-Au koto no
-Taete shi nakuwa
-Nakanaka ni
 
+      
 
-Hito o mo mi o mo
-Urami zaramashi
 
+sangi hitoshi
 
+asajiu no
+ono no shinohara
+shinoburedo
 
-| <-  |  -> |
-45
 
-Kentoku Ko
+amarite nado ka
+hito no koishiki
 
-Aware to mo
-Iu beki hito wa
-Omooede
 
 
-Mi no itazura ni
-Narinu beki kana
+      
 
 
+taira no kanemori
 
-| <-  |  -> |
-46
+shinoburedo
+iro ni ide ni keri
+waga koi wa
 
-Sone no Yoshitada
 
-Yura no to o
-Wataru funabito
-Kaji o tae
+mono ya omou to
+hito no tou made
 
 
-Yukue mo shiranu
-Koi no michi kana
 
+      
 
 
-| <-  |  -> |
-47
+mibu no tadami
 
-Egyo Hoshi
+koisu cho
+waga na wa madaki
+tachi ni keri
 
-Yaemugura
-Shigereru yado no
-Sabishiki ni
 
+hito shirezu koso
+omoi someshi ka
 
-Hito koso miene
-Aki wa ki ni keri
 
 
+      
 
-| <-  |  -> |
-48
 
-Minamoto no Shigeyuki
+kiyohara no motosuke
 
-Kaze o itami
-Iwa utsu nami no
-Onore nomi
+chigiriki na
+katami ni sode o
+shibori tsutsu
 
 
-Kudakete mono o
-Omou koro kana
+sue no matsuyama
+nami kosaji to wa
 
 
 
-| <-  |  -> |
-49
+      
 
-Onakatomi no Yoshinobu Ason
 
-Mikakimori
-Eji no taku hi no
-Yoru wa moe
+gon chunagon atsutada
 
+ai mite no
+nochi no kokoro ni
+kurabureba
 
-Hiru wa kie tsutsu
-Mono o koso omoe
 
+mukashi wa mono o
+omowazari keri
 
 
-| <-  |  -> |
-50
 
-Fujiwara no Yoshitaka
+      
 
-Kimi ga tame
-Oshi karazarishi
-Inochi sae
 
+chunagon asatada
 
-Nagaku mo gana to
-Omoi keru kana
+au koto no
+taete shi nakuwa
+nakanaka ni
 
 
+hito o mo mi o mo
+urami zaramashi
 
-| <-  |  -> |
-51
 
-Fujiwara no Sanekata Ason
 
-Kaku to dani
-Eyawa ibuki no
-Sashimogusa
+      
 
 
-Sashimo shiraji na
-Moyuru omoi o
+kentoku ko
 
+aware to mo
+iu beki hito wa
+omooede
 
 
-| <-  |  -> |
-52
+mi no itazura ni
+narinu beki kana
 
-Fujiwara no Michinobu Ason
 
-Akenureba
-Kururu mono to wa
-Shiri nagara
 
+      
 
-Nao urameshiki
-Asaborake kana
 
+sone no yoshitada
 
+yura no to o
+wataru funabito
+kaji o tae
 
-| <-  |  -> |
-53
 
-Udaisho Michitsuna no Haha
+yukue mo shiranu
+koi no michi kana
 
-Nageki tsutsu
-Hitori nuru yo no
-Akuru ma wa
 
 
-Ikani hisashiki
-Mono to ka wa shiru
+      
 
 
+egyo hoshi
 
-| <-  |  -> |
-54
+yaemugura
+shigereru yado no
+sabishiki ni
 
-Gido Sanshi no Haha
 
-Wasureji no
-Yukusue made wa
-Katakereba
+hito koso miene
+aki wa ki ni keri
 
 
-Kyo o kagiri no
-Inochi to mo gana
 
+      
 
 
-| <-  |  -> |
-55
+minamoto no shigeyuki
 
-Dainagon Kinto
+kaze o itami
+iwa utsu nami no
+onore nomi
 
-Taki no oto wa
-Taete hisashiku
-Narinuredo
 
+kudakete mono o
+omou koro kana
 
-Na koso nagarete
-Nao kikoe kere
 
 
+      
 
-| <-  |  -> |
-56
 
-Izumi Shikibu
+onakatomi no yoshinobu ason
 
-Arazaran
-Kono yo no hoka no
-Omoide ni
+mikakimori
+eji no taku hi no
+yoru wa moe
 
 
-Ima hitotabi no
-Au koto mo gana
+hiru wa kie tsutsu
+mono o koso omoe
 
 
 
-| <-  |  -> |
-57
+      
 
-Murasaki Shikibu
 
-Meguri aite
-Mishi ya sore to mo
-Wakanu ma ni
+fujiwara no yoshitaka
 
+kimi ga tame
+oshi karazarishi
+inochi sae
 
-Kumo-gakure ni shi
-Yowa no tsuki kage
 
+nagaku mo gana to
+omoi keru kana
 
 
-| <-  |  -> |
-58
 
-Daini no Sanmi
+      
 
-Arimayama
-Ina no sasawara
-Kaze fukeba
 
+fujiwara no sanekata ason
 
-Ide soyo hito o
-Wasure ya wa suru
+kaku to dani
+eyawa ibuki no
+sashimogusa
 
 
+sashimo shiraji na
+moyuru omoi o
 
-| <-  |  -> |
-59
 
-Akazome Emon
 
-Yasurawade
-Nenamashi mono o
-Sayo fukete
+      
 
 
-Katabuku made no
-Tsuki o mishi kana
+fujiwara no michinobu ason
 
+akenureba
+kururu mono to wa
+shiri nagara
 
 
-| <-  |  -> |
-60
+nao urameshiki
+asaborake kana
 
-Koshikibu no Naishi
 
-Oeyama
-Ikuno no michi no
-To kereba
 
+      
 
-Mada fumi mo mizu
-Ama no Hashidate
 
+udaisho michitsuna no haha
 
+nageki tsutsu
+hitori nuru yo no
+akuru ma wa
 
-| <-  |  -> |
-61
 
-Ise no Osuke
+ikani hisashiki
+mono to ka wa shiru
 
-Inishie no
-Nara no miyako no
-Yae-zakura
 
 
-Kyo kokonoe ni
-Nioi nuru kana
+      
 
 
+gido sanshi no haha
 
-| <-  |  -> |
-62
+wasureji no
+yukusue made wa
+katakereba
 
-Sei Shonagon
 
-Yo o komete
-Tori no sorane wa
-Hakaru tomo
+kyo o kagiri no
+inochi to mo gana
 
 
-Yo ni Osaka no
-Seki wa yurusaji
 
+      
 
 
-| <-  |  -> |
-63
+dainagon kinto
 
-Sakyo no Daibu Michimasa
+taki no oto wa
+taete hisashiku
+narinuredo
 
-Ima wa tada
-Omoi taenan
-To bakari wo
 
+na koso nagarete
+nao kikoe kere
 
-Hito-zute nara de
-Iu yoshi mo gana
 
 
+      
 
-| <-  | <-  |
-64
 
-GonChunagon Sadayori
+izumi shikibu
 
-Asaborake
-Uji no kawagiri
-Tae-dae ni
+arazaran
+kono yo no hoka no
+omoide ni
 
 
-Araware wataru
-Zeze no ajirogi
+ima hitotabi no
+au koto mo gana
 
 
 
-| <-  |  -> |
-65
+      
 
-Sagami
 
-Urami wabi
-Hosanu sode da ni
-Aru mono o
+murasaki shikibu
 
+meguri aite
+mishi ya sore to mo
+wakanu ma ni
 
-Koi ni kuchinan
-Na koso oshi kere
 
+kumogakure ni shi
+yowa no tsuki kage
 
 
-| <-  |  -> |
-66
 
-Daisojo Gyoson
+      
 
-Morotomo ni
-Aware to omoe
-Yama-zakura
 
+daini no sanmi
 
-Hana yori hoka ni
-Shiru hito mo nashi
+arimayama
+ina no sasawara
+kaze fukeba
 
 
+ide soyo hito o
+wasure ya wa suru
 
-| <-  |  -> |
-67
 
-Suo no Naishi
 
-Haru no yo no
-Yume bakari naru
-Tamakura ni
+      
 
 
-Kainaku tatan
-Na koso oshi kere
+akazome emon
 
+yasurawade
+nenamashi mono o
+sayo fukete
 
 
-| <-  |  -> |
-68
+katabuku made no
+tsuki o mishi kana
 
-Sanjo In
 
-Kokoro ni mo
-Arade ukiyo ni
-Nagaraeba
 
+      
 
-Koishikaru beki
-Yowa no tsuki kana
 
+koshikibu no naishi
 
+oeyama
+ikuno no michi no
+to kereba
 
-| <-  |  -> |
-69
 
-Noin Hoshi
+mada fumi mo mizu
+ama no hashidate
 
-Arashi fuku
-Mimuro no yama no
-Momijiba wa
 
 
-Tatsuta no kawa no
-Nishiki nari keri
+      
 
 
+ise no osuke
 
-| <-  |  -> |
-70
+inishie no
+nara no miyako no
+yaezakura
 
-Ryosen Hoshi
 
-Sabishisa ni
-Yado o tachi idete
-Nagamureba
+kyo kokonoe ni
+nioi nuru kana
 
 
-Izuko mo onaji
-Aki no yugure
 
+      
 
 
-| <-  |  -> |
-71
+sei shonagon
 
-Dainagon Tsunenobu
+yo o komete
+tori no sorane wa
+hakaru tomo
 
-Yu sareba
-Kadota no inaba
-Otozurete
 
+yo ni osaka no
+seki wa yurusaji
 
-Ashi no maroya ni
-Akikaze zo fuku
 
 
+      
 
-| <-  |  -> |
-72
 
-Yushi Naishinno-ke no Kii
+sakyo no daibu michimasa
 
-Oto ni kiku
-Takashi no hama no
-Adanami wa
+ima wa tada
+omoi taenan
+to bakari wo
 
 
-Kakeji ya sode no
-Nure mo koso sure
+hitozute nara de
+iu yoshi mo gana
 
 
 
-| <-  |  -> |
-73
+      
 
-GonChunagon Masafusa
 
-Takasago no
-Onoe no sakura
-Saki ni keri
+gonchunagon sadayori
 
+asaborake
+uji no kawagiri
+taedae ni
 
-Toyama no kasumi
-Tatazu mo aranan
 
+araware wataru
+zeze no ajirogi
 
 
-| <-  |  -> |
-74
 
-Minamoto no Toshiyori Ason
+      
 
-Ukari keru
-Hito o Hatsuse no
-Yama oroshiyo
 
+sagami
 
-Hageshikare to wa
-Inoranu mono o
+urami wabi
+hosanu sode da ni
+aru mono o
 
 
+koi ni kuchinan
+na koso oshi kere
 
-| <-  |  -> |
-75
 
-Fujiwara no Mototoshi
 
-Chigiri okishi
-Sasemo ga tsuyu o
-Inochi ni te
+      
 
 
-Aware kotoshi no
-Aki mo inumeri
+daisojo gyoson
 
+morotomo ni
+aware to omoe
+yamazakura
 
 
-| <-  |  -> |
-76
+hana yori hoka ni
+shiru hito mo nashi
 
-Hoshoji no Nyudo Kanpaku Dajodaijin
 
-Wata no hara
-Kogi idete mireba
-Hisakata no
 
+      
 
-Kumoi ni mayoo
-Okitsu shiranami
 
+suo no naishi
 
+haru no yo no
+yume bakari naru
+tamakura ni
 
-| <-  |  -> |
-77
 
-Sutoku In
+kainaku tatan
+na koso oshi kere
 
-Se o hayami
-Iwa ni sekaruru
-Takigawa no
 
 
-Warete mo sue ni
-Awan to zo omou
+      
 
 
+sanjo in
 
-| <-  |  -> |
-78
+kokoro ni mo
+arade ukiyo ni
+nagaraeba
 
-Minamoto no Kanemasa
 
-Awaji shima
-Kayou chidori no
-Naku koe ni
+koishikaru beki
+yowa no tsuki kana
 
 
-Ikuyo nezamenu
-Suma no sekimori
 
+      
 
 
-| <-  |  -> |
-79
+noin hoshi
 
-Sakyo no Daibu Akisuke
+arashi fuku
+mimuro no yama no
+momijiba wa
 
-Akikaze ni
-Tanabiku kumo no
-Taema yori
 
+tatsuta no kawa no
+nishiki nari keri
 
-More izuru tsuki no
-Kage no sayakesa
 
 
+      
 
-| <-  |  -> |
-80
 
-Taiken Moin no Horikawa
+ryosen hoshi
 
-Nagakaran
-Kokoro mo shirazu
-Kurokami no
+sabishisa ni
+yado o tachi idete
+nagamureba
 
 
-Midarete kesa wa
-Mono o koso omoe
+izuko mo onaji
+aki no yugure
 
 
 
-| <-  |  -> |
-81
+      
 
-Go Tokudaiji no Sadaijin
 
-Hototogisu
-Nakitsuru kata o
-Nagamureba
+dainagon tsunenobu
 
+yu sareba
+kadota no inaba
+otozurete
 
-Tada ariake no
-Tsuki zo nokoreru
 
+ashi no maroya ni
+akikaze zo fuku
 
 
-| <-  |  -> |
-82
 
-Doin Hoshi
+      
 
-Omoi wabi
-Satemo inochi wa
-Aru mono o
 
+yushi naishinnoke no kii
 
-Uki ni taenu wa
-Namida nari keri
+oto ni kiku
+takashi no hama no
+adanami wa
 
 
+kakeji ya sode no
+nure mo koso sure
 
-| <-  |  -> |
-83
 
-Kotaigogu no Daibu Toshinari
 
-Yo no naka yo
-Michi koso nakere
-Omoi iru
+      
 
 
-Yama no oku ni mo
-Shika zo naku naru
+gonchunagon masafusa
 
+takasago no
+onoe no sakura
+saki ni keri
 
 
-| <-  |  -> |
-84
+toyama no kasumi
+tatazu mo aranan
 
-Fujiwara no Kiyosuke Ason
 
-Nagaraeba
-Mata konogoro ya
-Shinobaren
 
+      
 
-Ushi to mishi yo zo
-Ima wa koishiki
 
+minamoto no toshiyori ason
 
+ukari keru
+hito o hatsuse no
+yama oroshiyo
 
-| <-  |  -> |
-85
 
-Shun'e Hoshi
+hageshikare to wa
+inoranu mono o
 
-Yo mo sugara
-Mono omou koro wa
-Ake yaranu
 
 
-Neya no hima sae
-Tsure nakari keri
+      
 
 
+fujiwara no mototoshi
 
-| <-  |  -> |
-86
+chigiri okishi
+sasemo ga tsuyu o
+inochi ni te
 
-Saigyo Hoshi
 
-Nageke tote
-Tsuki ya wa mono o
-Omowasuru
+aware kotoshi no
+aki mo inumeri
 
 
-Kakochi gao naru
-Waga namida kana
 
+      
 
 
-| <-  |  -> |
-87
+hoshoji no nyudo kanpaku dajodaijin
 
-Jakuren Hoshi
+wata no hara
+kogi idete mireba
+hisakata no
 
-Murasame no
-Tsuyu mo mada hinu
-Maki no ha ni
 
+kumoi ni mayoo
+okitsu shiranami
 
-Kiri tachinoboru
-Aki no yugure
 
 
+      
 
-| <-  |  -> |
-88
 
-Koka Moin no Betto
+sutoku in
 
-Naniwae no
-Ashi no karine no
-Hitoyo yue
+se o hayami
+iwa ni sekaruru
+takigawa no
 
 
-Mi o tsukushite ya
-Koi wataru beki
+warete mo sue ni
+awan to zo omou
 
 
 
-| <-  |  -> |
-89
+      
 
-Shokushi Naishinno
 
-Tama no o yo
-Taenaba taene
-Nagaraeba
+minamoto no kanemasa
 
+awaji shima
+kayou chidori no
+naku koe ni
 
-Shinoburu koto no
-Yowari mo zo suru
 
+ikuyo nezamenu
+suma no sekimori
 
 
-| <-  |  -> |
-90
 
-Inpu Moin no Taifu
+      
 
-Misebaya na
-Ojima no ama no
-Sode dani mo
 
+sakyo no daibu akisuke
 
-Nure ni zo nureshi
-Iro wa kawarazu
+akikaze ni
+tanabiku kumo no
+taema yori
 
 
+more izuru tsuki no
+kage no sayakesa
 
-| <-  |  -> |
-91
 
-Go Kyogoku no Sessho Dajodaijin
 
-Kirigirisu
-Naku ya shimo yo no
-Samushiro ni
+      
 
 
-Koromo katashiki
-Hitori kamo nen
+taiken moin no horikawa
 
+nagakaran
+kokoro mo shirazu
+kurokami no
 
 
-| <-  |  -> |
-92
+midarete kesa wa
+mono o koso omoe
 
-Nijo In no Sanuki
 
-Waga sode wa
-Shiohi ni mienu
-Oki no ishi no
 
+      
 
-Hito koso shirane
-Kawaku ma mo nashi
 
+go tokudaiji no sadaijin
 
+hototogisu
+nakitsuru kata o
+nagamureba
 
-| <-  |  -> |
-93
 
-Kamakura no Udaijin
+tada ariake no
+tsuki zo nokoreru
 
-Yo no naka wa
-Tsune ni mo ga mo na
-Nagisa kogu
 
 
-Ama no obune no
-Tsuna de kanashi mo
+      
 
 
+doin hoshi
 
-| <-  |  -> |
-94
+omoi wabi
+satemo inochi wa
+aru mono o
 
-Sangi Masatsune
 
-Miyoshino no
-Yama no akikaze
-Sayo fukete
+uki ni taenu wa
+namida nari keri
 
 
-Furusato samuku
-Koromo utsu nari
 
+      
 
 
-| <-  |  -> |
-95
+kotaigogu no daibu toshinari
 
-Saki no Daisojo Jien
+yo no naka yo
+michi koso nakere
+omoi iru
 
-Okenaku
-Ukiyo no tami ni
-Ou kana
 
+yama no oku ni mo
+shika zo naku naru
 
-Waga tatsu soma ni
-Sumizome no sode
 
 
+      
 
-| <-  |  -> |
-96
 
-Nyudo Saki no Dajodaijin
+fujiwara no kiyosuke ason
 
-Hana sasou
-Arashi no niwa no
-Yuki nara de
+nagaraeba
+mata konogoro ya
+shinobaren
 
 
-Furi yuku mono wa
-Waga mi nari keri
+ushi to mishi yo zo
+ima wa koishiki
 
 
 
-| <-  |  -> |
-97
+      
 
-GonChunagon Sadaie
 
-Konu hito o
-Matsuho no ura no
-Yunagi ni
+shune hoshi
 
+yo mo sugara
+mono omou koro wa
+ake yaranu
 
-Yaku ya moshio no
-Mi mo kogare tsutsu
 
+neya no hima sae
+tsure nakari keri
 
 
-| <-  |  -> |
-98
 
-Junii Ietaka
+      
 
-Kaze soyogu
-Nara no ogawa no
-Yugure wa
 
+saigyo hoshi
 
-Misogi zo natsu no
-Shirushi nari keru
+nageke tote
+tsuki ya wa mono o
+omowasuru
 
 
+kakochi gao naru
+waga namida kana
 
-| <-  |  -> |
-99
 
-Gotoba In
 
-Hito mo oshi
-Hito mo urameshi
-Ajiki naku
+      
 
 
-Yo o omou yue ni
-Mono omou mi wa
+jakuren hoshi
 
+murasame no
+tsuyu mo mada hinu
+maki no ha ni
 
 
-| <-  |  -> |
-100
+kiri tachinoboru
+aki no yugure
 
-Juntoku In
 
-Momoshiki ya
-Furuki nokiba no
-Shinobu ni mo
 
+      
 
-Nao amari aru
-Mukashi nari keri
 
+koka moin no betto
 
+naniwae no
+ashi no karine no
+hitoyo yue
 
-| <-  |  -> |SHO SAI MYO KICHIJO DARANI
-NO MO SAN MAN DA MOTO NAN
- OHA RA CHI KOTO SHA SONO NAN
- TO JI TO EN GYA GYA GYA KI GYA KI UN NUN
-  SHIFU RA SHIFU RA HARA SHIFU RA HARA SHIFU RA
-    CHISHU SA CHISHU SA SHUSHI RI SHUSHI RI
-     SOHA JA SOHA JA SEN CHI GYA SHIRI E SOMO KO
-     EMMEI JIKKU KANNON GYo
-     Tenchi Tenno
 
-Aki no ta no
-Kariho no io no
-Toma o arami
+mi o tsukushite ya
+koi wataru beki
 
 
-Waga koromode wa
-Tsuyu ni nure tsutsu 
-Jito Tenno
 
-Haru sugite
-Natsu ki ni kerashi
-Shirotae no
+      
 
 
-Koromo hosu cho
-Ama no Kaguyama 
+shokushi naishinno
 
-Kakinomoto no Hitomaro
+tama no o yo
+taenaba taene
+nagaraeba
 
-Ashibiki no
-Yamadori no o no
-Shidari o no
 
+shinoburu koto no
+yowari mo zo suru
 
-Naganagashi yo o
-Hitori ka mo nen
 
-Yamabe no Akahito
 
-Tago no Ura ni
-Uchi idete mireba
-Shirotae no
+      
 
 
-Fuji no takane ni
-Yuki wa furi tsutsu
+inpu moin no taifu
 
+misebaya na
+ojima no ama no
+sode dani mo
 
-1
 
-Tenchi Tenno
+nure ni zo nureshi
+iro wa kawarazu
 
-Aki no ta no
-Kariho no io no
-Toma o arami
 
 
-Waga koromode wa
-Tsuyu ni nure tsutsu
+      
 
 
+go kyogoku no sessho dajodaijin
 
-| <-  |  -> |
-2
+kirigirisu
+naku ya shimo yo no
+samushiro ni
 
-Jito Tenno
 
-Haru sugite
-Natsu ki ni kerashi
-Shirotae no
+koromo katashiki
+hitori kamo nen
 
 
-Koromo hosu cho
-Ama no Kaguyama
 
+      
 
 
-| <-  |  -> |
-3
+nijo in no sanuki
 
-Kakinomoto no Hitomaro
+waga sode wa
+shiohi ni mienu
+oki no ishi no
 
-Ashibiki no
-Yamadori no o no
-Shidari o no
 
+hito koso shirane
+kawaku ma mo nashi
 
-Naganagashi yo o
-Hitori ka mo nen
 
 
+      
 
-| <-  |  -> |
-4
 
-Yamabe no Akahito
+kamakura no udaijin
 
-Tago no Ura ni
-Uchi idete mireba
-Shirotae no
+yo no naka wa
+tsune ni mo ga mo na
+nagisa kogu
 
 
-Fuji no takane ni
-Yuki wa furi tsutsu
+ama no obune no
+tsuna de kanashi mo
 
 
 
-| <-  |  -> |
-5
+      
 
-Sarumaru Dayu
 
-Okuyama ni
-Momiji fumiwake
-Naku shika no
+sangi masatsune
 
+miyoshino no
+yama no akikaze
+sayo fukete
 
-Koe kiku toki zo
-Aki wa kanashiki
 
+furusato samuku
+koromo utsu nari
 
 
-| <-  |  -> |
-6
 
-Chunagon Yakamochi
+      
 
-Kasasagi no
-Wataseru hashi ni
-Oku shimo no
 
+saki no daisojo jien
 
-Shiroki o mireba
-Yo zo fuke ni keru
+okenaku
+ukiyo no tami ni
+ou kana
 
 
+waga tatsu soma ni
+sumizome no sode
 
-| <-  |  -> |
-7
 
-Abe no Nakamaro
 
-Ama no hara
-Furisake mireba
-Kasuga naru
+      
 
 
-Mikasa no yama ni
-Ideshi tsuki kamo
+nyudo saki no dajodaijin
 
+hana sasou
+arashi no niwa no
+yuki nara de
 
 
-| <-  |  -> |
-8
+furi yuku mono wa
+waga mi nari keri
 
-Kisen Hoshi
 
-Waga io wa
-Miyako no tatsumi
-Shika zo sumu
 
+      
 
-Yo o Ujiyama to
-Hito wa iu nari
 
+gonchunagon sadaie
 
+konu hito o
+matsuho no ura no
+yunagi ni
 
-| <-  |  -> |
-9
 
-Ono no Komachi
+yaku ya moshio no
+mi mo kogare tsutsu
 
-Hana no iro wa
-Utsuri ni keri na
-Itazura ni
 
 
-Waga mi yo ni furu
-Nagame seshi ma ni
+      
 
 
+junii ietaka
 
-| <-  |  -> |
-10
+kaze soyogu
+nara no ogawa no
+yugure wa
 
-Semimaru
 
-Kore ya kono
-Yuku mo kaeru mo
-Wakarete wa
+misogi zo natsu no
+shirushi nari keru
 
 
-Shiru mo shiranu mo
-Osaka no seki
 
+      
 
 
-| <-  |  -> |
-11
+gotoba in
 
-Sangi Takamura
+hito mo oshi
+hito mo urameshi
+ajiki naku
 
-Wata no hara
-Yasoshima kakete
-Kogi idenu to
 
+yo o omou yue ni
+mono omou mi wa
 
-Hito ni wa tsugeyo
-Ama no tsuri bune
 
 
+      
 
-| <-  |  -> |
-12
 
-Sojo Henjo
+juntoku in
 
-Ama tsu kaze
-Kumo no kayoiji
-Fuki toji yo
+momoshiki ya
+furuki nokiba no
+shinobu ni mo
 
 
-Otome no sugata
-Shibashi todomen
+nao amari aru
+mukashi nari keri
 
 
 
-| <-  |  -> |
-13
+      sho sai myo kichijo darani
+no mo san man da moto nan
+ oha ra chi koto sha sono nan
+ to ji to en gya gya gya ki gya ki un nun
+  shifu ra shifu ra hara shifu ra hara shifu ra
+    chishu sa chishu sa shushi ri shushi ri
+     soha ja soha ja sen chi gya shiri e somo ko
+     emmei jikku kannon gyo
+     tenchi tenno
 
-Yozei In
+aki no ta no
+kariho no io no
+toma o arami
 
-Tsukuba ne no
-Mine yori otsuru
-Minano-gawa
 
+waga koromode wa
+tsuyu ni nure tsutsu 
+jito tenno
 
-Koi zo tsumorite
-Fuchi to nari nuru
+haru sugite
+natsu ki ni kerashi
+shirotae no
 
 
+koromo hosu cho
+ama no kaguyama 
 
-| <-  |  -> |
-14
+kakinomoto no hitomaro
 
-Kawara no Sadaijin
+ashibiki no
+yamadori no o no
+shidari o no
 
-Michinoku no
-Shinobu moji-zuri
-Tare yue ni
 
+naganagashi yo o
+hitori ka mo nen
 
-Midare some ni shi
-Ware naranaku ni
+yamabe no akahito
 
+tago no ura ni
+uchi idete mireba
+shirotae no
 
 
-| <-  |  -> |
-15
+fuji no takane ni
+yuki wa furi tsutsu
 
-Koko Tenno
 
-Kimi ga tame
-Haru no no ni idete
-Wakana tsumu
 
 
-Waga koromode ni
-Yuki wa furi tsutsu
+tenchi tenno
 
+aki no ta no
+kariho no io no
+toma o arami
 
 
-| <-  |  -> |
-16
+waga koromode wa
+tsuyu ni nure tsutsu
 
-Chunagon Yukihira
 
-Tachi wakare
-Inaba no yama no
-Mine ni oru
 
+      
 
-Matsu to shi kikaba
-Ima kaeri kon
 
+jito tenno
 
+haru sugite
+natsu ki ni kerashi
+shirotae no
 
-| <-  |  -> |
-17
 
-Ariwara no Narihira Ason
+koromo hosu cho
+ama no kaguyama
 
-Chihayaburu
-Kamiyo mo kikazu
-Tatsuta-gawa
 
 
-Kara kurenai ni
-Mizu kukuru to wa
+      
 
 
+kakinomoto no hitomaro
 
-| <-  |  -> |
-18
+ashibiki no
+yamadori no o no
+shidari o no
 
-Fujiwara no Toshiyuki Ason
 
-Sumi no e no
-Kishi ni yoru nami
-Yoru sae ya
+naganagashi yo o
+hitori ka mo nen
 
 
-Yume no kayoi ji
-Hito me yoku ran
 
+      
 
 
-| <-  |  -> |
-19
+yamabe no akahito
 
-Ise
+tago no ura ni
+uchi idete mireba
+shirotae no
 
-Naniwa gata
-Mijikaki ashi no
-Fushi no ma mo
 
+fuji no takane ni
+yuki wa furi tsutsu
 
-Awade kono yo o
-Sugushite yo to ya
 
 
+      
 
-| <-  |  -> |
-20
 
-Motoyoshi Shinno
+sarumaru dayu
 
-Wabi nureba
-Ima hata onaji
-Naniwa naru
+okuyama ni
+momiji fumiwake
+naku shika no
 
 
-Mi o tsukushite mo
-Awan to zo omou
+koe kiku toki zo
+aki wa kanashiki
 
 
 
-| <-  |  -> |
-21
+      
 
-Sosei Hoshi
 
-Ima kon to
-Iishi bakari ni
-Nagatsuki no
+chunagon yakamochi
 
+kasasagi no
+wataseru hashi ni
+oku shimo no
 
-Ariake no tsuki o
-Machi idetsuru kana
 
+shiroki o mireba
+yo zo fuke ni keru
 
 
-| <-  |  -> |
-22
 
-Fun'ya no Yasuhide
+      
 
-Fuku kara ni
-Aki no kusaki no
-Shiorureba
 
+abe no nakamaro
 
-Mube yama kaze o
-Arashi to iuran
+ama no hara
+furisake mireba
+kasuga naru
 
 
+mikasa no yama ni
+ideshi tsuki kamo
 
-| <-  |  -> |
-23
 
-Oe no Chisato
 
-Tsuki mireba
-Chiji ni mono koso
-Kanashi kere
+      
 
 
-Waga mi hitotsu no
-Aki ni wa aranedo
+kisen hoshi
 
+waga io wa
+miyako no tatsumi
+shika zo sumu
 
 
-| <-  |  -> |
-24
+yo o ujiyama to
+hito wa iu nari
 
-Kan Ke
 
-Kono tabi wa
-Nusa mo toriaezu
-Tamukeyama
 
+      
 
-Momiji no nishiki
-Kami no mani mani
 
+ono no komachi
 
+hana no iro wa
+utsuri ni keri na
+itazura ni
 
-| <-  |  -> |
-25
 
-Sanjo Udaijin
+waga mi yo ni furu
+nagame seshi ma ni
 
-Na ni shi owaba
-Osakayama no
-Sanekazura
 
 
-Hito ni shirarede
-Kuru yoshi mo gana
+      
 
 
+semimaru
 
-| <-  |  -> |
-26
+kore ya kono
+yuku mo kaeru mo
+wakarete wa
 
-Teishin Ko
 
-Ogurayama
-Mine no momijiba
-Kokoro araba
+shiru mo shiranu mo
+osaka no seki
 
 
-Ima hitotabi no
-Miyuki matanan
 
+      
 
 
-| <-  |  -> |
-27
+sangi takamura
 
-Chunagon Kanesuke
+wata no hara
+yasoshima kakete
+kogi idenu to
 
-Mika no Hara
-Wakite nagaruru
-Izumi-gawa
 
+hito ni wa tsugeyo
+ama no tsuri bune
 
-Itsu mi kitote ka
-Koishi karuran
 
 
+      
 
-| <-  |  -> |
-28
 
-Minamoto no Muneyuki Ason
+sojo henjo
 
-Yama-zato wa
-Fuyu zo sabishisa
-Masari keru
+ama tsu kaze
+kumo no kayoiji
+fuki toji yo
 
 
-Hitome mo kusa mo
-Karenu to omoeba
+otome no sugata
+shibashi todomen
 
 
 
-| <-  |  -> |
-29
+      
 
-Oshikochi no Mitsune
 
-Kokoroate ni
-Orabaya oran
-Hatsushimo no
+yozei in
 
+tsukuba ne no
+mine yori otsuru
+minanogawa
 
-Oki madowaseru
-Shiragiku no hana
 
+koi zo tsumorite
+fuchi to nari nuru
 
 
-| <-  |  -> |
-30
 
-Mibu no Tadamine
+      
 
-Ariake no
-Tsurenaku mieshi
-Wakare yori
 
+kawara no sadaijin
 
-Akatsuki bakari
-Uki mono wa nashi
+michinoku no
+shinobu mojizuri
+tare yue ni
 
 
+midare some ni shi
+ware naranaku ni
 
-| <-  |  -> |
-31
 
-Sakanoue no Korenori
 
-Asaborake
-Ariake no tsuki to
-Miru made ni
+      
 
 
-Yoshino no sato ni
-Fureru shirayuki
+koko tenno
 
+kimi ga tame
+haru no no ni idete
+wakana tsumu
 
 
-| <-  |  -> |
-32
+waga koromode ni
+yuki wa furi tsutsu
 
-Harumichi no Tsuraki
 
-Yama kawa ni
-Kaze no kaketaru
-Shigarami wa
 
+      
 
-Nagare mo aenu
-Momiji nari keri
 
+chunagon yukihira
 
+tachi wakare
+inaba no yama no
+mine ni oru
 
-| <-  |  -> |
-33
 
-Ki no Tomonori
+matsu to shi kikaba
+ima kaeri kon
 
-Hisakata no
-Hikari nodokeki
-Haru no hi ni
 
 
-Shizu-gokoro naku
-Hana no chiruran
+      
 
 
+ariwara no narihira ason
 
-| <-  |  -> |
-34
+chihayaburu
+kamiyo mo kikazu
+tatsutagawa
 
-Fujiwara no Okikaze
 
-Tare o ka mo
-Shiru hito ni sen
-Takasago no
+kara kurenai ni
+mizu kukuru to wa
 
 
-Matsu mo mukashi no
-Tomo nara naku ni
 
+      
 
 
-| <-  |  -> |
-35
+fujiwara no toshiyuki ason
 
-Ki no Tsurayuki
+sumi no e no
+kishi ni yoru nami
+yoru sae ya
 
-Hito wa isa
-Kokoro mo shirazu
-Furusato wa
 
+yume no kayoi ji
+hito me yoku ran
 
-Hana zo mukashi no
-Ka ni nioi keru
 
 
+      
 
-| <-  |  -> |
-36
 
-Kiyohara no Fukayabu
+ise
 
-Natsu no yo wa
-Mada yoi nagara
-Akenuru o
+naniwa gata
+mijikaki ashi no
+fushi no ma mo
 
 
-Kumo no izuko ni
-Tsuki yadoruran
+awade kono yo o
+sugushite yo to ya
 
 
 
-| <-  |  -> |
-37
+      
 
-Fun'ya no Asayasu
 
-Shiratsuyu o
-Kaze no fukishiku
-Aki no no wa
+motoyoshi shinno
 
+wabi nureba
+ima hata onaji
+naniwa naru
 
-Tsuranuki tomenu
-Tama zo chiri keru
 
+mi o tsukushite mo
+awan to zo omou
 
 
-| <-  |  -> |
-38
 
-Ukon
+      
 
-Wasuraruru
-Mi o ba omowazu
-Chikaite shi
 
+sosei hoshi
 
-Hito no inochi no
-Oshiku mo aru kana
+ima kon to
+iishi bakari ni
+nagatsuki no
 
 
+ariake no tsuki o
+machi idetsuru kana
 
-| <-  |  -> |
-39
 
-Sangi Hitoshi
 
-Asajiu no
-Ono no shinohara
-Shinoburedo
+      
 
 
-Amarite nado ka
-Hito no koishiki
+funya no yasuhide
 
+fuku kara ni
+aki no kusaki no
+shiorureba
 
 
-| <-  |  -> |
-40
+mube yama kaze o
+arashi to iuran
 
-Taira no Kanemori
 
-Shinoburedo
-Iro ni ide ni keri
-Waga koi wa
 
+      
 
-Mono ya omou to
-Hito no tou made
 
+oe no chisato
 
+tsuki mireba
+chiji ni mono koso
+kanashi kere
 
-| <-  |  -> |
-41
 
-Mibu no Tadami
+waga mi hitotsu no
+aki ni wa aranedo
 
-Koisu cho
-Waga na wa madaki
-Tachi ni keri
 
 
-Hito shirezu koso
-Omoi someshi ka
+      
 
 
+kan ke
 
-| <-  |  -> |
-42
+kono tabi wa
+nusa mo toriaezu
+tamukeyama
 
-Kiyohara no Motosuke
 
-Chigiriki na
-Katami ni sode o
-Shibori tsutsu
+momiji no nishiki
+kami no mani mani
 
 
-Sue no Matsuyama
-Nami kosaji to wa
 
+      
 
 
-| <-  |  -> |
-43
+sanjo udaijin
 
-Gon Chunagon Atsutada
+na ni shi owaba
+osakayama no
+sanekazura
 
-Ai mite no
-Nochi no kokoro ni
-Kurabureba
 
+hito ni shirarede
+kuru yoshi mo gana
 
-Mukashi wa mono o
-Omowazari keri
 
 
+      
 
-| <-  |  -> |
-44
 
-Chunagon Asatada
+teishin ko
 
-Au koto no
-Taete shi nakuwa
-Nakanaka ni
+ogurayama
+mine no momijiba
+kokoro araba
 
 
-Hito o mo mi o mo
-Urami zaramashi
+ima hitotabi no
+miyuki matanan
 
 
 
-| <-  |  -> |
-45
+      
 
-Kentoku Ko
 
-Aware to mo
-Iu beki hito wa
-Omooede
+chunagon kanesuke
 
+mika no hara
+wakite nagaruru
+izumigawa
 
-Mi no itazura ni
-Narinu beki kana
 
+itsu mi kitote ka
+koishi karuran
 
 
-| <-  |  -> |
-46
 
-Sone no Yoshitada
+      
 
-Yura no to o
-Wataru funabito
-Kaji o tae
 
+minamoto no muneyuki ason
 
-Yukue mo shiranu
-Koi no michi kana
+yamazato wa
+fuyu zo sabishisa
+masari keru
 
 
+hitome mo kusa mo
+karenu to omoeba
 
-| <-  |  -> |
-47
 
-Egyo Hoshi
 
-Yaemugura
-Shigereru yado no
-Sabishiki ni
+      
 
 
-Hito koso miene
-Aki wa ki ni keri
+oshikochi no mitsune
 
+kokoroate ni
+orabaya oran
+hatsushimo no
 
 
-| <-  |  -> |
-48
+oki madowaseru
+shiragiku no hana
 
-Minamoto no Shigeyuki
 
-Kaze o itami
-Iwa utsu nami no
-Onore nomi
 
+      
 
-Kudakete mono o
-Omou koro kana
 
+mibu no tadamine
 
+ariake no
+tsurenaku mieshi
+wakare yori
 
-| <-  |  -> |
-49
 
-Onakatomi no Yoshinobu Ason
+akatsuki bakari
+uki mono wa nashi
 
-Mikakimori
-Eji no taku hi no
-Yoru wa moe
 
 
-Hiru wa kie tsutsu
-Mono o koso omoe
+      
 
 
+sakanoue no korenori
 
-| <-  |  -> |
-50
+asaborake
+ariake no tsuki to
+miru made ni
 
-Fujiwara no Yoshitaka
 
-Kimi ga tame
-Oshi karazarishi
-Inochi sae
+yoshino no sato ni
+fureru shirayuki
 
 
-Nagaku mo gana to
-Omoi keru kana
 
+      
 
 
-| <-  |  -> |
-51
+harumichi no tsuraki
 
-Fujiwara no Sanekata Ason
+yama kawa ni
+kaze no kaketaru
+shigarami wa
 
-Kaku to dani
-Eyawa ibuki no
-Sashimogusa
 
+nagare mo aenu
+momiji nari keri
 
-Sashimo shiraji na
-Moyuru omoi o
 
 
+      
 
-| <-  |  -> |
-52
 
-Fujiwara no Michinobu Ason
+ki no tomonori
 
-Akenureba
-Kururu mono to wa
-Shiri nagara
+hisakata no
+hikari nodokeki
+haru no hi ni
 
 
-Nao urameshiki
-Asaborake kana
+shizugokoro naku
+hana no chiruran
 
 
 
-| <-  |  -> |
-53
+      
 
-Udaisho Michitsuna no Haha
 
-Nageki tsutsu
-Hitori nuru yo no
-Akuru ma wa
+fujiwara no okikaze
 
+tare o ka mo
+shiru hito ni sen
+takasago no
 
-Ikani hisashiki
-Mono to ka wa shiru
 
+matsu mo mukashi no
+tomo nara naku ni
 
 
-| <-  |  -> |
-54
 
-Gido Sanshi no Haha
+      
 
-Wasureji no
-Yukusue made wa
-Katakereba
 
+ki no tsurayuki
 
-Kyo o kagiri no
-Inochi to mo gana
+hito wa isa
+kokoro mo shirazu
+furusato wa
 
 
+hana zo mukashi no
+ka ni nioi keru
 
-| <-  |  -> |
-55
 
-Dainagon Kinto
 
-Taki no oto wa
-Taete hisashiku
-Narinuredo
+      
 
 
-Na koso nagarete
-Nao kikoe kere
+kiyohara no fukayabu
 
+natsu no yo wa
+mada yoi nagara
+akenuru o
 
 
-| <-  |  -> |
-56
+kumo no izuko ni
+tsuki yadoruran
 
-Izumi Shikibu
 
-Arazaran
-Kono yo no hoka no
-Omoide ni
 
+      
 
-Ima hitotabi no
-Au koto mo gana
 
+funya no asayasu
 
+shiratsuyu o
+kaze no fukishiku
+aki no no wa
 
-| <-  |  -> |
-57
 
-Murasaki Shikibu
+tsuranuki tomenu
+tama zo chiri keru
 
-Meguri aite
-Mishi ya sore to mo
-Wakanu ma ni
 
 
-Kumo-gakure ni shi
-Yowa no tsuki kage
+      
 
 
+ukon
 
-| <-  |  -> |
-58
+wasuraruru
+mi o ba omowazu
+chikaite shi
 
-Daini no Sanmi
 
-Arimayama
-Ina no sasawara
-Kaze fukeba
+hito no inochi no
+oshiku mo aru kana
 
 
-Ide soyo hito o
-Wasure ya wa suru
 
+      
 
 
-| <-  |  -> |
-59
+sangi hitoshi
 
-Akazome Emon
+asajiu no
+ono no shinohara
+shinoburedo
 
-Yasurawade
-Nenamashi mono o
-Sayo fukete
 
+amarite nado ka
+hito no koishiki
 
-Katabuku made no
-Tsuki o mishi kana
 
 
+      
 
-| <-  |  -> |
-60
 
-Koshikibu no Naishi
+taira no kanemori
 
-Oeyama
-Ikuno no michi no
-To kereba
+shinoburedo
+iro ni ide ni keri
+waga koi wa
 
 
-Mada fumi mo mizu
-Ama no Hashidate
+mono ya omou to
+hito no tou made
 
 
 
-| <-  |  -> |
-61
+      
 
-Ise no Osuke
 
-Inishie no
-Nara no miyako no
-Yae-zakura
+mibu no tadami
 
+koisu cho
+waga na wa madaki
+tachi ni keri
 
-Kyo kokonoe ni
-Nioi nuru kana
 
+hito shirezu koso
+omoi someshi ka
 
 
-| <-  |  -> |
-62
 
-Sei Shonagon
+      
 
-Yo o komete
-Tori no sorane wa
-Hakaru tomo
 
+kiyohara no motosuke
 
-Yo ni Osaka no
-Seki wa yurusaji
+chigiriki na
+katami ni sode o
+shibori tsutsu
 
 
+sue no matsuyama
+nami kosaji to wa
 
-| <-  |  -> |
-63
 
-Sakyo no Daibu Michimasa
 
-Ima wa tada
-Omoi taenan
-To bakari wo
+      
 
 
-Hito-zute nara de
-Iu yoshi mo gana
+gon chunagon atsutada
 
+ai mite no
+nochi no kokoro ni
+kurabureba
 
 
-| <-  | <-  |
-64
+mukashi wa mono o
+omowazari keri
 
-GonChunagon Sadayori
 
-Asaborake
-Uji no kawagiri
-Tae-dae ni
 
+      
 
-Araware wataru
-Zeze no ajirogi
 
+chunagon asatada
 
+au koto no
+taete shi nakuwa
+nakanaka ni
 
-| <-  |  -> |
-65
 
-Sagami
+hito o mo mi o mo
+urami zaramashi
 
-Urami wabi
-Hosanu sode da ni
-Aru mono o
 
 
-Koi ni kuchinan
-Na koso oshi kere
+      
 
 
+kentoku ko
 
-| <-  |  -> |
-66
+aware to mo
+iu beki hito wa
+omooede
 
-Daisojo Gyoson
 
-Morotomo ni
-Aware to omoe
-Yama-zakura
+mi no itazura ni
+narinu beki kana
 
 
-Hana yori hoka ni
-Shiru hito mo nashi
 
+      
 
 
-| <-  |  -> |
-67
+sone no yoshitada
 
-Suo no Naishi
+yura no to o
+wataru funabito
+kaji o tae
 
-Haru no yo no
-Yume bakari naru
-Tamakura ni
 
+yukue mo shiranu
+koi no michi kana
 
-Kainaku tatan
-Na koso oshi kere
 
 
+      
 
-| <-  |  -> |
-68
 
-Sanjo In
+egyo hoshi
 
-Kokoro ni mo
-Arade ukiyo ni
-Nagaraeba
+yaemugura
+shigereru yado no
+sabishiki ni
 
 
-Koishikaru beki
-Yowa no tsuki kana
+hito koso miene
+aki wa ki ni keri
 
 
 
-| <-  |  -> |
-69
+      
 
-Noin Hoshi
 
-Arashi fuku
-Mimuro no yama no
-Momijiba wa
+minamoto no shigeyuki
 
+kaze o itami
+iwa utsu nami no
+onore nomi
 
-Tatsuta no kawa no
-Nishiki nari keri
 
+kudakete mono o
+omou koro kana
 
 
-| <-  |  -> |
-70
 
-Ryosen Hoshi
+      
 
-Sabishisa ni
-Yado o tachi idete
-Nagamureba
 
+onakatomi no yoshinobu ason
 
-Izuko mo onaji
-Aki no yugure
+mikakimori
+eji no taku hi no
+yoru wa moe
 
 
+hiru wa kie tsutsu
+mono o koso omoe
 
-| <-  |  -> |
-71
 
-Dainagon Tsunenobu
 
-Yu sareba
-Kadota no inaba
-Otozurete
+      
 
 
-Ashi no maroya ni
-Akikaze zo fuku
+fujiwara no yoshitaka
 
+kimi ga tame
+oshi karazarishi
+inochi sae
 
 
-| <-  |  -> |
-72
+nagaku mo gana to
+omoi keru kana
 
-Yushi Naishinno-ke no Kii
 
-Oto ni kiku
-Takashi no hama no
-Adanami wa
 
+      
 
-Kakeji ya sode no
-Nure mo koso sure
 
+fujiwara no sanekata ason
 
+kaku to dani
+eyawa ibuki no
+sashimogusa
 
-| <-  |  -> |
-73
 
-GonChunagon Masafusa
+sashimo shiraji na
+moyuru omoi o
 
-Takasago no
-Onoe no sakura
-Saki ni keri
 
 
-Toyama no kasumi
-Tatazu mo aranan
+      
 
 
+fujiwara no michinobu ason
 
-| <-  |  -> |
-74
+akenureba
+kururu mono to wa
+shiri nagara
 
-Minamoto no Toshiyori Ason
 
-Ukari keru
-Hito o Hatsuse no
-Yama oroshiyo
+nao urameshiki
+asaborake kana
 
 
-Hageshikare to wa
-Inoranu mono o
 
+      
 
 
-| <-  |  -> |
-75
+udaisho michitsuna no haha
 
-Fujiwara no Mototoshi
+nageki tsutsu
+hitori nuru yo no
+akuru ma wa
 
-Chigiri okishi
-Sasemo ga tsuyu o
-Inochi ni te
 
+ikani hisashiki
+mono to ka wa shiru
 
-Aware kotoshi no
-Aki mo inumeri
 
 
+      
 
-| <-  |  -> |
-76
 
-Hoshoji no Nyudo Kanpaku Dajodaijin
+gido sanshi no haha
 
-Wata no hara
-Kogi idete mireba
-Hisakata no
+wasureji no
+yukusue made wa
+katakereba
 
 
-Kumoi ni mayoo
-Okitsu shiranami
+kyo o kagiri no
+inochi to mo gana
 
 
 
-| <-  |  -> |
-77
+      
 
-Sutoku In
 
-Se o hayami
-Iwa ni sekaruru
-Takigawa no
+dainagon kinto
 
+taki no oto wa
+taete hisashiku
+narinuredo
 
-Warete mo sue ni
-Awan to zo omou
 
+na koso nagarete
+nao kikoe kere
 
 
-| <-  |  -> |
-78
 
-Minamoto no Kanemasa
+      
 
-Awaji shima
-Kayou chidori no
-Naku koe ni
 
+izumi shikibu
 
-Ikuyo nezamenu
-Suma no sekimori
+arazaran
+kono yo no hoka no
+omoide ni
 
 
+ima hitotabi no
+au koto mo gana
 
-| <-  |  -> |
-79
 
-Sakyo no Daibu Akisuke
 
-Akikaze ni
-Tanabiku kumo no
-Taema yori
+      
 
 
-More izuru tsuki no
-Kage no sayakesa
+murasaki shikibu
 
+meguri aite
+mishi ya sore to mo
+wakanu ma ni
 
 
-| <-  |  -> |
-80
+kumogakure ni shi
+yowa no tsuki kage
 
-Taiken Moin no Horikawa
 
-Nagakaran
-Kokoro mo shirazu
-Kurokami no
 
+      
 
-Midarete kesa wa
-Mono o koso omoe
 
+daini no sanmi
 
+arimayama
+ina no sasawara
+kaze fukeba
 
-| <-  |  -> |
-81
 
-Go Tokudaiji no Sadaijin
+ide soyo hito o
+wasure ya wa suru
 
-Hototogisu
-Nakitsuru kata o
-Nagamureba
 
 
-Tada ariake no
-Tsuki zo nokoreru
+      
 
 
+akazome emon
 
-| <-  |  -> |
-82
+yasurawade
+nenamashi mono o
+sayo fukete
 
-Doin Hoshi
 
-Omoi wabi
-Satemo inochi wa
-Aru mono o
+katabuku made no
+tsuki o mishi kana
 
 
-Uki ni taenu wa
-Namida nari keri
 
+      
 
 
-| <-  |  -> |
-83
+koshikibu no naishi
 
-Kotaigogu no Daibu Toshinari
+oeyama
+ikuno no michi no
+to kereba
 
-Yo no naka yo
-Michi koso nakere
-Omoi iru
 
+mada fumi mo mizu
+ama no hashidate
 
-Yama no oku ni mo
-Shika zo naku naru
 
 
+      
 
-| <-  |  -> |
-84
 
-Fujiwara no Kiyosuke Ason
+ise no osuke
 
-Nagaraeba
-Mata konogoro ya
-Shinobaren
+inishie no
+nara no miyako no
+yaezakura
 
 
-Ushi to mishi yo zo
-Ima wa koishiki
+kyo kokonoe ni
+nioi nuru kana
 
 
 
-| <-  |  -> |
-85
+      
 
-Shun'e Hoshi
 
-Yo mo sugara
-Mono omou koro wa
-Ake yaranu
+sei shonagon
 
+yo o komete
+tori no sorane wa
+hakaru tomo
 
-Neya no hima sae
-Tsure nakari keri
 
+yo ni osaka no
+seki wa yurusaji
 
 
-| <-  |  -> |
-86
 
-Saigyo Hoshi
+      
 
-Nageke tote
-Tsuki ya wa mono o
-Omowasuru
 
+sakyo no daibu michimasa
 
-Kakochi gao naru
-Waga namida kana
+ima wa tada
+omoi taenan
+to bakari wo
 
 
+hitozute nara de
+iu yoshi mo gana
 
-| <-  |  -> |
-87
 
-Jakuren Hoshi
 
-Murasame no
-Tsuyu mo mada hinu
-Maki no ha ni
+      
 
 
-Kiri tachinoboru
-Aki no yugure
+gonchunagon sadayori
 
+asaborake
+uji no kawagiri
+taedae ni
 
 
-| <-  |  -> |
-88
+araware wataru
+zeze no ajirogi
 
-Koka Moin no Betto
 
-Naniwae no
-Ashi no karine no
-Hitoyo yue
 
+      
 
-Mi o tsukushite ya
-Koi wataru beki
 
+sagami
 
+urami wabi
+hosanu sode da ni
+aru mono o
 
-| <-  |  -> |
-89
 
-Shokushi Naishinno
+koi ni kuchinan
+na koso oshi kere
 
-Tama no o yo
-Taenaba taene
-Nagaraeba
 
 
-Shinoburu koto no
-Yowari mo zo suru
+      
 
 
+daisojo gyoson
 
-| <-  |  -> |
-90
+morotomo ni
+aware to omoe
+yamazakura
 
-Inpu Moin no Taifu
 
-Misebaya na
-Ojima no ama no
-Sode dani mo
+hana yori hoka ni
+shiru hito mo nashi
 
 
-Nure ni zo nureshi
-Iro wa kawarazu
 
+      
 
 
-| <-  |  -> |
-91
+suo no naishi
 
-Go Kyogoku no Sessho Dajodaijin
+haru no yo no
+yume bakari naru
+tamakura ni
 
-Kirigirisu
-Naku ya shimo yo no
-Samushiro ni
 
+kainaku tatan
+na koso oshi kere
 
-Koromo katashiki
-Hitori kamo nen
 
 
+      
 
-| <-  |  -> |
-92
 
-Nijo In no Sanuki
+sanjo in
 
-Waga sode wa
-Shiohi ni mienu
-Oki no ishi no
+kokoro ni mo
+arade ukiyo ni
+nagaraeba
 
 
-Hito koso shirane
-Kawaku ma mo nashi
+koishikaru beki
+yowa no tsuki kana
 
 
 
-| <-  |  -> |
-93
+      
 
-Kamakura no Udaijin
 
-Yo no naka wa
-Tsune ni mo ga mo na
-Nagisa kogu
+noin hoshi
 
+arashi fuku
+mimuro no yama no
+momijiba wa
 
-Ama no obune no
-Tsuna de kanashi mo
 
+tatsuta no kawa no
+nishiki nari keri
 
 
-| <-  |  -> |
-94
 
-Sangi Masatsune
+      
 
-Miyoshino no
-Yama no akikaze
-Sayo fukete
 
+ryosen hoshi
 
-Furusato samuku
-Koromo utsu nari
+sabishisa ni
+yado o tachi idete
+nagamureba
 
 
+izuko mo onaji
+aki no yugure
 
-| <-  |  -> |
-95
 
-Saki no Daisojo Jien
 
-Okenaku
-Ukiyo no tami ni
-Ou kana
+      
 
 
-Waga tatsu soma ni
-Sumizome no sode
+dainagon tsunenobu
 
+yu sareba
+kadota no inaba
+otozurete
 
 
-| <-  |  -> |
-96
+ashi no maroya ni
+akikaze zo fuku
 
-Nyudo Saki no Dajodaijin
 
-Hana sasou
-Arashi no niwa no
-Yuki nara de
 
+      
 
-Furi yuku mono wa
-Waga mi nari keri
 
+yushi naishinnoke no kii
 
+oto ni kiku
+takashi no hama no
+adanami wa
 
-| <-  |  -> |
-97
 
-GonChunagon Sadaie
+kakeji ya sode no
+nure mo koso sure
 
-Konu hito o
-Matsuho no ura no
-Yunagi ni
 
 
-Yaku ya moshio no
-Mi mo kogare tsutsu
+      
 
 
+gonchunagon masafusa
 
-| <-  |  -> |
-98
+takasago no
+onoe no sakura
+saki ni keri
 
-Junii Ietaka
 
-Kaze soyogu
-Nara no ogawa no
-Yugure wa
+toyama no kasumi
+tatazu mo aranan
 
 
-Misogi zo natsu no
-Shirushi nari keru
 
+      
 
 
-| <-  |  -> |
-99
+minamoto no toshiyori ason
 
-Gotoba In
+ukari keru
+hito o hatsuse no
+yama oroshiyo
 
-Hito mo oshi
-Hito mo urameshi
-Ajiki naku
 
+hageshikare to wa
+inoranu mono o
 
-Yo o omou yue ni
-Mono omou mi wa
 
 
+      
 
-| <-  |  -> |
-100
 
-Juntoku In
+fujiwara no mototoshi
 
-Momoshiki ya
-Furuki nokiba no
-Shinobu ni mo
+chigiri okishi
+sasemo ga tsuyu o
+inochi ni te
 
 
-Nao amari aru
-Mukashi nari keri
+aware kotoshi no
+aki mo inumeri
 
 
 
-| <-  |  -> |
+      
+
+
+hoshoji no nyudo kanpaku dajodaijin
+
+wata no hara
+kogi idete mireba
+hisakata no
+
+
+kumoi ni mayoo
+okitsu shiranami
+
+
+
+      
+
+
+sutoku in
+
+se o hayami
+iwa ni sekaruru
+takigawa no
+
+
+warete mo sue ni
+awan to zo omou
+
+
+
+      
+
+
+minamoto no kanemasa
+
+awaji shima
+kayou chidori no
+naku koe ni
+
+
+ikuyo nezamenu
+suma no sekimori
+
+
+
+      
+
+
+sakyo no daibu akisuke
+
+akikaze ni
+tanabiku kumo no
+taema yori
+
+
+more izuru tsuki no
+kage no sayakesa
+
+
+
+      
+
+
+taiken moin no horikawa
+
+nagakaran
+kokoro mo shirazu
+kurokami no
+
+
+midarete kesa wa
+mono o koso omoe
+
+
+
+      
+
+
+go tokudaiji no sadaijin
+
+hototogisu
+nakitsuru kata o
+nagamureba
+
+
+tada ariake no
+tsuki zo nokoreru
+
+
+
+      
+
+
+doin hoshi
+
+omoi wabi
+satemo inochi wa
+aru mono o
+
+
+uki ni taenu wa
+namida nari keri
+
+
+
+      
+
+
+kotaigogu no daibu toshinari
+
+yo no naka yo
+michi koso nakere
+omoi iru
+
+
+yama no oku ni mo
+shika zo naku naru
+
+
+
+      
+
+
+fujiwara no kiyosuke ason
+
+nagaraeba
+mata konogoro ya
+shinobaren
+
+
+ushi to mishi yo zo
+ima wa koishiki
+
+
+
+      
+
+
+shune hoshi
+
+yo mo sugara
+mono omou koro wa
+ake yaranu
+
+
+neya no hima sae
+tsure nakari keri
+
+
+
+      
+
+
+saigyo hoshi
+
+nageke tote
+tsuki ya wa mono o
+omowasuru
+
+
+kakochi gao naru
+waga namida kana
+
+
+
+      
+
+
+jakuren hoshi
+
+murasame no
+tsuyu mo mada hinu
+maki no ha ni
+
+
+kiri tachinoboru
+aki no yugure
+
+
+
+      
+
+
+koka moin no betto
+
+naniwae no
+ashi no karine no
+hitoyo yue
+
+
+mi o tsukushite ya
+koi wataru beki
+
+
+
+      
+
+
+shokushi naishinno
+
+tama no o yo
+taenaba taene
+nagaraeba
+
+
+shinoburu koto no
+yowari mo zo suru
+
+
+
+      
+
+
+inpu moin no taifu
+
+misebaya na
+ojima no ama no
+sode dani mo
+
+
+nure ni zo nureshi
+iro wa kawarazu
+
+
+
+      
+
+
+go kyogoku no sessho dajodaijin
+
+kirigirisu
+naku ya shimo yo no
+samushiro ni
+
+
+koromo katashiki
+hitori kamo nen
+
+
+
+      
+
+
+nijo in no sanuki
+
+waga sode wa
+shiohi ni mienu
+oki no ishi no
+
+
+hito koso shirane
+kawaku ma mo nashi
+
+
+
+      
+
+
+kamakura no udaijin
+
+yo no naka wa
+tsune ni mo ga mo na
+nagisa kogu
+
+
+ama no obune no
+tsuna de kanashi mo
+
+
+
+      
+
+
+sangi masatsune
+
+miyoshino no
+yama no akikaze
+sayo fukete
+
+
+furusato samuku
+koromo utsu nari
+
+
+
+      
+
+
+saki no daisojo jien
+
+okenaku
+ukiyo no tami ni
+ou kana
+
+
+waga tatsu soma ni
+sumizome no sode
+
+
+
+      
+
+
+nyudo saki no dajodaijin
+
+hana sasou
+arashi no niwa no
+yuki nara de
+
+
+furi yuku mono wa
+waga mi nari keri
+
+
+
+      
+
+
+gonchunagon sadaie
+
+konu hito o
+matsuho no ura no
+yunagi ni
+
+
+yaku ya moshio no
+mi mo kogare tsutsu
+
+
+
+      
+
+
+junii ietaka
+
+kaze soyogu
+nara no ogawa no
+yugure wa
+
+
+misogi zo natsu no
+shirushi nari keru
+
+
+
+      
+
+
+gotoba in
+
+hito mo oshi
+hito mo urameshi
+ajiki naku
+
+
+yo o omou yue ni
+mono omou mi wa
+
+
+
+      
+
+
+juntoku in
+
+momoshiki ya
+furuki nokiba no
+shinobu ni mo
+
+
+nao amari aru
+mukashi nari keri
+
+
+
+      
 

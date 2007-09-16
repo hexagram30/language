@@ -8,3 +8,4 @@
 * add code exmaple pages on sf.net site (maybe take stuff off of old trac for that)
 * upload to PyPI
 * fix links to svn, download, etc.
+* fix horrible hard-coding of word list files.
