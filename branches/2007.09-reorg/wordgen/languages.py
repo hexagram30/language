@@ -1,4 +1,5 @@
 import random
+from itertools import islice
 
 from wordgen.utils import UTF8File
 from wordgen.syntagmata import Syntagmata
@@ -11,22 +12,55 @@ class Language(object):
     def makeWord(self, syllableCount):
         return self.language.makeWord(syllableCount)
 
-    def printSelection(self, count=20, maxSyllables=7):
-        for i in xrange(count):
-            print self.makeWord(random.randint(1, maxSyllables))
+    def wordList(self, maxSyllables=7):
+        while True:
+            yield self.makeWord(random.randint(1, maxSyllables))
 
-    def createWordlist(self, filename='tempWordlist.txt', count=250,
-                       maxSyllables=7):
+    def getWordList(self, count=20, maxSyllables=7):
+        wordsIter = self.wordList(maxSyllables)
+        words = list(islice(wordsIter, count))
+        words.sort()
+        return words
+
+    def printWordList(self, count=20, maxSyllables=7):
+        wordList = self.getWordList(count, maxSyllables)
+        print '\n'.join(wordList)
+
+    def saveWordlist(self, filename='tempWordlist.txt', count=250,
+                     maxSyllables=7):
         if self.name:
             filename='tmp/%sWordlist.txt' % self.name
-        data = []
-        for i in xrange(count):
-            word = self.makeWord(random.randint(1, maxSyllables))
-            data.append(word)
-        data.sort()
-        file = UTF8File(filename, 'w+')
-        file.write('\n'.join(data))
-        file.close()
+        data = self.getWordList(count, maxSyllables)
+        fh = UTF8File(filename, 'w+')
+        fh.write('\n'.join(data))
+        fh.close()
+
+class Composite(Language):
+
+    parts = {}
+
+    def addLanguage(self, langName, parts):
+        """
+        langName is a string representing the language (has to be in
+        corproa/*/*.txt).
+
+        parts is an integer representing, of the total parts, how many the one
+        being added will account for.
+        """
+        lang = Syntagmata(langName)
+        if not self.language:
+            self.language = lang * parts
+        else:
+            self.language += (lang * parts)
+        self.parts.setdefault(langName, 0)
+        self.parts[langName] += parts
+
+    def report(self):
+        totalParts = sum(self.parts.values())
+        for key, val in self.parts.items():
+            ratio = val/float(totalParts)
+            percent = int(100*ratio)
+            print "%s: %i parts (%i%%)" % (key, val, percent)
 
 class Sanskrit(Language):
     def __init__(self):

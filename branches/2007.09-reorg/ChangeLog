@@ -21,6 +21,8 @@ better API.
 * Updated scripts.
 * Added support for a whole new slew of languages.
 * Renamed language to languages.
+* Refactored the word list generating code.
+* Added a composite language feature.
 
 2007.09.15
 
