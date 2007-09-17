@@ -72,18 +72,12 @@ class Language(object):
 
 class Composite(Language):
 
-    def __init__(self):
+    def __init__(self, langName=''):
         super(Composite, self).__init__()
         self.parts = {}
+        self.langName = langName
 
     def addLanguage(self, langArg, parts=1):
-        """
-        langName is a string representing the language (has to be in
-        corproa/*/*.txt).
-
-        parts is an integer representing, of the total parts, how many the one
-        being added will account for.
-        """
         syn = getSyntagmata(langArg)
         if not self.language:
             self.language = syn * parts
@@ -91,6 +85,7 @@ class Composite(Language):
             self.language += (syn * parts)
         self.parts.setdefault(syn.langName, 0)
         self.parts[syn.langName] += parts
+        self.language.langName = self.langName
 
     def report(self):
         totalParts = sum(self.parts.values())
@@ -203,4 +198,11 @@ class OldEnglish(Language):
     def __init__(self):
         super(OldEnglish, self).__init__()
         self.language = Syntagmata('oldenglish')
+
+class Russian(Language):
+    implements(ILanguage)
+    def __init__(self):
+        super(Russian, self).__init__()
+        self.language = Syntagmata('russian')
+
 
