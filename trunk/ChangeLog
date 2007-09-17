@@ -29,6 +29,7 @@ better API.
 * Made improvements to Composite class.
 * Incremented version.
 * Updated menus in docs.
+* Updated mythgarthur languages to use the new Composite class.
 
 2007.09.15
 

@@ -76,7 +76,7 @@ class Composite(Language):
         super(Composite, self).__init__()
         self.parts = {}
 
-    def addLanguage(self, langArg, parts):
+    def addLanguage(self, langArg, parts=1):
         """
         langName is a string representing the language (has to be in
         corproa/*/*.txt).
