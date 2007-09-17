@@ -32,6 +32,7 @@ better API.
 * Updated mythgarthur languages to use the new Composite class.
 * Added Russian support.
 * Added RookSaga languages.
+* Removed tmp dir.
 
 2007.09.15
 
