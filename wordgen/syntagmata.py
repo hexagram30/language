@@ -2,12 +2,12 @@ import re
 import time
 import random
 
-from wordgen.types import *
+from wordgen.corpora.corpus import Corpus
+from wordgen.elements import Vowel, Consonant, Word
 from wordgen.exceptions import *
+from wordgen.types import *
+from wordgen.utils import UTF8File, Counter
 
-from utils import UTF8File, Counter
-from elements import Vowel, Consonant, Word
-from corpora.corpus import Corpus
 
 class Syntagmata(object):
     '''
@@ -295,9 +295,11 @@ class Syntagmata(object):
         file.write(str(stats))
         file.close()
 
+
 def _test():
     import doctest
     doctest.testmod()
+
 
 if __name__ == "__main__":
     _test()

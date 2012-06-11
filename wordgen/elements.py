@@ -1,5 +1,8 @@
 import re
 
+from wordgen import exceptions
+
+
 class Letter(object):
     '''
     >>> letter = Letter('abc')
@@ -24,11 +27,14 @@ class Letter(object):
             return True
         return False
 
+
 class Vowel(Letter):
     pass
 
+
 class Consonant(Letter):
     pass
+
 
 class Word(object):
     '''
@@ -55,7 +61,6 @@ class Word(object):
     >>> word('123')
     False
     '''
-
     def __init__(self, *letters):
         if len(letters) == 1:
             letters = letters[0]
@@ -63,7 +68,7 @@ class Word(object):
             letters = ''.join([ x.letters for x in letters 
                 if isinstance(x, Letter) ])
         else:
-            raise UnexpectedParameter
+            raise exceptions.UnexpectedParameter
         self.pattern = "^[%s]+$" % letters
         self.regex = re.compile(self.pattern)
         self.match = None
@@ -76,4 +81,3 @@ class Word(object):
         if self.match:
             return True
         return False
-

@@ -4,6 +4,7 @@ from glob import glob
 
 from wordgen.utils import UTF8File
 
+
 def getAvailableLanguageSources():
     """
     >>> from pprint import pprint
@@ -107,9 +108,11 @@ class Corpus(object):
             self.loadSource()
         return self.source
 
+
 def _test():
     import doctest
     doctest.testmod()
-        
+
+
 if __name__ == "__main__":
     _test()
