@@ -1,7 +1,0 @@
-<table>
-  <tr>
-    <td class="menu-vert">
-    <!--#include virtual="/cgi-bin/menu-nav.py?file=main_nav" -->
-    </td>
-  </tr>
-</table>
