@@ -49,16 +49,17 @@ Once upon a time in the 90s, I was hacking some Perl with friends: we were
 playing with cryptography and examining letter frequencies in different
 languages at different historical times. Our curiosity (I dare not say
 "hypothesis") had us wondering if character frequencies could indicate source
-language in old encryption styles.
+language in old encryption styles, and the Perl code helped us explore this
+space quickly, examining letter frequencies over time.
 
 A short time later, I had the idea of using this code to assist users in a site
 I maintained. I ran middlearth.net with as a PHPNuke site (hey, we all have
-dark secrets; I'm just being honest about mine) and to assist with users who
+dark secrets; I'm just being honest about mine) and to assist with those who
 wanted to create a Tolkien-like name for themselves, I wrote a PHP script that
-generated names for any of the given races.
+generated names for any of the given races, based on the Perl code.
 
 Later, I migrated the site to a Zope and then Plone CMS, converting the script
-to Python. And finally, in 2003, I wanted to just be able to use the tool as a
+to Python. And finally, in 2003, I just wanted to be able to use the tool as a
 command-line utility, whence this library.
 
 Usage
