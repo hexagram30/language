@@ -1,0 +1,18 @@
+* change copora to 
+  . languages at the top level, with their respective files beneath that
+  . move/convert pertinent stuff in old to fictional
+  . convert pertinent stuff in "tmp" to fictional
+* remove old, tmp
+* add code exmaple pages on sf.net site (maybe take stuff off of old trac for that)
+* upload to PyPI
+* fix links to svn, download, etc.
+* fix horrible hard-coding of word list files.
+* write a script that generates
+ o alphabets
+ o consonants
+ o vowels
+ o stats
+ (and adds them to svn?)
+ this will require interactivity on the part of the user (is this a vowel? is
+ this a consonant?)
+* get corpora files working with setup tools
