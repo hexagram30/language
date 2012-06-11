@@ -27,3 +27,7 @@
 * add new corpora specifically for names
   - distinuish place names, and
   - people names
+* in the corpora, move all the language components into one folder for that
+  language
+* convert languages into a sub-package
+  - move fictional into that subpackage
