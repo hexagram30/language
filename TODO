@@ -10,7 +10,11 @@
  this a consonant?)
 * get corpora files working with setuptools
 * maybe improve all this with a CLI tool framework like cliff
-* move bin scripts into a script module(s)
+  - move bin scripts into a script module(s)
+  - add a command that lists the available corpora
+  - add subcommands for generating just a word, a person name, or a place name
+  - add a command for generating a list of words (in series, on a line)
+  - add a command for generating a bullet list of words
 * rename wordgen lib dir to anamyeter
 * add word lists:
   - Tolkien languages
