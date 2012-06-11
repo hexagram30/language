@@ -23,11 +23,11 @@ ablauting thematic suffix: *\*-yé/ó-*. Finally, PIE has as agentive suffixes
 *\*-t(e)r-* and *\*-t(o)r-* (hysterokinetic and amphikinetic. respectively). So
 what does all this mean? Namely, this:
 
-* *\*h₁néh₃mō* - names (nominative)
+* *\*h₁néh₃mō* - names (nominative plural)
 
 * *\*h₁néh₃mōyó* - to give names
 
-* *\*h₁néh₃mōyótor* - on who gives names
+* *\*h₁néh₃mōyótor* - one who gives names
 
 But can you imagine that last one for a project name? Nah, I couldn't either.
 So, I skipped a couple thousand years, and looked at Proto-Celtic instead:
