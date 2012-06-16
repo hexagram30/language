@@ -2,27 +2,29 @@ from anamyeter.languages import base
 
 
 class ProtoCeltic(base.Language):
-    pass
+    # no such thing; we made it up
+    iso639 = "pcl"
 
 
 class Gaulish(base.Language):
-    pass
+    # no such thing; we made it up
+    iso639 = "gau"
 
 
 class OldIrish(base.Language):
-    pass
+    iso639 = "sga"
 
 
 class Irish(base.Language):
-    pass
+    iso639 = "gle"
 
 
 class ScotsGaelic(base.Language):
 
     implements(ILanguage)
     name = "Scots Gaelic"
-    abbrev = ""
+    iso639 = "gla"
 
     def __init__(self):
         super(Gaelic, self).__init__()
-        self.language = Syntagmata('gaelic')
+        self.language = Syntagmata(self.iso639)
