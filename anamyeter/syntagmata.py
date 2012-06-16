@@ -2,7 +2,7 @@ import re
 import time
 import random
 
-from anamyeter.corpora.corpus import Corpus
+from anamyeter.corpus import Corpus
 from anamyeter.elements import Vowel, Consonant, Word
 from anamyeter.exceptions import *
 from anamyeter.types import *

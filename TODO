@@ -30,7 +30,16 @@
   language
 * convert languages into a sub-package
   - move fictional into that subpackage
+  - split up languages into family groups
 * don't keep stats in source (e.g., the pickle files)
   - keep those in ~/.anamyeter
   - generate them if needed
-
+* reorganize coporpra
+  - move the corpus.py moduel out of corpora
+  - make corpora/<lang> dirs, where <lang> is the ISO abbreviation
+  - make corpora/<lang>/sources/names.txt
+  - make corpora/<lang>/sources/places.txt
+  - make corpora/<lang>/sources/words.txt
+  - make corpora/<lang>/alphabet.txt
+  - make corpora/<lang>/vowels.txt
+  - make corpora/<lang>/consonants.txt
