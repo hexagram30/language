@@ -1,6 +1,6 @@
 import codecs
 
-from wordgen.exceptions import FileNotFound
+from anamyeter.exceptions import FileNotFound
 
 
 class Counter(dict):

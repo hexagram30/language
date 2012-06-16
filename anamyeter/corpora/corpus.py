@@ -2,7 +2,7 @@ import os
 from os import path
 from glob import glob
 
-from wordgen.utils import UTF8File
+from anamyeter.utils import UTF8File
 
 
 def getAvailableLanguageSources():

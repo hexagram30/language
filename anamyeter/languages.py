@@ -3,8 +3,8 @@ from itertools import islice
 
 from zope.interface import Interface, implements
 
-from wordgen.utils import UTF8File
-from wordgen.syntagmata import Syntagmata
+from anamyeter.utils import UTF8File
+from anamyeter.syntagmata import Syntagmata
 
 
 def getSupportedLanguages():

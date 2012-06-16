@@ -1,6 +1,6 @@
 import re
 
-from wordgen import exceptions
+from anamyeter import exceptions
 
 
 class Letter(object):

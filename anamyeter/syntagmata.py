@@ -2,11 +2,11 @@ import re
 import time
 import random
 
-from wordgen.corpora.corpus import Corpus
-from wordgen.elements import Vowel, Consonant, Word
-from wordgen.exceptions import *
-from wordgen.types import *
-from wordgen.utils import UTF8File, Counter
+from anamyeter.corpora.corpus import Corpus
+from anamyeter.elements import Vowel, Consonant, Word
+from anamyeter.exceptions import *
+from anamyeter.types import *
+from anamyeter.utils import UTF8File, Counter
 
 
 class Syntagmata(object):

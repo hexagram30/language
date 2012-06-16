@@ -4,8 +4,8 @@ import re
 import sys
 import codecs
 
-from wordgen.utils import UTF8File
-from wordgen.syntagmata import Syntagmata
+from anamyeter.utils import UTF8File
+from anamyeter.syntagmata import Syntagmata
 
 sourceType = sys.argv[1]
 sourceFile = "wordgen/corpora/sources/%s.txt" % sourceType

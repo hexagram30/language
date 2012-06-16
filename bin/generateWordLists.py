@@ -1,4 +1,5 @@
-from wordgen.language import Gaelic
+from anamyeter.languages import Gaelic
+
 
 l = Gaelic()
-l.createWordlist(maxSyllables=5)
+print l.getWordList(maxSyllables=5)

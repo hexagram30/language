@@ -1,4 +1,5 @@
-from wordgen.languages import *
+from anamyeter.languages import *
+
 
 Orcish = Composite('orcish')
 Orcish.addLanguage(Arabic, 9)
@@ -18,7 +19,7 @@ Human.addLanguage(English, 6)
 Human.addLanguage(OldNorse, 2)
 Elvish.addLanguage(OldEnglish)
 
-Dwarvish = Composite('drawvish')
+Dwarvish = Composite('dwarvish')
 Dwarvish.addLanguage(Gaelic, 5)
 Dwarvish.addLanguage(Hebrew, 5)
 Dwarvish.addLanguage(German)

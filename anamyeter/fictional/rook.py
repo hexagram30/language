@@ -1,4 +1,5 @@
-from wordgen.languages import *
+from anamyeter.languages import *
+
 
 Rookish = Composite('rookish')
 Rookish.addLanguage(English, 3)

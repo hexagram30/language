@@ -15,7 +15,6 @@
   - add subcommands for generating just a word, a person name, or a place name
   - add a command for generating a list of words (in series, on a line)
   - add a command for generating a bullet list of words
-* rename wordgen lib dir to anamyeter
 * add word lists:
   - Tolkien languages
   - PIE
@@ -31,3 +30,7 @@
   language
 * convert languages into a sub-package
   - move fictional into that subpackage
+* don't keep stats in source (e.g., the pickle files)
+  - keep those in ~/.anamyeter
+  - generate them if needed
+
