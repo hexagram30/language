@@ -23,6 +23,7 @@
   - Latin
   - Proto-Norse
   - Proto-Germanic
+  - Avestan
 * in the corpora, move all the language components into one folder for that
   language
 * don't keep stats in source (e.g., the pickle files)
