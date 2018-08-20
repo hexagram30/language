@@ -1,3 +1,5 @@
+# ChangeLog
+
 2007.09.16
 
 * Added code to corpora.corpus for abstracting textual file data.
@@ -149,4 +151,4 @@ commands and options into variables.
 
 * Added website to the repository.
 * Updated notes for install.
-* Initial import into sf.net CVS. 
+* Initial import into sf.net CVS.

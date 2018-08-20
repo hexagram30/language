@@ -1,3 +1,5 @@
+# TODO
+
 * upload to PyPI
 * fix horrible hard-coding of word list files.
 * write a script that generates
