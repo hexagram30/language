@@ -1,0 +1,9 @@
+language: clojure
+script:
+- lein build
+jdk:
+- oraclejdk8
+notifications:
+  slack:
+    rooms:
+    - hexagram30:LQkiA60LztFoZGZ0ojjbRA6m#cicd
