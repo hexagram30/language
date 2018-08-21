@@ -4,8 +4,25 @@
     [clojure.set :as set]
     [clojure.string :as string]
     [hxgm30.language.syntagmata.corpus :as corpus]
-    [hxgm30.language.syntagmata.lang.core :as lang]
     [hxgm30.language.syntagmata.util :as util]))
+
+(def supported
+  [:afrikaans
+   :arabic
+   :chinese
+   :english
+   :french
+   :german
+   :hindi
+   :japanese
+   :korean
+   :oldenglish
+   :oldnorse
+   :pie
+   :russian
+   :sanskrit
+   :scots
+   :spanish])
 
 (defn pseudo-syllables
   ""
@@ -34,10 +51,10 @@
 (defn sound-transitions
   ""
   [language words]
-  (->> words
-       (map (comp #(remove nil? %)
-                  #(mapcat rest %)
-                  #(re-seq (re-pattern (corpus/re-sound-transitions language)) %)))))
+  (map (comp #(remove nil? %)
+             #(mapcat rest %)
+             #(re-seq (re-pattern (corpus/re-sound-transitions language)) %))
+       words))
 
 (defn flat-sound-transitions
   [language words]
@@ -80,10 +97,12 @@
 (defn regen-stats
   []
   (doall
-    (for [language lang/supported]
-      (corpus/dump :stats language (generate-stats language))))
-  :ok)
+    (for [language supported]
+      (do
+        (corpus/dump :stats language (generate-stats language))
+        {language :ok}))))
 
 (defn stats
   [language]
   (corpus/undump :stats language))
+
