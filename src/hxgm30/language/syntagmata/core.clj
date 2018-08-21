@@ -3,54 +3,86 @@
     [clojure.java.io :as io]
     [clojure.set :as set]
     [clojure.string :as string]
-    [hxgm30.language.syntagmata.corpus :as corpus]))
+    [hxgm30.language.syntagmata.corpus :as corpus]
+    [hxgm30.language.syntagmata.lang.core :as lang]
+    [hxgm30.language.syntagmata.util :as util]))
+
+(defn pseudo-syllables
+  ""
+  [language words]
+  (map (comp #(if (= % []) [""] %)
+             #(string/split % #"_")
+             #(string/replace % (re-pattern (str (corpus/re-vowel language) "+")) "_"))
+       words))
+
+(defn pseudo-syllable-counts
+  ""
+  [language words]
+  (map count (pseudo-syllables language words)))
 
 (defn pseudo-syllable-freqs
-  "Create a lookup of key/value pairs where the key is the number
+  "The intent of this function is to provide information regarding how many
+  pseudo-syllables occur in the words of a corpus, ultimately giving a
+  statistical view of word length.
+
+  Create a lookup of key/value pairs where the key is the number
   pseudo-syllables and the associated value is the number of times the given
   pseudo-syllable occurs."
   [language words]
-  (->> words
-       (map (comp inc
-                  count
-                  #(string/split % #"_")
-                  #(string/replace % (re-pattern (str (corpus/re-vowel language) "+")) "_")))
-       frequencies))
+  (frequencies (pseudo-syllable-counts language words)))
 
-(defn frequency->percent-range
-  "A reducer that, given a frequency and an accumulator, returns an updated
-  accumulator with the given frequency converted to a percent range. The first
-  argument is expectred to be provided as a partial."
-  [total acc [k v]]
-  (let [last-value (or (last (first (last acc))) 0)
-        v-percent (/ v total)]
-    (conj acc [[last-value (+ v-percent last-value)] k])))
-
-(defn frequencies->percent-ranges
-  "Create a lookup of key/value pairs where the key is the range of percentages
-  where a syllable count occurs, and the value is the syllable count."
-  [freqs]
-  (let [total (reduce + 0.0 (vals freqs))]
-    (->> freqs
-         (reduce (partial frequency->percent-range total) [])
-         (into {}))))
-
-(defn sound-transition-freqs
+(defn sound-transitions
   ""
   [language words]
   (->> words
-       (mapcat #(re-seq (re-pattern (corpus/re-sound-transition language)) %))
-       frequencies))
+       (map (comp #(remove nil? %)
+                  #(mapcat rest %)
+                  #(re-seq (re-pattern (corpus/re-sound-transitions language)) %)))))
 
-(defn stats
+(defn flat-sound-transitions
+  [language words]
+  (flatten (sound-transitions language words)))
+
+(defn positional-sound-transitions
+  [position transitions]
+  (case position
+    :initial (map first transitions)
+    :final (remove nil? (map (comp last rest) transitions))
+    (mapcat (comp butlast rest) transitions)))
+
+(defn positional-sound-transition-freqs
+  [position transitions]
+  (frequencies (positional-sound-transitions position transitions)))
+
+(defn generate-stats
   ""
   [language]
   (let [words (corpus/load-wordlist language)
         pseudo-syllable-freqs (pseudo-syllable-freqs language words)
-        sound-transition-freqs (sound-transition-freqs language words)]
+        transitions (sound-transitions language words)
+        initial (positional-sound-transition-freqs :initial transitions)
+        medial (positional-sound-transition-freqs :medial transitions)
+        final (positional-sound-transition-freqs :final transitions)]
     {:pseudo-syllables {
       :frequencies pseudo-syllable-freqs
-      :percent-ranges (frequencies->percent-ranges pseudo-syllable-freqs)}
+      :percent-ranges (util/frequencies->percent-ranges pseudo-syllable-freqs)}
      :sound-transitions {
-      :frequencies sound-transition-freqs
-      :percent-ranges (frequencies->percent-ranges sound-transition-freqs)}}))
+       :initial {
+         :frequencies initial
+         :percent-ranges (util/frequencies->percent-ranges initial)}
+       :medial {
+         :frequencies medial
+         :percent-ranges (util/frequencies->percent-ranges medial)}
+       :final {
+         :frequencies final
+         :percent-ranges (util/frequencies->percent-ranges final)}}}))
+
+(defn regen-stats
+  []
+  (run!
+    (for [language lang/supported]
+      (corpus/dump :stats language (generate-stats language)))))
+
+(defn stats
+  [language]
+  (corpus/undump :stats language))
