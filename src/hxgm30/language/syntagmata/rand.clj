@@ -42,12 +42,14 @@
   ([stats]
     (sentence stats (rand-int 10)))
   ([stats words]
-    (->> words
-         inc
-         range
-         (map (fn [_] (word stats)))
-         (string/join " ")
-         string/capitalize)))
+    (str
+      (->> words
+           inc
+           range
+           (map (fn [_] (word stats)))
+           (string/join " ")
+           string/capitalize)
+      ".")))
 
 (defn paragraph
   ([stats]
@@ -57,6 +59,5 @@
       (->> sentence-count
            inc
            range
-           (map (fn [_] (sentence stats)))
-           (string/join ". "))
-      ".")))
+           (map (fn [_] (sentence stats))))
+      " ")))
