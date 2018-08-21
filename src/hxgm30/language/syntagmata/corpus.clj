@@ -1,13 +1,18 @@
 (ns hxgm30.language.syntagmata.corpus
   (:require
+    [clojure.edn :as edn]
     [clojure.java.io :as io]
     [clojure.set :as set]
     [clojure.string :as string]
-    [hxgm30.language.syntagmata.util :as util]))
+    [hxgm30.language.syntagmata.util :as util])
+  (:refer-clojure :exclude [load]))
+
+(def file-template "syntagmata/corpora/%s/%s.txt")
+(def file-resource-template (str "resources/" file-template))
 
 (defn load
   [type language]
-  (->> (format "syntagmata/corpora/%s/%s.txt"
+  (->> (format file-template
                (name type)
                (name language))
        io/resource
@@ -22,6 +27,22 @@
                   #(string/replace % "'d" "")
                   #(string/replace % "'re" "")))
        sort))
+
+(defn dump
+    [type language data]
+    (spit (format file-resource-template
+                  (name type)
+                  (name language))
+          data))
+
+(defn undump
+    [type language]
+    (->> (format file-template
+                 (name type)
+                 (name language))
+         io/resource
+         slurp
+         edn/read-string))
 
 (defn load-oneline-file
   [type language]
@@ -61,7 +82,7 @@
 
 (defn re-sound-transition
   [language]
-  (str (re-consonant :sanskrit) "?" (re-vowel :sanskrit) "+"))
+  (str (re-consonant language) "?" (re-vowel language) "+"))
 
 (defn clean-word
   [language word]
@@ -80,3 +101,11 @@
   [language]
   (let [raw-words (load :sources language)]
     (clean-words language raw-words)))
+
+(defn load-wordlist
+    [language]
+    (load :wordlists language))
+
+(defn load-stats
+    [language]
+    (load :stats language))

@@ -45,7 +45,7 @@
 (defn stats
   ""
   [language]
-  (let [words (corpus/load-source language)
+  (let [words (corpus/load-wordlist language)
         pseudo-syllable-freqs (pseudo-syllable-freqs language words)
         sound-transition-freqs (sound-transition-freqs language words)]
     {:pseudo-syllables {
