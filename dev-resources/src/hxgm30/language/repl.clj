@@ -9,8 +9,9 @@
     [com.stuartsierra.component :as component]
     ; [hxgm30.language.components.config :as config]
     ; [hxgm30.language.components.core]
-    [hxgm30.language.syntagmata.rand :as rand]
     [hxgm30.language.syntagmata.core :as syntagmata]
+    [hxgm30.language.syntagmata.corpus :as corpus]
+    [hxgm30.language.syntagmata.rand :as rand]
     [hxgm30.language.syntagmata.util :as util]
     [trifl.java :refer [show-methods]]))
 
