@@ -1,118 +1,82 @@
-import os
-from os import path
-from glob import glob
+(ns hxgm30.language.syntagmata.corpus
+  (:require
+    [clojure.java.io :as io]
+    [clojure.set :as set]
+    [clojure.string :as string]
+    [hxgm30.language.syntagmata.util :as util]))
 
-from anamyeter.utils import UTF8File
+(defn load
+  [type language]
+  (->> (format "syntagmata/corpora/%s/%s.txt"
+               (name type)
+               (name language))
+       io/resource
+       io/reader
+       line-seq
+       (mapcat #(string/split % #" "))
+       (remove empty?)
+       (map (comp string/lower-case
+                  #(string/replace % "\"" "")
+                  #(string/replace % "'s" "")
+                  #(string/replace % "'ll" "")
+                  #(string/replace % "'d" "")
+                  #(string/replace % "'re" "")))
+       sort))
 
+(defn load-oneline-file
+  [type language]
+  (->> language
+       (load type)
+       first
+       (map str)
+       set))
 
-def getAvailableLanguageSources():
-    """
-    >>> from pprint import pprint
-    >>> files = getAvailableLanguages()
-    >>> files.sort()
-    >>> pprint(files)
-    ['afrikaner',
-     'arabic',
-     'chinese',
-     'english',
-     'french',
-     'gaelic',
-     'german',
-     'hebrew',
-     'hindi',
-     'japanese',
-     'korean',
-     'oldenglish',
-     'oldenglish_raw',
-     'oldnorse',
-     'oldnorse_raw',
-     'onomatopoetic',
-     'russian',
-     'sanskrit',
-     'spanish']
-    """
-    base = path.dirname(__file__)
-    sources = path.join(base, 'sources', '*.txt')
-    return [path.splitext(path.basename(x))[0] for x in glob(sources)]
-        
+(defn load-consonants
+  [language]
+  (load-oneline-file :consonants language))
 
-class Corpus(object):
-    """
-    This object acts as a proxy for textual data files in the corpora,
-    specifically, for one language at a time. All of that languages textual
-    resources are exposed as attributes of the Corpus object.
-    
-    >>> c = Corpus('english')
-    >>> c.getVowels()
-    u'aeiouy'
-    >>> c.getConsonants()
-    u'bcdfghjklmnpqrstvwxz'
-    >>> k = c.getStats().keys()
-    >>> k.sort()
-    >>> k
-    ['FinalType', 'InitialType', 'MedialType']
+(defn load-vowels
+  [language]
+  (load-oneline-file :vowels language))
 
-    """
-    def __init__(self, language='', vowels='', consonants=''):
-        self.path = os.path.dirname(__file__)
-        self.vowelsFile = "%s/vowels/%s.txt" % (self.path, language)
-        self.consonantsFile = "%s/consonants/%s.txt" % (self.path, language)
-        self.statsFile = "%s/stats/%s.txt" % (self.path, language)
-        self.sourceFile = "%s/sources/%s.txt" % (self.path, language)
-        self.vowels = u''
-        self.consonants = u''
-        self.stats = {}
-        self.source = u''
+(defn load-alphabet
+  [language]
+  (set/union (load-consonants language) (load-vowels language)))
 
-    def loadVowels(self, vowels=u''):
-        self.vowels = vowels
-        if not self.vowels:
-            vowels = UTF8File(self.vowelsFile)
-            self.vowels = vowels.read()
-            vowels.close()
+(defn re-not-alpha
+  [language]
+  (str "[^" (apply str (load-alphabet language)) "]"))
 
-    def loadConsonants(self, consonants=u''):
-        self.consonants = consonants
-        if not self.consonants:
-            consonants = UTF8File(self.consonantsFile)
-            self.consonants = consonants.read()
-            consonants.close()
+(defn re-alpha
+  [language]
+  (str "[" (apply str (load-alphabet language)) "]"))
 
-    def loadStats(self):
-        stats = UTF8File(self.statsFile)
-        self.stats = eval(stats.read())
-        stats.close()
+(defn re-vowel
+  [language]
+  (str "[" (apply str (load-vowels language)) "]"))
 
-    def loadSource(self):
-        source = UTF8File(self.sourceFile)
-        self.source = source.read()
-        source.close()
+(defn re-consonant
+  [language]
+  (str "[" (apply str (load-consonants language)) "]"))
 
-    def getVowels(self):
-        if not self.vowels:
-            self.loadVowels()
-        return self.vowels
+(defn re-sound-transition
+  [language]
+  (str (re-consonant :sanskrit) "?" (re-vowel :sanskrit) "+"))
 
-    def getConsonants(self):
-        if not self.consonants:
-            self.loadConsonants()
-        return self.consonants
+(defn clean-word
+  [language word]
+  (-> word
+      (string/replace (re-pattern (re-not-alpha language))
+                      " ")
+      (string/split #"\s")))
 
-    def getStats(self):
-        if not self.stats:
-            self.loadStats()
-        return self.stats
+(defn clean-words
+  [language words]
+  (->> words
+      (mapcat #(clean-word language %))
+      (remove empty?)))
 
-    def getSource(self):
-        if not self.source:
-            self.loadSource()
-        return self.source
-
-
-def _test():
-    import doctest
-    doctest.testmod()
-
-
-if __name__ == "__main__":
-    _test()
+(defn load-source
+  [language]
+  (let [raw-words (load :sources language)]
+    (clean-words language raw-words)))
