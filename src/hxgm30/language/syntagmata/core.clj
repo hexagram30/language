@@ -79,9 +79,10 @@
 
 (defn regen-stats
   []
-  (run!
+  (doall
     (for [language lang/supported]
-      (corpus/dump :stats language (generate-stats language)))))
+      (corpus/dump :stats language (generate-stats language))))
+  :ok)
 
 (defn stats
   [language]
