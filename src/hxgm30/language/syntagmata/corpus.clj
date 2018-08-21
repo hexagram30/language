@@ -66,23 +66,27 @@
 
 (defn re-not-alpha
   [language]
-  (str "[^" (apply str (load-alphabet language)) "]"))
+  (str "[^" (string/join (load-alphabet language)) "]"))
 
 (defn re-alpha
   [language]
-  (str "[" (apply str (load-alphabet language)) "]"))
+  (str "[" (string/join (load-alphabet language)) "]"))
 
 (defn re-vowel
   [language]
-  (str "[" (apply str (load-vowels language)) "]"))
+  (str "[" (string/join (load-vowels language)) "]"))
 
 (defn re-consonant
   [language]
-  (str "[" (apply str (load-consonants language)) "]"))
+  (str "[" (string/join (load-consonants language)) "]"))
 
-(defn re-sound-transition
+(defn re-sound-transitions
   [language]
-  (str (re-consonant language) "?" (re-vowel language) "+"))
+  (format "(%s+)|(%s+%s+)|(%s+)"
+          (re-vowel language)
+          (re-consonant language)
+          (re-vowel language)
+          (re-consonant language)))
 
 (defn clean-word
   [language word]
