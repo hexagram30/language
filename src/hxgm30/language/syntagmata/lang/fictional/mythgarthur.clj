@@ -1,26 +1,38 @@
-; from anamyeter.languages import *
+(ns hxgm30.language.syntagmata.lang.fictional.mythgarthur
+  "To use the languages defined here, you can do the following:
+  ```
+    (require '[hxgm30.language.syntagmata.lang.core :as lang]
+             '[hxgm30.language.syntagmata.lang.fictional.mythgarthur :as myth)
+    (lang/paragraph mythgarthur/elvish)
+  ```
+  Which will give output along the lines of the following:
+  ```
+    Réðiglǣð hápugalalju. Anntilligi bhakk. Sírr sīn
+    lérð tar fögluttúw hangu. Wu dùlcestitna vins marga
+    mǣt bigufitir kö daforðinn sǣn lǣðgaðatti. Rol.
+    Fytuðran. Kongr merð mi þallmirdunn all hiða daur.
+  ```")
 
+(def orcish
+  {:arabic 9
+   :afrikaans 8
+   :chinese 5
+   :german 4
+   :oldnorse 1})
 
-; Orcish = Composite('orcish')
-; Orcish.addLanguage(Arabic, 9)
-; Orcish.addLanguage(Afrikaner, 8)
-; Orcish.addLanguage(Chinese, 5)
-; Orcish.addLanguage(German, 4)
-; Orcish.addLanguage(OldNorse)
+(def elvish
+  {:oldnorse 5
+   :oldenglish 2
+   :gaelic 1})
 
-; Elvish = Composite('elvish')
-; Elvish.addLanguage(OldNorse, 5)
-; Elvish.addLanguage(OldEnglish, 2)
-; Elvish.addLanguage(Gaelic, 1)
+(def human
+  {:sanskrit 6
+   :english 6
+   :oldnorse 2
+   :oldenglish 1})
 
-; Human = Composite('human')
-; Human.addLanguage(Sanskrit, 6)
-; Human.addLanguage(English, 6)
-; Human.addLanguage(OldNorse, 2)
-; Human.addLanguage(OldEnglish, 1)
-
-; Dwarvish = Composite('dwarvish')
-; Dwarvish.addLanguage(Gaelic, 5)
-; Dwarvish.addLanguage(Scots, 5)
-; Dwarvish.addLanguage(Arabic, 5)
-; Dwarvish.addLanguage(German, 1)
+(def dwarvish
+  {:gaelic 5
+   :scots 5
+   :hebrew 5
+   :german 1})

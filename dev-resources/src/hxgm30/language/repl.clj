@@ -12,6 +12,8 @@
     [hxgm30.language.syntagmata.core :as syntagmata]
     [hxgm30.language.syntagmata.corpus :as corpus]
     [hxgm30.language.syntagmata.lang.core :as lang]
+    [hxgm30.language.syntagmata.lang.fictional.mythgarthur :as mythgarthur]
+    [hxgm30.language.syntagmata.lang.fictional.rook :as rook]
     [hxgm30.language.syntagmata.rand :as rand]
     [hxgm30.language.syntagmata.util :as util]
     [trifl.java :refer [show-methods]]))
