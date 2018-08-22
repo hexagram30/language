@@ -121,6 +121,6 @@
   (let [cmd (keyword (first args))]
     (case cmd
       :regen-stats (do
-                     (println "Regenerating stats ...")
+                     (println "Regenerating stats ...\n")
                      (pprint/pprint (regen-stats))
                      (println)))))
