@@ -1,10 +1,12 @@
 (ns hxgm30.language.syntagmata.core
   (:require
     [clojure.java.io :as io]
+    [clojure.pprint :as pprint]
     [clojure.set :as set]
     [clojure.string :as string]
     [hxgm30.language.syntagmata.corpus :as corpus]
-    [hxgm30.language.syntagmata.util :as util]))
+    [hxgm30.language.syntagmata.util :as util])
+  (:gen-class))
 
 (def supported
   [:afrikaans
@@ -114,3 +116,11 @@
   [language]
   (corpus/undump :stats language))
 
+(defn -main
+  [& args]
+  (let [cmd (keyword (first args))]
+    (case cmd
+      :regen-stats (do
+                     (println "Regenerating stats ...")
+                     (pprint/pprint (regen-stats))
+                     (println)))))

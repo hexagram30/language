@@ -91,5 +91,6 @@
       ["ltest" ":all"]
       ["uberjar"]]
     ;; Scripts
-    "fictional" ["run" "-m" "hxgm30.language.syntagmata.lang.core"]})
+    "fictional" ["run" "-m" "hxgm30.language.syntagmata.lang.core"]
+    "regen-stats" ["run" "-m" "hxgm30.language.syntagmata.core" "regen-stats"]})
 
