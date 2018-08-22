@@ -11,13 +11,19 @@
    :arabic
    :chinese
    :english
+   :finnish
    :french
+   :gaelic
    :german
+   :greek
+   :hebrew
    :hindi
    :japanese
    :korean
+   :latin
    :oldenglish
    :oldnorse
+   :onomatopoetic
    :pie
    :russian
    :sanskrit
@@ -95,12 +101,14 @@
          :percent-ranges (util/frequencies->percent-ranges final)}}}))
 
 (defn regen-stats
-  []
-  (doall
-    (for [language supported]
-      (do
-        (corpus/dump :stats language (generate-stats language))
-        {language :ok}))))
+  ([]
+    (doall
+      (for [language supported]
+        (do
+          (corpus/dump :stats language (generate-stats language))
+          {language :ok}))))
+  ([language]
+    (corpus/dump :stats language (generate-stats language))))
 
 (defn stats
   [language]
