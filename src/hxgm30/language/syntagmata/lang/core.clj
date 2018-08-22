@@ -41,25 +41,25 @@
            (rand/syllable (syntagmata/stats (select lang-freqs)) :final)))))
 
 (defn sentence
-  ([stats]
-    (sentence stats (rand-int 10)))
-  ([stats words]
+  ([lang-freqs]
+    (sentence lang-freqs (rand-int 10)))
+  ([lang-freqs words]
     (str
       (->> words
            inc
            range
-           (map (fn [_] (word stats)))
+           (map (fn [_] (word lang-freqs)))
            (string/join " ")
            string/capitalize)
       ".")))
 
 (defn paragraph
-  ([stats]
-    (paragraph stats (rand-int 10)))
-  ([stats sentence-count]
+  ([lang-freqs]
+    (paragraph lang-freqs (rand-int 10)))
+  ([lang-freqs sentence-count]
     (str
       (->> sentence-count
            inc
            range
-           (map (fn [_] (sentence stats))))
-      " ")))
+           (map (fn [_] (sentence lang-freqs)))
+           (string/join " ")))))
