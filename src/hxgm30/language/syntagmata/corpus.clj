@@ -113,3 +113,8 @@
 (defn load-stats
     [language]
     (load :stats language))
+
+(defn save-wordlist
+  [language data]
+  (doall
+    (dump :wordlists language (string/join "\n" data))))
