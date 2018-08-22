@@ -22,6 +22,7 @@
     :name "Apache License, Version 2.0"
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :dependencies [
+    [clojusc/opennlp "0.4.1-SNAPSHOT"]
     [clojusc/system-manager "0.3.0-SNAPSHOT"]
     [clojusc/twig "0.3.3"]
     [hexagram30/common "0.1.0-SNAPSHOT"]
