@@ -3,8 +3,11 @@
     [clojure.string :as string]
     [hxgm30.language.syntagmata.core :as syntagmata]
     [hxgm30.language.syntagmata.corpus :as corpus]
+    [hxgm30.language.syntagmata.lang.fictional.mythgarthur :as mythgarthur]
+    [hxgm30.language.syntagmata.lang.fictional.rook :as rook]
     [hxgm30.language.syntagmata.rand :as rand]
-    [hxgm30.language.syntagmata.util :as util]))
+    [hxgm30.language.syntagmata.util :as util])
+  (:gen-class))
 
 (defn select
   "Expects a signature like the following:
@@ -63,3 +66,33 @@
            range
            (map (fn [_] (sentence lang-freqs)))
            (string/join " ")))))
+
+(defn- print-sample
+  [name lang]
+  (print (format "\n\t%s: %s\n" name (paragraph lang))))
+
+(defn -main
+  [& args]
+  (let [world (keyword (first args))
+        language (keyword (second args))]
+    (case world
+      :rook (case language
+              :rookish (print-sample "Rookish" rook/rookish)
+              :elani (print-sample "Elani" rook/elani)
+              :jas (print-sample "Jas" rook/jas)
+              :mux (print-sample "Mux" rook/mux)
+              (doall
+                (do (-main :rook :rookish)
+                    (-main :rook :elani)
+                    (-main :rook :jas)
+                    (-main :rook :mux))))
+      :mythgarthur (case language
+                     :orcish (print-sample "Orcish" mythgarthur/orcish)
+                     :elvish (print-sample "Elvish" mythgarthur/elvish)
+                     :human (print-sample "Human" mythgarthur/human)
+                     :dwarvish (print-sample "Dwarvish" mythgarthur/dwarvish)
+                     (doall
+                       (do (-main :mythgarthur :orcish)
+                           (-main :mythgarthur :elvish)
+                           (-main :mythgarthur :human)
+                           (-main :mythgarthur :dwarvish)))))))

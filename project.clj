@@ -75,9 +75,11 @@
       ["check-vers"]]
     "kibit" ["with-profile" "+lint" "kibit"]
     "eastwood" ["with-profile" "+lint" "eastwood" "{:namespaces [:source-paths]}"]
+    ; "eastwood" ["with-profile" "+lint" "eastwood" "{:namespaces [hxgm30.language.syntagmata.core hxgm30.language.syntagmata.corpus]}"]
     "lint" ["do"
       ["kibit"]
-      ["eastwood"]]
+      ;["eastwood"]
+      ]
     "ltest" ["with-profile" "+test" "ltest"]
     "ltest-clean" ["do"
       ["clean"]
@@ -87,5 +89,7 @@
       ["check-vers"]
       ["lint"]
       ["ltest" ":all"]
-      ["uberjar"]]})
+      ["uberjar"]]
+    ;; Scripts
+    "fictional" ["run" "-m" "hxgm30.language.syntagmata.lang.core"]})
 
