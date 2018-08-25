@@ -21,12 +21,18 @@
   :license {
     :name "Apache License, Version 2.0"
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
+  :exclusions [
+    [io.aviso/pretty]
+    [org.clojure/tools.reader]]
   :dependencies [
     [clojusc/opennlp "0.4.1-SNAPSHOT"]
     [clojusc/system-manager "0.3.0-SNAPSHOT"]
     [clojusc/twig "0.3.3"]
     [hexagram30/common "0.1.0-SNAPSHOT"]
-    [org.clojure/clojure "1.9.0"]]
+    [hexagram30/dice "0.1.0-SNAPSHOT"]
+    [io.aviso/pretty "0.1.34"]
+    [org.clojure/clojure "1.9.0"]
+    [org.clojure/tools.reader "1.3.0"]]
   :profiles {
     :ubercompile {
       :aot :all}
@@ -48,9 +54,7 @@
       :plugins [
         [jonase/eastwood "0.2.9"]
         [lein-ancient "0.6.15"]
-        [lein-bikeshed "0.5.1"]
-        [lein-kibit "0.1.6"]
-        [venantius/yagni "0.1.4"]]}
+        [lein-kibit "0.1.6"]]}
     :test {
       :plugins [
         [lein-ltest "0.3.0"]]

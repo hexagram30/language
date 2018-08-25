@@ -1,0 +1,11 @@
+{:lang {
+   :udp-server {
+     ;; (reduce + (map int "Hexagram30 Language UDP CLI Server"))
+     :port 2924
+    }}
+ :logging {
+   :level :debug
+   :nss [hxgm30]}
+ :rng {
+   :algorithm :non-blocking
+   :seed-bytes 1024}}
