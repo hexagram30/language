@@ -44,8 +44,7 @@
   [cfg-data]
   (merge (basic cfg-data)
          rnd
-         cli-server
-         ))
+         cli-server))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Component Initializations   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -83,3 +82,5 @@
     ((mode init-lookup))))
 
 (def cli #(init :cli))
+
+(def testing #(init :testing))

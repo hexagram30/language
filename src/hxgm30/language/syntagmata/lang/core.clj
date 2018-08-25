@@ -1,6 +1,10 @@
 (ns hxgm30.language.syntagmata.lang.core
   (:require
     [clojure.string :as string]
+    [clojusc.system-manager.core :as system-manager]
+    [clojusc.twig :as logger]
+    [hxgm30.dice.components.random :as random]
+    [hxgm30.language.components.core]
     [hxgm30.language.syntagmata.core :as syntagmata]
     [hxgm30.language.syntagmata.corpus :as corpus]
     [hxgm30.language.syntagmata.lang.fictional.mythgarthur :as mythgarthur]
@@ -23,76 +27,98 @@
              :chinese 5
              :arabic 3})
   ```"
-  [lang-freqs]
-  (util/percent-> (rand) (util/frequencies->percent-ranges lang-freqs)))
+  [system lang-freqs]
+  (util/percent-> (random/float system) (util/frequencies->percent-ranges lang-freqs)))
 
 (defn word
-  [lang-freqs]
-  (let [lang (select lang-freqs)
+  [system lang-freqs]
+  (let [lang (select system lang-freqs)
         stats (syntagmata/stats lang)
-        syllables (rand/syllable-count stats)]
+        syllables (rand/syllable-count system stats)]
     (case syllables
-      1 (rand/syllable stats :initial)
-      2 (str (rand/syllable stats :initial)
-             (rand/syllable (syntagmata/stats (select lang-freqs)) :final))
-      (str (rand/syllable stats :initial)
+      1 (rand/syllable system stats :initial)
+      2 (str (rand/syllable system stats :initial)
+             (rand/syllable
+              system
+              (syntagmata/stats
+                (select system lang-freqs))
+              :final))
+      (str (rand/syllable system stats :initial)
            (->> syllables
                 dec
                 range
-                (mapcat (fn [_] (rand/syllable (syntagmata/stats (select lang-freqs)) :medial)))
+                (mapcat (fn [_]
+                         (rand/syllable
+                          system
+                          (syntagmata/stats (select system lang-freqs))
+                          :medial)))
                 (string/join ""))
-           (rand/syllable (syntagmata/stats (select lang-freqs)) :final)))))
+           (rand/syllable
+            system
+            (syntagmata/stats
+              (select system lang-freqs))
+            :final)))))
 
 (defn sentence
-  ([lang-freqs]
-    (sentence lang-freqs (rand-int 10)))
-  ([lang-freqs words]
+  ([system lang-freqs]
+    (sentence system lang-freqs (random/int system 10)))
+  ([system lang-freqs words]
     (str
       (->> words
            inc
            range
-           (map (fn [_] (word lang-freqs)))
+           (map (fn [_] (word system lang-freqs)))
            (string/join " ")
            string/capitalize)
       ".")))
 
 (defn paragraph
-  ([lang-freqs]
-    (paragraph lang-freqs (rand-int 10)))
-  ([lang-freqs sentence-count]
+  ([system lang-freqs]
+    (paragraph system lang-freqs (random/int system 10)))
+  ([system lang-freqs sentence-count]
     (str
       (->> sentence-count
            inc
            range
-           (map (fn [_] (sentence lang-freqs)))
+           (map (fn [_] (sentence system lang-freqs)))
            (string/join " ")))))
 
 (defn- print-sample
-  [name lang]
-  (print (format "\n\t%s: %s\n" name (paragraph lang))))
+  [system name lang]
+  (print (format "\n\t%s: %s\n" name (paragraph system lang))))
+
+(defn run
+  [system world language]
+  (case world
+    :rook (case language
+            :rookish (print-sample system "Rookish" rook/rookish)
+            :elani (print-sample system "Elani" rook/elani)
+            :jas (print-sample system "Jas" rook/jas)
+            :mux (print-sample system "Mux" rook/mux)
+            (doall
+              (do (run system :rook :rookish)
+                  (run system :rook :elani)
+                  (run system :rook :jas)
+                  (run system :rook :mux))))
+    :mythgarthur (case language
+                   :orcish (print-sample system "Orcish" mythgarthur/orcish)
+                   :elvish (print-sample system "Elvish" mythgarthur/elvish)
+                   :human (print-sample system "Human" mythgarthur/human)
+                   :dwarvish (print-sample system "Dwarvish" mythgarthur/dwarvish)
+                   (doall
+                     (do (run system :mythgarthur :orcish)
+                         (run system :mythgarthur :elvish)
+                         (run system :mythgarthur :human)
+                         (run system :mythgarthur :dwarvish))))))
+
 
 (defn -main
   [& args]
-  (let [world (keyword (first args))
+  (logger/set-level! '[hxgm30] :error)
+  (system-manager/setup-manager {:init 'hxgm30.language.components.core/cli
+                                 :throw-errors true})
+  (system-manager/startup)
+  (let [sys (system-manager/system)
+        world (keyword (first args))
         language (keyword (second args))]
-    (case world
-      :rook (case language
-              :rookish (print-sample "Rookish" rook/rookish)
-              :elani (print-sample "Elani" rook/elani)
-              :jas (print-sample "Jas" rook/jas)
-              :mux (print-sample "Mux" rook/mux)
-              (doall
-                (do (-main :rook :rookish)
-                    (-main :rook :elani)
-                    (-main :rook :jas)
-                    (-main :rook :mux))))
-      :mythgarthur (case language
-                     :orcish (print-sample "Orcish" mythgarthur/orcish)
-                     :elvish (print-sample "Elvish" mythgarthur/elvish)
-                     :human (print-sample "Human" mythgarthur/human)
-                     :dwarvish (print-sample "Dwarvish" mythgarthur/dwarvish)
-                     (doall
-                       (do (-main :mythgarthur :orcish)
-                           (-main :mythgarthur :elvish)
-                           (-main :mythgarthur :human)
-                           (-main :mythgarthur :dwarvish)))))))
+    (run sys world language)))

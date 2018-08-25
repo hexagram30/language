@@ -3,61 +3,63 @@
     [clojure.java.io :as io]
     [clojure.set :as set]
     [clojure.string :as string]
+    [hxgm30.dice.components.random :as random]
     [hxgm30.language.syntagmata.util :as util]))
 
 (defn syllable-count
-  [stats]
-  (util/percent-> (rand) (get-in stats [:pseudo-syllables :percent-ranges])))
+  [system stats]
+  (util/percent-> (random/float system)
+                  (get-in stats [:pseudo-syllables :percent-ranges])))
 
 (defn syllable
-  [stats position]
+  [system stats position]
   (case position
     :initial (util/percent->
-              (rand)
+              (random/float system)
               (get-in stats [:sound-transitions :initial :percent-ranges]))
     :medial (util/percent->
-              (rand)
+              (random/float system)
               (get-in stats [:sound-transitions :medial :percent-ranges]))
     :final (util/percent->
-              (rand)
+              (random/float system)
               (get-in stats [:sound-transitions :final :percent-ranges]))))
 
 (defn word
-  ([stats]
-    (word stats (syllable-count stats)))
-  ([stats syllables]
+  ([system stats]
+    (word system stats (syllable-count system stats)))
+  ([system stats syllables]
     (case syllables
-      1 (syllable stats :initial)
-      2 (str (syllable stats :initial)
-             (syllable stats :final))
-      (str (syllable stats :initial)
+      1 (syllable system stats :initial)
+      2 (str (syllable system stats :initial)
+             (syllable system stats :final))
+      (str (syllable system stats :initial)
            (->> syllables
                 dec
                 range
-                (mapcat (fn [_] (syllable stats :medial)))
+                (mapcat (fn [_] (syllable system stats :medial)))
                 (string/join ""))
-           (syllable stats :final)))))
+           (syllable system stats :final)))))
 
 (defn sentence
-  ([stats]
-    (sentence stats (rand-int 10)))
-  ([stats words]
+  ([system stats]
+    (sentence system stats (random/int system 10)))
+  ([system stats words]
     (str
       (->> words
            inc
            range
-           (map (fn [_] (word stats)))
+           (map (fn [_] (word system stats)))
            (string/join " ")
            string/capitalize)
       ".")))
 
 (defn paragraph
-  ([stats]
-    (paragraph stats (rand-int 10)))
-  ([stats sentence-count]
+  ([system stats]
+    (paragraph system stats (random/int system 10)))
+  ([system stats sentence-count]
     (str
       (->> sentence-count
            inc
            range
-           (map (fn [_] (sentence stats))))
+           (map (fn [_] (sentence system stats))))
       " ")))

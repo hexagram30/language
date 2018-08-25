@@ -10,7 +10,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (def setup-options {
-  :init 'hxgm30.language.components.testing.system/init
+  :init 'hxgm30.language.components.core/testing
   :throw-errors true})
 
 (defn init
