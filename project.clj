@@ -15,7 +15,7 @@
        ns
        "\u001B[35m]\u001B[33m λ\u001B[m=> "))
 
-(defproject hexagram30/language "4.0.0-SNAPSHOT"
+(defproject hexagram30/language "4.0.0"
   :description "A language and word generator for use in hexagram30 narratives"
   :url "https://github.com/hexagram30/language"
   :license {
