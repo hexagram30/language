@@ -9,40 +9,81 @@
 
 (def file-template "syntagmata/corpora/%s/%s.txt")
 (def file-resource-template (str "resources/" file-template))
+(def name-file-template "syntagmata/corpora/names/%s/%s/%s.txt")
+
 
 (defn load
-  [type language]
-  (->> (format file-template
-               (name type)
-               (name language))
-       io/resource
-       io/reader
-       line-seq
-       (mapcat #(string/split % #" "))
-       (remove empty?)
-       (map (comp string/lower-case
-                  #(string/replace % "\"" "")
-                  #(string/replace % "'s" "")
-                  #(string/replace % "'ll" "")
-                  #(string/replace % "'d" "")
-                  #(string/replace % "'re" "")))
-       sort))
+  ([type language]
+    (load (format file-template
+                  (name type)
+                  (name language))))
+  ([race name-type data-type]
+    (load (format name-file-template
+                  (name race)
+                  (name name-type)
+                  (name data-type))))
+  ([fullpath]
+    (->> fullpath
+         io/resource
+         io/reader
+         line-seq
+         (mapcat #(string/split % #" "))
+         (remove empty?)
+         (map (comp string/lower-case
+                    #(string/replace % "\"" "")
+                    #(string/replace % "'s" "")
+                    #(string/replace % "'ll" "")
+                    #(string/replace % "'d" "")
+                    #(string/replace % "'re" "")))
+         sort)))
+
+(defn extract-alphabet
+  ([type language]
+    (extract-alphabet (format file-template
+                      (name type)
+                      (name language))))
+  ([race name-type data-type]
+    (extract-alphabet (format name-file-template
+                      (name race)
+                      (name name-type)
+                      (name data-type))))
+  ([fullpath]
+    (->> fullpath
+         load
+         (map #(into #{} %))
+         (apply clojure.set/union)
+         clojure.string/join)))
 
 (defn dump
-    [type language data]
-    (spit (format file-resource-template
-                  (name type)
-                  (name language))
-          data))
+    ([type language data]
+      (dump (format file-resource-template
+                    (name type)
+                    (name language))
+            data))
+    ([race name-type data-type data]
+      (dump (format name-file-template
+                    (name race)
+                    (name name-type)
+                    (name data-type))
+            data))
+    ([fullpath data]
+      (spit fullpath data)))
 
 (defn undump
-    [type language]
-    (->> (format file-template
-                 (name type)
-                 (name language))
-         io/resource
-         slurp
-         edn/read-string))
+    ([type language]
+      (undump (format file-template
+                      (name type)
+                      (name language))))
+    ([race name-type data-type data]
+      (undump (format name-file-template
+                      (name race)
+                      (name name-type)
+                      (name data-type))))
+    ([fullpath]
+      (->> fullpath
+           io/resource
+           slurp
+           edn/read-string)))
 
 (defn load-oneline-file
   [type language]

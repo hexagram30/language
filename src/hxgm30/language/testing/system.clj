@@ -3,7 +3,7 @@
     [clojusc.system-manager.core :as system-api]
     [clojusc.twig :as logger]
     [hxgm30.language.components.config :as config]
-    [hxgm30.language.components.testing.system]))
+    [hxgm30.language.components.core]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Setup and Constants   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
