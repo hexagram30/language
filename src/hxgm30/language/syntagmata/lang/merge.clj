@@ -1,4 +1,4 @@
-(ns hxgm30.language.syntagmata.lang.core
+(ns hxgm30.language.syntagmata.lang.merge
   (:require
     [clojure.string :as string]
     [clojusc.system-manager.core :as system-manager]

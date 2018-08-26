@@ -1,7 +1,7 @@
 (ns hxgm30.language.syntagmata.lang.fictional.rook
   "To use the languages defined here, you can do the following:
   ```
-    (require '[hxgm30.language.syntagmata.lang.core :as lang]
+    (require '[hxgm30.language.syntagmata.lang.merge :as lang]
              '[hxgm30.language.syntagmata.lang.fictional.rook :as rook])
     (lang/paragraph rook/mux)
   ```
