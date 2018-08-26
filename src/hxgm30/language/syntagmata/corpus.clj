@@ -86,60 +86,68 @@
            edn/read-string)))
 
 (defn load-oneline-file
-  [type language]
-  (->> language
-       (load type)
-       first
-       (map str)
-       set))
+  ([type language]
+    (load-oneline-file (load type language)))
+  ([race name-type data-type]
+    (load-oneline-file (load race name-type data-type)))
+  ([fullpath]
+    (->> fullpath
+         first
+         (map str)
+         set)))
 
 (defn load-consonants
-  [language]
-  (load-oneline-file :consonants language))
+  ([language]
+    (load-oneline-file :consonants language))
+  ([race name-type]
+    (load-oneline-file race name-type :consonants)))
 
 (defn load-vowels
-  [language]
-  (load-oneline-file :vowels language))
+  ([language]
+    (load-oneline-file :vowels language))
+  ([race name-type]
+    (load-oneline-file race name-type :vowels)))
 
 (defn load-alphabet
-  [language]
-  (set/union (load-consonants language) (load-vowels language)))
+  [& args]
+  (set/union (apply load-consonants args)
+             (apply load-vowels args)))
 
 (defn re-not-alpha
-  [language]
-  (str "[^" (string/join (load-alphabet language)) "]"))
+  [& args]
+  (str "[^" (string/join (apply load-alphabet args)) "]"))
 
 (defn re-alpha
-  [language]
-  (str "[" (string/join (load-alphabet language)) "]"))
+  [& args]
+  (str "[" (string/join (apply load-alphabet args)) "]"))
 
 (defn re-vowel
-  [language]
-  (str "[" (string/join (load-vowels language)) "]"))
+  [& args]
+  (str "[" (string/join (apply load-vowels args)) "]"))
 
 (defn re-consonant
-  [language]
-  (str "[" (string/join (load-consonants language)) "]"))
+  [& args]
+  (str "[" (string/join (apply load-consonants args)) "]"))
 
 (defn re-sound-transitions
-  [language]
+  [& args]
   (format "(%s+)|(%s+%s+)|(%s+)"
-          (re-vowel language)
-          (re-consonant language)
-          (re-vowel language)
-          (re-consonant language)))
+          (apply re-vowel args)
+          (apply re-consonant args)
+          (apply re-vowel args)
+          (apply re-consonant args)))
 
 (defn clean-word
-  [language word]
+  [word & args]
   (-> word
-      (string/replace (re-pattern (re-not-alpha language))
+      (string/replace (re-pattern (apply re-not-alpha args))
                       " ")
       (string/split #"\s")))
 
 (defn clean-words
-  [language words]
+  [words & args]
   (->> words
-      (mapcat #(clean-word language %))
+      (mapcat #(apply clean-word (cons % args)))
       (remove empty?)))
 
 (defn load-source
@@ -148,12 +156,16 @@
     (clean-words language raw-words)))
 
 (defn load-wordlist
-    [language]
+  ([language]
     (load :wordlists language))
+  ([race name-type]
+    (load race name-type :list)))
 
 (defn load-stats
-    [language]
+  ([language]
     (load :stats language))
+  ([race name-type]
+    (load race name-type :stats)))
 
 (defn save-wordlist
   [language data]
