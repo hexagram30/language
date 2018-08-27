@@ -5,8 +5,8 @@
     [hxgm30.language.io :as io]
     [hxgm30.language.syntagmata.util :as util]))
 
-(def file-template "syntagmata/corpora/%s/%s")
-(def name-file-template "syntagmata/corpora/names/%s/%s/%s")
+(def file-template "corpora/syntagmata/%s/%s")
+(def name-file-template "corpora/syntagmata/names/%s/%s/%s")
 
 (defn fullpath
   ([type language]
