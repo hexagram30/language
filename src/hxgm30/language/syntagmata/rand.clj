@@ -57,9 +57,9 @@
   ([system stats]
     (paragraph system stats (random/int system 10)))
   ([system stats sentence-count]
-    (str
+    (string/join
+      " "
       (->> sentence-count
            inc
            range
-           (map (fn [_] (sentence system stats))))
-      " ")))
+           (map (fn [_] (sentence system stats)))))))
