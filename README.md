@@ -5,9 +5,23 @@
 [![][logo]][logo-large]
 
 
+## Names and Text
+
+There are several ways to use the CLI for this component:
+
+* Generate text (a word, sentence, or paragraph) based on a statistical
+  anaylsis of a language's syllables (syntagmata).
+* Generate text in a language created by assembling statisticvs for real
+  languages.
+* Generate text one of the pre-defined "assembled" (fictional) languages.
+* Generate a male/female name pair for a fictional fantasy race.
+* Generate male/female name paris for all supported fantasy races.
+
+
 ## Usage
 
-From the command line:
+
+### Command Line
 
 ```
 $ lein fictional mythgarthur
@@ -70,7 +84,75 @@ $ lein fictional rook
          da marirr mange bass mmmmkorvara.
 ```
 
-From the REPL:
+Generate a name:
+
+```
+$ lein name halfling
+
+ __                                                 ______ ______
+|  |--.-----.--.--.---.-.-----.----.---.-.--------.|__    |      |
+|     |  -__|_   _|  _  |  _  |   _|  _  |        ||__    |  --  |
+|__|__|_____|__.__|___._|___  |__| |___._|__|__|__||______|______|
+
+................................  l a n g u a g e  ...............
+
+
+
+Halfling
+  Female: Dose Ganks
+  Male: Miwmadango Ganks
+
+```
+
+Generate names for all races:
+
+```
+$ lein names
+
+ __                                                 ______ ______
+|  |--.-----.--.--.---.-.-----.----.---.-.--------.|__    |      |
+|     |  -__|_   _|  _  |  _  |   _|  _  |        ||__    |  --  |
+|__|__|_____|__.__|___._|___  |__| |___._|__|__|__||______|______|
+
+................................  l a n g u a g e  ...............
+
+
+
+Dragonborn
+  Female: Thararinn Lidojallok
+  Male: Shancaskaranil Lidojallok
+
+Dwarf
+  Female: Hlith Gokeruk
+  Male: Baefundan Gokeruk
+
+Elf
+  Female: Arirelee Inólkiilan
+  Male: Thar Inólkiilan
+
+Gnome
+  Female: Cabemwimi Gambernir
+  Male: Geadle Gambernir
+
+Halfling
+  Female: Giwadaranca Sardle
+  Male: Grir Sardle
+
+Human
+  Female: Brich An
+  Male: Elchiglas An
+
+Orc
+  Female: Onsimeng Oafoohonfist
+  Male: Lurcorrench Oafoohonfist
+
+Tiefling
+  Female: Kalerchal Stoldedbeakest
+  Male: Dakekmes Stoldedbeakest
+
+```
+
+### REPL
 
 ```
     (require '[hxgm30.language.syntagmata.lang.core :as lang]

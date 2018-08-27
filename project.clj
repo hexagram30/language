@@ -97,5 +97,7 @@
       ["uberjar"]]
     ;; Scripts
     "fictional" ["run" "-m" "hxgm30.language.syntagmata.lang.merge"]
+    "name" ["run" "-m" "hxgm30.language.syntagmata.lang.names"]
+    "names" ["run" "-m" "hxgm30.language.syntagmata.lang.names"]
     "regen-stats" ["run" "-m" "hxgm30.language.syntagmata.core" "regen-stats"]})
 
