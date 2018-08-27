@@ -5,45 +5,25 @@
     [clojure.set :as set]
     [clojure.string :as string]
     [hxgm30.language.syntagmata.corpus :as corpus]
-    [hxgm30.language.syntagmata.util :as util])
+    [hxgm30.language.syntagmata.lang.core :as lang]
+    [hxgm30.language.syntagmata.util :as util]
+    [taoensso.timbre :as log])
   (:gen-class))
-
-(def supported
-  [:afrikaans
-   :arabic
-   :chinese
-   :english
-   :finnish
-   :french
-   :gaelic
-   :german
-   :greek
-   :hebrew
-   :hindi
-   :japanese
-   :korean
-   :latin
-   :oldenglish
-   :oldnorse
-   :onomatopoetic
-   :pie
-   :russian
-   :sanskrit
-   :scots
-   :spanish])
 
 (defn pseudo-syllables
   ""
-  [language words]
+  [words & args]
   (map (comp #(if (= % []) [""] %)
              #(string/split % #"_")
-             #(string/replace % (re-pattern (str (corpus/re-vowel language) "+")) "_"))
+             #(string/replace %
+                              (re-pattern
+                                (str (apply corpus/re-vowel args) "+")) "_"))
        words))
 
 (defn pseudo-syllable-counts
   ""
-  [language words]
-  (map count (pseudo-syllables language words)))
+  [words & args]
+  (map count (apply pseudo-syllables (cons words args))))
 
 (defn pseudo-syllable-freqs
   "The intent of this function is to provide information regarding how many
@@ -53,20 +33,20 @@
   Create a lookup of key/value pairs where the key is the number
   pseudo-syllables and the associated value is the number of times the given
   pseudo-syllable occurs."
-  [language words]
-  (frequencies (pseudo-syllable-counts language words)))
+  [words & args]
+  (frequencies (apply pseudo-syllable-counts (cons words args))))
 
 (defn sound-transitions
   ""
-  [language words]
+  [words & args]
   (map (comp #(remove nil? %)
              #(mapcat rest %)
-             #(re-seq (re-pattern (corpus/re-sound-transitions language)) %))
+             #(re-seq (re-pattern (apply corpus/re-sound-transitions args)) %))
        words))
 
 (defn flat-sound-transitions
-  [language words]
-  (flatten (sound-transitions language words)))
+  [words & args]
+  (flatten (apply sound-transitions (cons words args))))
 
 (defn positional-sound-transitions
   [position transitions]
@@ -81,10 +61,10 @@
 
 (defn generate-stats
   ""
-  [language]
-  (let [words (corpus/load-wordlist language)
-        pseudo-syllable-freqs (pseudo-syllable-freqs language words)
-        transitions (sound-transitions language words)
+  [& args]
+  (let [words (apply corpus/load-wordlist args)
+        pseudo-syllable-freqs (apply pseudo-syllable-freqs (cons words args))
+        transitions (apply sound-transitions (cons words args))
         initial (positional-sound-transition-freqs :initial transitions)
         medial (positional-sound-transition-freqs :medial transitions)
         final (positional-sound-transition-freqs :final transitions)]
@@ -102,19 +82,39 @@
          :frequencies final
          :percent-ranges (util/frequencies->percent-ranges final)}}}))
 
+(defn regen-language-stats
+  []
+  (doall
+    (for [language lang/supported-languages]
+      (do
+        (log/debug "Processing %s ..." language)
+        (corpus/dump :stats language (generate-stats language))
+        {language :ok}))))
+
+(defn regen-name-stats
+  []
+  (doall
+    (for [race lang/supported-names
+          name-type lang/supported-name-types]
+      (do
+        (log/debug "Processing %s + %s ..." race name-type)
+        (corpus/dump race name-type :stats (generate-stats race name-type))
+        {race {name-type :ok}}))))
+
 (defn regen-stats
   ([]
-    (doall
-      (for [language supported]
-        (do
-          (corpus/dump :stats language (generate-stats language))
-          {language :ok}))))
+    (regen-language-stats)
+    (regen-name-stats))
   ([language]
-    (corpus/dump :stats language (generate-stats language))))
+    (corpus/dump :stats language (generate-stats language)))
+  ([race name-type]
+    (corpus/dump race name-type :stats (generate-stats race name-type))))
 
 (defn stats
-  [language]
-  (corpus/undump :stats language))
+  ([language]
+    (corpus/undump :stats language))
+  ([race name-type]
+    (corpus/undump race name-type :stats)))
 
 (defn -main
   [& args]
