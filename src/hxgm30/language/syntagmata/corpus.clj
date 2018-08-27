@@ -10,8 +10,11 @@
 (def file-template "syntagmata/corpora/%s/%s.txt")
 (def file-resource-template (str "resources/" file-template))
 (def name-file-template "syntagmata/corpora/names/%s/%s/%s.txt")
+(def name-file-resource-template (str "resources/" name-file-template))
 
-
+(defn load-clean
+  [fullpath]
+  )
 (defn load
   ([type language]
     (load (format file-template
@@ -61,7 +64,7 @@
                     (name language))
             data))
     ([race name-type data-type data]
-      (dump (format name-file-template
+      (dump (format name-file-resource-template
                     (name race)
                     (name name-type)
                     (name data-type))
@@ -74,7 +77,7 @@
       (undump (format file-template
                       (name type)
                       (name language))))
-    ([race name-type data-type data]
+    ([race name-type data-type]
       (undump (format name-file-template
                       (name race)
                       (name name-type)
@@ -163,9 +166,9 @@
 
 (defn load-stats
   ([language]
-    (load :stats language))
+    (undump :stats language))
   ([race name-type]
-    (load race name-type :stats)))
+    (undump race name-type :stats)))
 
 (defn save-wordlist
   [language data]
