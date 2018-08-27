@@ -121,4 +121,5 @@
   (let [sys (system-manager/system)
         world (keyword (first args))
         language (keyword (second args))]
-    (run sys world language)))
+    (run sys world language)
+    (println)))
