@@ -154,18 +154,43 @@ Tiefling
 
 ### REPL
 
+Example for generating a paragraph in one of the pre-defined constructed
+languages:
+
+```clj
+(require '[hxgm30.language.syntagmata.lang.core :as lang]
+         '[hxgm30.language.syntagmata.lang.fictional.rook :as rook])
+(lang/paragraph rook/mux)
 ```
-    (require '[hxgm30.language.syntagmata.lang.core :as lang]
-             '[hxgm30.language.syntagmata.lang.fictional.rook :as rook])
-    (lang/paragraph rook/mux)
+```
+Whizz ji reira nou pebodana suran yabisebt. Dan
+aravan curassouronan mume potikertarp gun kerr
+aruppitten dep bem. Lu whoom ido ong sluckoo. Lue
+oya nyaazz hesh kedirayo. Pum settewaxth lias.
+Phes gegigupe whistramew losomepe irstendeng
+gesiweck wegetiop boo bur.
+```
+
+Example for generaing a name:
+
+```clj
+(require '[hxgm30.language.syntagmata.lang.names :as names])
+(names/last (system) :elf)
 ```
 ```
-    Whizz ji reira nou pebodana suran yabisebt. Dan
-    aravan curassouronan mume potikertarp gun kerr
-    aruppitten dep bem. Lu whoom ido ong sluckoo. Lue
-    oya nyaazz hesh kedirayo. Pum settewaxth lias.
-    Phes gegigupe whistramew losomepe irstendeng
-    gesiweck wegetiop boo bur.
+"Ikiiladol"
+```
+```clj
+(names/female (system) :elf)
+```
+```
+"Aladenienwë"
+```
+```clj
+(names/male (system) :elf)
+```
+```
+"Es"
 ```
 
 
