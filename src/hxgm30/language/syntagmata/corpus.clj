@@ -45,8 +45,7 @@
          io/load-clean-lines
          (map set)
          (apply clojure.set/union)
-         (apply sorted-set)
-         clojure.string/join)))
+         (apply sorted-set))))
 
 (defn dump
     ([type language data]
@@ -65,34 +64,27 @@
     ([fullpath]
       (io/undump fullpath)))
 
-(defn load-oneline-file
-  ([type language]
-    (load-oneline-file (fullpath type language)))
-  ([race name-type data-type]
-    (load-oneline-file (fullpath race name-type data-type)))
-  ([fullpath]
-    (io/load-oneline-file fullpath)))
-
-(defn load-consonants
+(defn undump-consonants
   ([language]
-    (load-oneline-file :consonants language))
+    (undump :consonants language))
   ([race name-type]
-    (load-oneline-file race name-type :consonants)))
+    (undump race name-type :consonants)))
 
-(defn load-vowels
+(defn undump-vowels
   ([language]
-    (load-oneline-file :vowels language))
+    (undump :vowels language))
   ([race name-type]
-    (load-oneline-file race name-type :vowels)))
+    (undump race name-type :vowels)))
 
-(defn load-alphabet
+(defn undump-alphabet
   [& args]
-  (set/union (apply load-consonants args)
-             (apply load-vowels args)))
+  (apply sorted-set
+    (set/union (apply undump-consonants args)
+               (apply undump-vowels args))))
 
 (defn string-chars->string
   [string-chars]
-  (string/replace (string/join string-chars) #"-" (str "\"" "-")))
+  (string/replace (string/join string-chars) "-" (str "\"" "-")))
 
 (defn regex-range
   [string-chars]
@@ -102,21 +94,21 @@
   [string-chars]
   (str "[^" (string-chars->string string-chars) "]"))
 
-(defn re-not-alpha
-  [& args]
-  (regex-not-range (apply load-alphabet args)))
-
 (defn re-alpha
   [& args]
-  (regex-range (apply load-alphabet args)))
+  (regex-range (apply undump-alphabet args)))
 
-(defn re-vowel
+(defn re-not-alpha
   [& args]
-  (regex-range (apply load-vowels args)))
+  (regex-not-range (apply undump-alphabet args)))
 
 (defn re-consonant
   [& args]
-  (regex-range (apply load-consonants args)))
+  (regex-range (apply undump-consonants args)))
+
+(defn re-vowel
+  [& args]
+  (regex-range (apply undump-vowels args)))
 
 (defn re-sound-transitions
   [& args]

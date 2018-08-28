@@ -87,7 +87,7 @@
   (doall
     (for [language lang/supported-languages]
       (do
-        (log/debug "Processing %s ..." language)
+        (log/debugf "Processing %s ..." language)
         (corpus/dump :stats language (generate-stats language))
         {language :ok}))))
 
@@ -97,7 +97,7 @@
     (for [race lang/supported-names
           name-type lang/supported-name-types]
       (do
-        (log/debug "Processing %s + %s ..." race name-type)
+        (log/debugf "Processing %s + %s ..." race name-type)
         (corpus/dump race name-type :stats (generate-stats race name-type))
         {race {name-type :ok}}))))
 

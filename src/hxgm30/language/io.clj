@@ -35,11 +35,3 @@
        io/resource
        slurp
        edn/read-string))
-
-(defn load-oneline-file
-  [fullpath]
-  (->> fullpath
-       load-lines
-       first
-       (map str)
-       set))
