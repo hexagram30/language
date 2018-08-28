@@ -43,8 +43,9 @@
   ([fullpath]
     (->> fullpath
          io/load-clean-lines
-         (map #(into #{} %))
+         (map set)
          (apply clojure.set/union)
+         (apply sorted-set)
          clojure.string/join)))
 
 (defn dump
