@@ -159,51 +159,52 @@ languages (words, sentences, and paragraphs):
 
 
 ```clj
-[hxgm30.language.repl] λ=> (lang/word (system) :gaelic)
+(require '[hxgm30.language.syntagmata.lang.core :as lang])
+(lang/word (system) :gaelic)
 ```
 ```
 "irna"
 ```
 ```clj
-[hxgm30.language.repl] λ=> (lang/word (system) :oldnorse)
+(lang/word (system) :oldnorse)
 ```
 ```
 "hapleindarð"
 ```
 ```clj
-[hxgm30.language.repl] λ=> (lang/word (system) :hebrew)
+(lang/word (system) :hebrew)
 ```
 ```
 "smv"
 ```
 ```clj
-[hxgm30.language.repl] λ=> (lang/sentence (system) :arabic)
+(lang/sentence (system) :arabic)
 ```
 ```
 "Atheemituna ilimtunahuwma wataqattaaaan aghayyilbayn tabtaghoohuthkumilashhadu
 faaaajabusibkubzan waalnnawalayltudul."
 ```
 ```clj
-[hxgm30.language.repl] λ=> (lang/sentence (system) :hindi)
+(lang/sentence (system) :hindi)
 ```
 ```
 "Tyaah shuu madaanesuyaa sarhamanaana bhuumaanaasramaadiraptaa puukakham ariivam
 sahaa."
 ```
 ```clj
-[hxgm30.language.repl] λ=> (lang/sentence (system) :greek)
+(lang/sentence (system) :greek)
 ```
 ```
 "Τυδεΐ πιροπώμην δ᾽ γὰ."
 ```
 ```clj
-[hxgm30.language.repl] λ=> (lang/sentence (system) :pie)
+(lang/sentence (system) :pie)
 ```
 ```
 "*krehnów *ǵeééru *rekh₁ns *um *ǵer *heym *kashyeǵʰ *dáwni *doeyr."
 ```
 ```clj
-[hxgm30.language.repl] λ=> (lang/paragraph (system) :chinese)
+(lang/paragraph (system) :chinese)
 ```
 ```
 "Pia xiun lai cha tao mian ang tain. Shi rang kan zen. Zheng sa pien ba.
@@ -215,8 +216,7 @@ Example for generating a paragraph in one of the pre-defined constructed
 languages:
 
 ```clj
-(require '[hxgm30.language.syntagmata.lang.core :as lang]
-         '[hxgm30.language.syntagmata.lang.fictional.rook :as rook])
+(require '[hxgm30.language.syntagmata.lang.fictional.rook :as rook])
 (lang/paragraph rook/mux)
 ```
 ```
