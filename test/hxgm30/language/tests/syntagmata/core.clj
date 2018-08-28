@@ -22,7 +22,7 @@
           ["" "ng" "n" "r"]
           ["t" "ls"]
           ["t" "n"]]
-         (syntagmata/pseudo-syllables :english test-word-list))))
+         (syntagmata/pseudo-syllables test-word-list :english))))
 
 (deftest pseudo-syllable-counts
   (is (= [1
@@ -33,14 +33,14 @@
           4
           2
           2]
-         (syntagmata/pseudo-syllable-counts :english test-word-list))))
+         (syntagmata/pseudo-syllable-counts test-word-list :english))))
 
 (deftest pseudo-syllable-freqs
   (is (= {1 1
           2 4
           5 2
           4 1}
-         (syntagmata/pseudo-syllable-freqs :english test-word-list))))
+         (syntagmata/pseudo-syllable-freqs test-word-list :english))))
 
 (deftest sound-transitions
   (is (= [["a"]
@@ -51,7 +51,7 @@
           ["e" "ngi" "nee" "r"]
           ["too" "ls"]
           ["tu" "ne"]]
-         (syntagmata/sound-transitions :english test-word-list))))
+         (syntagmata/sound-transitions test-word-list :english))))
 
 (deftest flat-sound-transitions
   (is (= ["a"
@@ -62,10 +62,10 @@
           "e" "ngi" "nee" "r"
           "too" "ls"
           "tu" "ne"]
-         (syntagmata/flat-sound-transitions :english test-word-list))))
+         (syntagmata/flat-sound-transitions test-word-list :english))))
 
 (deftest positional-sound-transitions
-  (let [trans (syntagmata/sound-transitions :english test-word-list)]
+  (let [trans (syntagmata/sound-transitions test-word-list :english)]
     (is (= ["a" "a" "a" "ca" "e" "e" "too" "tu"]
            (syntagmata/positional-sound-transitions :initial trans)))
     (is (= ["ppli" "ca" "tio" "ncy" "clo" "poe" "ngi" "nee"]
@@ -74,7 +74,7 @@
            (syntagmata/positional-sound-transitions :final trans)))))
 
 (deftest positional-sound-transition-freqs
-  (let [trans (syntagmata/sound-transitions :english test-word-list)]
+  (let [trans (syntagmata/sound-transitions test-word-list :english)]
     (is (= {"a" 3, "ca" 1, "e" 2, "too" 1, "tu" 1}
            (syntagmata/positional-sound-transition-freqs :initial trans)))
     (is (= {"ppli" 1, "ca" 1, "tio" 1, "ncy" 1, "clo" 1, "poe" 1, "ngi" 1, "nee" 1}
