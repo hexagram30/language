@@ -1,7 +1,7 @@
-(ns ^:unit hxgm30.language.tests.syntagmata.core
+(ns ^:unit hxgm30.language.tests.common
   (:require
     [clojure.test :refer :all]
-    [hxgm30.language.syntagmata.core :as syntagmata]))
+    [hxgm30.language.common :as common]))
 
 (def test-word-list
   ["a"
@@ -22,7 +22,7 @@
           ["" "ng" "n" "r"]
           ["t" "ls"]
           ["t" "n"]]
-         (syntagmata/pseudo-syllables test-word-list :english))))
+         (common/pseudo-syllables test-word-list :english))))
 
 (deftest pseudo-syllable-counts
   (is (= [1
@@ -33,14 +33,14 @@
           4
           2
           2]
-         (syntagmata/pseudo-syllable-counts test-word-list :english))))
+         (common/pseudo-syllable-counts test-word-list :english))))
 
 (deftest pseudo-syllable-freqs
   (is (= {1 1
           2 4
           5 2
           4 1}
-         (syntagmata/pseudo-syllable-freqs test-word-list :english))))
+         (common/pseudo-syllable-freqs test-word-list :english))))
 
 (deftest sound-transitions
   (is (= [["a"]
@@ -51,7 +51,7 @@
           ["e" "ngi" "nee" "r"]
           ["too" "ls"]
           ["tu" "ne"]]
-         (syntagmata/sound-transitions test-word-list :english))))
+         (common/sound-transitions test-word-list :english))))
 
 (deftest flat-sound-transitions
   (is (= ["a"
@@ -62,22 +62,22 @@
           "e" "ngi" "nee" "r"
           "too" "ls"
           "tu" "ne"]
-         (syntagmata/flat-sound-transitions test-word-list :english))))
+         (common/flat-sound-transitions test-word-list :english))))
 
 (deftest positional-sound-transitions
-  (let [trans (syntagmata/sound-transitions test-word-list :english)]
+  (let [trans (common/sound-transitions test-word-list :english)]
     (is (= ["a" "a" "a" "ca" "e" "e" "too" "tu"]
-           (syntagmata/positional-sound-transitions :initial trans)))
+           (common/positional-sound-transitions :initial trans)))
     (is (= ["ppli" "ca" "tio" "ncy" "clo" "poe" "ngi" "nee"]
-           (syntagmata/positional-sound-transitions :medial trans)))
+           (common/positional-sound-transitions :medial trans)))
     (is (= ["pple" "n" "t" "dia" "r" "ls" "ne"]
-           (syntagmata/positional-sound-transitions :final trans)))))
+           (common/positional-sound-transitions :final trans)))))
 
 (deftest positional-sound-transition-freqs
-  (let [trans (syntagmata/sound-transitions test-word-list :english)]
+  (let [trans (common/sound-transitions test-word-list :english)]
     (is (= {"a" 3, "ca" 1, "e" 2, "too" 1, "tu" 1}
-           (syntagmata/positional-sound-transition-freqs :initial trans)))
+           (common/positional-sound-transition-freqs :initial trans)))
     (is (= {"ppli" 1, "ca" 1, "tio" 1, "ncy" 1, "clo" 1, "poe" 1, "ngi" 1, "nee" 1}
-           (syntagmata/positional-sound-transition-freqs :medial trans)))
+           (common/positional-sound-transition-freqs :medial trans)))
     (is (= {"pple" 1, "n" 1, "t" 1, "dia" 1, "r" 1, "ls" 1, "ne" 1}
-           (syntagmata/positional-sound-transition-freqs :final trans)))))
+           (common/positional-sound-transition-freqs :final trans)))))
