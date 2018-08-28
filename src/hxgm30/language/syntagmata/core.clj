@@ -59,7 +59,7 @@
   [position transitions]
   (frequencies (positional-sound-transitions position transitions)))
 
-(defn generate-stats
+(defn generate-syntagmata
   ""
   [& args]
   (let [words (apply corpus/load-wordlist args)
@@ -82,45 +82,48 @@
          :frequencies final
          :percent-ranges (util/frequencies->percent-ranges final)}}}))
 
-(defn regen-language-stats
+(defn regen-language-syntagmata
   []
   (doall
     (for [language lang/supported-languages]
       (do
         (log/debugf "Processing %s ..." language)
-        (corpus/dump :stats language (generate-stats language))
+        (corpus/dump-syntagmata language (generate-syntagmata language))
         {language :ok}))))
 
-(defn regen-name-stats
+(defn regen-name-syntagmata
   []
   (doall
     (for [race lang/supported-names
           name-type lang/supported-name-types]
       (do
         (log/debugf "Processing %s + %s ..." race name-type)
-        (corpus/dump race name-type :stats (generate-stats race name-type))
+        (corpus/dump-syntagmata race name-type (generate-syntagmata race name-type))
         {race {name-type :ok}}))))
 
-(defn regen-stats
+(defn regen-syntagmata
   ([]
-    (regen-language-stats)
-    (regen-name-stats))
+      (regen-language-syntagmata)
+      (regen-name-syntagmata)
+      :ok)
   ([language]
-    (corpus/dump :stats language (generate-stats language)))
+    (corpus/dump-syntagmata language (generate-syntagmata language)))
   ([race name-type]
-    (corpus/dump race name-type :stats (generate-stats race name-type))))
+    (corpus/dump-syntagmata race
+                            name-type
+                            (generate-syntagmata race name-type))))
 
-(defn stats
+(defn syntagmata
   ([language]
-    (corpus/undump :stats language))
+    (corpus/undump-syntagmata language))
   ([race name-type]
-    (corpus/undump race name-type :stats)))
+    (corpus/undump-syntagmata race name-type)))
 
 (defn -main
   [& args]
   (let [cmd (keyword (first args))]
     (case cmd
-      :regen-stats (do
-                     (println "Regenerating stats ...\n")
-                     (pprint/pprint (regen-stats))
-                     (println)))))
+      :regen-syntagmata (do
+                          (println "Regenerating syntagmata data ...\n")
+                          (regen-syntagmata)
+                          (println)))))

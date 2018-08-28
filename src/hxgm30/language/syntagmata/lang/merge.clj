@@ -33,14 +33,14 @@
 (defn word
   [system lang-freqs]
   (let [lang (select system lang-freqs)
-        stats (syntagmata/stats lang)
+        stats (syntagmata/syntagmata lang)
         syllables (rand/syllable-count system stats)]
     (case syllables
       1 (rand/syllable system stats :initial)
       2 (str (rand/syllable system stats :initial)
              (rand/syllable
               system
-              (syntagmata/stats
+              (syntagmata/syntagmata
                 (select system lang-freqs))
               :final))
       (str (rand/syllable system stats :initial)
@@ -50,12 +50,12 @@
                 (mapcat (fn [_]
                          (rand/syllable
                           system
-                          (syntagmata/stats (select system lang-freqs))
+                          (syntagmata/syntagmata (select system lang-freqs))
                           :medial)))
                 (string/join ""))
            (rand/syllable
             system
-            (syntagmata/stats
+            (syntagmata/syntagmata
               (select system lang-freqs))
             :final)))))
 

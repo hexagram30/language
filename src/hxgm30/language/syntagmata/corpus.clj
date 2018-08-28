@@ -5,8 +5,8 @@
     [hxgm30.language.io :as io]
     [hxgm30.language.syntagmata.util :as util]))
 
-(def file-template "corpora/syntagmata/%s/%s")
-(def name-file-template "corpora/syntagmata/names/%s/%s/%s")
+(def file-template "corpora/%s/%s")
+(def name-file-template "corpora/names/%s/%s/%s")
 
 (defn fullpath
   ([type language]
@@ -49,8 +49,7 @@
 
 (defn dump
     ([type language data]
-      (dump (fullpath type language)
-            data))
+      (dump (fullpath type language) data))
     ([race name-type data-type data]
       (dump (fullpath race name-type data-type) data))
     ([fullpath data]
@@ -142,11 +141,17 @@
   ([race name-type]
     (load-lines race name-type :list)))
 
-(defn load-stats
+(defn undump-syntagmata
   ([language]
-    (undump :stats language))
+    (undump :syntagmata language))
   ([race name-type]
-    (undump race name-type :stats)))
+    (undump race name-type :syntagmata)))
+
+(defn dump-syntagmata
+  ([language data]
+    (dump :syntagmata language data))
+  ([race name-type data]
+    (dump race name-type :syntagmata data)))
 
 (defn save-wordlist
   [language data]

@@ -42,6 +42,6 @@
    :male
    :surname])
 
-(def word #(rand/word %1 (corpus/load-stats %2)))
-(def sentence #(rand/sentence %1 (corpus/load-stats %2)))
-(def paragraph #(rand/paragraph %1 (corpus/load-stats %2)))
+(def word #(rand/word %1 (corpus/undump-syntagmata %2)))
+(def sentence #(rand/sentence %1 (corpus/undump-syntagmata %2)))
+(def paragraph #(rand/paragraph %1 (corpus/undump-syntagmata %2)))

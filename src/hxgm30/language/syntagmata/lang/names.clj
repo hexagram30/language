@@ -15,7 +15,7 @@
 
 (defn gen-name
   [system race name-type]
-  (string/capitalize (rand/word system (corpus/load-stats race name-type))))
+  (string/capitalize (rand/word system (corpus/undump-syntagmata race name-type))))
 
 (defn last
   [system race]
