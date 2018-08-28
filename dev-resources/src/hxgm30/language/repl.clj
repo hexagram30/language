@@ -18,7 +18,7 @@
     [hxgm30.language.syntagmata.lang.fictional.rook :as rook]
     [hxgm30.language.syntagmata.lang.names :as names]
     [hxgm30.language.syntagmata.rand :as rand]
-    [hxgm30.language.syntagmata.util :as util]
+    [hxgm30.language.util :as util]
     [trifl.java :refer [show-methods]]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

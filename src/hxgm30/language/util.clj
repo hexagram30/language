@@ -1,4 +1,4 @@
-(ns hxgm30.language.syntagmata.util
+(ns hxgm30.language.util
   (:require
     [clojure.java.io :as io]
     [clojure.set :as set]

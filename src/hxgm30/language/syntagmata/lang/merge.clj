@@ -10,7 +10,7 @@
     [hxgm30.language.syntagmata.lang.fictional.mythgarthur :as mythgarthur]
     [hxgm30.language.syntagmata.lang.fictional.rook :as rook]
     [hxgm30.language.syntagmata.rand :as rand]
-    [hxgm30.language.syntagmata.util :as util])
+    [hxgm30.language.util :as util])
   (:gen-class))
 
 (defn select

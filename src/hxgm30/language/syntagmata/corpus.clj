@@ -3,7 +3,7 @@
     [clojure.set :as set]
     [clojure.string :as string]
     [hxgm30.language.io :as io]
-    [hxgm30.language.syntagmata.util :as util]))
+    [hxgm30.language.util :as util]))
 
 (def file-template "corpora/%s/%s")
 (def name-file-template "corpora/names/%s/%s/%s")

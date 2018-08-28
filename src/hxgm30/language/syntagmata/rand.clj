@@ -4,7 +4,7 @@
     [clojure.set :as set]
     [clojure.string :as string]
     [hxgm30.dice.components.random :as random]
-    [hxgm30.language.syntagmata.util :as util]))
+    [hxgm30.language.util :as util]))
 
 (defn syllable-count
   [system stats]

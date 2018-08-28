@@ -9,7 +9,7 @@
     [hxgm30.language.syntagmata.corpus :as corpus]
     [hxgm30.language.syntagmata.lang.core :as lang]
     [hxgm30.language.syntagmata.rand :as rand]
-    [hxgm30.language.syntagmata.util :as util])
+    [hxgm30.language.util :as util])
   (:refer-clojure :exclude [last])
   (:gen-class))
 
