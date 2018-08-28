@@ -4,10 +4,10 @@
     [clojusc.system-manager.core :as system-manager]
     [clojusc.twig :as logger]
     [hxgm30.dice.components.random :as random]
+    [hxgm30.language.common :as common]
     [hxgm30.language.components.core]
     [hxgm30.language.syntagmata.core :as syntagmata]
     [hxgm30.language.syntagmata.corpus :as corpus]
-    [hxgm30.language.syntagmata.lang.core :as lang]
     [hxgm30.language.syntagmata.rand :as rand]
     [hxgm30.language.util :as util])
   (:refer-clojure :exclude [last])
@@ -42,7 +42,7 @@
 (defn run
   ([system]
     (doall
-      (for [race lang/supported-names]
+      (for [race common/supported-names]
         (print-sample system race))))
   ([system race]
     (print-sample system race)))

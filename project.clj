@@ -99,5 +99,6 @@
     "fictional" ["run" "-m" "hxgm30.language.syntagmata.lang.merge"]
     "name" ["run" "-m" "hxgm30.language.syntagmata.lang.names"]
     "names" ["run" "-m" "hxgm30.language.syntagmata.lang.names"]
+    "regen-markov-chains" ["run" "-m" "hxgm30.language.markov.core" "regen-markov-chains"]
     "regen-syntagmata" ["run" "-m" "hxgm30.language.syntagmata.core" "regen-syntagmata"]})
 

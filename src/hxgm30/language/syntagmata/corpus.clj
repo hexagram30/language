@@ -153,6 +153,18 @@
   ([race name-type data]
     (dump race name-type :syntagmata data)))
 
+(defn undump-markov
+  ([language]
+    (undump :markov language))
+  ([race name-type]
+    (undump race name-type :markov)))
+
+(defn dump-markov
+  ([language data]
+    (dump :markov language data))
+  ([race name-type data]
+    (dump race name-type :markov data)))
+
 (defn save-wordlist
   [language data]
   (doall
