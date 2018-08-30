@@ -4,6 +4,7 @@
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.common :as common]
     [hxgm30.language.gen.corpus :as corpus]
+    [hxgm30.language.gen.impl.common :as common-impl]
     [hxgm30.language.util :as util]
     [taoensso.timbre :as log]))
 
@@ -12,7 +13,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defrecord SyntagmataStatsGenerator
-  [system])
+  [system
+   generator
+   reader
+   writer])
 
 (defn generate-stats
   ""
@@ -37,56 +41,20 @@
          :frequencies final
          :percent-ranges (util/frequencies->percent-ranges final)}}}))
 
-(defn regen-language-stats
-  [this]
-  (doall
-    (for [language common/supported-languages]
-      (do
-        (log/debugf "Processing %s ..." language)
-        (corpus/dump-syntagmata language (generate-stats this language))
-        {language :ok}))))
-
-(defn regen-name-stats
-  [this]
-  (doall
-    (for [race common/supported-names
-          name-type common/supported-name-types]
-      (do
-        (log/debugf "Processing %s + %s ..." race name-type)
-        (corpus/dump-syntagmata race
-                                name-type
-                                (generate-stats this race name-type))
-        {race {name-type :ok}}))))
-
-(defn regen-stats
-  ([this]
-    (regen-language-stats this)
-    (regen-name-stats this)
-    :ok)
-  ([this language]
-    (corpus/dump-syntagmata language (generate-stats this language)))
-  ([this race name-type]
-    (corpus/dump-syntagmata race
-                            name-type
-                            (generate-stats this race name-type))))
-
-(defn stats
-  ([this language]
-    (corpus/undump-syntagmata language))
-  ([this race name-type]
-    (corpus/undump-syntagmata race name-type)))
-
 (def stats-gen-behaviour
   {:generate-stats generate-stats
-   :regen-language-stats regen-language-stats
-   :regen-name-stats regen-name-stats
-   :regen-stats regen-stats
-   :stats stats})
+   :regen-language-stats common-impl/regen-language-stats
+   :regen-name-stats common-impl/regen-name-stats
+   :regen-stats common-impl/regen-stats
+   :stats common-impl/stats})
 
 (defn create-stats-generator
   [system]
   (map->SyntagmataStatsGenerator
-    {:system system}))
+    {:system system
+     :generator generate-stats
+     :reader corpus/undump-markov
+     :writer corpus/dump-markov}))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Concent Generator Implementation   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -94,7 +62,8 @@
 
 (defrecord SyntagmataContentGenerator
   [system
-   stats-gen])
+   stats-gen
+   word-fn])
 
 (defn syllable-count
   [this stats]
@@ -118,7 +87,7 @@
   ([this stats-or-lang]
     (if (keyword? stats-or-lang)
       (word this (corpus/undump-syntagmata stats-or-lang))
-      (word this stats-or-lang (syllable-count this stats-or-lang))))
+      (word this stats-or-lang (common-impl/syllable-count this stats-or-lang))))
   ([this stats syllables]
     (case syllables
       1 (syllable this stats :initial)
@@ -132,43 +101,16 @@
                 (string/join ""))
            (syllable this stats :final)))))
 
-(defn sentence
-  ([this stats-or-lang]
-    (if (keyword? stats-or-lang)
-      (sentence this (corpus/undump-syntagmata stats-or-lang))
-      (sentence this stats-or-lang (random/int (:system this) 10))))
-  ([this stats words]
-    (str
-      (->> words
-           inc
-           range
-           (map (fn [_] (word this stats)))
-           (string/join " ")
-           string/capitalize)
-      ".")))
-
-(defn paragraph
-  ([this stats-or-lang]
-    (if (keyword? stats-or-lang)
-      (paragraph this (corpus/undump-syntagmata stats-or-lang))
-      (paragraph this stats-or-lang (random/int (:system this) 10))))
-  ([this stats sentence-count]
-    (string/join
-      " "
-      (->> sentence-count
-           inc
-           range
-           (map (fn [_] (sentence this stats)))))))
-
 (def content-gen-behaviour
-  {:syllable-count syllable-count
+  {:paragraph common-impl/paragraph
+   :sentence common-impl/sentence
    :syllable syllable
-   :word word
-   :sentence sentence
-   :paragraph paragraph})
+   :syllable-count common-impl/syllable-count
+   :word word})
 
 (defn create-content-generator
   [system]
   (map->SyntagmataContentGenerator
     {:system system
-     :stats-gen (create-stats-generator system)}))
+     :stats-gen (create-stats-generator system)
+     :word-fn word}))

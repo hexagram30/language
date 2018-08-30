@@ -4,6 +4,7 @@
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.common :as common]
     [hxgm30.language.gen.corpus :as corpus]
+    [hxgm30.language.gen.impl.common :as common-impl]
     [hxgm30.language.util :as util]
     [taoensso.timbre :as log]))
 
@@ -32,7 +33,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defrecord MarkovStatsGenerator
-  [system])
+  [system
+   generator
+   reader
+   writer])
 
 (defn generate-stats
   ""
@@ -50,54 +54,20 @@
                  (mapcat syllables->pairs)
                  transitions-lookup)}))
 
-(defn regen-language-stats
-  [this]
-  (doall
-    (for [language common/supported-languages]
-      (do
-        (log/debugf "Processing %s ..." language)
-        (corpus/dump-markov language (generate-stats this language))
-        {language :ok}))))
-
-(defn regen-name-stats
-  [this]
-  (doall
-    (for [race common/supported-names
-          name-type common/supported-name-types]
-      (do
-        (log/debugf "Processing %s + %s ..." race name-type)
-        (corpus/dump-markov race name-type (generate-stats this race name-type))
-        {race {name-type :ok}}))))
-
-(defn regen-stats
-  ([this]
-    (regen-language-stats this)
-    (regen-name-stats this)
-    :ok)
-  ([this language]
-    (corpus/dump-markov language (generate-stats this language)))
-  ([this race name-type]
-    (corpus/dump-markov race
-                        name-type
-                        (generate-stats this race name-type))))
-
-(defn stats
-  ([this language]
-    (corpus/undump-markov language))
-  ([this race name-type]
-    (corpus/undump-markov race name-type)))
-
 (def stats-gen-behaviour
   {:generate-stats generate-stats
-   :regen-language-stats regen-language-stats
-   :regen-name-stats regen-name-stats
-   :regen-stats regen-stats
-   :stats stats})
+   :regen-language-stats common-impl/regen-language-stats
+   :regen-name-stats common-impl/regen-name-stats
+   :regen-stats common-impl/regen-stats
+   :stats common-impl/stats})
 
 (defn create-stats-generator
   [system]
   (map->MarkovStatsGenerator
-    {:system system}))
+    {:system system
+     :generator generate-stats
+     :reader corpus/undump-markov
+     :writer corpus/dump-markov}))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Concent Generator Implementation   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -105,75 +75,50 @@
 
 (defrecord MarkovContentGenerator
   [system
-   stats-gen])
-
-(defn syllable-count
-  [this stats]
-  (util/percent-> (random/float (:system this))
-                  (get-in stats [:pseudo-syllables :percent-ranges])))
+   stats-gen
+   word-fn])
 
 (defn syllable
-  [this stats position]
-  (case position
-    :initial (util/percent->
-              (random/float (:system this))
-              (get-in stats [:sound-transitions :initial :percent-ranges]))
-    :medial (util/percent->
-              (random/float (:system this))
-              (get-in stats [:sound-transitions :medial :percent-ranges]))
-    :final (util/percent->
-              (random/float (:system this))
-              (get-in stats [:sound-transitions :final :percent-ranges]))))
+  ([this stats]
+    (syllable this stats nil))
+  ([this stats last-syllable]
+    (if (nil? last-syllable)
+      (util/percent->
+        (random/float (:system this))
+        (get-in stats [:sound-transitions :initial :percent-ranges]))
+      (util/percent-> (random/float (:system this))
+                      (get-in stats [:chain last-syllable])))))
 
 (defn word
-  ([this stats]
-    (word this stats (syllable-count this stats)))
+  ([this stats-or-lang]
+    (if (keyword? stats-or-lang)
+      (word this (corpus/undump-markov stats-or-lang))
+      (word this
+            stats-or-lang
+            (common-impl/syllable-count this stats-or-lang))))
   ([this stats syllables]
-    (case syllables
-      1 (syllable this stats :initial)
-      2 (str (syllable this stats :initial)
-             (syllable this stats :final))
-      (str (syllable this stats :initial)
-           (->> syllables
-                dec
-                range
-                (mapcat (fn [_] (syllable this stats :medial)))
-                (string/join ""))
-           (syllable this stats :final)))))
-
-(defn sentence
-  ([this stats]
-    (sentence this stats (random/int (:system this) 10)))
-  ([this stats words]
-    (str
-      (->> words
-           inc
+    (word this stats syllables [nil]))
+  ([this stats syllables acc]
+    (if (= 1 syllables)
+      (syllable this stats)
+      (->> syllables
            range
-           (map (fn [_] (word this stats)))
-           (string/join " ")
-           string/capitalize)
-      ".")))
-
-(defn paragraph
-  ([this stats]
-    (paragraph this stats (random/int (:system this) 10)))
-  ([this stats sentence-count]
-    (string/join
-      " "
-      (->> sentence-count
-           inc
-           range
-           (map (fn [_] (sentence this stats)))))))
+           (reduce (fn [acc _]
+                     (conj acc (syllable this stats (last acc))))
+                   acc)
+           (remove nil?)
+           (string/join "")))))
 
 (def content-gen-behaviour
-  {:syllable-count syllable-count
+  {:paragraph common-impl/paragraph
+   :sentence common-impl/sentence
    :syllable syllable
-   :word word
-   :sentence sentence
-   :paragraph paragraph})
+   :syllable-count common-impl/syllable-count
+   :word word})
 
 (defn create-content-generator
   [system]
   (map->MarkovContentGenerator
-    {:system system
-     :stats-gen (create-stats-generator system)}))
+    {:stats-gen (create-stats-generator system)
+     :system system
+     :word-fn word}))

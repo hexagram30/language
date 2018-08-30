@@ -33,8 +33,8 @@
 
 (defprotocol ContentGeneratorAPI
   (syllable-count [this stats])
-  (syllable [this stats position])
-  (word [this stats] [this stats syllables])
+  (syllable [this stats] [this stats position])
+  (word [this stats] [this stats syllables] [this stats syllables acc])
   (sentence [this stats] [this stats words])
   (paragraph [this stats] [this stats sencences]))
 

@@ -60,5 +60,9 @@
   :ok)
 
 (comment
-
+  (def m (gen/create-content-generator (system) :markov))
+  (def stats (gen/stats (:stats-gen m) :halfling :male))
+  (gen/word m stats 1)
+  (gen/word m stats 2)
+  (gen/word m stats 3)
   )

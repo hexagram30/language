@@ -1,6 +1,6 @@
 {:lang {
    :generator {
-     :default-mode :syntagmata}
+     :default-mode :markov}
    :udp-server {
      ;; (reduce + (map int "Hexagram30 Language UDP CLI Server"))
      :port 2924

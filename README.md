@@ -159,52 +159,53 @@ languages (words, sentences, and paragraphs):
 
 
 ```clj
-(require '[hxgm30.language.syntagmata.lang.core :as lang])
-(lang/word (system) :gaelic)
+(require '[hxgm30.language.gen.core :as lang])
+(def generator (lang/create-content-generator (system) :markov))
+(lang/word generator :gaelic)
 ```
 ```
 "irna"
 ```
 ```clj
-(lang/word (system) :oldnorse)
+(lang/word generator :oldnorse)
 ```
 ```
 "hapleindarð"
 ```
 ```clj
-(lang/word (system) :hebrew)
+(lang/word generator :hebrew)
 ```
 ```
 "smv"
 ```
 ```clj
-(lang/sentence (system) :arabic)
+(lang/sentence generator :arabic)
 ```
 ```
 "Atheemituna ilimtunahuwma wataqattaaaan aghayyilbayn tabtaghoohuthkumilashhadu
 faaaajabusibkubzan waalnnawalayltudul."
 ```
 ```clj
-(lang/sentence (system) :hindi)
+(lang/sentence generator :hindi)
 ```
 ```
 "Tyaah shuu madaanesuyaa sarhamanaana bhuumaanaasramaadiraptaa puukakham ariivam
 sahaa."
 ```
 ```clj
-(lang/sentence (system) :greek)
+(lang/sentence generator :greek)
 ```
 ```
 "Τυδεΐ πιροπώμην δ᾽ γὰ."
 ```
 ```clj
-(lang/sentence (system) :pie)
+(lang/sentence generator :pie)
 ```
 ```
 "*krehnów *ǵeééru *rekh₁ns *um *ǵer *heym *kashyeǵʰ *dáwni *doeyr."
 ```
 ```clj
-(lang/paragraph (system) :chinese)
+(lang/paragraph generator :chinese)
 ```
 ```
 "Pia xiun lai cha tao mian ang tain. Shi rang kan zen. Zheng sa pien ba.
