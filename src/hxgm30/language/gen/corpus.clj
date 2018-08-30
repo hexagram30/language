@@ -48,20 +48,20 @@
          (apply sorted-set))))
 
 (defn dump
-    ([type language data]
-      (dump (fullpath type language) data))
-    ([race name-type data-type data]
-      (dump (fullpath race name-type data-type) data))
-    ([fullpath data]
-      (io/dump (str "resources/" fullpath) data)))
+  ([type language data]
+    (dump (fullpath type language) data))
+  ([race name-type data-type data]
+    (dump (fullpath race name-type data-type) data))
+  ([fullpath data]
+    (io/dump (str "resources/" fullpath) data)))
 
 (defn undump
-    ([type language]
-      (undump (fullpath type language)))
-    ([race name-type data-type]
-      (undump (fullpath race name-type data-type)))
-    ([fullpath]
-      (io/undump fullpath)))
+  ([type language]
+    (undump (fullpath type language)))
+  ([race name-type data-type]
+    (undump (fullpath race name-type data-type)))
+  ([fullpath]
+    (io/undump fullpath)))
 
 (defn undump-consonants
   ([language]

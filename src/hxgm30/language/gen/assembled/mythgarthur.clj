@@ -1,9 +1,11 @@
-(ns hxgm30.language.gen.lang.fictional.mythgarthur
-  "To use the languages defined here, you can do the following:
+(ns hxgm30.language.gen.assembled.mythgarthur
+  "To use the languages defined here, you can do the following (see the `clj`
+  namespace or the `repl` namespace in `dev-system` for how to create a system):
   ```
-    (require '[hxgm30.language.gen.lang.merge :as lang]
-             '[hxgm30.language.gen.lang.fictional.mythgarthur :as myth)
-    (lang/paragraph mythgarthur/elvish)
+    (require '[hxgm30.language.gen.core :as gen]
+             '[hxgm30.language.gen.assembled.core :as lang]
+             '[hxgm30.language.gen.assembled.mythgarthur :as myth)
+    (lang/paragraph (gen/create-content-generator system) mythgarthur/elvish)
   ```
   Which will give output along the lines of the following:
   ```

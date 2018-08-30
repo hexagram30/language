@@ -44,6 +44,7 @@
         [lein-shell "0.5.0"]
         [venantius/ultra "0.5.2"]]
       :source-paths ["dev-resources/src"]
+      :aot [clojure.tools.logging.impl]
       :repl-options {
         :init-ns hxgm30.language.repl
         :prompt ~get-prompt
@@ -96,9 +97,9 @@
       ["ltest" ":all"]
       ["uberjar"]]
     ;; Scripts
-    "fictional" ["run" "-m" "hxgm30.language.gen.lang.merge"]
-    "name" ["run" "-m" "hxgm30.language.gen.lang.names"]
-    "names" ["run" "-m" "hxgm30.language.gen.lang.names"]
-    "regen-markov-chains" ["run" "-m" "hxgm30.language.gen.markov" "regen-markov-chains"]
-    "regen-syntagmata" ["run" "-m" "hxgm30.language.gen.syntagmata" "regen-syntagmata"]})
+    "fictional" ["run" "-m" "hxgm30.language.gen.assembled.core"]
+    "name" ["run" "-m" "hxgm30.language.gen.name"]
+    "names" ["run" "-m" "hxgm30.language.gen.name"]
+    "regen-markov-chains" ["run" "-m" "hxgm30.language.gen.core" "regen-markov-chains"]
+    "regen-syntagmata" ["run" "-m" "hxgm30.language.gen.core" "regen-syntagmata"]})
 

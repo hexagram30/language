@@ -1,20 +1,24 @@
-(ns hxgm30.language.gen.lang.names
+(ns hxgm30.language.gen.name
   (:require
     [clojure.string :as string]
     [clojusc.system-manager.core :as system-manager]
     [clojusc.twig :as logger]
     [hxgm30.dice.components.random :as random]
+    [hxgm30.language.cli :as cli]
     [hxgm30.language.common :as common]
+    [hxgm30.language.components.config :as config]
     [hxgm30.language.components.core]
+    [hxgm30.language.gen.core :as gen]
     [hxgm30.language.gen.corpus :as corpus]
-    [hxgm30.language.gen.rand :as rand]
     [hxgm30.language.util :as util])
   (:refer-clojure :exclude [last])
   (:gen-class))
 
 (defn gen-name
-  [system race name-type]
-  (string/capitalize (rand/word system (corpus/undump-syntagmata race name-type))))
+  [this race name-type]
+  (string/capitalize
+    (gen/word this
+      (gen/stats (:stats-gen this) race name-type))))
 
 (defn last
   [system race]
@@ -39,21 +43,20 @@
                    lastname))))
 
 (defn run
-  ([system]
+  ([this]
     (doall
       (for [race common/supported-names]
-        (print-sample system race))))
-  ([system race]
-    (print-sample system race)))
+        (print-sample this race))))
+  ([this race]
+    (print-sample this race)))
 
 (defn -main
   [& args]
-  (logger/set-level! '[hxgm30] :error)
-  (system-manager/setup-manager {:init 'hxgm30.language.components.core/cli
-                                 :throw-errors true})
-  (system-manager/startup)
-  (let [sys (system-manager/system)]
+  (let [sys (cli/setup-system)
+        generator (gen/create-content-generator
+                   sys
+                   (config/lang-default-generator-mode sys))]
     (if-let [race (first args)]
-      (run sys (keyword race))
-      (run sys)))
+      (run generator (keyword race))
+      (run generator)))
   (println))

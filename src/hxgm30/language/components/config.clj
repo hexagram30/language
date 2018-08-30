@@ -22,6 +22,10 @@
 
 ;; Lang
 
+(defn lang-default-generator-mode
+  [system]
+  (get-in (get-cfg system) [:lang :generator :default-mode]))
+
 (defn lang-udp-server-port
   [system]
   (get-in (get-cfg system) [:lang :udp-server :port]))
