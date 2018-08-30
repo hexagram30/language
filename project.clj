@@ -80,7 +80,7 @@
       ["check-vers"]]
     "kibit" ["with-profile" "+lint" "kibit"]
     "eastwood" ["with-profile" "+lint" "eastwood" "{:namespaces [:source-paths]}"]
-    ; "eastwood" ["with-profile" "+lint" "eastwood" "{:namespaces [hxgm30.language.syntagmata.core hxgm30.language.syntagmata.corpus]}"]
+    ; "eastwood" ["with-profile" "+lint" "eastwood" "{:namespaces [hxgm30.language.gen.core hxgm30.language.syntagmata.corpus]}"]
     "lint" ["do"
       ["kibit"]
       ;["eastwood"]
@@ -96,9 +96,9 @@
       ["ltest" ":all"]
       ["uberjar"]]
     ;; Scripts
-    "fictional" ["run" "-m" "hxgm30.language.syntagmata.lang.merge"]
-    "name" ["run" "-m" "hxgm30.language.syntagmata.lang.names"]
-    "names" ["run" "-m" "hxgm30.language.syntagmata.lang.names"]
-    "regen-markov-chains" ["run" "-m" "hxgm30.language.markov.core" "regen-markov-chains"]
-    "regen-syntagmata" ["run" "-m" "hxgm30.language.syntagmata.core" "regen-syntagmata"]})
+    "fictional" ["run" "-m" "hxgm30.language.gen.lang.merge"]
+    "name" ["run" "-m" "hxgm30.language.gen.lang.names"]
+    "names" ["run" "-m" "hxgm30.language.gen.lang.names"]
+    "regen-markov-chains" ["run" "-m" "hxgm30.language.gen.markov" "regen-markov-chains"]
+    "regen-syntagmata" ["run" "-m" "hxgm30.language.gen.syntagmata" "regen-syntagmata"]})
 

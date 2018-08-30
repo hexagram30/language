@@ -1,4 +1,4 @@
-(ns hxgm30.language.syntagmata.corpus
+(ns hxgm30.language.gen.corpus
   (:require
     [clojure.set :as set]
     [clojure.string :as string]

@@ -1,4 +1,4 @@
-(ns hxgm30.language.syntagmata.rand
+(ns hxgm30.language.gen.rand
   (:require
     [clojure.java.io :as io]
     [clojure.set :as set]

@@ -1,15 +1,15 @@
-(ns hxgm30.language.syntagmata.lang.merge
+(ns hxgm30.language.gen.lang.merge
   (:require
     [clojure.string :as string]
     [clojusc.system-manager.core :as system-manager]
     [clojusc.twig :as logger]
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.components.core]
-    [hxgm30.language.syntagmata.core :as syntagmata]
-    [hxgm30.language.syntagmata.corpus :as corpus]
-    [hxgm30.language.syntagmata.lang.fictional.mythgarthur :as mythgarthur]
-    [hxgm30.language.syntagmata.lang.fictional.rook :as rook]
-    [hxgm30.language.syntagmata.rand :as rand]
+    [hxgm30.language.gen.syntagmata :refer [syntagmata]]
+    [hxgm30.language.gen.corpus :as corpus]
+    [hxgm30.language.gen.lang.fictional.mythgarthur :as mythgarthur]
+    [hxgm30.language.gen.lang.fictional.rook :as rook]
+    [hxgm30.language.gen.rand :as rand]
     [hxgm30.language.util :as util])
   (:gen-class))
 
@@ -33,14 +33,14 @@
 (defn word
   [system lang-freqs]
   (let [lang (select system lang-freqs)
-        stats (syntagmata/syntagmata lang)
+        stats (syntagmata lang)
         syllables (rand/syllable-count system stats)]
     (case syllables
       1 (rand/syllable system stats :initial)
       2 (str (rand/syllable system stats :initial)
              (rand/syllable
               system
-              (syntagmata/syntagmata
+              (syntagmata
                 (select system lang-freqs))
               :final))
       (str (rand/syllable system stats :initial)
@@ -50,12 +50,12 @@
                 (mapcat (fn [_]
                          (rand/syllable
                           system
-                          (syntagmata/syntagmata (select system lang-freqs))
+                          (syntagmata (select system lang-freqs))
                           :medial)))
                 (string/join ""))
            (rand/syllable
             system
-            (syntagmata/syntagmata
+            (syntagmatasyntagmata
               (select system lang-freqs))
             :final)))))
 

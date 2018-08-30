@@ -1,7 +1,7 @@
 (ns hxgm30.language.common
   (:require
     [clojure.string :as string]
-    [hxgm30.language.syntagmata.corpus :as corpus]))
+    [hxgm30.language.gen.corpus :as corpus]))
 
 (def supported-languages
   [:afrikaans

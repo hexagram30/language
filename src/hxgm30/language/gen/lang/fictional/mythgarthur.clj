@@ -1,8 +1,8 @@
-(ns hxgm30.language.syntagmata.lang.fictional.mythgarthur
+(ns hxgm30.language.gen.lang.fictional.mythgarthur
   "To use the languages defined here, you can do the following:
   ```
-    (require '[hxgm30.language.syntagmata.lang.merge :as lang]
-             '[hxgm30.language.syntagmata.lang.fictional.mythgarthur :as myth)
+    (require '[hxgm30.language.gen.lang.merge :as lang]
+             '[hxgm30.language.gen.lang.fictional.mythgarthur :as myth)
     (lang/paragraph mythgarthur/elvish)
   ```
   Which will give output along the lines of the following:

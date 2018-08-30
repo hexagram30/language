@@ -1,4 +1,4 @@
-(ns hxgm30.language.syntagmata.lang.names
+(ns hxgm30.language.gen.lang.names
   (:require
     [clojure.string :as string]
     [clojusc.system-manager.core :as system-manager]
@@ -6,9 +6,8 @@
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.common :as common]
     [hxgm30.language.components.core]
-    [hxgm30.language.syntagmata.core :as syntagmata]
-    [hxgm30.language.syntagmata.corpus :as corpus]
-    [hxgm30.language.syntagmata.rand :as rand]
+    [hxgm30.language.gen.corpus :as corpus]
+    [hxgm30.language.gen.rand :as rand]
     [hxgm30.language.util :as util])
   (:refer-clojure :exclude [last])
   (:gen-class))

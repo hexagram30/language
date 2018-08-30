@@ -1,11 +1,11 @@
-(ns hxgm30.language.syntagmata.core
+(ns hxgm30.language.gen.syntagmata
   (:require
     [clojure.java.io :as io]
     [clojure.pprint :as pprint]
     [clojure.set :as set]
     [clojure.string :as string]
     [hxgm30.language.common :as common]
-    [hxgm30.language.syntagmata.corpus :as corpus]
+    [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.util :as util]
     [taoensso.timbre :as log])
   (:gen-class))
