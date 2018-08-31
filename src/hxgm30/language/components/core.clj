@@ -2,6 +2,7 @@
   (:require
     [com.stuartsierra.component :as component]
     [hxgm30.dice.components.random :as random]
+    [hxgm30.httpd.components.server :as httpd]
     [hxgm30.language.components.config :as config]
     [hxgm30.language.components.logging :as logging]
     [taoensso.timbre :as log]))
@@ -29,6 +30,24 @@
             (random/create-component)
             [:config])})
 
+(def httpd
+  {:httpd (component/using
+           (httpd/create-component)
+           [:config :logging])})
+
+;;; Additional components for systems that want to supress logging (e.g.,
+;;; systems created for testing).
+
+(def rnd-without-logging
+  {:random (component/using
+            (random/create-component)
+            [:config])})
+
+(def httpd-without-logging
+  {:httpd (component/using
+           (httpd/create-component)
+           [:config])})
+
 (defn basic
   [cfg-data]
   (merge (cfg cfg-data)
@@ -37,11 +56,22 @@
 (defn main
   [cfg-data]
   (merge (basic cfg-data)
-         rnd))
+         rnd
+         httpd))
+
+(defn main
+  [cfg-data]
+  (merge (basic cfg-data)
+         rnd
+         httpd))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Component Initializations   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn initialize-config-only
+  []
+  (component/map->SystemMap (config/build-config)))
 
 (defn initialize-bare-bones
   []
@@ -53,7 +83,8 @@
   []
   (-> (config/build-config)
       cfg
-      (merge rnd-without-logging)
+      (merge rnd-without-logging
+             httpd-without-logging)
       component/map->SystemMap))
 
 (defn initialize
@@ -66,6 +97,7 @@
   {:basic #'initialize-bare-bones
    :cli #'initialize-without-logging
    :main #'initialize
+   :testing-config-only #'initialize-config-only
    :testing #'initialize-without-logging})
 
 (defn init
@@ -75,5 +107,5 @@
     ((mode init-lookup))))
 
 (def cli #(init :cli))
-
+(def integration-testing #(init :testing-config-only))
 (def testing #(init :testing))
