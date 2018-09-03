@@ -3,8 +3,7 @@
   (try
     (str
       (slurp "resources/text/banner.txt")
-      ;(slurp "resources/text/loading.txt")
-      )
+      (slurp "resources/text/loading.txt"))
     ;; If another project can't find the banner, just skip it;
     ;; this function is really only meant to be used by Dragon itself.
     (catch Exception _ "")))
@@ -29,6 +28,7 @@
     [clojusc/system-manager "0.3.0-SNAPSHOT"]
     [clojusc/twig "0.3.3"]
     [hexagram30/common "0.1.0-SNAPSHOT"]
+    [hexagram30/db-plugin "0.1.0-SNAPSHOT"]
     [hexagram30/dice "0.1.0-SNAPSHOT"]
     [hexagram30/httpd "0.1.0-SNAPSHOT"]
     [io.aviso/pretty "0.1.34"]
@@ -64,17 +64,27 @@
         :unit #(not (or (:integration %) (:system %)))
         :integration :integration
         :system :system
-        :default (complement :system)}}}
+        :default (complement :system)}}
+    :redis-plugin {
+      :jvm-opts [
+        "-Ddb.backend=redis"
+        "-Ddb.backend.subtype=db"]
+      :dependencies [
+        [hexagram30/redis-db-plugin "0.1.0-SNAPSHOT"]]
+      :aliases {
+        "read-db-cfg" ["run" "-m" "hxgm30.db.plugin.docker" "read" "compose-redis-db.yml"]
+        "start-db" ["run" "-m" "hxgm30.db.plugin.docker" "up" "compose-redis-db.yml"]
+        "stop-db" ["run" "-m" "hxgm30.db.plugin.docker" "down" "compose-redis-db.yml"]}}}
   :aliases {
     ;; Dev Aliases
     "repl" ["do"
       ["clean"]
-      ["repl"]]
+      ["with-profile" "+redis-plugin" "repl"]]
     "ubercompile" ["do"
       ["clean"]
-      ["with-profile" "+ubercompile" "compile"]]
-    "check-vers" ["with-profile" "+lint" "ancient" "check" ":all"]
-    "check-jars" ["with-profile" "+lint" "do"
+      ["with-profile" "+ubercompile,+redis-plugin" "compile"]]
+    "check-vers" ["with-profile" "+lint,+redis-plugin" "ancient" "check" ":all"]
+    "check-jars" ["with-profile" "+lint,+redis-plugin" "do"
       ["deps" ":tree"]
       ["deps" ":plugin-tree"]]
     "check-deps" ["do"
@@ -87,7 +97,7 @@
       ["kibit"]
       ;["eastwood"]
       ]
-    "ltest" ["with-profile" "+test" "ltest"]
+    "ltest" ["with-profile" "+test,+redis-plugin" "ltest"]
     "ltest-clean" ["do"
       ["clean"]
       ["ltest"]]
@@ -98,9 +108,9 @@
       ["ltest" ":all"]
       ["uberjar"]]
     ;; Scripts
-    "fictional" ["run" "-m" "hxgm30.language.gen.assembled.core"]
-    "name" ["run" "-m" "hxgm30.language.gen.name"]
-    "names" ["run" "-m" "hxgm30.language.gen.name"]
-    "regen-markov-chains" ["run" "-m" "hxgm30.language.gen.core" "regen-markov-chains"]
-    "regen-syntagmata" ["run" "-m" "hxgm30.language.gen.core" "regen-syntagmata"]})
+    "fictional" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.assembled.core"]
+    "name" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.name"]
+    "names" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.name"]
+    "regen-markov-chains" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.core" "regen-markov-chains"]
+    "regen-syntagmata" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.core" "regen-syntagmata"]})
 
