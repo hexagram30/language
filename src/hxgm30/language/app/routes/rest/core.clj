@@ -11,25 +11,26 @@
 
 (defn language-api
   [httpd-component]
-  ["/api/language"
+  [
     ;; Generate content based on assembled languages
-    ["/gen/assembled/:world/:lang" {:get base-handler/ok}]
-    ["/gen/assembled/:world/:lang/markov" {:get base-handler/ok}]
-    ["/gen/assembled/:world/:lang/syntagmata" {:get base-handler/ok}]
+    ["/api/language/gen/assembled/:world/:lang"
+     {:get handler/ok}]
     ;; Generate content based on existing languages
-    ["/gen/:lang" {:get base-handler/ok}]
-    ["/gen/:lang/markov" {:get base-handler/ok}]
-    ["/gen/:lang/syntagmata" {:get base-handler/ok}]
+    ["/api/language/gen/:lang"
+     {:get handler/ok}]
     ;; Generate names
-    ["/gen/name/:race/:name-type " {:get base-handler/ok}]
-    ["/gen/name/:race/:name-type/markov" {:get base-handler/ok}]
-    ["/gen/name/:race/:name-type/syntagmata" {:get base-handler/ok}]
+    ["/api/language/gen/name/:race/:name-type"
+     {:get handler/ok}]
     ;; Stats operations for stored languages and names
-    ["/stats/:lang/:name-type/markov" {:get base-handler/ok}]
-    ["/stats/:lang/:name-type/syntagmata" {:get base-handler/ok}]
+    ["/api/language/stats/:lang"
+     {:get (handler/read-lang-stats httpd-component)}]
+    ["/api/language/stats/:race/:name-type"
+    {:get (handler/read-name-stats httpd-component)}]
     ;; Dictionary operations
-    ["/dictionary/:lang" {:get base-handler/ok}]
-    ["/dictionary/:lang/search" {:get base-handler/ok}]])
+    ["/api/language/dictionary/:lang"
+     {:get handler/ok}]
+    ["/api/language/dictionary/:lang/search"
+     {:get handler/ok}]])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Assembled Routes   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
