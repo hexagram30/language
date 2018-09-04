@@ -53,8 +53,8 @@
   (map->SyntagmataStatsGenerator
     {:system system
      :generator generate-stats
-     :reader corpus/undump-markov
-     :writer corpus/dump-markov}))
+     :reader corpus/undump-syntagmata
+     :writer corpus/dump-syntagmata}))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Concent Generator Implementation   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -71,19 +71,23 @@
                   (get-in stats [:pseudo-syllables :percent-ranges])))
 
 (defn syllable
-  [this stats position]
-  (case position
-    :initial (util/percent->
-              (random/float (:system this))
-              (get-in stats [:sound-transitions :initial :percent-ranges]))
-    :medial (util/percent->
-              (random/float (:system this))
-              (get-in stats [:sound-transitions :medial :percent-ranges]))
-    :final (util/percent->
-              (random/float (:system this))
-              (get-in stats [:sound-transitions :final :percent-ranges]))))
+  ([this position]
+    (syllable this (common-impl/stats (:stats-gen this)) position))
+  ([this stats position]
+    (case position
+      :initial (util/percent->
+                (random/float (:system this))
+                (get-in stats [:sound-transitions :initial :percent-ranges]))
+      :medial (util/percent->
+                (random/float (:system this))
+                (get-in stats [:sound-transitions :medial :percent-ranges]))
+      :final (util/percent->
+                (random/float (:system this))
+                (get-in stats [:sound-transitions :final :percent-ranges])))))
 
 (defn word
+  ([this]
+    (word this (common-impl/stats (:stats-gen this))))
   ([this stats-or-lang]
     (if (keyword? stats-or-lang)
       (word this (corpus/undump-syntagmata stats-or-lang))

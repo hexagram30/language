@@ -20,7 +20,7 @@
      {:get handler/not-implemented}]
     ;; Generate names
     ["/api/language/gen/name/:race/:name-type"
-     {:get handler/not-implemented}]
+     {:get (handler/gen-name httpd-component)}]
     ;; Stats operations for stored languages and names
     ["/api/language/stats/:lang"
      {:get (handler/read-lang-stats httpd-component)}]

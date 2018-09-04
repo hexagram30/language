@@ -1,7 +1,6 @@
 (ns hxgm30.language.gen.name
   (:require
     [clojure.string :as string]
-    [clojusc.system-manager.core :as system-manager]
     [clojusc.twig :as logger]
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.cli :as cli]
@@ -14,41 +13,50 @@
   (:refer-clojure :exclude [last])
   (:gen-class))
 
+;; XXX Let's fix this up: have an API that takes the generator as the first arg,
+;;     and then in the Language component, have functions that take the systm as
+;;     the first component.
+
 (defn gen-name
-  [this race name-type]
-  (string/capitalize
-    (gen/word this
-      (gen/stats (:stats-gen this) race name-type))))
+  ([generator race name-type]
+    (string/capitalize
+      (gen/word generator
+                (gen/stats (:stats-gen generator) race name-type))))
+  ([generator race name-type syllables]
+    (string/capitalize
+      (gen/word generator
+                (gen/stats (:stats-gen generator) race name-type)
+                syllables))))
 
 (defn last
-  [system race]
-  (gen-name system race :surname))
+  [generator race]
+  (gen-name generator race :surname))
 
 (defn female
-  [system race]
-  (gen-name system race :female))
+  [generator race]
+  (gen-name generator race :female))
 
 (defn male
-  [system race]
-  (gen-name system race :male))
+  [generator race]
+  (gen-name generator race :male))
 
 (defn- print-sample
-  [system race]
-  (let [lastname (last system race)]
+  [generator race]
+  (let [lastname (last generator race)]
     (print (format "\n%s\n\tFemale: %s %s\n\tMale: %s %s\n"
                    (string/capitalize (name race))
-                   (female system race)
+                   (female generator race)
                    lastname
-                   (male system race)
+                   (male generator race)
                    lastname))))
 
 (defn run
-  ([this]
+  ([generator]
     (doall
       (for [race common/supported-names]
-        (print-sample this race))))
-  ([this race]
-    (print-sample this race)))
+        (print-sample generator race))))
+  ([generator race]
+    (print-sample generator race)))
 
 (defn -main
   [& args]

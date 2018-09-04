@@ -32,11 +32,11 @@
     :syntagmata (syntagmata/create-stats-generator system)))
 
 (defprotocol ContentGeneratorAPI
-  (syllable-count [this stats])
-  (syllable [this stats] [this stats position])
-  (word [this stats] [this stats syllables] [this stats syllables acc])
-  (sentence [this stats] [this stats words])
-  (paragraph [this stats] [this stats sencences]))
+  (syllable-count [this] [this stats])
+  (syllable [this] [this stats] [this stats position])
+  (word [this] [this stats] [this stats syllables] [this stats syllables acc])
+  (sentence [this] [this stats] [this stats words])
+  (paragraph [this] [this stats] [this stats sencences]))
 
 (extend MarkovContentGenerator
         ContentGeneratorAPI
@@ -57,11 +57,11 @@
   (let [sys (cli/setup-system)
         cmd (keyword (first args))]
     (case cmd
-      :regen-syntagmata (do
-                          (println "Regenerating syntagmata data ...\n")
-                          (regen-stats (syntagmata/create-stats-generator sys))
-                          (println))
       :regen-markov-chains (do
                              (println "Regenerating markov-chain data ...\n")
-                             (regen-stats (markov/create-stats-generator sys))
-                             (println)))))
+                             (regen-stats (create-stats-generator sys :markov))
+                             (println))
+      :regen-syntagmata (do
+                          (println "Regenerating syntagmata data ...\n")
+                          (regen-stats (create-content-generator sys :syntagmata))
+                          (println)))))

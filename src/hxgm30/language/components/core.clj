@@ -33,7 +33,7 @@
 (def httpd
   {:httpd (component/using
            (httpd/create-component)
-           [:config :logging])})
+           [:config :logging :random])})
 
 ;;; Additional components for systems that want to supress logging (e.g.,
 ;;; systems created for testing).
@@ -46,7 +46,7 @@
 (def httpd-without-logging
   {:httpd (component/using
            (httpd/create-component)
-           [:config])})
+           [:config :random])})
 
 (defn basic
   [cfg-data]

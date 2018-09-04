@@ -74,6 +74,9 @@
                         name-type
                         ((get-generator) this race name-type))))
 
+;; XXX - Maybe rename this to read-stats and add a `stats` implementation to
+;;       the content generator that extracts the stats-generator and calls
+;;       `read-stats` with that ...
 (defn stats
   ([this language]
     ((get-reader this) language))
@@ -85,11 +88,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn syllable-count
-  [this stats]
-  (util/percent-> (random/float (:system this))
-                  (get-in stats [:pseudo-syllables :percent-ranges])))
+  ([this]
+    (syllable-count this (stats (:stats-gen this))))
+  ([this stats]
+    (util/percent-> (random/float (:system this))
+                    (get-in stats [:pseudo-syllables :percent-ranges]))))
 
 (defn sentence
+  ([this]
+    (sentence this (stats (:stats-gen this))))
   ([this stats-or-lang]
     (if (keyword? stats-or-lang)
       (sentence this ((get-stats-reader this) stats-or-lang))
@@ -105,6 +112,8 @@
       ".")))
 
 (defn paragraph
+  ([this]
+    (paragraph this (stats (:stats-gen this))))
   ([this stats-or-lang]
     (if (keyword? stats-or-lang)
       (paragraph this ((get-stats-reader this) stats-or-lang))

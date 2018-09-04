@@ -14,7 +14,9 @@
     [clojure.java.io :as io]
     [clojusc.twig :as twig]
     [hxgm30.httpd.kit.response :as response]
+    [hxgm30.language.gen.core :as gen]
     [hxgm30.language.gen.corpus :as corpus]
+    [hxgm30.language.gen.name :as name]
     [ring.middleware.file :as file-middleware]
     [ring.util.codec :as codec]
     [ring.util.http-response]
@@ -42,6 +44,11 @@
   (or (keyword (get-in request [:params :gen-type]))
       :markov))
 
+(defn get-syllables
+  [request]
+  (when-let [sylls (get-in request [:params :syllables])]
+    (Integer/parseInt sylls)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Generic Handlers   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -58,6 +65,24 @@
 ;;;   API Handlers   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defn gen-name
+  [component]
+  (fn [request]
+    (let [race (get-race request)
+          name-type (get-name-type request)
+          gen-type (get-gen-type request)
+          sylls (get-syllables request)
+          ;; XXX - Once the language component has been created, instantiate
+          ;;       a generator in the component so that it doesn't have to be
+          ;;       done on every request.
+          generator (gen/create-content-generator component gen-type)]
+      (response/json request
+                     [{:race race
+                       :name-type name-type
+                       :name (if-not (nil? sylls)
+                               (name/gen-name generator race name-type sylls)
+                               (name/gen-name generator race name-type))}]))))
+
 (defn read-lang-stats
   [component]
   (fn [request]
@@ -73,7 +98,5 @@
     (let [race (get-race request)
           name-type (get-name-type request)
           gen-type (get-gen-type request)]
-      (log/debug "Got race: " race)
-      (log/debug "Got name type: " name-type)
       (response/json request
                      (corpus/undump race name-type gen-type)))))
