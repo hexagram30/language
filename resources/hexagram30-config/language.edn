@@ -18,7 +18,10 @@
    :streaming {
      :timeout 20000 ; milliseconds 20 seconds * 1000
      :heartbeat 200 ; milliseconds
-     }}
+     }
+   :route-fns {
+     :api hxgm30.language.app.routes.rest.core/all
+     :site hxgm30.language.app.routes.site/all}}
  :lang {
    :generator {
      :default-mode :markov}
