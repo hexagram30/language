@@ -14,6 +14,7 @@
     [clojure.java.io :as io]
     [clojusc.twig :as twig]
     [hxgm30.httpd.kit.response :as response]
+    [hxgm30.language.common :as common]
     [hxgm30.language.gen.core :as gen]
     [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.gen.name :as name]
@@ -49,6 +50,37 @@
   (when-let [sylls (get-in request [:params :syllables])]
     (Integer/parseInt sylls)))
 
+(defn -gen-name
+  [generator race name-type sylls]
+  (if-not (nil? sylls)
+    (name/gen-name generator race name-type sylls)
+    (name/gen-name generator race name-type)))
+
+(defn gen-one-name
+  [generator race name-type sylls]
+  [{:race race
+    :name-type name-type
+    :name (-gen-name generator race name-type sylls)}])
+
+(defn gen-all-names
+  [generator race sylls]
+  [{:race race
+    :name {:female (-gen-name generator race :female sylls)
+           :male (-gen-name generator race :male sylls)
+           :surname (-gen-name generator race :surname sylls)}}])
+
+(defn gen-one-name-all-races
+  [generator name-type sylls]
+  (->> common/supported-names
+       (mapcat #(gen-one-name generator % name-type sylls))
+       vec))
+
+(defn gen-all-names-all-races
+  [generator sylls]
+  (->> common/supported-names
+       (mapcat #(gen-all-names generator % sylls))
+       vec))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Generic Handlers   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -76,12 +108,19 @@
           ;;       a generator in the component so that it doesn't have to be
           ;;       done on every request.
           generator (gen/create-content-generator component gen-type)]
-      (response/json request
-                     [{:race race
-                       :name-type name-type
-                       :name (if-not (nil? sylls)
-                               (name/gen-name generator race name-type sylls)
-                               (name/gen-name generator race name-type))}]))))
+      (response/json
+        request
+        (cond (and (not= :all race) (not= :all name-type))
+              (gen-one-name generator race name-type sylls)
+
+              (and (not= :all race) (= :all name-type))
+              (gen-all-names generator race sylls)
+
+              (and (= :all race) (not= :all name-type))
+              (gen-one-name-all-races generator name-type sylls)
+
+              (and (= :all race) (= :all name-type))
+              (gen-all-names-all-races generator sylls))))))
 
 (defn read-lang-stats
   [component]
