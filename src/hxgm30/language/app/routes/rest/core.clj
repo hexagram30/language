@@ -14,13 +14,13 @@
   [
     ;; Generate content based on assembled languages
     ["/api/language/gen/assembled/:world/:lang"
-     {:get handler/ok}]
+     {:get handler/not-implemented}]
     ;; Generate content based on existing languages
     ["/api/language/gen/:lang"
-     {:get handler/ok}]
+     {:get handler/not-implemented}]
     ;; Generate names
     ["/api/language/gen/name/:race/:name-type"
-     {:get handler/ok}]
+     {:get handler/not-implemented}]
     ;; Stats operations for stored languages and names
     ["/api/language/stats/:lang"
      {:get (handler/read-lang-stats httpd-component)}]
@@ -28,9 +28,9 @@
     {:get (handler/read-name-stats httpd-component)}]
     ;; Dictionary operations
     ["/api/language/dictionary/:lang"
-     {:get handler/ok}]
+     {:get handler/not-implemented}]
     ["/api/language/dictionary/:lang/search"
-     {:get handler/ok}]])
+     {:get handler/not-implemented}]])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Assembled Routes   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
