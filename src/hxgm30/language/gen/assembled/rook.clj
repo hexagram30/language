@@ -17,6 +17,12 @@
     gesiweck wegetiop boo bur.
   ```")
 
+(def supported-languages
+  [:rookish
+   :elani
+   :jas
+   :mux])
+
 (def rookish
   {:english 3
    :hindi 1

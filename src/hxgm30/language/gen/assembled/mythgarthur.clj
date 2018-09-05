@@ -15,6 +15,12 @@
     Fytuðran. Kongr merð mi þallmirdunn all hiða daur.
   ```")
 
+(def supported-languages
+  [:orcish
+   :elvish
+   :human
+   :dwarvish])
+
 (def orcish
   {:arabic 9
    :afrikaans 8

@@ -22,9 +22,9 @@
 
   Thus, a call should looke like this:
   ```
-    (select {:english 2
-             :chinese 5
-             :arabic 3})
+    (select-lang {:english 2
+                  :chinese 5
+                  :arabic 3})
   ```"
   [this lang-freqs]
   (->> lang-freqs
@@ -37,15 +37,14 @@
 
 (defn word
   [this lang-freqs]
-  (let [stats (select-stats this lang-freqs)
-        syllables (gen/syllable-count this stats)]
+  (let [syllables (gen/syllable-count this (select-stats this lang-freqs))]
     (case syllables
-      1 (gen/syllable this stats :initial)
-      2 (str (gen/syllable this stats :initial)
+      1 (gen/syllable this (select-stats this lang-freqs) :initial)
+      2 (str (gen/syllable this (select-stats this lang-freqs) :initial)
              (gen/syllable this
                             (select-stats this lang-freqs)
                             :final))
-      (str (gen/syllable this stats :initial)
+      (str (gen/syllable this (select-stats this lang-freqs) :initial)
            (->> syllables
                 dec
                 range
