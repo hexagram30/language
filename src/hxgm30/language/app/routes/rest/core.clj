@@ -17,7 +17,7 @@
      {:get handler/not-implemented}]
     ;; Generate content based on existing languages
     ["/api/language/gen/:lang"
-     {:get handler/not-implemented}]
+     {:get (handler/gen-content httpd-component)}]
     ;; Generate names
     ["/api/language/gen/name/:race/:name-type"
      {:get (handler/gen-name httpd-component)}]
