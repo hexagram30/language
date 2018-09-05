@@ -28,7 +28,8 @@
    :spanish])
 
 (def supported-names
-  [:dragonborn
+  [:amerindian
+   :dragonborn
    :dwarf
    :elf
    :gnome
