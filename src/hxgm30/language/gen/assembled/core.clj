@@ -3,7 +3,6 @@
     [clojure.string :as string]
     [clojusc.twig :as logger]
     [hxgm30.dice.components.random :as random]
-    [hxgm30.language.cli :as cli]
     [hxgm30.language.components.config :as config]
     [hxgm30.language.components.core]
     [hxgm30.language.gen.corpus :as corpus]
@@ -110,15 +109,3 @@
                          (run this :mythgarthur :elvish)
                          (run this :mythgarthur :human)
                          (run this :mythgarthur :dwarvish))))))
-
-
-(defn -main
-  [& args]
-  (let [sys (cli/setup-system)
-        generator (gen/create-content-generator
-                   sys
-                   (config/lang-default-generator-mode sys))
-        world (keyword (first args))
-        language (keyword (second args))]
-    (run generator world language)
-    (println)))

@@ -11,7 +11,6 @@
     [hxgm30.language.common :as common]
     [hxgm30.language.components.config :as config]
     [hxgm30.language.components.core]
-    [hxgm30.language.components.udp :as udp]
     [hxgm30.language.gen.assembled.core :as assembled]
     [hxgm30.language.gen.assembled.mythgarthur :as mythgarthur]
     [hxgm30.language.gen.assembled.rook :as rook]

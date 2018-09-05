@@ -1,14 +1,12 @@
 (ns hxgm30.language.gen.core
   (:require
-    [hxgm30.language.cli :as cli]
     [hxgm30.language.gen.impl.markov :as markov]
     [hxgm30.language.gen.impl.syntagmata :as syntagmata])
   (:import
     (hxgm30.language.gen.impl.markov MarkovContentGenerator
                                      MarkovStatsGenerator)
     (hxgm30.language.gen.impl.syntagmata SyntagmataContentGenerator
-                                         SyntagmataStatsGenerator))
-  (:gen-class))
+                                         SyntagmataStatsGenerator)))
 
 (defprotocol StatsGeneratorAPI
   (generate-stats [this language] [this race name-type])
@@ -51,17 +49,3 @@
   (case type
     :markov (markov/create-content-generator system)
     :syntagmata (syntagmata/create-content-generator system)))
-
-(defn -main
-  [& args]
-  (let [sys (cli/setup-system)
-        cmd (keyword (first args))]
-    (case cmd
-      :regen-markov-chains (do
-                             (println "Regenerating markov-chain data ...\n")
-                             (regen-stats (create-stats-generator sys :markov))
-                             (println))
-      :regen-syntagmata (do
-                          (println "Regenerating syntagmata data ...\n")
-                          (regen-stats (create-content-generator sys :syntagmata))
-                          (println)))))

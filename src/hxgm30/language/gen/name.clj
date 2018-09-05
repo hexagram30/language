@@ -3,7 +3,6 @@
     [clojure.string :as string]
     [clojusc.twig :as logger]
     [hxgm30.dice.components.random :as random]
-    [hxgm30.language.cli :as cli]
     [hxgm30.language.common :as common]
     [hxgm30.language.components.config :as config]
     [hxgm30.language.components.core]
@@ -58,13 +57,3 @@
   ([generator race]
     (print-sample generator race)))
 
-(defn -main
-  [& args]
-  (let [sys (cli/setup-system)
-        generator (gen/create-content-generator
-                   sys
-                   (config/lang-default-generator-mode sys))]
-    (if-let [race (first args)]
-      (run generator (keyword race))
-      (run generator)))
-  (println))

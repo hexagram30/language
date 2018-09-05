@@ -4,6 +4,7 @@
     [hxgm30.dice.components.random :as random]
     [hxgm30.httpd.components.server :as httpd]
     [hxgm30.language.components.config :as config]
+    [hxgm30.language.components.lang :as lang]
     [hxgm30.language.components.logging :as logging]
     [taoensso.timbre :as log]))
 
@@ -25,15 +26,15 @@
             (random/create-component)
             [:config :logging])})
 
-(def rnd-without-logging
-  {:random (component/using
-            (random/create-component)
-            [:config])})
+(def language
+  {:lang (component/using
+            (lang/create-component)
+            [:config :logging :random])})
 
 (def httpd
   {:httpd (component/using
            (httpd/create-component)
-           [:config :logging :random])})
+           [:config :logging :random :lang])})
 
 ;;; Additional components for systems that want to supress logging (e.g.,
 ;;; systems created for testing).
@@ -43,10 +44,15 @@
             (random/create-component)
             [:config])})
 
+(def language-without-logging
+  {:lang (component/using
+            (lang/create-component)
+            [:config :random])})
+
 (def httpd-without-logging
   {:httpd (component/using
            (httpd/create-component)
-           [:config :random])})
+           [:config :random :lang])})
 
 (defn basic
   [cfg-data]
@@ -63,6 +69,7 @@
   [cfg-data]
   (merge (basic cfg-data)
          rnd
+         language
          httpd))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -84,6 +91,7 @@
   (-> (config/build-config)
       cfg
       (merge rnd-without-logging
+             language-without-logging
              httpd-without-logging)
       component/map->SystemMap))
 

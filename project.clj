@@ -108,9 +108,16 @@
       ["ltest" ":all"]
       ["uberjar"]]
     ;; Scripts
-    "fictional" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.assembled.core"]
-    "name" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.name"]
-    "names" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.name"]
-    "regen-markov-chains" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.core" "regen-markov-chains"]
-    "regen-syntagmata" ["with-profile" "+redis-plugin" "run" "-m" "hxgm30.language.gen.core" "regen-syntagmata"]})
+    "fictional" [
+      "with-profile" "+redis-plugin" "run" "-m"
+      "hxgm30.language.cli" "assembled"]
+    "names" [
+      "with-profile" "+redis-plugin" "run" "-m"
+      "hxgm30.language.cli" "names"]
+    "regen-markov-chains" [
+      "with-profile" "+redis-plugin" "run" "-m"
+      "hxgm30.language.cli" "regen-markov-chains"]
+    "regen-syntagmata" [
+      "with-profile" "+redis-plugin" "run" "-m"
+      "hxgm30.language.cli" "regen-syntagmata"]})
 

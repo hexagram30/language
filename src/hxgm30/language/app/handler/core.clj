@@ -16,6 +16,7 @@
     [clojusc.twig :as twig]
     [hxgm30.httpd.kit.response :as response]
     [hxgm30.language.common :as common]
+    [hxgm30.language.components.lang :as lang-component]
     [hxgm30.language.gen.core :as gen]
     [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.gen.name :as name]
@@ -57,8 +58,6 @@
 
 (defn- -gen-content
   [generator lang content-type]
-  (log/error "lang:" lang)
-  (log/error "content-type:" content-type)
   (let [stats (gen/stats (:stats-gen generator) lang)]
     (case content-type
       :word (gen/word generator stats)
@@ -162,10 +161,7 @@
     (let [lang (get-lang request)
           content-type (get-content-type request)
           gen-type (get-gen-type request)
-          ;; XXX - Once the language component has been created, instantiate
-          ;;       a generator in the component so that it doesn't have to be
-          ;;       done on every request.
-          generator (gen/create-content-generator component gen-type)]
+          generator (lang-component/get-generator component gen-type)]
       (response/json
         request
         (cond (and (not= :all lang) (not= :all content-type))
@@ -196,10 +192,7 @@
           name-type (get-name-type request)
           gen-type (get-gen-type request)
           sylls (get-syllables request)
-          ;; XXX - Once the language component has been created, instantiate
-          ;;       a generator in the component so that it doesn't have to be
-          ;;       done on every request.
-          generator (gen/create-content-generator component gen-type)]
+          generator (lang-component/get-generator component gen-type)]
       (response/json
         request
         (cond (and (not= :all race) (not= :all name-type))
