@@ -24,6 +24,7 @@
     [io.aviso/pretty]
     [org.clojure/tools.reader]]
   :dependencies [
+    [cheshire "5.8.0"]
     [clojusc/opennlp "0.4.1-SNAPSHOT"]
     [clojusc/system-manager "0.3.0-SNAPSHOT"]
     [clojusc/twig "0.3.3"]
@@ -56,7 +57,8 @@
       :plugins [
         [jonase/eastwood "0.2.9"]
         [lein-ancient "0.6.15"]
-        [lein-kibit "0.1.6"]]}
+        [lein-kibit "0.1.6"]
+        [lein-nvd "0.5.4"]]}
     :test {
       :plugins [
         [lein-ltest "0.3.0"]]
@@ -83,6 +85,7 @@
     "ubercompile" ["do"
       ["clean"]
       ["with-profile" "+ubercompile,+redis-plugin" "compile"]]
+    "check-security" ["with-profile" "+lint,+redis-plugin" "nvd" "check"]
     "check-vers" ["with-profile" "+lint,+redis-plugin" "ancient" "check" ":all"]
     "check-jars" ["with-profile" "+lint,+redis-plugin" "do"
       ["deps" ":tree"]
