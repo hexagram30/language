@@ -39,7 +39,7 @@
           (lang/create-component)
           [:config :logging :random :backend])})
 
-(def httpd
+(def http
   {:httpd (component/using
            (httpd/create-component)
            [:config :logging :random :backend :lang])})
@@ -64,7 +64,7 @@
             (lang/create-component)
             [:config :random])})
 
-(def httpd-without-logging
+(def http-without-logging
   {:httpd (component/using
            (httpd/create-component)
            [:config :random :lang])})
@@ -80,7 +80,7 @@
          rnd
          (db cfg-data)
          language
-         httpd))
+         http))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Component Initializations   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -104,7 +104,7 @@
         (merge rnd-without-logging
                (db-without-logging cfg-data)
                 language-without-logging
-               httpd-without-logging)
+               http-without-logging)
         component/map->SystemMap)))
 
 (defn initialize

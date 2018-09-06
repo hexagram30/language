@@ -5,12 +5,12 @@
     [hxgm30.language.io :as io]
     [hxgm30.language.util :as util]))
 
-(def file-template "corpora/%s/%s")
+(def lang-file-template "corpora/%s/%s")
 (def name-file-template "corpora/names/%s/%s/%s")
 
 (defn fullpath
   ([language data-type]
-    (format file-template
+    (format lang-file-template
             (name data-type)
             (name language)))
   ([race name-type data-type]

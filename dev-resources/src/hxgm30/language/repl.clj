@@ -21,6 +21,7 @@
     [hxgm30.language.gen.name :as name]
     [hxgm30.language.io :as lang-io]
     [hxgm30.language.util :as util]
+    [taoensso.carmine :as redis]
     [trifl.java :refer [show-methods]]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -5,6 +5,7 @@
     [hxgm30.db.plugin.component :as db-component]
     [hxgm30.db.plugin.redis.api.db :as db]
     [hxgm30.language.components.config :as config]
+    [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.gen.core :as gen]
     [taoensso.timbre :as log]))
 
@@ -22,12 +23,15 @@
 
 (defn ingest-stats
   [system & args]
-  (apply db/ingest-stats
-         (cons (get-db system) (butlast args))
-         ))
+  (apply
+    db/ingest-stats
+    (concat
+     [(get-db system)]
+     args
+     [(apply corpus/undump args)])))
 
-(def lang-stats #(db/lang-stats (get-db %1) %2))
-(def name-stats #(db/name-stats (get-db %1) %2 %3))
+(def lang-stats #(db/lang-stats (get-db %1) %2 %3))
+(def name-stats #(db/name-stats (get-db %1) %2 %3 %4))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Component Lifecycle Implementation   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
