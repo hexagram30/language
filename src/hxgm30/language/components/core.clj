@@ -1,6 +1,7 @@
 (ns hxgm30.language.components.core
   (:require
     [com.stuartsierra.component :as component]
+    [hxgm30.db.plugin.backend :as backend]
     [hxgm30.dice.components.random :as random]
     [hxgm30.httpd.components.server :as httpd]
     [hxgm30.language.components.config :as config]
@@ -26,15 +27,22 @@
             (random/create-component)
             [:config :logging])})
 
+(defn db
+  [cfg-data]
+  (let [backend (get-in cfg-data [:backend :plugin])]
+    {:backend (component/using
+               (backend/create-component backend)
+               [:config :logging])}))
+
 (def language
   {:lang (component/using
-            (lang/create-component)
-            [:config :logging :random])})
+          (lang/create-component)
+          [:config :logging :random :backend])})
 
 (def httpd
   {:httpd (component/using
            (httpd/create-component)
-           [:config :logging :random :lang])})
+           [:config :logging :random :backend :lang])})
 
 ;;; Additional components for systems that want to supress logging (e.g.,
 ;;; systems created for testing).
@@ -43,6 +51,13 @@
   {:random (component/using
             (random/create-component)
             [:config])})
+
+(defn db-without-logging
+  [cfg-data]
+  (let [backend (get-in cfg-data [:backend :plugin])]
+    {:backend (component/using
+               (backend/create-component backend)
+               [:config])}))
 
 (def language-without-logging
   {:lang (component/using
@@ -63,12 +78,7 @@
   [cfg-data]
   (merge (basic cfg-data)
          rnd
-         httpd))
-
-(defn main
-  [cfg-data]
-  (merge (basic cfg-data)
-         rnd
+         (db cfg-data)
          language
          httpd))
 
@@ -88,18 +98,21 @@
 
 (defn initialize-without-logging
   []
-  (-> (config/build-config)
-      cfg
-      (merge rnd-without-logging
-             language-without-logging
-             httpd-without-logging)
-      component/map->SystemMap))
+  (let [cfg-data (config/build-config)]
+    (-> cfg-data
+        cfg
+        (merge rnd-without-logging
+               (db-without-logging cfg-data)
+                language-without-logging
+               httpd-without-logging)
+        component/map->SystemMap)))
 
 (defn initialize
   []
-  (-> (config/build-config)
-      main
-      component/map->SystemMap))
+  (let [cfg-data (config/build-config)]
+    (-> cfg-data
+        main
+        component/map->SystemMap)))
 
 (def init-lookup
   {:basic #'initialize-bare-bones

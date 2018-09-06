@@ -41,7 +41,8 @@
    ["/api/language/dictionary/:lang"
     {:get general-handler/not-implemented
     ;; XXX add :post support for new entries
-    ;; XXX add :put support for updating entries}]
+    ;; XXX add :put support for updating entries
+    }]
    ["/api/language/dictionary/:lang/search"
     {:get general-handler/not-implemented}]])
 
