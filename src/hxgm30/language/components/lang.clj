@@ -14,12 +14,6 @@
 ;;;   Utility Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;   Language Component API   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (defn get-generator
   [system gen-type]
   (get-in system [:lang :generators gen-type]))
@@ -28,16 +22,11 @@
   [system]
   (get-in system [:lang :db]))
 
-(defn ingest-stats
-  [system & args]
-  (apply
-    db/ingest-stats
-    (concat
-     [(get-db system)]
-     args
-     [(apply corpus/undump args)])))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Language Component API   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defn ingest-all-stats
+(defn- -ingest-all-stats
   [system]
   (db/ingest-stats
     (get-db system)
@@ -53,6 +42,17 @@
               (log/debugf "race, name-type, gen: %s, %s, %s" race name-type gen)
               [[race name-type gen]
                (apply corpus/undump [race name-type gen])])))))
+
+(defn ingest-stats
+  [system & args]
+  (if (nil? args)
+    (-ingest-all-stats system)
+    (apply
+      db/ingest-stats
+      (concat
+       [(get-db system)]
+       args
+       [(apply corpus/undump args)]))))
 
 (def lang-stats #(db/lang-stats (get-db %1) %2 %3))
 (def name-stats #(db/name-stats (get-db %1) %2 %3 %4))
