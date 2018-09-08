@@ -15,7 +15,7 @@
        "\u001B[35m]\u001B[33m λ\u001B[m=> "))
 
 (defproject hexagram30/language "4.2.0-SNAPSHOT"
-  :description "A language and word generator for use in hexagram30 narratives"
+  :description "A syntagmata and Markov chain language and word generator for use in hexagram30 narratives"
   :url "https://github.com/hexagram30/language"
   :license {
     :name "Apache License, Version 2.0"

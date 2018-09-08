@@ -1,6 +1,6 @@
 # hexagram30/language
 
-*A language and word generator for use in hexagram30 narratives*
+*A syntagmata and Markov chain language and word generator for use in hexagram30 narratives*
 
 [![][logo]][logo-large]
 
