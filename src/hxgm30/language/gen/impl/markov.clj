@@ -79,8 +79,6 @@
    word-fn])
 
 (defn syllable
-  ([this]
-    (syllable this (common-impl/stats (:stats-gen this))))
   ([this stats]
     (syllable this stats nil))
   ([this stats last-syllable]
@@ -92,8 +90,6 @@
                       (get-in stats [:chain last-syllable])))))
 
 (defn word
-  ([this]
-    (word this (common-impl/stats (:stats-gen this))))
   ([this stats-or-lang]
     (if (keyword? stats-or-lang)
       (word this (corpus/undump-markov stats-or-lang))

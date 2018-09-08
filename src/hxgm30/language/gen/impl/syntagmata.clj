@@ -71,9 +71,7 @@
                   (get-in stats [:pseudo-syllables :percent-ranges])))
 
 (defn syllable
-  ([this position]
-    (syllable this (common-impl/stats (:stats-gen this)) position))
-  ([this stats position]
+=  ([this stats position]
     (case position
       :initial (util/percent->
                 (random/float (:system this))
@@ -86,8 +84,6 @@
                 (get-in stats [:sound-transitions :final :percent-ranges])))))
 
 (defn word
-  ([this]
-    (word this (common-impl/stats (:stats-gen this))))
   ([this stats-or-lang]
     (if (keyword? stats-or-lang)
       (word this (corpus/undump-syntagmata stats-or-lang))
