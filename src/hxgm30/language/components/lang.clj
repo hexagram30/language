@@ -4,10 +4,17 @@
     [com.stuartsierra.component :as component]
     [hxgm30.db.plugin.component :as db-component]
     [hxgm30.db.plugin.redis.api.db :as db]
+    [hxgm30.language.common :as common]
     [hxgm30.language.components.config :as config]
     [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.gen.core :as gen]
     [taoensso.timbre :as log]))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Utility Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Language Component API   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -29,6 +36,23 @@
      [(get-db system)]
      args
      [(apply corpus/undump args)])))
+
+(defn ingest-all-stats
+  [system]
+  (db/ingest-stats
+    (get-db system)
+    (concat (for [lang common/supported-languages
+                  gen common/gen-types]
+              (do
+              (log/debugf "lang, gen: %s, %s" lang  gen)
+              [[lang gen] (apply corpus/undump [lang gen])]))
+            (for [race common/supported-names
+                  name-type common/supported-name-types
+                  gen common/gen-types]
+              (do
+              (log/debugf "race, name-type, gen: %s, %s, %s" race name-type gen)
+              [[race name-type gen]
+               (apply corpus/undump [race name-type gen])])))))
 
 (def lang-stats #(db/lang-stats (get-db %1) %2 %3))
 (def name-stats #(db/name-stats (get-db %1) %2 %3 %4))

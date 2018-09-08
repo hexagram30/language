@@ -3,6 +3,10 @@
     [clojure.string :as string]
     [hxgm30.language.gen.corpus :as corpus]))
 
+(def gen-types
+  [:markov
+   :syntagmata])
+
 (def supported-languages
   [:afrikaans
    :arabic

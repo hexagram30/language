@@ -8,6 +8,7 @@
     [clojusc.twig :as logger]
     [com.stuartsierra.component :as component]
     [hxgm30.db.plugin.redis.api.db :as db-api]
+    [hxgm30.db.plugin.redis.api.schema :as schema]
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.common :as common]
     [hxgm30.language.components.config :as config]
