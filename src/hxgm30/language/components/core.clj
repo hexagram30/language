@@ -67,7 +67,7 @@
 (def http-without-logging
   {:httpd (component/using
            (httpd/create-component)
-           [:config :random :lang])})
+           [:config :random :backend :lang])})
 
 (defn basic
   [cfg-data]
