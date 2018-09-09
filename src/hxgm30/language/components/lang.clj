@@ -62,7 +62,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defrecord LangServer [
-  conn
+  db
   dictionary
   generators])
 
@@ -102,3 +102,4 @@
   ""
   []
   (map->LangServer {}))
+
