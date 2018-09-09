@@ -71,7 +71,7 @@
                   (get-in stats [:pseudo-syllables :percent-ranges])))
 
 (defn syllable
-=  ([this stats position]
+  ([this stats position]
     (case position
       :initial (util/percent->
                 (random/float (:system this))
