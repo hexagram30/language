@@ -117,9 +117,9 @@
     "names" [
       "with-profile" "+redis-plugin" "run" "-m"
       "hxgm30.language.cli" "names"]
-    "regen-markov-chains" [
+    "regen-markov" [
       "with-profile" "+redis-plugin" "run" "-m"
-      "hxgm30.language.cli" "regen-markov-chains"]
+      "hxgm30.language.cli" "regen-markov"]
     "regen-syntagmata" [
       "with-profile" "+redis-plugin" "run" "-m"
       "hxgm30.language.cli" "regen-syntagmata"]})
