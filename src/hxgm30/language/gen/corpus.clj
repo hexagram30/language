@@ -3,17 +3,23 @@
     [clojure.set :as set]
     [clojure.string :as string]
     [hxgm30.language.io :as io]
-    [hxgm30.language.util :as util]))
+    [hxgm30.language.util :as util]
+    [taoensso.timbre :as log]))
 
 (def lang-file-template "corpora/%s/%s")
 (def name-file-template "corpora/names/%s/%s/%s")
 
 (defn fullpath
   ([language data-type]
+    (log/trace "Got language:" language)
+    (log/trace "Got data-type:" data-type)
     (format lang-file-template
             (name data-type)
             (name language)))
   ([race name-type data-type]
+    (log/trace "Got race:" race)
+    (log/trace "Got name-type:" name-type)
+    (log/trace "Got data-type:" data-type)
     (format name-file-template
             (name race)
             (name name-type)
@@ -149,7 +155,7 @@
 
 (defn dump-syntagmata
   ([language data]
-    (dump language data :syntagmata))
+    (dump language :syntagmata data))
   ([race name-type data]
     (dump race name-type :syntagmata data)))
 
@@ -161,7 +167,7 @@
 
 (defn dump-markov
   ([language data]
-    (dump language data :markov))
+    (dump language :markov data))
   ([race name-type data]
     (dump race name-type :markov data)))
 
