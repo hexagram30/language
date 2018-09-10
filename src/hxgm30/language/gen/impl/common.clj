@@ -72,7 +72,7 @@
   ([this race name-type]
     ((get-writer this) race
                        name-type
-                       ((get-generator) this race name-type))))
+                       ((get-generator this) this race name-type))))
 
 ;; XXX - Maybe rename this to read-stats and add a `stats` implementation to
 ;;       the content generator that extracts the stats-generator and calls
