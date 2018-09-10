@@ -13,7 +13,7 @@
   (:require
     [hxgm30.httpd.kit.response :as response]
     [hxgm30.language.app.handler.util :as util]
-    [hxgm30.language.gen.corpus :as corpus]
+    [hxgm30.language.components.lang :as lang]
     [taoensso.timbre :as log]))
 
 (defn read-lang-stats
@@ -23,7 +23,7 @@
           gen-type (util/get-gen-type request)]
       (log/debug "Got language:" lang)
       (response/json request
-                     (corpus/undump gen-type lang)))))
+                     (lang/lang-stats component gen-type lang)))))
 
 (defn read-name-stats
   [component]
@@ -32,4 +32,4 @@
           name-type (util/get-name-type request)
           gen-type (util/get-gen-type request)]
       (response/json request
-                     (corpus/undump race name-type gen-type)))))
+                     (lang/name-stats component race name-type gen-type)))))
