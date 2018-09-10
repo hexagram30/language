@@ -89,7 +89,10 @@
 
 (defn string-chars->string
   [string-chars]
-  (string/replace (string/join string-chars) "-" (str "\"" "-")))
+  (-> string-chars
+      string/join
+      (string/replace "-" (str "\\" "-"))
+      (string/replace "'" (str "\\" "'"))))
 
 (defn regex-range
   [string-chars]
