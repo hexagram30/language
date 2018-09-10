@@ -1,10 +1,10 @@
 (ns hxgm30.language.gen.impl.common
   (:require
     [clojure.string :as string]
+    [hxgm30.common.util :as util]
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.common :as common]
     [hxgm30.language.gen.corpus :as corpus]
-    [hxgm30.language.util :as util]
     [taoensso.timbre :as log]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -2,14 +2,14 @@
   (:require
     [clojure.string :as string]
     [clojusc.twig :as logger]
+    [hxgm30.common.util :as util]
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.components.config :as config]
     [hxgm30.language.components.core]
-    [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.gen.assembled.mythgarthur :as mythgarthur]
     [hxgm30.language.gen.assembled.rook :as rook]
     [hxgm30.language.gen.core :as gen]
-    [hxgm30.language.util :as util])
+    [hxgm30.language.gen.corpus :as corpus])
   (:gen-class))
 
 (defn select-lang

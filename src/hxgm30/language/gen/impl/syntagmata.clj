@@ -1,11 +1,11 @@
 (ns hxgm30.language.gen.impl.syntagmata
   (:require
     [clojure.string :as string]
+    [hxgm30.common.util :as util]
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.common :as common]
     [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.gen.impl.common :as common-impl]
-    [hxgm30.language.util :as util]
     [taoensso.timbre :as log]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -57,7 +57,7 @@
      :writer corpus/dump-syntagmata}))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;   Concent Generator Implementation   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Content Generator Implementation   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defrecord SyntagmataContentGenerator
