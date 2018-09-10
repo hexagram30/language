@@ -34,6 +34,7 @@
 
 (defn- -get-var
   [string]
+  (log/tracef "Resolving %s ..." string)
   (-> string
       symbol
       resolve
@@ -41,9 +42,7 @@
 
 (defn- -lang-freqs
   [world lang]
-  (log/error "string:" (format "%s.%s/%s" base-ns world lang))
   (-get-var (format "%s.%s/%s" base-ns (name world) (name lang))))
-
 
 (defn- -supported-langs
   [world]
