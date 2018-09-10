@@ -2,6 +2,7 @@
   (:require
     [clojure.edn :as edn]
     [clojure.java.io :as io]
+    [clojure.pprint :as pprint]
     [clojure.string :as string]))
 
 (defn load-lines
@@ -27,7 +28,7 @@
 
 (defn dump
   [fullpath data]
-  (spit fullpath data))
+  (spit fullpath (with-out-str (pprint/pprint data))))
 
 (defn undump
   [fullpath]
