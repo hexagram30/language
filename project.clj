@@ -24,15 +24,15 @@
     [io.aviso/pretty]
     [org.clojure/tools.reader]]
   :dependencies [
-    [cheshire "5.8.0"]
+    [cheshire "5.8.1"]
     [clojure-opennlp "0.5.0"]
     [clojusc/system-manager "0.3.0-SNAPSHOT"]
-    [clojusc/twig "0.3.3"]
+    [clojusc/twig "0.4.0"]
     [hexagram30/common "0.1.0-SNAPSHOT"]
     [hexagram30/db-plugin "0.1.0-SNAPSHOT"]
     [hexagram30/dice "0.1.0-SNAPSHOT"]
     [hexagram30/httpd "0.1.0-SNAPSHOT"]
-    [io.aviso/pretty "0.1.34"]
+    [io.aviso/pretty "0.1.35"]
     [org.clojure/clojure "1.9.0"]
     [org.clojure/tools.reader "1.3.0"]]
   :profiles {
@@ -40,7 +40,7 @@
       :aot :all}
     :dev {
       :dependencies [
-        [clojusc/trifl "0.3.0"]
+        [clojusc/trifl "0.4.0"]
         [org.clojure/tools.namespace "0.2.11"]]
       :plugins [
         [lein-shell "0.5.0"]
@@ -55,10 +55,10 @@
       :source-paths ^:replace ["src"]
       :test-paths ^:replace []
       :plugins [
-        [jonase/eastwood "0.2.9"]
+        [jonase/eastwood "0.3.1"]
         [lein-ancient "0.6.15"]
         [lein-kibit "0.1.6"]
-        [lein-nvd "0.5.4"]]}
+        [lein-nvd "0.5.5"]]}
     :test {
       :plugins [
         [lein-ltest "0.3.0"]]
