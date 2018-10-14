@@ -68,8 +68,11 @@
 
 (defn start
   [this]
-  (let [lang-db (db/create-lang-db (db-component/db-conn this))]
+  (let [lang-db (db/create-lang-db (db-component/db-conn this))
+        ;lang-db :thing
+        ]
     (log/info "Starting language component ...")
+    (log/debug "Using connection:" (db-component/db-conn this))
     (log/debug "Started language component.")
     (assoc this :db lang-db
                 :generators {
@@ -101,5 +104,5 @@
 (defn create-component
   ""
   []
-  (map->LangServer {}))
+  (map->LangServer {:db nil}))
 

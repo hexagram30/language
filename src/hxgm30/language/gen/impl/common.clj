@@ -1,15 +1,34 @@
 (ns hxgm30.language.gen.impl.common
   (:require
     [clojure.string :as string]
+    [hxgm30.db.plugin.redis.api.db :as db]
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.common :as common]
     [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.util :as util]
-    [taoensso.timbre :as log]))
+    [taoensso.timbre :as log])
+  (:import
+    (clojure.lang Keyword)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Utility Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn get-db
+  [system]
+  (or (get-in system [:lang :db])
+      (get-in system [:db])))
+
+(defn db-reader-fn
+  [system ^Keyword gen-type]
+  (fn [& args]
+    (log/debug "Got system:" system)
+    (log/debug "Got system with keys:" (keys system))
+    (log/debug ":db component:" (:db system))
+    (log/debug "Got gen-type:" gen-type)
+    (log/debug "Got args: " args)
+    (log/debug "New args:" (vec (concat [(get-db system)] args [gen-type])))
+    (apply db/get-stats (concat [(get-db system)] args [gen-type]))))
 
 (defn get-generator
   [this]

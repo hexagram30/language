@@ -1,6 +1,7 @@
 (ns hxgm30.language.gen.impl.syntagmata
   (:require
     [clojure.string :as string]
+    [hxgm30.db.plugin.redis.api.db :as db]
     [hxgm30.dice.components.random :as random]
     [hxgm30.language.common :as common]
     [hxgm30.language.gen.corpus :as corpus]
@@ -53,7 +54,7 @@
   (map->SyntagmataStatsGenerator
     {:system system
      :generator generate-stats
-     :reader corpus/undump-syntagmata
+     :reader (common-impl/db-reader-fn system :syntagmata)
      :writer corpus/dump-syntagmata}))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -86,7 +87,7 @@
 (defn word
   ([this stats-or-lang]
     (if (keyword? stats-or-lang)
-      (word this (corpus/undump-syntagmata stats-or-lang))
+      (word this (common-impl/stats (:stats-gen this) stats-or-lang))
       (word this stats-or-lang (common-impl/syllable-count this stats-or-lang))))
   ([this stats syllables]
     (case syllables
