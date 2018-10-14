@@ -21,6 +21,7 @@
     [hxgm30.language.gen.corpus :as corpus]
     [hxgm30.language.gen.name :as name]
     [hxgm30.language.io :as lang-io]
+    [hxgm30.language.natural.core :as nlp]
     [hxgm30.language.util :as util]
     [taoensso.carmine :as redis]
     [trifl.java :refer [show-methods]]))
@@ -62,10 +63,33 @@
   (println (slurp (io/resource "text/banner.txt")))
   :ok)
 
+;; Words and names generator
 (comment
   (def m (gen/create-content-generator (system) :markov))
   (def stats (gen/stats (:stats-gen m) :halfling :male))
   (gen/word m stats 1)
   (gen/word m stats 2)
   (gen/word m stats 3)
+  )
+
+;; Natural language
+(comment
+  (def tkns (nlp/tokenize "take the hat from the table"))
+  tkns
+  ; ["take" "the" "hat" "from" "the" "table" "."]
+  (def tagged (nlp/pos-tag tkns))
+  tagged
+  ; (["take" "VB"]
+  ;  ["the" "DT"]
+  ;  ["hat" "NN"]
+  ;  ["from" "IN"]
+  ;  ["the" "DT"]
+  ;  ["table" "NN"]
+  ;  ["." "."])
+  (def chunked (nlp/chunker tagged))
+  chunked
+  ; ({:phrase ["take"] :tag "VP"}
+  ;  {:phrase ["the" "hat"] :tag "NP"}
+  ;  {:phrase ["from"] :tag "PP"}
+  ;  {:phrase ["the" "table"] :tag "NP"})
   )
