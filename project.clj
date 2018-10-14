@@ -25,7 +25,7 @@
     [org.clojure/tools.reader]]
   :dependencies [
     [cheshire "5.8.0"]
-    [clojusc/opennlp "0.4.1-SNAPSHOT"]
+    [clojure-opennlp "0.5.0"]
     [clojusc/system-manager "0.3.0-SNAPSHOT"]
     [clojusc/twig "0.3.3"]
     [hexagram30/common "0.1.0-SNAPSHOT"]
