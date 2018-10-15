@@ -86,10 +86,26 @@
   ;  ["the" "DT"]
   ;  ["table" "NN"]
   ;  ["." "."])
+  (def tagged-no-dt
+    (remove nlp/determiner? tagged))
+
   (def chunked (nlp/chunker tagged))
   chunked
   ; ({:phrase ["take"] :tag "VP"}
   ;  {:phrase ["the" "hat"] :tag "NP"}
   ;  {:phrase ["from"] :tag "PP"}
   ;  {:phrase ["the" "table"] :tag "NP"})
+
+  (nlp/parse "take the hat from the table")
+  ; {:chunked ({:phrase ["take"] :tag "VP"}
+  ;            {:phrase ["the" "hat"] :tag "NP"}
+  ;            {:phrase ["from"] :tag "PP"}
+  ;            {:phrase ["the" "table"] :tag "NP"})
+  ;  :tagged (["take" "VB"]
+  ;           ["the" "DT"]
+  ;           ["hat" "NN"]
+  ;           ["from" "IN"]
+  ;           ["the" "DT"]
+  ;           ["table" "NN"]
+  ;           ["." "."])}
   )
