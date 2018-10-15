@@ -5,9 +5,6 @@
     [opennlp.treebank :as treebank]))
 
 (def tokenize
-  ; [sentence]
-  ; (let [tokenizer (nlp/make-tokenizer (util/get-model "en-token.bin"))]
-  ;   (tokenizer (util/close-sentence sentence))))
   (comp (nlp/make-tokenizer (util/get-model "en-token.bin"))
         util/close-sentence))
 
@@ -18,3 +15,18 @@
 (def chunker
   (treebank/make-treebank-chunker
     (util/get-model "en-chunker.bin")))
+
+(defn determiner?
+  [tagged-element]
+  (= "DT" (second tagged-element)))
+
+(defn parse
+  ([sentence]
+    (parse sentence {:with-determiners? true}))
+  ([sentence opts]
+    (let [tokens (tokenize sentence)
+          tagged (pos-tag tokens)]
+      {:tagged (if (:with-determiners? opts)
+                 tagged
+                 (remove determiner? tagged))
+       :chunked (chunker tagged)})))
