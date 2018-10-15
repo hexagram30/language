@@ -1,5 +1,6 @@
 (ns hxgm30.language.repl
   (:require
+    [wordnet.core :as wordnet]
     [clojure.java.io :as io]
     [clojure.pprint :refer [pprint]]
     [clojure.string :as string]
@@ -108,4 +109,20 @@
   ;           ["the" "DT"]
   ;           ["table" "NN"]
   ;           ["." "."])}
+  )
+
+;; WordNet
+(comment
+  (def dict (wordnet/make-dictionary (io/resource "wordnet/wordnet-db/dict")))
+  (def dog (first (dict "dog" :noun)))
+  (:lemma dog)
+  ; "dog"
+  (map :lemma (wordnet/words (wordnet/synset dog)))
+  ; ("dog" "domestic_dog" "Canis_familiaris")
+  (->> :hypernym
+       (wordnet/related-synsets (wordnet/synset dog))
+       (mapcat wordnet/words)
+       (reduce (fn [acc x] (conj acc (:lemma x)))
+               #{}))
+  ; #{"canid" "canine" "domestic_animal" "domesticated_animal"}
   )

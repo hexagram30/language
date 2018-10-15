@@ -28,6 +28,7 @@
     [clojure-opennlp "0.5.0"]
     [clojusc/system-manager "0.3.0-SNAPSHOT"]
     [clojusc/twig "0.4.0"]
+    [clojusc/wordnet "1.0.0"]
     [hexagram30/common "0.1.0-SNAPSHOT"]
     [hexagram30/db-plugin "0.1.0-SNAPSHOT"]
     [hexagram30/dice "0.1.0-SNAPSHOT"]
@@ -110,7 +111,7 @@
       ["lint"]
       ["ltest" ":all"]
       ["uberjar"]]
-    ;; Scripts
+    ;; Lang-Gen Scripts
     "fictional" [
       "with-profile" "+redis-plugin" "run" "-m"
       "hxgm30.language.cli" "assembled"]
@@ -122,5 +123,7 @@
       "hxgm30.language.cli" "regen-markov"]
     "regen-syntagmata" [
       "with-profile" "+redis-plugin" "run" "-m"
-      "hxgm30.language.cli" "regen-syntagmata"]})
+      "hxgm30.language.cli" "regen-syntagmata"]
+    ;; WordNet scripts
+    "install-jwi" ["shell" "resources/scripts/install-jwi.sh"]})
 
