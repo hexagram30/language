@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:hexagram30/nlp-data.git
+	branch = master
+	commit = a9e45817d96701737a2d890e0c7e596e4ea4a150
+	parent = 58db9c5ff245f27081870caea5ec95e82102d319
+	cmdver = 0.3.1
