@@ -19,8 +19,6 @@
   (io/resource (format "nlp/models/%s" filename)))
 
 (defn get-wordnet-dict
-  ([]
-    (get-wordnet-dict "dict"))
-  ([filename]
-    (io/resource (format "wordnet/wordnet-db/%s" filename))))
+  []
+  (io/resource "wordnet/data/dict"))
 
