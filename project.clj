@@ -37,6 +37,8 @@
     [org.clojure/clojure "1.9.0"]
     [org.clojure/tools.reader "1.3.0"]]
   :jar-exclusions [
+    #"corpora"
+    #"nlp"
     #"wordnet"]
   :profiles {
     :ubercompile {
