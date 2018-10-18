@@ -23,3 +23,4 @@
     (get-wordnet-dict "dict"))
   ([filename]
     (io/resource (format "wordnet/wordnet-db/%s" filename))))
+
