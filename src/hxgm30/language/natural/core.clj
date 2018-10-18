@@ -1,5 +1,6 @@
 (ns hxgm30.language.natural.core
   (:require
+    [clojure.string :as string]
     [hxgm30.language.natural.util :as util]
     [opennlp.nlp :as nlp]
     [opennlp.treebank :as treebank]
@@ -25,6 +26,24 @@
   [tagged-element]
   (= "DT" (second tagged-element)))
 
+(defn verb?
+  [tagged-element]
+  (string/starts-with? (second tagged-element) "VB"))
+
+(defn noun?
+  [tagged-element]
+  (string/starts-with? (second tagged-element) "NN"))
+
+(defn noun-or-verb?
+  [tagged-element]
+  (or (noun? tagged-element) (verb? tagged-element)))
+
+(defn tagged->ast
+  [tagged]
+  {:action (get-in (vec (filter verb? tagged)) [0 0])
+   :object (get-in (vec (filter noun? tagged)) [0 0])
+   :relations (map first (rest (filter noun? tagged)))})
+
 (defn synonyms
   [word ^Keyword pos]
   (->> (wordnet-dict word pos)
@@ -46,7 +65,14 @@
   ([sentence opts]
     (let [tokens (tokenize sentence)
           tagged (pos-tag tokens)]
-      {:tagged (if (:with-determiners? opts)
-                 tagged
-                 (remove determiner? tagged))
-       :chunked (chunker tagged)})))
+      {:tagged (cond (:simple? opts)
+                     (filter noun-or-verb? tagged)
+
+                     (not (:with-determiners? opts))
+                     (remove determiner? tagged)
+
+                     :else
+                     tagged)
+       :chunked (chunker tagged)
+       :ast (tagged->ast tagged)
+       :tokens tokens})))
