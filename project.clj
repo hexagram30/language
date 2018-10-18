@@ -79,6 +79,9 @@
         "start-db" ["run" "-m" "hxgm30.db.plugin.docker" "up" "compose-redis-db.yml"]
         "stop-db" ["run" "-m" "hxgm30.db.plugin.docker" "down" "compose-redis-db.yml"]}}}
   :aliases {
+    ;; Dependencies
+    "wordnet"
+      ["shell" "resources/scripts/setup-wordnet.sh"]
     ;; Dev Aliases
     "repl" ["do"
       ["clean"]
@@ -109,6 +112,7 @@
       ["clean"]
       ["check-vers"]
       ["lint"]
+      ["wordnet"]
       ["ltest" ":all"]
       ["uberjar"]]
     ;; Lang-Gen Scripts
