@@ -21,21 +21,26 @@
     :name "Apache License, Version 2.0"
     :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :exclusions [
+    ;; JDK version issues overrides
+    [fipp]
     [io.aviso/pretty]
     [org.clojure/tools.reader]]
   :dependencies [
-    [cheshire "5.8.1"]
+    ;; JDK version issues overrides
+    [fipp "0.6.18"]
+    [io.aviso/pretty "0.1.37"]
+    [org.clojure/tools.reader "1.3.2"]
+    ;; Regular dependencies
+    [cheshire "5.9.0"]
     [clojure-opennlp "0.5.0"]
-    [clojusc/system-manager "0.3.0-SNAPSHOT"]
-    [clojusc/twig "0.4.0"]
+    [clojusc/system-manager "0.3.0"]
+    [clojusc/twig "0.4.1"]
     [clojusc/wordnet "1.0.0"]
     [hexagram30/common "0.1.0-SNAPSHOT"]
     [hexagram30/db-plugin "0.1.0-SNAPSHOT"]
     [hexagram30/dice "0.1.0-SNAPSHOT"]
     [hexagram30/httpd "0.1.0-SNAPSHOT"]
-    [io.aviso/pretty "0.1.35"]
-    [org.clojure/clojure "1.9.0"]
-    [org.clojure/tools.reader "1.3.0"]]
+    [org.clojure/clojure "1.10.1"]]
   :jar-exclusions [
     #"corpora"
     #"nlp"
@@ -45,11 +50,11 @@
       :aot :all}
     :dev {
       :dependencies [
-        [clojusc/trifl "0.4.0"]
-        [org.clojure/tools.namespace "0.2.11"]]
+        [clojusc/trifl "0.4.2"]
+        [org.clojure/tools.namespace "0.3.1"]]
       :plugins [
         [lein-shell "0.5.0"]
-        [venantius/ultra "0.5.2"]]
+        [venantius/ultra "0.6.0"]]
       :source-paths ["dev-resources/src"]
       :aot [clojure.tools.logging.impl]
       :repl-options {
@@ -60,10 +65,10 @@
       :source-paths ^:replace ["src"]
       :test-paths ^:replace []
       :plugins [
-        [jonase/eastwood "0.3.1"]
+        [jonase/eastwood "0.3.6"]
         [lein-ancient "0.6.15"]
-        [lein-kibit "0.1.6"]
-        [lein-nvd "0.5.5"]]}
+        [lein-kibit "0.1.7"]
+        [lein-nvd "1.3.0"]]}
     :test {
       :plugins [
         [lein-ltest "0.3.0"]]
