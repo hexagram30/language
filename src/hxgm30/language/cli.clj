@@ -41,7 +41,9 @@
                                :stats-gen
                                gen/regen-stats))
       :names (if-let [race (second args)]
-               (name/run generator (keyword race))
+               (if-let [count (nth args 2)]
+                  (name/run generator (keyword race) (Integer/parseInt count))
+                  (name/run generator (keyword race)))
                (name/run generator))
       :assemble (let [world (keyword (first args))
                       language (keyword (second args))]

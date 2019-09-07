@@ -13,7 +13,7 @@
   (:gen-class))
 
 ;; XXX Let's fix this up: have an API that takes the generator as the first arg,
-;;     and then in the Language component, have functions that take the systm as
+;;     and then in the Language component, have functions that take the system as
 ;;     the first component.
 
 (defn gen-name
@@ -49,11 +49,24 @@
                    (male generator race)
                    lastname))))
 
+(defn- print-samples
+  [generator race count]
+  (print (format "\n%s\n" (string/capitalize (name race))))
+  (dotimes [_ (inc count)]
+    (let [lastname (last generator race)]
+      (print (format "\tFemale: %s %s\n\tMale: %s %s\n\n"
+                     (female generator race)
+                     lastname
+                     (male generator race)
+                     lastname)))))
+
 (defn run
   ([generator]
     (doall
       (for [race common/supported-names]
         (print-sample generator race))))
   ([generator race]
-    (print-sample generator race)))
+    (print-sample generator race))
+  ([generator race count]
+    (print-samples generator race count)))
 
