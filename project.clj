@@ -27,7 +27,7 @@
     [org.clojure/tools.reader]]
   :dependencies [
     ;; JDK version issues overrides
-    [fipp "0.6.18"]
+    [fipp "0.6.19"]
     [io.aviso/pretty "0.1.37"]
     [org.clojure/tools.reader "1.3.2"]
     ;; Regular dependencies
