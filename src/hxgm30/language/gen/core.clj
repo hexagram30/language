@@ -1,5 +1,6 @@
 (ns hxgm30.language.gen.core
   (:require
+    [clojure.string :as string]
     [hxgm30.common.util :as util]
     [hxgm30.language.gen.impl.markov :as markov]
     [hxgm30.language.gen.impl.syntagmata :as syntagmata])
@@ -114,7 +115,7 @@
     (derive-word words-data (rand-int 10)))
   ([words-data syllable-count]
     (let [total (reduce + 0.0 (map :weight words-data))]
-      (apply str
+      (string/join
         (flatten
           (map (fn [_] (rand-nth
                         (vec
