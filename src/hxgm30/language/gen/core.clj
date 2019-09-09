@@ -70,7 +70,7 @@
           {}
           (eat word)))
 
-(defn create-word-lookup [words-data]
+(defn create-word-lookup [words-data total]
   "This function expects `words-data` to have a structure like the following:
 
   ```
@@ -97,7 +97,7 @@
       :weight 3}
      {:word \"ao\"
       :weight 9}])
-  ````
+  ```
   "
   (reduce (partial util/frequency->percent-range total)
           []
@@ -119,8 +119,9 @@
         (flatten
           (map (fn [_] (rand-nth
                         (vec
-                         (u/percent-> (rand)
-                                      (create-word-lookup words-data)))))
+                         (util/percent->
+                          (rand)
+                          (create-word-lookup words-data total)))))
                (range syllable-count)))))))
 
 (defn derive-words
