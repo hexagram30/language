@@ -1,0 +1,398 @@
+World:
+
+tunkasila - Lakota, grandfather
+nuna - Inuit, earth
+olor - Dwarvish
+shaoghal - Scottish Gaelic
+arda - Quenya
+verǫld - Old Norse
+maailma - Finnish
+delkhiin - Mongolian
+sikul - Tibetan
+honua - Hawai'ian
+ao - Maori
+
+The People:
+
+titunwan - Lakota
+inuit - Inuit
+khazâd - Dwarvish
+dhaoine - Scottish Gaelic
+quendi - Quenya
+thjoth (þjóð) - Old Norse
+kansa - Finnish
+khümüüs - Mongolian
+simeng - Tibetan
+poʻe - Hawai'ian
+iwi - Maori
+
+vowels = iuaâ
+consonants = tnwkhzd
+
+words (corpus/load-wordlist
+pseudo-syllable-freqs (common/pseudo-syllable-freqs
+transitions (common/sound-transitions )
+ial (common/positional-sound-transition-freqs :initial
+
+percents:
+
+inuit - 30                        =  30 --> 4%
+finish - 15                       =  15 --> 2%
+dwarvish - 5 10 5                 =  20 --> 3%
+quenya - 5                        =   5 --> 1%
+old norse 45 10 25 5 5 5          =  95 --> 13%
+mongolian - 40                    =  40 --> 5%
+tibetan - 40                      =  40 --> 5%
+gaelic - 25                       =  25 --> 3%
+maori - 45 20                     =  65 --> 9%
+hawai'ian - 20                    =  20 --> 3%
+lakota - 50 50 50 50 50 50 50 50  = 400 --> 52%
+                                 -------   ----
+                                    755    100%
+(defn eat [data]
+  (loop [d (map identity data)
+         acc [d]]
+    (if (= (count d) 2)
+      acc
+      (let [nxt (vec (rest d))]
+        (recur nxt
+               (conj acc nxt))))))
+
+(defn simple-markov [word]
+  (reduce (fn [acc rem] (assoc acc (str (first rem)) (str (second rem))))
+          {}
+          (eat word)))
+
+(def world
+  [{:word "tunkasila"
+    :weight 52}
+   {:word "nuna"
+    :weight 4}
+   {:word "olor"
+    :weight 3}
+   {:word "shaoghal"
+    :weight 3}
+   {:word "arda"
+    :weight 1}
+   {:word "verǫld"
+    :weight 13}
+   {:word "maailma"
+    :weight 2}
+   {:word "delkhiin"
+    :weight 5}
+   {:word "sikul"
+    :weight 5}
+   {:word "honua"
+    :weight 3}
+   {:word "ao"
+    :weight 9}])
+
+(def total (reduce + 0.0 (map :weight world)))
+
+(require '[hxgm30.common.util :as u])
+
+(defn create-word-lookup [words-data]
+  (reduce (partial u/frequency->percent-range total)
+          []
+          (map #(list (simple-markov (:word %)) (:weight %))
+               words-data)))
+
+(create-word-lookup world)
+
+(defn gen-word [words-data syllables]
+  (apply str
+        (flatten
+          (map (fn [_] (rand-nth
+                        (vec
+                         (u/percent-> (rand) (create-word-lookup words-data)))))
+               (range syllables)))))
+
+(def peoples
+  [{:word "titunwan"
+    :weight 52}
+   {:word "inuit"
+    :weight 4}
+   {:word "khazâd"
+    :weight 3}
+   {:word "dhaoine"
+    :weight 3}
+   {:word "quendi"
+    :weight 1}
+   {:word "þjóð"
+    :weight 13}
+   {:word "kansa"
+    :weight 2}
+   {:word "khümüüs"
+    :weight 5}
+   {:word "simeng"
+    :weight 5}
+   {:word "poʻe"
+    :weight 3}
+   {:word "iwi"
+    :weight 9}])
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Glacial   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(def peoples
+  [{:word "titunwan"
+    :weight 50}
+   {:word "inuit"
+    :weight 30}
+   {:word "khazâd"
+    :weight 15}
+   {:word "kansa"
+    :weight 5}])
+
+;; n'Wanitui (Glacial)
+(def nwanitui
+  {:lakota 50
+   :inuit 30
+   :finnish 15
+   :dwarvish 5})
+
+(def snow
+  [{:word "wah-shmah"
+    :weight 50}
+   {:word "naklin" ; "forgotten snow"
+    :weight 30}
+   {:word "vol" ; endless, eternal
+    :weight 15}
+   {:word "lumi"
+    :weight 5}])
+
+(gen/derive-words snow 20)
+
+Wa-shmin - Northern Glacial Wastes
+
+(def land
+  [{:word "maká"
+    :weight 50}
+   {:word "nuna"
+    :weight 30}
+   {:word "grimstnzhadn"
+    :weight 15}
+   {:word "maa"
+    :weight 5}])
+
+(gen/derive-words land 20)
+
+Ma-kámaakna
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Boreal Forests   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Arboreal
+(def peoples
+  [{:word "titunwan"
+    :weight 50}
+   {:word "quendi"
+    :weight 5}
+   {:word "þjóð"
+    :weight 45}])
+
+;; Óðitwa (Arboreal)
+(def othitwa
+  {:lakota 50
+   :quenya 5
+   :oldnorse 45})
+
+(def land
+  [{:word "maká"
+    :weight 50}
+   {:word "nórë"
+    :weight 5}
+   {:word "bjoð"
+    :weight 15}])
+
+(gen/derive-words land 20)
+
+ "órmajo"
+ "maoð"
+ "akakma"
+ "ká"
+ "oðma"
+
+Ká-oðma
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Plains   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Plains
+(def peoples
+  [{:word "titunwan"
+    :weight 50}
+   {:word "þjóð"
+    :weight 10}
+   {:word "khümüüs"
+    :weight 40}])
+
+;; Óðtunwwa (Plains)
+(def othtunwwa
+  {:lakota 50
+   :mongolian 40
+   :oldnorse 10})
+
+(def land
+  [{:word "maká"
+    :weight 50}
+   {:word "gazar"
+    :weight 40}
+   {:word "bjoð"
+    :weight 10}])
+
+(gen/derive-words land 20)
+
+Oð-kázak
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Hills   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Hills
+(def peoples
+  [{:word "titunwan"
+    :weight 50}
+   {:word "simeng"
+    :weight 40}
+   {:word "khazâd"
+    :weight 10}])
+
+;; Zâtunun (Hills)
+(def zatunun
+  {:lakota 50
+   :tibetan 40
+   :dwarvish 10})
+
+(def land
+  [{:word "maká"
+    :weight 50}
+   {:word "sa"
+    :weight 40}
+   {:word "grimsthadn"
+    :weight 10}])
+
+(gen/derive-words land 20)
+
+Sa-kásama
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Western Coast   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Western Coast
+(def peoples
+  [{:word "titunwan"
+    :weight 50}
+   {:word "dhaoine"
+    :weight 25}
+   {:word "þjóð"
+    :weight 25}])
+
+;; Óðne (Western Coast)
+(def othne
+  {:lakota 50
+   :gaelic 25
+   :oldnorse 25})
+
+(def land
+  [{:word "maká"
+    :weight 50}
+   {:word "shaoghal"
+    :weight 25}
+   {:word "bjoð"
+    :weight 25}])
+
+(gen/derive-words land 20)
+(gen/derive-words land 20 3)
+
+Ghakoð
+
+;; for the ocean name, use "sun" + "ocean"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Southern Coast   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Southern Coast
+(def peoples
+  [{:word "titunwan"
+    :weight 50}
+   {:word "iwi"
+    :weight 45}
+   {:word "þjóð"
+    :weight 5}])
+
+;; Wituwi (Southern Coast)
+(def wituwi
+  {:lakota 50
+   :maori 45
+   :oldnorse 5})
+
+(def land
+  [{:word "maká"
+    :weight 50}
+   {:word "whenua"
+    :weight 45}
+   {:word "bjoð"
+    :weight 5}])
+
+(gen/derive-words land 20)
+(gen/derive-words land 20 3)
+
+Ua-kánuma
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Eastern Bay   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Eastern Bay
+(def peoples
+  [{:word "titunwan"
+    :weight 50}
+   {:word "iwi"
+    :weight 40}
+   {:word "khazâd"
+    :weight 5}
+   {:word "þjóð"
+    :weight 5}])
+
+;; Wóðniwi (Eastern Bay)
+(def wothniwi
+  {:lakota 50
+   :maori 40
+   :dwarvish 5
+   :oldnorse 5})
+
+;; For land area, use "two" + "land"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Southern Islands   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Southern Islands
+(def peoples
+  [{:word "titunwan"
+    :weight 50}
+   {:word "iwi"
+    :weight 20}
+   {:word "poʻe"
+    :weight 25}
+   {:word "khazâd"
+    :weight 2.5}
+   {:word "þjóð"
+    :weight 2.5}])
+
+;; Unpoiwʻe (Southern Islands)
+(def unpoiwe
+  {:lakota 50
+   :maori 20
+   :hawaiian 25
+   :oldnorse 2.5
+   :dwarvish 2.5})
+
+
+
