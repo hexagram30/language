@@ -24,11 +24,14 @@
     ;; JDK version issues overrides
     [fipp]
     [io.aviso/pretty]
+    [org.clojure/clojure]
+    [org.clojure/core.rrb-vector]
     [org.clojure/tools.reader]]
   :dependencies [
     ;; JDK version issues overrides
     [fipp "0.6.19"]
     [io.aviso/pretty "0.1.37"]
+    [org.clojure/core.rrb-vector "0.0.14"]
     [org.clojure/tools.reader "1.3.2"]
     ;; Regular dependencies
     [cheshire "5.9.0"]

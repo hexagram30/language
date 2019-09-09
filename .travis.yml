@@ -1,4 +1,5 @@
 language: clojure
+lein: 2.8.3
 script:
 - lein build
 jdk:
