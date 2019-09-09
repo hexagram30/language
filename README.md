@@ -269,7 +269,7 @@ service's ["About" page][libera-about].
 ## License
 
 ```
-Copyright © 2018, Hexagram30 <hexagram30@cnbb.games>
+Copyright © 2018-2019, Hexagram30 <hexagram30@cnbb.games>
 Copyright © 2003-2012, Duncan McGreggor
 Copyright © 2000-2002, Middleearth.net
 Copyright © 1999, Duncan McGreggor
