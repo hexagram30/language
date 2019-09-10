@@ -248,6 +248,19 @@ Ká-oðma
 
 Oð-kázak
 
+(def river
+  [{:word "mní"
+    :weight 50}
+   {:word "golyn"
+    :weight 40}
+   {:word "fljót"
+    :weight 10}])
+
+(gen/derive-words river 20)
+(gen/derive-words river 20 3)
+
+Lyótní
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Hills   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -279,6 +292,18 @@ Oð-kázak
 
 Sa-kásama
 
+(def river
+  [{:word "mní"
+    :weight 50}
+   {:word "gyuchu"
+    :weight 40}
+   {:word "llur"
+    :weight 10}])
+
+(gen/derive-words river 20)
+(gen/derive-words river 20 3)
+
+Níchyu
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Western Coast   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -313,6 +338,50 @@ Ghakoð
 
 ;; for the ocean name, use "sun" + "ocean"
 
+(def sun
+  [{:word "wí"
+    :weight 50}
+   {:word "ghrian"
+    :weight 25}
+   {:word "roðull"
+    :weight 25}])
+
+(gen/derive-words sun 20)
+(gen/derive-words sun 20 3)
+
+Righwí
+
+(def ocean
+  [{:word "mneewahnchah"
+    :weight 50}
+   {:word "ghrian"
+    :weight 25}
+   {:word "roðull"
+    :weight 25}])
+
+(gen/derive-words ocean 20)
+(gen/derive-words ocean 20 3)
+
+
+Mnahðu
+
+Righwí-Mnahðu
+
+(def river
+  [{:word "mní"
+    :weight 50}
+   {:word "ar-a-mach" ; outlet
+    :weight 10}
+   {:word "inbhir" ; estuary
+    :weight 15}
+   {:word "fljót"
+    :weight 10}])
+
+(gen/derive-words river 20)
+(gen/derive-words river 20 3)
+
+Jóníhi
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Southern Coast   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -345,6 +414,19 @@ Ghakoð
 
 Ua-kánuma
 
+(def ocean
+  [{:word "mneewahnchah"
+    :weight 50}
+   {:word "moana"
+    :weight 45}
+   {:word "roðull"
+    :weight 5}])
+
+(gen/derive-words ocean 20)
+(gen/derive-words ocean 20 3)
+
+Mnonul
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Eastern Bay   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -368,6 +450,56 @@ Ua-kánuma
    :oldnorse 5})
 
 ;; For land area, use "two" + "land"
+
+(def land
+  [{:word "maká"
+    :weight 50}
+   {:word "whenua"
+    :weight 40}
+   {:word "bjoð"
+    :weight 5}
+   {:word "grimsthadn"
+    :weight 5}])
+
+(gen/derive-words land 20)
+(gen/derive-words land 20 3)
+
+Káhenu
+
+(def two
+  [{:word "núnpa"
+    :weight 50}
+   {:word "rua"
+    :weight 40}
+   {:word "tvennr"
+    :weight 5}
+   {:word "nu'"
+    :weight 5}])
+
+(gen/derive-words two 20)
+(gen/derive-words two 20 3)
+
+Rupa
+
+Káhenu-Rupa
+
+(def bay
+  [{:word "mneewahnchah"
+    :weight 50}
+   {:word "kokoru"
+    :weight 40}
+   {:word "vágr"
+    :weight 5}
+   ;; No dwarvish word, so combining Gaelic and Hebrew
+   {:word "bàgh"
+    :weight 2.5}
+   {:word "mafaratz"
+    :weight 2.5}])
+
+(gen/derive-words bay 20)
+(gen/derive-words bay 20 3)
+
+Koàgor Mnach
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Southern Islands   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -394,5 +526,19 @@ Ua-kánuma
    :oldnorse 2.5
    :dwarvish 2.5})
 
+(def land
+  [{:word "maká"
+    :weight 50}
+   {:word "whenua"
+    :weight 20}
+   {:word "alamo" ; Hawai'ian for "jewels"
+    :weight 20}
+   {:word "bjoð"
+    :weight 2.5}
+   {:word "grimsthadn"
+    :weight 2.5}])
 
+(gen/derive-words land 20)
+(gen/derive-words land 20 3)
 
+Laká-hemaak
