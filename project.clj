@@ -36,9 +36,11 @@
     ;; Regular dependencies
     [cheshire "5.9.0"]
     [clojure-opennlp "0.5.0"]
+    [clojusc/process-manager "0.2.0-SNAPSHOT"]
     [clojusc/system-manager "0.3.0"]
     [clojusc/twig "0.4.1"]
     [clojusc/wordnet "1.0.0"]
+    [com.redislabs/jredisearch "1.0.0-rc2"]
     [hexagram30/common "0.1.0-SNAPSHOT"]
     [hexagram30/db-plugin "0.1.0-SNAPSHOT"]
     [hexagram30/dice "0.1.0-SNAPSHOT"]

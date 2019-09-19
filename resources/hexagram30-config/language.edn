@@ -5,6 +5,11 @@
      :redis {
        :host "localhost"
        :port 6389}}}
+ :dictionary {
+   :db {
+     :redis {
+       :host "localhost"
+       :port 6390}}}
  :httpd {
    :api {
      :version "v1.0"

@@ -1,10 +1,12 @@
 (ns hxgm30.language.components.core
   (:require
+    [clojusc.process.manager.components.docker :as docker]
     [com.stuartsierra.component :as component]
     [hxgm30.db.plugin.backend :as backend]
     [hxgm30.dice.components.random :as random]
     [hxgm30.httpd.components.server :as httpd]
     [hxgm30.language.components.config :as config]
+    [hxgm30.language.components.dictionary :as dictionary]
     [hxgm30.language.components.lang :as lang]
     [hxgm30.language.components.logging :as logging]
     [taoensso.timbre :as log]))
@@ -39,12 +41,27 @@
           (lang/create-component)
           [:config :logging :random :backend])})
 
+(def dictdb
+  {:redis-search (component/using
+                  (docker/create-component
+                    :neo4j
+                    {:image-id "hexagram30/redisearch:latest"
+                     :ports ["127.0.0.1:6380:6379"]
+                     :volumes [(str (System/getProperty "user.dir") "/data/redis-search:/data")]
+                     :container-id-file "/tmp/hxgm30-lang-redissearch-container-id"})
+                  [:config :logging])})
+
+(def dict
+  {:dictionary (component/using
+                (dictionary/create-component)
+                [:config :logging :redis-search :lang])})
+
 (def http
   {:httpd (component/using
            (httpd/create-component)
-           [:config :logging :random :backend :lang])})
+           [:config :logging :random :backend :lang :dictionary])})
 
-;;; Additional components for systems that want to supress logging (e.g.,
+;;; Additional components for systems that want to suppress logging (e.g.,
 ;;; systems created for testing).
 
 (def rnd-without-logging
@@ -67,7 +84,7 @@
 (def http-without-logging
   {:httpd (component/using
            (httpd/create-component)
-           [:config :random :backend :lang])})
+           [:config :random :backend :lang :dictionary])})
 
 (defn basic
   [cfg-data]
@@ -80,6 +97,8 @@
          rnd
          (db cfg-data)
          language
+         dictdb
+         dict
          http))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
