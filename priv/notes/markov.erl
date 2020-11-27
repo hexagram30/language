@@ -1,5 +1,9 @@
 %% Copied from:
 %% * https://pastebin.com/bGaW7CkK
+%%
+%% For dumping / loading data, see:
+%% * https://erlang.org/doc/man/ets.html#tab2file-2
+%% * https://erlang.org/doc/man/ets.html#file2tab-1
 -module(markov).
 -compile(export_all).
 -author({jha, abhinav}).
