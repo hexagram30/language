@@ -8,8 +8,8 @@
 There are two branches of code maintained for this project. You will find usage
 examples in each repo, specific to the language and tooling for the given branch:
 
-* The [Clojure](tree/clojure) branch
-* The [LFE](tree/lfe) branch
+* The [Clojure](../../tree/clojure) branch
+* The [LFE](../../tree/lfe) branch
 
 [//]: --Named-Links--
 
