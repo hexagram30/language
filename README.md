@@ -1,254 +1,51 @@
 # hexagram30/language
 
-*A syntagmata and Markov chain language and word generator for use in hexagram30 narratives*
+*A syntagmata and Markov chain language, word, and name generator for use in hexagram30 narratives*
 
 [![][logo]][logo-large]
 
 
-## Names and Text
-
-There are several ways to use the CLI for this component:
-
-* Generate text (a word, sentence, or paragraph) based on a statistical
-  anaylsis of a language's syllables (syntagmata).
-* Generate text in a language created by assembling statisticvs for real
-  languages.
-* Generate text one of the pre-defined "assembled" (fictional) languages.
-* Generate a male/female name pair for a fictional fantasy race.
-* Generate male/female name paris for all supported fantasy races.
-
+Note: This is an WIP port from the [Clojure version of the project](../../tree/clojure).
+Only some of the functionality has been created here.
 
 ## Usage
 
 
 ### Command Line
 
-```
-$ lein fictional mythgarthur
-
- __                                                 ______ ______
-|  |--.-----.--.--.---.-.-----.----.---.-.--------.|__    |      |
-|     |  -__|_   _|  _  |  _  |   _|  _  |        ||__    |  --  |
-|__|__|_____|__.__|___._|___  |__| |___._|__|__|__||______|______|
-
-..................................  l a n g u a g e  .............
-
-
-
-    Orcish: Khikuteeqareem bys dundewlulbuyoothind. Tachellunat ör.
-            Wannadden beqtusodin we etsinklithu beqatet oollavoominokwaalle
-            sleshranind aaldtorings.
-
-    Elvish: Har spum. Mé vin ýð il. Þafe þeg vemattuð nadogaflimyga.
-
-    Human: Shrimmornancafafetyaða stete breandensting eckeccusmaastelēamætipi
-           sanh ǣhasior. Chaki sunse hwīktra dustravastin verigearn stōmh
-           braprakanaff satundishagarapi. Late chamatyaunac fytu pittindaho.
-           Hvelse elcumaathadhyan
-           jargafunnacateceraremisharieftilastirandinammidvinampler oftectioble
-           paapashetmand bíly þrónbhoneculy mririndisuas.
-
-    Dwarvish: Mshg aca a withexynt unce. Lyrc fath lbn pòn dhèabhammilba tìr
-              oblarboyn. Nbyaylie dienn stogabar ylk a vyth. A waplinaidh tha hvar.
-              Marirama' aspainatem thannt sosvrysyp adachtnipylzie moch
-              doireaselpyme gur yochtigund chui.
-```
-```
-$ lein fictional rook
-
- __                                                 ______ ______
-|  |--.-----.--.--.---.-.-----.----.---.-.--------.|__    |      |
-|     |  -__|_   _|  _  |  _  |   _|  _  |        ||__    |  --  |
-|__|__|_____|__.__|___._|___  |__| |___._|__|__|__||______|______|
-
-..................................  l a n g u a g e  .............
-
-
-
-    Rookish: Shisovey ruumoltirbusawaki ul dedo mucomaku jewn clogikahubleng
-             der vit watikuntara. Cushhnomatsutamas ah irpartontioundiasta
-             steashinamo. Tos. Cosbatagi thoshhnumohaxpoka desa cossebud
-             wationdiri rer sustrayatocotably nuevibuctine. Loshirgasir ostistrar.
-             Rudipnura ate hal bhuremahaa proyuckeponfoji esta hamastari
-             denaanactimos detibut o. Chekunares quesephermaa pirnaghoum
-             rejikambis dinegin eto pute shikabhar. Saipongekabi mampandun. Bhiip
-             yukicioris asogeffento augatreaw karque quexpresdare. Unidackitae
-             vatetioxtrerd guegigreeatinatuz ista hiff juededossetaugis.
-
-    Elani: Lopiblitre u faung cehrellevre aaalemavraive mount batiorduessin.
-
-    Jas: Nerhacakon za na. Ci juer eet a shuim. Kao uja ni. Hua zape choun trit
-         ago beng zhe cheng. Shou ago xiang haing purs eemheing chou.
-
-    Mux: Cezzle miss ung claki mudekichar pomashiro bezz. Po booki chtontottenk
-         da marirr mange bass mmmmkorvara.
-```
-
 Generate a name:
 
 ```
-$ lein name halfling
-
- __                                                 ______ ______
-|  |--.-----.--.--.---.-.-----.----.---.-.--------.|__    |      |
-|     |  -__|_   _|  _  |  _  |   _|  _  |        ||__    |  --  |
-|__|__|_____|__.__|___._|___  |__| |___._|__|__|__||______|______|
-
-................................  l a n g u a g e  ...............
-
-
-
-Halfling
-  Female: Dose Ganks
-  Male: Miwmadango Ganks
+$ rebar3 name halfling male
+```
+```
 
 ```
 
-Generate names for all races:
+Get supported races:
 
 ```
-$ lein names
+$ rebar3 name races
+```
 
- __                                                 ______ ______
-|  |--.-----.--.--.---.-.-----.----.---.-.--------.|__    |      |
-|     |  -__|_   _|  _  |  _  |   _|  _  |        ||__    |  --  |
-|__|__|_____|__.__|___._|___  |__| |___._|__|__|__||______|______|
+Get supported name types for a race:
 
-................................  l a n g u a g e  ...............
+```
+$ rebar3 name types dwarf
+```
 
+Update the Markov chain stats files for the name generator:
 
-
-Dragonborn
-  Female: Thararinn Lidojallok
-  Male: Shancaskaranil Lidojallok
-
-Dwarf
-  Female: Hlith Gokeruk
-  Male: Baefundan Gokeruk
-
-Elf
-  Female: Arirelee Inólkiilan
-  Male: Thar Inólkiilan
-
-Gnome
-  Female: Cabemwimi Gambernir
-  Male: Geadle Gambernir
-
-Halfling
-  Female: Giwadaranca Sardle
-  Male: Grir Sardle
-
-Human
-  Female: Brich An
-  Male: Elchiglas An
-
-Orc
-  Female: Onsimeng Oafoohonfist
-  Male: Lurcorrench Oafoohonfist
-
-Tiefling
-  Female: Kalerchal Stoldedbeakest
-  Male: Dakekmes Stoldedbeakest
-
+```
+$ rebar3 name regen
 ```
 
 ### REPL
 
-Example for genarating content that is statistically similar to real
-languages (words, sentences, and paragraphs):
 
 
-```clj
-(require '[hxgm30.language.gen.core :as lang])
-(def generator (lang/create-content-generator (system) :markov))
-(lang/word generator :gaelic)
-```
-```
-"irna"
-```
-```clj
-(lang/word generator :oldnorse)
-```
-```
-"hapleindarð"
-```
-```clj
-(lang/word generator :hebrew)
-```
-```
-"smv"
-```
-```clj
-(lang/sentence generator :arabic)
-```
-```
-"Atheemituna ilimtunahuwma wataqattaaaan aghayyilbayn tabtaghoohuthkumilashhadu
-faaaajabusibkubzan waalnnawalayltudul."
-```
-```clj
-(lang/sentence generator :hindi)
-```
-```
-"Tyaah shuu madaanesuyaa sarhamanaana bhuumaanaasramaadiraptaa puukakham ariivam
-sahaa."
-```
-```clj
-(lang/sentence generator :greek)
-```
-```
-"Τυδεΐ πιροπώμην δ᾽ γὰ."
-```
-```clj
-(lang/sentence generator :pie)
-```
-```
-"*krehnów *ǵeééru *rekh₁ns *um *ǵer *heym *kashyeǵʰ *dáwni *doeyr."
-```
-```clj
-(lang/paragraph generator :chinese)
-```
-```
-"Pia xiun lai cha tao mian ang tain. Shi rang kan zen. Zheng sa pien ba.
-Naing he qun kuain yin ha. Miu kain hung tai pe jing jin zen mu.
-Tuang pan dain shao cheng diu can dia niang."
-```
+```lisp
 
-Example for generating a paragraph in one of the pre-defined constructed
-languages:
-
-```clj
-(require '[hxgm30.language.syntagmata.lang.fictional.rook :as rook])
-(lang/paragraph rook/mux)
-```
-```
-Whizz ji reira nou pebodana suran yabisebt. Dan
-aravan curassouronan mume potikertarp gun kerr
-aruppitten dep bem. Lu whoom ido ong sluckoo. Lue
-oya nyaazz hesh kedirayo. Pum settewaxth lias.
-Phes gegigupe whistramew losomepe irstendeng
-gesiweck wegetiop boo bur.
-```
-
-Example for generaing a name:
-
-```clj
-(require '[hxgm30.language.syntagmata.lang.names :as names])
-(names/last (system) :elf)
-```
-```
-"Ikiiladol"
-```
-```clj
-(names/female (system) :elf)
-```
-```
-"Aladenienwë"
-```
-```clj
-(names/male (system) :elf)
-```
-```
-"Es"
 ```
 
 

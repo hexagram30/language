@@ -1,0 +1,14 @@
+{application, 'hxgm30.language',
+ [{description, "A syntagmata and Markov chain language, word, and name generator for use in hexagram30 narratives"},
+  {vsn, "5.0.0-dev"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
