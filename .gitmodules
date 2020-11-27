@@ -1,0 +1,4 @@
+[submodule "priv/corpora"]
+	path = priv/corpora
+	url = git@github.com:hexagram30/language-corpora.git
+	branch = main
