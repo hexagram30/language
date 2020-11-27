@@ -30,13 +30,18 @@
     (io:format "~s~n" `(,content))))
 
 (defun dispatch-name-commands
-  (((= `(,subcmd . ,_) args))
-   (io:format "Got args: ~p~n" `(,args))
+  (((= `(,subcmd . ,subargs) args))
+   ;(io:format "Got args: ~p~n" `(,args))
    (case subcmd
-     ("races" (hxgm30.language.names:races))
-     ("types" (hxgm30.language.names:types))
+     ("races" (print-list (hxgm30.language.names:races)))
+     ("types" (print-list (apply #'hxgm30.language.names:types/1 subargs)))
      ("regen" (hxgm30.language.names:regen))
-     (_ (apply #'hxgm30.language.names:gen/2 args)))))
+     (_ (apply #'hxgm30.language.names:gen/2 args)))
+   'ok))
 
 (defun unknown-feature (f)
   (io:format "Unknown feature: ~p~n" `(,f)))
+
+(defun print-list (data)
+  (lists:map (lambda (x) (io:format "~s~n" `(,x))) data)
+  'ok)

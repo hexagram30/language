@@ -2,7 +2,7 @@
 
 CMD=$1
 
-DATA=resources/json/names.json
+DATA=priv/json/names.json
 
 IFS=\ 
 
