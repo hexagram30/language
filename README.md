@@ -43,11 +43,27 @@ $ rebar3 name regen
 ### REPL
 
 
+```
+$ rebar3 lfe repl
+```
 
-```lisp
+Generate a name:
+
+``` lisp
 
 ```
 
+Get supported races:
+
+```lisp
+lfe> (hxgm30.language.names:races)
+```
+
+Get supported name types for a race:
+
+``` lisp
+lfe> (hxgm30.language.names:types "Dragonborn")
+```
 
 ## Donating
 
